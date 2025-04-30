@@ -125,7 +125,7 @@ export default function OurWorks() {
                     }}
                   >
                     <div className={styles.imageWrap}>
-                      <Image src={item.image} alt="Our Works" />
+                      <img src={item.image} alt="Our Works" />
                     </div>
                     <p>
                       {item.text} <strong>{item.highlight}</strong>
