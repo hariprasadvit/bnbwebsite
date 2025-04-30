@@ -1,0 +1,1 @@
+"use strict";exports.id=127,exports.ids=[127],exports.modules={7127:(e,s,t)=>{t.r(s),t.d(s,{default:()=>o});let o=(0,t(8570).createProxy)(String.raw`/Volumes/Batman/Projects/BNB-Website/bnb-website/src/components/Home/Testimonials/index.js#default`)}};

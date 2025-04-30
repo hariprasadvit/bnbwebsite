@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"components/Home/OurClients/index.js -> react-slick":{"id":6406,"files":["static/chunks/406.67a744b6a096454f.js"]},"components/Home/OurWorks/index.js -> react-slick":{"id":6406,"files":["static/chunks/406.67a744b6a096454f.js"]},"components/Home/Testimonials/index.js -> react-slick":{"id":6406,"files":["static/chunks/406.67a744b6a096454f.js"]}}';
