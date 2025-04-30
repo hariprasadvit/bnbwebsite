@@ -1,20 +1,20 @@
 {
   "components/Home/OurClients/index.js -> react-slick": {
-    "id": 6406,
+    "id": "components/Home/OurClients/index.js -> react-slick",
     "files": [
-      "static/chunks/406.67a744b6a096454f.js"
+      "static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js"
     ]
   },
   "components/Home/OurWorks/index.js -> react-slick": {
-    "id": 6406,
+    "id": "components/Home/OurWorks/index.js -> react-slick",
     "files": [
-      "static/chunks/406.67a744b6a096454f.js"
+      "static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js"
     ]
   },
   "components/Home/Testimonials/index.js -> react-slick": {
-    "id": 6406,
+    "id": "components/Home/Testimonials/index.js -> react-slick",
     "files": [
-      "static/chunks/406.67a744b6a096454f.js"
+      "static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js"
     ]
   }
 }

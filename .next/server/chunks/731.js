@@ -1,1 +1,0 @@
-"use strict";exports.id=731,exports.ids=[731],exports.modules={731:(e,t,s)=>{s.r(t),s.d(t,{default:()=>r});let r=(0,s(8570).createProxy)(String.raw`/Volumes/Batman/Projects/BNB-Website/bnb-website/src/components/Home/DataDriven/index.js#default`)}};

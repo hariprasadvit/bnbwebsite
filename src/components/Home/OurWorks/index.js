@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../../styles/page.module.scss";
-import workImg1 from "/Home/ourworks1.png";
-import workImg2 from "/Home/ourworks2.png";
+import workImg1 from "/public/Home/ourworks1.png";
+import workImg2 from "/public/Home/ourworks2.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -125,7 +125,7 @@ export default function OurWorks() {
                     }}
                   >
                     <div className={styles.imageWrap}>
-                      <img src={item.image} alt="Our Works" />
+                      <Image src={item.image} alt="Our Works" />
                     </div>
                     <p>
                       {item.text} <strong>{item.highlight}</strong>
