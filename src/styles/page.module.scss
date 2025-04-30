@@ -557,7 +557,52 @@
             }
           }
         }
+
+
       }
+
+
+    }
+
+    .customArrow {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      width: 81px;
+      height: 46px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      top: auto;
+      bottom: -6px;
+      right: -15px !important;
+      left: auto;
+      z-index: 9;
+      background: #fff;
+      border: 1px solid #010104;
+
+      &:before {
+        display: none;
+      }
+
+      svg {
+        fill: #010104;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover {
+        background: #010104;
+        border: 1px solid transparent;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    .customArrowLeft {
+      right: 80px !important;
     }
   }
 }
