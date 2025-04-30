@@ -1,0 +1,88 @@
+.headerWrapper {
+    position: fixed;
+    inset: 0;
+    background: #fefdf6;
+    z-index: 999;
+    bottom: auto;
+
+    .container {
+        display: grid;
+        grid-template-columns: 161px 41% 5%;
+        align-items: center;
+        padding: 40px 80px;
+        justify-content: space-between;
+        transition: all 0.3s ease-in-out;
+
+        .logo {
+            text-align: center;
+
+            img {
+                transition: all .2s ease-in-out;
+            }
+        }
+
+        .menu {
+            ul {
+                display: flex;
+                gap: 50px;
+
+                li {
+                    a {
+                        display: block;
+                        min-width: 80px;
+                        font-size: 18px;
+                        line-height: 14px;
+                        text-align: center;
+
+                        &.active,
+                        &:hover {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .submenu {
+            display: grid;
+            grid-template-columns: 10px 10px;
+            gap: 5px;
+            cursor: pointer;
+
+            div {
+                width: 9px;
+                height: 9px;
+                border-radius: 100%;
+                background: #333333;
+                border: 1px solid #707070;
+
+                &:nth-child(2) {
+                    background: #D44116;
+                    border-color: #D44116;
+                }
+
+                &:last-child {
+                    background: #D44116;
+                    border-color: #D44116;
+                }
+            }
+        }
+    }
+
+    &.shrink {
+
+        .container {
+            padding: 10px 80px;
+            box-shadow: 0px 0px 4px 1px #ccc;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logo {
+            img {
+                width: 100px;
+                height: auto;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
