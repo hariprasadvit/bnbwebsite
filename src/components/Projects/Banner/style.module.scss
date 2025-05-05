@@ -1,0 +1,53 @@
+/* banner */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 180px 80px 0;
+    position: relative;
+    background: #000;
+    min-height: 100vh;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 90px;
+}
+
+.content h1 {
+    font-size: 67px;
+    line-height: 67px;
+    color: #A0A0A0;
+    font-weight: bold;
+    margin-bottom: 45px;
+    max-width: 1045px;
+    width: 100%;
+}
+
+.content h1 span {
+    color: #fff;
+    display: block;
+}
+
+.content h2 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #FEFDF5;
+    font-weight: normal;
+    width: 100%;
+    max-width: 990px;
+    padding: 0 0 90px 90px;
+}
+
+
+.scroll {
+    font-size: 18px;
+    line-height: 14px;
+    color: #FEFDF5;
+    margin-top: 30px;
+    width: 100%;
+    text-align: right;
+}

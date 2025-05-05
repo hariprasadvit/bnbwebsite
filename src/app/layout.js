@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className={titillium.variable}>
       <head />
       <body>
-        <Header />
         {children}
         <Footer />
       </body>

@@ -5,7 +5,7 @@ import logo from "/public/logo.svg";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import Link from "next/link";
-export default function Header() {
+export default function Header({ whiteHeader, active }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,9 @@ export default function Header() {
   }, []);
   return (
     <header
-      className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""}`}
+      className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""} ${
+        whiteHeader ? styles.whiteHeader : ""
+      }`}
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
@@ -26,7 +28,12 @@ export default function Header() {
         <nav className={styles.menu}>
           <ul>
             <li>
-              <Link href="/">Projects</Link>
+              <Link
+                href="/projects"
+                className={active === "projects" ? styles.active : ""}
+              >
+                Projects
+              </Link>
             </li>
             <li>
               <Link href="/">Services</Link>
