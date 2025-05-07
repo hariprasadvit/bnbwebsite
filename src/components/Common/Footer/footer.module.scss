@@ -5,12 +5,35 @@
     .container {
         padding: 40px 80px 20px;
 
+        @media screen and (max-width: 1200px) {
+            padding: 40px 40px 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 40px 16px 20px;
+        }
+
         .topContent {
             display: flex;
             justify-content: space-between;
             font-size: 21px;
             line-height: 36px;
             margin-bottom: 80px;
+
+            @media screen and (max-width: 1250px) {
+                display: grid;
+                grid-template-columns: 177px 308px;
+                gap: 30px;
+                justify-content: flex-start;
+            }
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: 100%;
+                gap: 15px;
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 30px;
+            }
 
             .logo {
                 img {}
@@ -35,14 +58,54 @@
             border-bottom: 1px dashed #ffffff80;
             padding-bottom: 80px;
 
+            @media screen and (max-width: 1150px) {
+                gap: 50px;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            @media screen and (max-width: 768px) {
+                padding-bottom: 30px;
+                gap: 20px;
+            }
+
+            .linksWrap {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                @media screen and (max-width: 768px) {
+                    gap: 10px;
+                }
+
+                &:first-child {
+                    min-width: 250px;
+                }
+
+                &:last-child {
+                    min-width: 400px;
+                }
+
+            }
+
             .linksWrap {
                 min-width: 450px;
+
+                @media screen and (max-width: 768px) {
+                    min-width: auto;
+                }
 
                 h5 {
                     font-size: 21px;
                     line-height: 36px;
                     font-weight: 600;
                     margin-bottom: 30px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 18px;
+                        line-height: 25px;
+                        margin-bottom: 10px;
+                    }
                 }
 
                 ul {
@@ -53,11 +116,20 @@
                     li {
                         margin-bottom: 10px;
 
+                        @media screen and (max-width: 768px) {
+                            margin-bottom: 5px;
+                        }
+
                         a {
                             color: #fefdf5d0;
                             line-height: 43px;
                             font-size: 18px;
                             font-weight: 300;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: 16px;
+                                line-height: 25px;
+                            }
 
                             &:hover {
                                 text-decoration: underline;
@@ -87,6 +159,12 @@
             align-items: center;
             padding: 30px 10px;
             border-bottom: 1px dashed #ffffff80;
+
+            @media screen and (max-width: 550px) {
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
 
             ul {
                 display: flex;
@@ -136,6 +214,13 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 50px 0 10px;
+
+            @media screen and (max-width: 550px) {
+                padding: 20px 16px 10px;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
 
             p {}
 

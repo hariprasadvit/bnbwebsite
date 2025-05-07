@@ -6,6 +6,14 @@
   justify-content: space-between;
   padding: 180px 80px 0;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    padding: 180px 40px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 180px 16px 0;
+  }
 }
 
 .content {
@@ -22,6 +30,17 @@
   margin-bottom: 45px;
   max-width: 685px;
   width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 47px;
+    line-height: 57px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
 }
 
 .content h1 span {
@@ -35,10 +54,16 @@
   font-weight: normal;
   width: 100%;
   max-width: 940px;
-}
 
-.content h1 span {
-  color: #d44116;
+  @media screen and (max-width: 1200px) {
+    font-size: 29px;
+    line-height: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+    line-height: 30px;
+  }
 }
 
 .scroll {
@@ -53,17 +78,32 @@
 .dashedBorder {
   border-bottom: 2px dashed #000;
   padding-top: 80px;
-  /* margin-left: 40px; */
+
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+  }
 }
 
 .rowReverseImportant {
   flex-direction: row-reverse !important;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column !important;
+  }
 }
 
 /* MVP section */
 
 .splitSection {
   padding: 80px 80px 0;
+
+  @media screen and (max-width: 1200px) {
+    padding: 80px 40px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px 0;
+  }
 }
 
 .lastSection {
@@ -76,11 +116,22 @@
   justify-content: center;
   gap: 50px;
   position: relative;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 
 .splitSectionLeft {
   max-width: 360px;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+  }
 }
 
 .splitSectionLeft img {}
@@ -94,6 +145,16 @@
   font-size: 36px;
   line-height: 65px;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }
 
 .splitSectionRight p {
@@ -101,11 +162,27 @@
   line-height: 36px;
   margin-bottom: 40px;
   font-weight: 300;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
 }
 
 .splitSectionRight ul {
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 }
 
 .splitSectionRight ul li {
@@ -116,6 +193,18 @@
   width: 50%;
   padding-left: 35px;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .splitSectionRight ul li::before {
@@ -127,6 +216,20 @@
   border-radius: 100%;
   left: 0;
   top: 10px;
+
+  @media screen and (max-width: 1200px) {
+    width: 13px;
+    height: 13px;
+    left: 10px;
+    top: 7px;
+  }
+}
+
+.splitSectionRight a {
+  @media screen and (max-width: 768px) {
+    margin: 0 20px 0 auto;
+    display: table;
+  }
 }
 
 // Our Works section
@@ -138,10 +241,28 @@
   .container {
     padding: 55px 0 55px 80px;
 
+    @media screen and (max-width: 1200px) {
+      padding: 55px 0 55px 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 40px 0 16px 40px;
+    }
+
     .topContent {
       display: flex;
       justify-content: space-between;
       padding-right: 80px;
+      gap: 40px;
+
+      @media screen and (max-width: 1200px) {
+        padding: 55px 0 55px 40px;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 0;
+      }
 
       h2 {
         font-size: 56px;
@@ -149,6 +270,16 @@
         font-weight: 300;
         max-width: 320px;
         width: 100%;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 46px;
+          line-height: 55px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 27px;
+          line-height: 37px;
+        }
       }
 
       p {
@@ -157,6 +288,16 @@
         max-width: 640px;
         width: 100%;
         margin-top: 85px;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 18px;
+          line-height: 30px;
+          padding-right: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+          margin: 0;
+        }
       }
     }
 
@@ -168,6 +309,15 @@
         top: 59%;
         transform: rotate(270deg);
 
+        @media screen and (max-width: 768px) {
+          top: 39%;
+        }
+
+        @media screen and (max-width: 550px) {
+          top: 23%;
+          left: -70px;
+        }
+
         span {
           font-size: 18px;
         }
@@ -177,6 +327,10 @@
         max-width: 82%;
         margin: 0 0 0 auto;
         padding-top: 100px;
+
+        @media screen and (max-width: 550px) {
+          max-width: 97%;
+        }
 
         >div {
           margin-bottom: -216px;
@@ -192,16 +346,46 @@
             flex-direction: column;
             padding: 100px 50px;
             align-items: flex-start;
+
+            @media screen and (max-width: 1200px) {
+              min-height: 485px;
+              max-width: 420px;
+              padding: 30px 40px;
+            }
+
+            @media screen and (max-width: 768px) {
+              min-height: 375px;
+              max-width: 360px;
+              padding: 30px 40px;
+            }
+
+            @media screen and (max-width: 550px) {
+              min-height: 290px;
+              max-width: 270px;
+              padding: 25px;
+            }
           }
         }
 
         .imageWrap {
           margin-bottom: 75px;
 
+          @media screen and (max-width: 768px) {
+            margin-bottom: 50px;
+          }
+
+          @media screen and (max-width: 550px) {
+            margin-bottom: 30px;
+          }
+
           img {
             width: 100%;
             max-width: 300px;
             height: 150px;
+
+            @media screen and (max-width: 1200px) {
+              height: 100px;
+            }
           }
 
         }
@@ -210,6 +394,21 @@
           color: #090B0F;
           font-size: 31px;
           line-height: 42px;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 28px;
+            line-height: 40px;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 24px;
+            line-height: 34px;
+          }
+
+          @media screen and (max-width: 550px) {
+            font-size: 20px;
+            line-height: 26px;
+          }
         }
 
         .customArrow {
@@ -226,6 +425,12 @@
           top: -60px;
           right: 155px !important;
           left: auto;
+
+          @media screen and (max-width: 768px) {
+            right: 35px !important;
+            width: 60px;
+            height: 40px;
+          }
 
           &:before {
             display: none;
@@ -247,6 +452,10 @@
 
         .customArrowLeft {
           right: 262px !important;
+
+          @media screen and (max-width: 768px) {
+            right: 132px !important;
+          }
         }
       }
     }
@@ -260,6 +469,19 @@
     padding: 290px 80px 80px;
     display: flex;
     justify-content: space-between;
+    gap: 40px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 290px 40px 80px;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 250px 16px 40px;
+    }
 
     .nSectionLeft {
       p {
@@ -280,12 +502,32 @@
         line-height: 59px;
         margin-bottom: 30px;
         font-weight: 400;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 39px;
+          line-height: 49px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 25px;
+          line-height: 35px;
+        }
       }
 
       p {
         font-size: 21px;
         line-height: 36px;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       .numbersWrap {
@@ -303,12 +545,27 @@
             line-height: 36px;
             font-weight: 500;
             margin-bottom: 10px;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 54px;
+              line-height: 36px;
+            }
+
+            @media screen and (max-width: 768px) {
+              font-size: 35px;
+              line-height: 36px;
+            }
           }
 
           span {
             font-size: 21px;
             line-height: 36px;
             font-weight: 300;
+
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+              line-height: 36px;
+            }
           }
         }
       }
@@ -318,6 +575,16 @@
         line-height: 36px;
         font-weight: 300;
         margin-top: 30px;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
 
         a {
           font-size: 21px;
@@ -335,6 +602,14 @@
 
   .container {
     padding: 40px 80px 80px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 40px 40px 80px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 40px 16px;
+    }
 
     h2 {
       font-size: 21px;
@@ -369,19 +644,52 @@
   .container {
     padding: 80px 80px 0;
 
+    @media screen and (max-width: 1200px) {
+      padding: 40px 40px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 40px 16px 0;
+    }
+
     h2 {
       font-size: 49px;
       line-height: 59px;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 39px;
+        line-height: 49px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 25px;
+        line-height: 35px;
+      }
     }
 
     .contentList {
       .content {
         display: grid;
         border-bottom: 1px dashed #000;
-        grid-template-columns: 30% 42% 10%;
+        grid-template-columns: 30% 42% 100px;
         justify-content: space-between;
         align-items: flex-start;
         padding: 70px 0;
+
+        @media screen and (max-width: 1200px) {
+          grid-template-columns: 30% 42% 100px;
+        }
+
+        @media screen and (max-width: 850px) {
+          grid-template-columns: 100%;
+          gap: 30px;
+          padding: 50px 0 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+          padding: 20px 0 0;
+          gap: 20px;
+        }
 
         &:last-child {
           border-bottom: 0;
@@ -389,8 +697,14 @@
 
         .heading {
           font-size: 27px;
-          line-height: 65px;
+          line-height: 35px;
           font-weight: 600;
+
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 10px;
+          }
         }
 
         .desc {
@@ -399,12 +713,23 @@
             line-height: 36px;
             font-weight: 600;
             margin-bottom: 20px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+              line-height: 25px;
+              margin-bottom: 5px;
+            }
           }
 
           p {
             font-size: 21px;
             line-height: 36px;
             font-weight: 300;
+
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
+              line-height: 25px;
+            }
           }
         }
 
@@ -423,6 +748,11 @@
 .dataDriven {
   .container {
     padding: 50px 80px;
+
+    @media screen and (max-width: 1200px) {
+      padding: 50px 40px;
+
+    }
 
     .sectionTop {
       h2 {
@@ -516,9 +846,21 @@
 .Testimonials {
   padding: 40px 80px 40px 100px;
 
+  @media screen and (max-width: 1200px) {
+    padding: 40px 40px 40px 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px 40px;
+  }
+
   .container {
     background: #ECE3DA;
     padding: 40px 50px;
+
+    @media screen and (max-width: 550px) {
+      padding: 25px 25px 80px;
+    }
 
     .testimonialItem {
       >div {
@@ -527,6 +869,11 @@
           line-height: 42px;
           font-weight: 600;
           margin-bottom: 26px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 18px;
+            line-height: 25px;
+          }
         }
 
         .profileData {
@@ -548,12 +895,22 @@
               font-size: 21px;
               font-weight: 600;
               margin-bottom: 3px;
+
+              @media screen and (max-width: 768px) {
+                font-size: 18px;
+                line-height: 25px;
+              }
             }
 
             span {
               display: block;
               font-size: 16px;
               font-weight: 300;
+
+              @media screen and (max-width: 768px) {
+                font-size: 14px;
+                line-height: 15px;
+              }
             }
           }
         }
@@ -582,6 +939,12 @@
       background: #fff;
       border: 1px solid #010104;
 
+      @media screen and (max-width: 550px) {
+        bottom: -80px;
+        width: 60px;
+        height: 40px;
+      }
+
       &:before {
         display: none;
       }
@@ -603,6 +966,10 @@
 
     .customArrowLeft {
       right: 80px !important;
+
+      @media screen and (max-width: 550px) {
+        right: 60px !important;
+      }
     }
   }
 }

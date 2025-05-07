@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
+import Spline from "@splinetool/react-spline/next";
 
 export default function Banner() {
   return (
@@ -20,6 +21,14 @@ export default function Banner() {
         </div>
         <div className={styles.scroll}>(Scroll)</div>
         <div className={styles.dashedBorder}></div>
+      </div>
+      <div className={styles.splineWrap}>
+        <Spline
+          className={styles.spline}
+          scene="https://prod.spline.design/uyq7dF5D1Z1ksQZy/scene.splinecode"
+          width={849}
+          height={549}
+        />
       </div>
     </section>
   );

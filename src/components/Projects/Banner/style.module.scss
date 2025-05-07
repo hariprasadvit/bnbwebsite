@@ -15,6 +15,8 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 90px;
+    position: relative;
+    z-index: 1;
 }
 
 .content h1 {
@@ -50,4 +52,24 @@
     margin-top: 30px;
     width: 100%;
     text-align: right;
+}
+
+.splineWrap {
+    position: absolute;
+    inset: 0;
+    margin: auto 0 auto auto;
+    z-index: 0;
+    width: 849px;
+    height: 549px;
+}
+
+
+.spline {
+    width: 849px !important;
+    height: 549px !important;
+
+    canvas {
+        width: 849px !important;
+        height: 549px !important;
+    }
 }
