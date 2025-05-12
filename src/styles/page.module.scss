@@ -751,7 +751,10 @@
 
     @media screen and (max-width: 1200px) {
       padding: 50px 40px;
+    }
 
+    @media screen and (max-width: 768px) {
+      padding: 40px 16px;
     }
 
     .sectionTop {
@@ -762,6 +765,17 @@
         width: 100%;
         margin-bottom: 35px;
         font-weight: 400;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 39px;
+          line-height: 49px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 25px;
+          line-height: 35px;
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -771,12 +785,26 @@
         grid-template-columns: 33% 34% 24%;
         justify-content: space-between;
 
+        @media screen and (max-width: 978px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+
         .points {
-          div {
+          @media screen and (max-width: 978px) {
+            width: 100%;
+          }
+
+          div.pointList {
             display: flex;
             gap: 18%;
             margin-bottom: 36px;
             cursor: pointer;
+
 
             &:last-child {
               margin-bottom: 0;
@@ -796,21 +824,36 @@
               font-weight: 300;
             }
 
+            &.showPoints {
+
+              span {
+                opacity: 1;
+              }
+
+              strong {
+                font-weight: 700;
+              }
+            }
           }
 
-          .showPoints {
-            span {
-              opacity: 1;
-            }
-
-            strong {
-              font-weight: 700;
-            }
+          .mobilePoints {
+            z-index: 99;
+            position: relative;
+            margin-bottom: 20px;
           }
         }
 
         .desc {
           position: relative;
+
+          @media screen and (max-width: 978px) {
+            width: 50%;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            min-height: 220px;
+          }
 
           div {
             position: absolute;
@@ -822,6 +865,12 @@
             line-height: 36px;
             font-weight: 300;
             pointer-events: none;
+
+            @media screen and (max-width: 768px) {
+              max-width: 100%;
+              font-size: 18px;
+              line-height: 1.5;
+            }
           }
 
           .showDesc {
@@ -831,8 +880,6 @@
             z-index: 1;
           }
         }
-
-
 
         .imgWrap {}
 
