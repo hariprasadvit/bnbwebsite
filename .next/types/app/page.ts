@@ -1,4 +1,4 @@
-// File: /Volumes/Batman/Projects/BNB-Website/bnb-website/src/app/page.js
+// File: D:\BeyondB&B\bnb-website\src\app\page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
