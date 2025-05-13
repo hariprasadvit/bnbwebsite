@@ -6,6 +6,8 @@ import AiAgent from "/public/Home/AiAgent.svg";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../../styles/page.module.scss";
+import AnimatedSVG from "./animatedgifs";
+
 
 export default function SectionList() {
   const sections = [
@@ -61,7 +63,7 @@ export default function SectionList() {
       title: "AI Agents",
       description:
         "Our AI-driven intelligent agents enhance automation, decision-making, and personalization across industries. At Boolean and Beyond, we design AI agents that integrate NLP, knowledge graphs, and machine learning to provide context-aware solutions.",
-      imageSrc: AiAgent,
+      imageSrc: AnimatedSVG,
       imageAlt: "AI Agents",
       listItems: [
         "Conversational AI & Chatbots",
@@ -72,6 +74,7 @@ export default function SectionList() {
       link: "#",
       isReverse: true,
       showScroll: false,
+      isGif: "true"
     },
   ];
   return (
@@ -79,24 +82,26 @@ export default function SectionList() {
       {sections.map((section, index) => (
         <section
           key={index}
-          className={`${styles.splitSection} ${
-            index == 3 ? styles.lastSection : ""
-          }`}
+          className={`${styles.splitSection} ${index == 3 ? styles.lastSection : ""
+            }`}
         >
           <div
-            className={`${styles.splitSectionContainer} ${
-              section.isReverse ? styles.rowReverseImportant : ""
-            } `}
+            className={`${styles.splitSectionContainer} ${section.isReverse ? styles.rowReverseImportant : ""
+              } `}
           >
             <div className={styles.splitSectionLeft}>
-              <Image
-                src={section.imageSrc}
-                alt={section.imageAlt}
-                layout="intrinsic"
-                width={315}
-                height={360}
-                sizes="(max-width: 768px) 100vw, 315px"
-              />
+              {
+                section?.isGif ? <AnimatedSVG /> :
+
+                  <Image
+                    src={section.imageSrc}
+                    alt={section.imageAlt}
+                    layout="intrinsic"
+                    width={315}
+                    height={360}
+                    sizes="(max-width: 768px) 100vw, 315px"
+                  />
+              }
             </div>
             <div className={styles.splitSectionRight}>
               <h2>{section.title}</h2>

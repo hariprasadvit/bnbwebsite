@@ -14,6 +14,7 @@ const InsightsAndBlog = dynamic(() =>
 );
 const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
+const OurWorks = dynamic(() => import("@/components/Projects/OurWorks"));
 
 export default function Projects() {
   return (
@@ -25,6 +26,7 @@ export default function Projects() {
         <Header whiteHeader active="projects" />
         <Banner />
         <RepeatSection />
+        <OurWorks />
         <NumberSection />
         <OurClients />
         <DataDriven />
