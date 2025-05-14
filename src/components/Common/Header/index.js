@@ -106,14 +106,19 @@ export default function Header({ whiteHeader, active }) {
           <ul>
             <li>
               <Link
-                href="/projects"
-                className={active === "projects" ? styles.active : ""}
+                href="/"
+              // className={active === "projects" ? styles.active : ""}
               >
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/">Services</Link>
+              <Link
+                href="/services"
+                className={active === "services" ? styles.active : ""}
+              >
+                Services
+              </Link>
             </li>
             <li>
               <Link href="/about">About</Link>
