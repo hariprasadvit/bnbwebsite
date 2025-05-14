@@ -27,7 +27,7 @@ export default function Projects() {
         <Banner />
         <RepeatSection />
         <OurWorks />
-        <NumberSection />
+        <NumberSection disableTopPadding />
         <OurClients />
         <DataDriven />
         <Testimonials />

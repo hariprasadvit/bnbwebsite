@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function NumberSection() {
+export default function NumberSection({
+  disableTopPadding = false
+}) {
   return (
     <section className={styles.numberSection}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${disableTopPadding ? styles.custompadding : ""}`}>
         <div className={styles.nSectionLeft}>
           <p>
             Lorem Epsom text goes here And some more lore Epsom Text goes here

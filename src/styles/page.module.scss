@@ -134,7 +134,8 @@
   }
 }
 
-.splitSectionLeft img {}
+.splitSectionLeft img {
+}
 
 .splitSectionRight {
   max-width: 100%;
@@ -236,7 +237,7 @@
 
 .ourWorks {
   background: #000;
-  color: #FEFDF5;
+  color: #fefdf5;
 
   .container {
     padding: 55px 0 55px 80px;
@@ -332,12 +333,12 @@
           max-width: 97%;
         }
 
-        >div {
+        > div {
           margin-bottom: -216px;
         }
 
         .workItem {
-          >div {
+          > div {
             min-height: 545px;
             max-width: 480px;
             margin-right: 25px;
@@ -387,11 +388,10 @@
               height: 100px;
             }
           }
-
         }
 
         p {
-          color: #090B0F;
+          color: #090b0f;
           font-size: 31px;
           line-height: 42px;
 
@@ -466,12 +466,18 @@
 
 .numberSection {
   .container {
+    &.custompadding {
+      padding: 80px 80px 80px;
+    }
     padding: 290px 80px 80px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
 
     @media screen and (max-width: 1200px) {
+      &.custompadding {
+        padding: 80px 40px 80px;
+      }
       padding: 290px 40px 80px;
     }
 
@@ -480,6 +486,9 @@
     }
 
     @media screen and (max-width: 768px) {
+      &.custompadding {
+        padding: 40px 16px 40px;
+      }
       padding: 250px 16px 40px;
     }
 
@@ -598,7 +607,7 @@
 //Our clients
 
 .OurClients {
-  background: #ECE3DA;
+  background: #ece3da;
 
   .container {
     padding: 40px 80px 80px;
@@ -620,7 +629,7 @@
     }
 
     .clientItem {
-      >div {
+      > div {
         max-width: 300px;
         display: flex;
         justify-content: center;
@@ -742,7 +751,6 @@
   }
 }
 
-
 // DataDriven Section
 
 .dataDriven {
@@ -805,7 +813,6 @@
             margin-bottom: 36px;
             cursor: pointer;
 
-
             &:last-child {
               margin-bottom: 0;
             }
@@ -825,7 +832,6 @@
             }
 
             &.showPoints {
-
               span {
                 opacity: 1;
               }
@@ -881,8 +887,8 @@
           }
         }
 
-        .imgWrap {}
-
+        .imgWrap {
+        }
       }
     }
   }
@@ -902,7 +908,7 @@
   }
 
   .container {
-    background: #ECE3DA;
+    background: #ece3da;
     padding: 40px 50px;
 
     @media screen and (max-width: 550px) {
@@ -910,7 +916,7 @@
     }
 
     .testimonialItem {
-      >div {
+      > div {
         .desc {
           font-size: 27px;
           line-height: 42px;
@@ -961,11 +967,7 @@
             }
           }
         }
-
-
       }
-
-
     }
 
     .customArrow {

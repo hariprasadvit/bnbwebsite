@@ -546,7 +546,7 @@
 
 .page_ourWorks__Zk2lG {
   background: #000;
-  color: #FEFDF5;
+  color: #fefdf5;
 }
 .page_ourWorks__Zk2lG .page_container__G0ivw {
   padding: 55px 0 55px 80px;
@@ -706,7 +706,7 @@
   }
 }
 .page_ourWorks__Zk2lG .page_container__G0ivw .page_bottomContent__uyt0u .page_workSlider__iu5P_ p {
-  color: #090B0F;
+  color: #090b0f;
   font-size: 31px;
   line-height: 42px;
 }
@@ -778,9 +778,15 @@
   justify-content: space-between;
   gap: 40px;
 }
+.page_numberSection__R4dlz .page_container__G0ivw.page_custompadding__pWFkx {
+  padding: 80px 80px 80px;
+}
 @media screen and (max-width: 1200px) {
   .page_numberSection__R4dlz .page_container__G0ivw {
     padding: 290px 40px 80px;
+  }
+  .page_numberSection__R4dlz .page_container__G0ivw.page_custompadding__pWFkx {
+    padding: 80px 40px 80px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -791,6 +797,9 @@
 @media screen and (max-width: 768px) {
   .page_numberSection__R4dlz .page_container__G0ivw {
     padding: 250px 16px 40px;
+  }
+  .page_numberSection__R4dlz .page_container__G0ivw.page_custompadding__pWFkx {
+    padding: 40px 16px 40px;
   }
 }
 .page_numberSection__R4dlz .page_container__G0ivw .page_nSectionLeft__7cebx p {
@@ -902,7 +911,7 @@
 }
 
 .page_OurClients__dGe_j {
-  background: #ECE3DA;
+  background: #ece3da;
 }
 .page_OurClients__dGe_j .page_container__G0ivw {
   padding: 40px 80px 80px;
@@ -1175,7 +1184,7 @@
   }
 }
 .page_Testimonials__lLupi .page_container__G0ivw {
-  background: #ECE3DA;
+  background: #ece3da;
   padding: 40px 50px;
 }
 @media screen and (max-width: 550px) {

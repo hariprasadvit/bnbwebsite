@@ -1,75 +1,202 @@
+// /* banner */
+
+// .banner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 180px 80px 0;
+//     position: relative;
+//     background: #000;
+//     min-height: 100vh;
+// }
+
+// .content {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 90px;
+//     position: relative;
+//     z-index: 1;
+// }
+
+// .content h1 {
+//     font-size: 67px;
+//     line-height: 67px;
+//     color: #A0A0A0;
+//     font-weight: bold;
+//     margin-bottom: 45px;
+//     max-width: 1045px;
+//     width: 100%;
+// }
+
+// .content h1 span {
+//     color: #fff;
+//     display: block;
+// }
+
+// .content h2 {
+//     font-size: 24px;
+//     line-height: 32px;
+//     color: #FEFDF5;
+//     font-weight: normal;
+//     width: 100%;
+//     max-width: 990px;
+//     padding: 0 0 90px 90px;
+// }
+
+// .scroll {
+//     font-size: 18px;
+//     line-height: 14px;
+//     color: #FEFDF5;
+//     margin-top: 30px;
+//     width: 100%;
+//     text-align: right;
+// }
+
+// .splineWrap {
+//     position: absolute;
+//     inset: 0;
+//     margin: auto 0 auto auto;
+//     z-index: 0;
+//     width: 849px;
+//     height: 549px;
+// }
+
+// .spline {
+//     width: 849px !important;
+//     height: 549px !important;
+
+//     canvas {
+//         width: 849px !important;
+//         height: 549px !important;
+//     }
+// }
+
 /* banner */
 
 .banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 180px 80px 0;
-    position: relative;
-    background: #000;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 180px 80px 0;
+  position: relative;
+  background: #000;
+  min-height: 100vh;
+  flex-direction: row;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 140px 40px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 20px 0;
+  }
 }
 
 .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 90px;
-    position: relative;
-    z-index: 1;
-}
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 2;
 
-.content h1 {
+  h1 {
     font-size: 67px;
     line-height: 67px;
-    color: #A0A0A0;
+    color: #a0a0a0;
     font-weight: bold;
     margin-bottom: 45px;
     max-width: 1045px;
     width: 100%;
-}
 
-.content h1 span {
-    color: #fff;
-    display: block;
-}
+    span {
+      color: #fff;
+      display: block;
+    }
 
-.content h2 {
+    @media (max-width: 1200px) {
+      font-size: 38px;
+      line-height: 56px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 56px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 42px;
+    }
+  }
+
+  h2 {
     font-size: 24px;
     line-height: 32px;
-    color: #FEFDF5;
+    color: #fefdf5;
     font-weight: normal;
     width: 100%;
     max-width: 990px;
     padding: 0 0 90px 90px;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      line-height: 28px;
+      padding: 0 0 60px 40px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 0 0 40px 20px;
+    }
+  }
 }
 
-
 .scroll {
-    font-size: 18px;
-    line-height: 14px;
-    color: #FEFDF5;
-    margin-top: 30px;
-    width: 100%;
-    text-align: right;
+  font-size: 18px;
+  line-height: 14px;
+  color: #fefdf5;
+  margin-top: 30px;
+  width: 100%;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }
 
 .splineWrap {
-    position: absolute;
-    inset: 0;
-    margin: auto 0 auto auto;
-    z-index: 0;
-    width: 849px;
-    height: 549px;
+  position: absolute;
+  top: 5;
+  right: 0;
+  bottom: 110px;
+  width: 849px;
+  height: 549px;
+  z-index: 1;
+  pointer-events: none;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2; // Optional: fade it for better text readability
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-
 .spline {
-    width: 849px !important;
-    height: 549px !important;
+  width: 100% !important;
+  height: 100% !important;
 
-    canvas {
-        width: 849px !important;
-        height: 549px !important;
-    }
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
