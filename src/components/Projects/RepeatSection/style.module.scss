@@ -284,9 +284,6 @@
         gap: 50px;
         width: 100%;
 
-        max-width: 1200px;
-        margin: 0 auto;
-
         p {
           font-size: 21px;
           line-height: 26px;
@@ -370,6 +367,7 @@
       .contentWrapper {
         .topSection {
           padding-bottom: 14px;
+
           strong {
             font-size: 22px;
             line-height: 36px;
@@ -377,6 +375,7 @@
         }
 
         .contentLeft {
+
           //   padding-left: 25px;
           h3 {
             font-size: 20px;

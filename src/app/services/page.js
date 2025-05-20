@@ -23,7 +23,7 @@ export default function Projects() {
         <title>Projects || B&B</title>
       </Head>
       <div style={{ width: "100%" }}>
-        <Header whiteHeader active="projects" />
+        <Header whiteHeader active="services" />
         <Banner />
         <RepeatSection />
         <OurWorks />

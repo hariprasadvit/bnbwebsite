@@ -183,18 +183,12 @@
         align-items: center;
         font-size: 24px;
         color: white;
-        transition: transform 0.3s ease;
-
-        // Disable cursor globally first
-        * {
-          cursor: default;
-        }
+        cursor: pointer;
 
         &:hover {
           transform: scale(1.05);
         }
 
-        // Enable pointer for specific elements
         ul li a,
         .joinNow a {
           cursor: pointer;
@@ -321,6 +315,7 @@
             margin: 10px 0;
             font-size: 18px;
           }
+
           li:last-child a {
             letter-spacing: 5px;
             font-weight: bold;
@@ -368,6 +363,7 @@
 
       // Hover red color for all menu items except menuItem_1
       .menuItem:not(.menuItem_1) {
+
         ul li:hover,
         .joinNow:hover {
           color: red;

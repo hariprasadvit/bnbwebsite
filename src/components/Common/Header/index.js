@@ -7,7 +7,6 @@ import styles from "./header.module.scss";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 export default function Header({ whiteHeader, active }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
@@ -91,12 +90,11 @@ export default function Header({ whiteHeader, active }) {
     },
   };
 
-
-
   return (
     <header
-      className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""} ${whiteHeader ? styles.whiteHeader : ""
-        }`}
+      className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""} ${
+        whiteHeader ? styles.whiteHeader : ""
+      }`}
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
@@ -107,7 +105,7 @@ export default function Header({ whiteHeader, active }) {
             <li>
               <Link
                 href="/"
-              // className={active === "projects" ? styles.active : ""}
+                // className={active === "projects" ? styles.active : ""}
               >
                 Projects
               </Link>
@@ -134,47 +132,6 @@ export default function Header({ whiteHeader, active }) {
           <div></div>
           <div></div>
         </div>
-        {/* <AnimatePresence>
-          {isMainMenuOpen && (
-            <motion.div
-              className={styles.mainMenu}
-              variants={mainMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_1}`}
-                variants={item1Variants}
-                transition={transition}
-              >
-                <div onClick={closeMainMenu}>Close</div>
-              </motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_2}`}
-                variants={item2Variants}
-                transition={transition}
-              >
-                <div>Location</div>
-              </motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_3}`}
-                variants={item3Variants}
-                transition={transition}
-              ></motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_4}`}
-                variants={item4Variants}
-                transition={transition}
-              ></motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_5}`}
-                variants={item5Variants}
-                transition={transition}
-              ></motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence> */}
 
         <AnimatePresence>
           {isMainMenuOpen && (
@@ -194,18 +151,25 @@ export default function Header({ whiteHeader, active }) {
                   &times;
                 </div>
 
-                <motion.nav variants={fadeUpStaggerContainer} initial="closed" animate="open">
-                  {["Home", "About", "Services", "Hiring", "Portfolio", "Clients", "Contact Us"].map((label, index) => (
-                    <motion.a
-                      key={index}
-                      href="#"
-                      variants={fadeUpItem}
-                    >
+                <motion.nav
+                  variants={fadeUpStaggerContainer}
+                  initial="closed"
+                  animate="open"
+                >
+                  {[
+                    "Home",
+                    "About",
+                    "Services",
+                    "Hiring",
+                    "Portfolio",
+                    "Clients",
+                    "Contact Us",
+                  ].map((label, index) => (
+                    <motion.a key={index} href="#" variants={fadeUpItem}>
                       {label}
                     </motion.a>
                   ))}
                 </motion.nav>
-
               </motion.div>
 
               <motion.div
@@ -216,7 +180,10 @@ export default function Header({ whiteHeader, active }) {
                 <div className={styles.locationCard}>
                   <img src="/image.png" alt="Map" className={styles.mapImage} />
                   <div className={styles.hoverOverlay}>
-                    <a href="/your-location-link" className={styles.locationText}>
+                    <a
+                      href="/your-location-link"
+                      className={styles.locationText}
+                    >
                       The Location
                     </a>
                   </div>
@@ -228,7 +195,11 @@ export default function Header({ whiteHeader, active }) {
                 variants={item3Variants}
                 transition={transition}
               >
-                <motion.ul variants={fadeUpStaggerContainer} initial="closed" animate="open">
+                <motion.ul
+                  variants={fadeUpStaggerContainer}
+                  initial="closed"
+                  animate="open"
+                >
                   {[
                     "THE GAMEPLAY",
                     "ABOUT LARP",
@@ -236,7 +207,7 @@ export default function Header({ whiteHeader, active }) {
                     "HISTORY",
                     "PEOPLE",
                     "JOIN",
-                    "..."
+                    "...",
                   ].map((text, index) => (
                     <motion.li key={index} variants={fadeUpItem}>
                       <a href="#">{text}</a>
@@ -244,7 +215,6 @@ export default function Header({ whiteHeader, active }) {
                   ))}
                 </motion.ul>
               </motion.div>
-
 
               <motion.div
                 className={`${styles.menuItem} ${styles.menuItem_4}`}
@@ -268,7 +238,7 @@ export default function Header({ whiteHeader, active }) {
                 variants={item5Variants}
                 transition={transition}
               >
-                <div >
+                <div>
                   <h3>Learn how to participate</h3>
                 </div>
               </motion.div>

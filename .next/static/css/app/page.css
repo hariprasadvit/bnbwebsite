@@ -112,10 +112,7 @@
   align-items: center;
   font-size: 24px;
   color: white;
-  transition: transform 0.3s ease;
-}
-.header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem__iRTWm * {
-  cursor: default;
+  cursor: pointer;
 }
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem__iRTWm:hover {
   transform: scale(1.05);
