@@ -8,41 +8,19 @@ import styles from "../../../styles/page.module.scss";
 import workImg1 from "/public/Home/ourworks1.png";
 import workImg2 from "/public/Home/ourworks2.png";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function OurWorks() {
-  const workItems = [
-    {
-      image: workImg1,
-      text: "Digital Product Development for",
-      highlight: "BCCI to Engage Cricket Fans",
-      bg: "#E7F2E7",
-    },
-    {
-      image: workImg2,
-      text: "Teaming Up with the Global FMCG Chain",
-      highlight: "for Creating a Digital Platform",
-      bg: "#FFFFFF",
-    },
-    {
-      image: workImg2,
-      text: "Teaming Up with the Global FMCG Chain",
-      highlight: "for Creating a Digital Platform",
-      bg: "#ECE3DA",
-    },
-    {
-      image: workImg2,
-      text: "Teaming Up with the Global FMCG Chain",
-      highlight: "for Creating a Digital Platform",
-      bg: "#E7F2E7",
-    },
-    {
-      image: workImg1,
-      text: "Digital Product Development for",
-      highlight: "BCCI to Engage Cricket Fans",
-      bg: "#FFFFFF",
-    },
-  ];
+export default function OurWorks({ data }) {
+  let {
+    title,
+    description = `           Our AI-driven intelligent agents enhance automation,
+            decision-making, and personalization across industries. At Boolean
+            and Beyond, we design AI agents that integrate NLP, knowledge
+            graphs, and machine learning to provide context-aware solutions.`,
+    card,
+  } = data;
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -96,20 +74,32 @@ export default function OurWorks() {
     prevArrow: <SamplePrevArrow />,
   };
 
+  function formatTitleWithBreaks(title, wordsPerLine = 3) {
+    const words = title.split(" ");
+    const lines = [];
+
+    for (let i = 0; i < words.length; i += wordsPerLine) {
+      lines.push(words.slice(i, i + wordsPerLine).join(" "));
+    }
+
+    return lines.map((line, idx) => (
+      <React.Fragment key={idx}>
+        {line}
+        {idx !== lines.length - 1 && <br />}
+      </React.Fragment>
+    ));
+  }
+
   return (
     <section className={styles.ourWorks}>
       <div className={styles.container}>
         <div className={styles.topContent}>
           <h2>
-            Some of our <br />
-            Pride Works
+            {/* Some of our <br />
+            Pride Works */}
+            {formatTitleWithBreaks(title)}
           </h2>
-          <p>
-            Our AI-driven intelligent agents enhance automation,
-            decision-making, and personalization across industries. At Boolean
-            and Beyond, we design AI agents that integrate NLP, knowledge
-            graphs, and machine learning to provide context-aware solutions.
-          </p>
+          <p>{description}</p>
         </div>
         <div className={styles.bottomContent}>
           <div className={styles.scrollDown}>
@@ -117,22 +107,34 @@ export default function OurWorks() {
           </div>
           <div className={styles.workSlider}>
             <Slider {...settings}>
-              {workItems.map((item, index) => (
-                <div className={styles.workItem} key={index}>
-                  <div
-                    style={{
-                      background: item.bg,
-                    }}
-                  >
-                    <div className={styles.imageWrap}>
-                      <Image src={item.image} alt="Our Works" />
+              {data.card.map((item, index) => {
+                const imageUrl = item.image?.url
+                  ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
+                  : "/fallback-image.png"; // fallback image
+
+                return (
+                  <div className={styles.workItem} key={index}>
+                    <div
+                      style={{
+                        background: item.bg,
+                      }}
+                    >
+                      <div className={styles.imageWrap}>
+                        <Image
+                          src={imageUrl}
+                          width={300}
+                          height={150}
+                          alt="Our Works"
+                        />
+                      </div>
+                      {/* <p>
+                        {item.text} <strong>{item.highlight}</strong>
+                      </p> */}
+                      <ReactMarkdown>{item.description}</ReactMarkdown>
                     </div>
-                    <p>
-                      {item.text} <strong>{item.highlight}</strong>
-                    </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </Slider>
           </div>
         </div>

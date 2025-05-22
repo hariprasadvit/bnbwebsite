@@ -13,39 +13,8 @@ import client5 from "/public/Home/client5.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function OurClients() {
-  const sliderItems = [
-    {
-      image: client1,
-    },
-    {
-      image: client2,
-    },
-    {
-      image: client3,
-    },
-    {
-      image: client4,
-    },
-    {
-      image: client5,
-    },
-    {
-      image: client1,
-    },
-    {
-      image: client2,
-    },
-    {
-      image: client3,
-    },
-    {
-      image: client4,
-    },
-    {
-      image: client5,
-    },
-  ];
+export default function OurClients({ data }) {
+  let { clients, title = "Clients who trusted us" } = data;
 
   const settings = {
     dots: false,
@@ -88,18 +57,28 @@ export default function OurClients() {
   return (
     <section className={styles.OurClients}>
       <div className={styles.container}>
-        <h2>Clients who trusted us</h2>
+        <h2>{title}</h2>
         <div className={styles.clientSlider}>
           <Slider {...settings}>
-            {sliderItems.map((item, index) => (
-              <div className={styles.clientItem} key={index}>
-                <div>
-                  <div className={styles.imageWrap}>
-                    <Image src={item.image} alt="Our Works" />
+            {clients.map((item, index) => {
+              const imageUrl = item?.url
+                ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
+                : "/fallback-image.png"; // fallback image
+              return (
+                <div className={styles.clientItem} key={index}>
+                  <div>
+                    <div className={styles.imageWrap}>
+                      <Image
+                        src={imageUrl}
+                        alt="Our Works"
+                        width={300}
+                        height={51}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </Slider>
         </div>
       </div>

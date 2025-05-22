@@ -9,27 +9,8 @@ import client2 from "/public/Home/client2.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function Testimonials() {
-  const sliderItems = [
-    {
-      desc: "“ They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.”",
-      name: "Gaurav Saxena",
-      position: "General Manager , Bcci",
-      image: client2,
-    },
-    {
-      desc: "“ They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.”",
-      name: "Gaurav Saxena",
-      position: "General Manager , Bcci",
-      image: client2,
-    },
-    {
-      desc: "“ They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.”",
-      name: "Gaurav Saxena",
-      position: "General Manager , Bcci",
-      image: client2,
-    },
-  ];
+export default function Testimonials({ data }) {
+  let { testimonial_card } = data;
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -87,20 +68,30 @@ export default function Testimonials() {
       <div className={styles.container}>
         <div className={styles.clientSlider}>
           <Slider {...settings}>
-            {sliderItems.map((item, index) => (
-              <div className={styles.testimonialItem} key={index}>
-                <div>
-                  <div className={styles.desc}>{item.desc}</div>
-                  <div className={styles.profileData}>
-                    <Image src={item.image} alt="client" />
-                    <div>
-                      <strong>{item.name}</strong>
-                      <span>{item.position}</span>
+            {testimonial_card.map((item, index) => {
+              const imageUrl = item.image?.url
+                ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
+                : "/fallback-image.png"; // fallback image
+              return (
+                <div className={styles.testimonialItem} key={index}>
+                  <div>
+                    <div className={styles.desc}>{item.content}</div>
+                    <div className={styles.profileData}>
+                      <Image
+                        src={imageUrl}
+                        alt="client"
+                        width={77}
+                        height={77}
+                      />
+                      <div>
+                        <strong>{item.author}</strong>
+                        <span>{item.author_designation}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </Slider>
         </div>
       </div>

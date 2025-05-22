@@ -1,18 +1,15 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
-export default function Banner() {
+export default function Banner({ data }) {
+  let { title, hightlighted_title, sub_title } = data;
   return (
     <section className={styles.banner} id="bannerTop">
       <div className={`${styles.content}`}>
         <div>
           <h1>
-            WE BUILD MVPS, ENTERPRISE APPS & <span> AI-POWERED SYSTEMS </span>
+            {title} <span> {hightlighted_title} </span>
           </h1>
-          <h2>
-            From rapid MVP development to enterprise-scale applications, we
-            build tailored solutions—leveraging knowledge graphs and AI
-            agents—to power automation, intelligence, and efficiency.
-          </h2>
+          <h2>{sub_title}</h2>
         </div>
         <div className={styles.scroll}>(Scroll)</div>
         <div className={styles.dashedBorder}></div>
