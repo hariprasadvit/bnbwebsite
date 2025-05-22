@@ -1412,11 +1412,13 @@
 @media screen and (max-width: 1200px) {
   .page_overviewCardWrapper__HP7HL {
     padding: 50px 40px;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 768px) {
   .page_overviewCardWrapper__HP7HL {
     padding: 40px 16px;
+    gap: 16px;
   }
 }
 
@@ -1454,6 +1456,7 @@
 @media screen and (max-width: 1200px) {
   .page_overviewCardDescription__sBQm9 {
     padding-left: 8.333333vw;
+    gap: 16px;
   }
 }
 @media screen and (max-width: 768px) {
