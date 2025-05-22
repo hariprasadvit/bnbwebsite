@@ -341,6 +341,12 @@
   width: 100%;
   padding: 65px;
 }
+@media screen and (max-width: 768px) {
+  .page_contactBannerContent__gn1JN {
+    padding: 40px 16px;
+    gap: 16px;
+  }
+}
 
 .page_contactUsButton__8hzqa {
   display: flex;

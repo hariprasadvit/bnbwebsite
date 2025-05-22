@@ -47,6 +47,11 @@
   gap: 32px;
   width: 100%;
   padding: 65px;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px ;
+    gap: 16px;
+  }
 }
 
 .contactUsButton{
