@@ -1,6 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
+import { homeBannerData } from "@/components/data";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const SectionList = dynamic(() => import("@/components/Home/SectionList"));
@@ -22,7 +23,7 @@ export default function Home() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner />
+        <Banner bannerData={homeBannerData} />
         <SectionList />
         <ContactBanner />
         <OurWorks />

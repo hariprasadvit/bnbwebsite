@@ -16,6 +16,24 @@
   }
 }
 
+.bannerImage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.bannerImageBottomContainer{
+  border: 1px solid #707070;
+  border-top: unset;
+}
 .contactBanner{
   display: flex;
   background-color: red;
@@ -926,6 +944,7 @@
 
         .desc {
           position: relative;
+          width: 100%;
 
           @media screen and (max-width: 978px) {
             width: 50%;
@@ -947,6 +966,10 @@
             font-weight: 300;
             pointer-events: none;
 
+            @media screen and (max-width: 978px) {
+              position: unset;
+            }
+
             @media screen and (max-width: 768px) {
               max-width: 100%;
               font-size: 18px;
@@ -963,6 +986,21 @@
         }
 
         .imgWrap {
+        }
+      }
+      .sectionBottomContainer.noImage {
+        grid-template-columns: 33% 67%;
+      
+        .desc {
+          width: 100% !important;
+      
+          div {
+            max-width: 100%;
+          }
+        }
+      
+        .points {
+          width: 100% !important;
         }
       }
     }
@@ -1095,5 +1133,58 @@
         right: 60px !important;
       }
     }
+  }
+}
+
+.overviewCardWrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 10.06588579vw 8.27232796vw 5.6368960vw 5.7467057vw;
+  gap: 52.5px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 50px 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px;
+  }
+}
+
+.overviewCardTitle{
+  font-size: 36px;
+  line-height: 65px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  color: #000000;
+
+
+  @media screen and (max-width: 1200px) {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+.overviewCardDescription{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: -0.15px;
+  font-weight: 300;
+  color: #000000;
+  padding-left: 17.8257686vw;
+
+  @media screen and (max-width: 1200px) {
+   padding-left: 8.333333vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: unset;
   }
 }

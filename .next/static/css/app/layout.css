@@ -133,17 +133,20 @@ img {
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
+  min-width: 110px;
 }
 @media screen and (max-width: 1200px) {
   .knowMoreLink {
     font-size: 18px;
     line-height: 30px;
+    min-width: 90px;
   }
 }
 @media screen and (max-width: 768px) {
   .knowMoreLink {
     font-size: 16px;
     line-height: 26px;
+    min-width: 80px;
   }
 }
 .knowMoreLink::before {
