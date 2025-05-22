@@ -1,27 +1,17 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import {
-  digitalProductBannerData,
-  digitalProductoverviewData,
-} from "@/components/data";
+import { digitalProductBannerData } from "@/components/data";
 import OurWorks from "@/components/Projects/OurWorks";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const BannerImage = dynamic(() =>
   import("@/components/DigitalProducts/BannerImage")
 );
-const OverViewCard = dynamic(() =>
-  import("@/components/DigitalProducts/OverviewCard")
-);
-const ContactBanner = dynamic(() => import("@/components/Home/ContactBanner"));
-
 const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
-const OurClients = dynamic(() => import("@/components/Home/OurClients"));
 const InsightsAndBlog = dynamic(() =>
   import("@/components/Home/InsightsAndBlog")
 );
-const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
 export default function DigitalProduct() {
@@ -38,9 +28,6 @@ export default function DigitalProduct() {
         <Testimonials />
         <OurWorks />
         <InsightsAndBlog />
-
-        {/* <OurClients /> */}
-        {/* <DataDriven /> */}
       </div>
     </div>
   );
