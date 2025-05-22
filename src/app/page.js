@@ -4,6 +4,7 @@ import Header from "@/components/Common/Header";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const SectionList = dynamic(() => import("@/components/Home/SectionList"));
+const ContactBanner = dynamic(() => import("@/components/Home/ContactBanner"));
 const OurWorks = dynamic(() => import("@/components/Home/OurWorks"));
 const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
 const OurClients = dynamic(() => import("@/components/Home/OurClients"));
@@ -23,6 +24,7 @@ export default function Home() {
         <Header />
         <Banner />
         <SectionList />
+        <ContactBanner />
         <OurWorks />
         <NumberSection />
         <OurClients />
