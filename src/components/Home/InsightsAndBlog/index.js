@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function InsightsAndBlog({ data }) {
+export default function InsightsAndBlog({ data = {} }) {
   let { insights_blogs_card, title = "Our Insights and Blog" } = data;
 
   return (
@@ -9,7 +9,7 @@ export default function InsightsAndBlog({ data }) {
       <div className={styles.container}>
         <h2>{title}</h2>
         <div className={styles.contentList}>
-          {insights_blogs_card.map((item, index) => (
+          {insights_blogs_card?.map((item, index) => (
             <div className={styles.content} key={index}>
               <div className={styles.heading}>{item.title}</div>
               <div className={styles.desc}>

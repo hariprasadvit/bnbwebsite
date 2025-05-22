@@ -9,7 +9,7 @@ import client2 from "/public/Home/client2.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function Testimonials({ data }) {
+export default function Testimonials({ data = {} }) {
   let { testimonial_card } = data;
 
   function SampleNextArrow(props) {
@@ -68,7 +68,7 @@ export default function Testimonials({ data }) {
       <div className={styles.container}>
         <div className={styles.clientSlider}>
           <Slider {...settings}>
-            {testimonial_card.map((item, index) => {
+            {testimonial_card?.map((item, index) => {
               const imageUrl = item.image?.url
                 ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
                 : "/fallback-image.png"; // fallback image

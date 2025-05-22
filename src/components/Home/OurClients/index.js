@@ -13,8 +13,8 @@ import client5 from "/public/Home/client5.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function OurClients({ data }) {
-  let { clients, title = "Clients who trusted us" } = data;
+export default function OurClients({ data = {} }) {
+  let { clients = [], title = "Clients who trusted us" } = data;
 
   const settings = {
     dots: false,
@@ -60,7 +60,7 @@ export default function OurClients({ data }) {
         <h2>{title}</h2>
         <div className={styles.clientSlider}>
           <Slider {...settings}>
-            {clients.map((item, index) => {
+            {clients?.map((item, index) => {
               const imageUrl = item?.url
                 ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
                 : "/fallback-image.png"; // fallback image

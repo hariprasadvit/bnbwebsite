@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
-export default function Banner({ data }) {
+export default function Banner({ data = {} }) {
   let { title, hightlighted_title, sub_title } = data;
   return (
     <section className={styles.banner} id="bannerTop">
