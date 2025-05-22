@@ -1,9 +1,11 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
+import { homeBannerData } from "@/components/data";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const SectionList = dynamic(() => import("@/components/Home/SectionList"));
+const ContactBanner = dynamic(() => import("@/components/Home/ContactBanner"));
 const OurWorks = dynamic(() => import("@/components/Home/OurWorks"));
 const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
 const OurClients = dynamic(() => import("@/components/Home/OurClients"));
@@ -21,8 +23,9 @@ export default function Home() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner />
+        <Banner bannerData={homeBannerData} />
         <SectionList />
+        <ContactBanner />
         <OurWorks />
         <NumberSection />
         <OurClients />

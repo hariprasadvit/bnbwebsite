@@ -6,7 +6,7 @@ import dataDrivenImg from "../../../../public/Home/dataDriven.svg";
 import Image from "next/image";
 import Select from "react-select";
 
-export default function DataDriven() {
+export default function DataDriven({ showDataDrivenImg = true }) {
   const isMobileView = () => window.innerWidth <= 978;
 
   const [activeMenu, setActiveMenu] = useState("01");
@@ -35,7 +35,11 @@ export default function DataDriven() {
           <h2>Make data driven decisions with real - Time insights</h2>
         </div>
         <div className={styles.sectionBottom}>
-          <div className={styles.sectionBottomContainer}>
+          <div
+            className={`${styles.sectionBottomContainer} ${
+              !showDataDrivenImg ? styles.noImage : ""
+            }`}
+          >
             <div className={styles.points}>
               {mobile ? (
                 <div className={styles.mobilePoints}>
@@ -70,36 +74,48 @@ export default function DataDriven() {
               )}
             </div>
             <div className={styles.desc}>
-              <div className={activeMenu === "01" ? styles.showDesc : null}>
-                Our AI-driven intelligent agents enhance automation,
-                decision-making, and personalization across industries. At
-                Boolean and Beyond, we design AI agents that integrate NLP,
-                knowledge graphs, and machine learning to provide context-aware
-                solutions.
-              </div>
-              <div className={activeMenu === "02" ? styles.showDesc : null}>
-                Personalization across industries. At Boolean and Beyond, we
-                design AI agents that integrate NLP, knowledge graphs, and
-                machine learning to provide context-aware solutions.
-              </div>
-              <div className={activeMenu === "03" ? styles.showDesc : null}>
-                AI agents that integrate NLP, knowledge graphs, and machine
-                learning to provide context-aware solutions.
-              </div>
-              <div className={activeMenu === "04" ? styles.showDesc : null}>
-                Intelligent that integrate NLP, knowledge graphs, and machine
-                learning to provide context-aware solutions.
-              </div>
-              <div className={activeMenu === "05" ? styles.showDesc : null}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-                deserunt illo iure impedit similique fugiat laborum suscipit est
-                perferendis totam debitis dolorem numquam nisi architecto, cum
-                eos placeat quam ipsam?
-              </div>
+              {activeMenu === "01" && (
+                <div className={activeMenu === "01" ? styles.showDesc : null}>
+                  Our AI-driven intelligent agents enhance automation,
+                  decision-making, and personalization across industries. At
+                  Boolean and Beyond, we design AI agents that integrate NLP,
+                  knowledge graphs, and machine learning to provide
+                  context-aware solutions.
+                </div>
+              )}
+              {activeMenu === "02" && (
+                <div className={activeMenu === "02" ? styles.showDesc : null}>
+                  Personalization across industries. At Boolean and Beyond, we
+                  design AI agents that integrate NLP, knowledge graphs, and
+                  machine learning to provide context-aware solutions.
+                </div>
+              )}
+              {activeMenu === "03" && (
+                <div className={activeMenu === "03" ? styles.showDesc : null}>
+                  AI agents that integrate NLP, knowledge graphs, and machine
+                  learning to provide context-aware solutions.
+                </div>
+              )}
+              {activeMenu === "04" && (
+                <div className={activeMenu === "04" ? styles.showDesc : null}>
+                  Intelligent that integrate NLP, knowledge graphs, and machine
+                  learning to provide context-aware solutions.
+                </div>
+              )}
+              {activeMenu === "05" && (
+                <div className={activeMenu === "05" ? styles.showDesc : null}>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
+                  deserunt illo iure impedit similique fugiat laborum suscipit
+                  est perferendis totam debitis dolorem numquam nisi architecto,
+                  cum eos placeat quam ipsam?
+                </div>
+              )}
             </div>
-            <div className={styles.imgWrap}>
-              <Image src={dataDrivenImg} alt="Data Driven" />
-            </div>
+            {showDataDrivenImg && (
+              <div className={styles.imgWrap}>
+                <Image src={dataDrivenImg} alt="Data Driven" />
+              </div>
+            )}
           </div>
         </div>
       </div>
