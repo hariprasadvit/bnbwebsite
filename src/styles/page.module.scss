@@ -47,6 +47,11 @@
   gap: 32px;
   width: 100%;
   padding: 65px;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px ;
+    gap: 16px;
+  }
 }
 
 .contactUsButton{
@@ -1144,10 +1149,12 @@
 
   @media screen and (max-width: 1200px) {
     padding: 50px 40px;
+    gap: 30px;
   }
 
   @media screen and (max-width: 768px) {
     padding: 40px 16px;
+    gap: 16px;
   }
 }
 
@@ -1182,6 +1189,7 @@
 
   @media screen and (max-width: 1200px) {
    padding-left: 8.333333vw;
+   gap: 16px;
   }
 
   @media screen and (max-width: 768px) {
