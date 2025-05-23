@@ -60,7 +60,11 @@ export default function SectionList({ data = {} }) {
                 </Link>
               </div>
             </div>
-            {index != 3 ? <div className={styles.dashedBorder}></div> : ""}
+            <div
+              className={`${styles.dashedBorder} ${
+                index === common_section_list.length - 1 ? styles.noBorder : ""
+              }`}
+            ></div>
           </section>
         );
       })}

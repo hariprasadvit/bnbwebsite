@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
 import { fetchAPI } from "@/lib/fetch-api";
 import BlockRenderer from "@/components/Home/BlockRenderer";
-import InsightsAndBlog from "@/components/Home/InsightsAndBlog";
 
 async function loader() {
   noStore();
@@ -44,6 +43,7 @@ export default async function Home(props) {
         {/* 
         <Banner />
         <SectionList />
+        <ContactBanner />
         <OurWorks />
         <NumberSection />
         <OurClients />

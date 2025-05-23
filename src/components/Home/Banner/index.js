@@ -11,8 +11,12 @@ export default function Banner({ data = {} }) {
           </h1>
           <h2>{sub_title}</h2>
         </div>
-        <div className={styles.scroll}>(Scroll)</div>
-        <div className={styles.dashedBorder}></div>
+        {bannerData.showScroll && <div className={styles.scroll}>(Scroll)</div>}
+        <div
+          className={`${styles.dashedBorder} ${
+            hideBorder ? styles.noBorder : ""
+          }`}
+        ></div>
       </div>
     </section>
   );

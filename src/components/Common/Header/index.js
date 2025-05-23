@@ -104,7 +104,7 @@ export default function Header({ whiteHeader, active }) {
           <ul>
             <li>
               <Link
-                href="/"
+                href="/digital-product"
                 // className={active === "projects" ? styles.active : ""}
               >
                 Projects
