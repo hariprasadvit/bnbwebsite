@@ -22,3 +22,55 @@ export const digitalProductoverviewData = {
     `While this platform was initially available only as a web-based application, BCCI sought to expand its reach by launching an Android and IOS application to cater to the growing number of users. Our company was entrusted with the task of developing a user-friendly web and mobile application for the IPL Fantasy League, ensuring seamless integration with the existing IPL web and mobile platform and enhancing the gaming experience for cricket fans across the globe.`,
   ],
 };
+
+export const projectBannerData = {
+  highlight: "FROM ZERO TO LAUNCH—",
+  heading: "WITHOUT WASTING MONTHS.",
+  subheading:
+    "At Boolean and Beyond, we offer a range of tech-driven solutions to help businesses achieve their goals.We don’t just build MVPs, we build what your users will love—and your investors will notice.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+export const mvpCardContent = {
+  introHeading:
+    "We don’t just build MVPs for startups, we create clarity, ignite momentum, and lay the foundation for scalable success.",
+  tag: "(Approach)",
+  mainHeading: "Focused. Functional. Fast.",
+  description:
+    "We collaborate closely with founders and product teams to distill big visions into actionable MVPs. Every feature is intentional, designed to validate core ideas and create real user impact. By prioritizing speed without sacrificing usability, we help teams move from concept to traction—fast, smart, and ready to grow.",
+};
+
+export const productDevelopmentData = [
+  {
+    number: "01",
+    title: "UX Research",
+    description:
+      "From SaaS tools to consumer platforms and marketplaces, we shape MVPs that are lean, testable, and launch-ready. Our focus: build what matters, validate fast, and adapt with insight. Because the first version should do more than exist—it should perform.",
+  },
+  {
+    number: "02",
+    title: "UX Design",
+    description: "",
+  },
+  {
+    number: "03",
+    title: "UI Design",
+    description: "",
+  },
+  {
+    number: "04",
+    title: "Front End Development",
+    description: "",
+  },
+  {
+    number: "05",
+    title: "Backend Development",
+    description: "",
+  },
+  {
+    number: "06",
+    title: "Testing",
+    description: "",
+  },
+];

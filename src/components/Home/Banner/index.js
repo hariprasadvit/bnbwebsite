@@ -4,12 +4,33 @@ import styles from "../../../styles/page.module.scss";
 export default function Banner({ bannerData, hideBorder = false }) {
   return (
     <section className={styles.banner} id="bannerTop">
-      <div className={`${styles.content}`}>
+      <div className={styles.content}>
         <div>
-          <h1>
-            {bannerData.heading} <span>{bannerData.highlight}</span>
+          <h1
+            className={`${styles.bannerHeading} ${
+              bannerData.highlightFirst ? styles.smallHeading : ""
+            }`}
+          >
+            {bannerData.highlightFirst ? (
+              <>
+                <span>{bannerData.highlight}</span> {bannerData.heading}
+              </>
+            ) : (
+              <>
+                {bannerData.heading} <span>{bannerData.highlight}</span>
+              </>
+            )}
           </h1>
-          <h2>{bannerData.subheading}</h2>
+          <h2
+            className={`${styles.subheading} ${
+              bannerData.highlightFirst ? styles.smallSubheading : ""
+            }`}
+          >
+            {bannerData.subheading}
+          </h2>
+          <div className={styles.bannerContactUsButton}>
+            <div className={styles.contactUsButton}>Talk to Us</div>
+          </div>
         </div>
         {bannerData.showScroll && <div className={styles.scroll}>(Scroll)</div>}
         <div
