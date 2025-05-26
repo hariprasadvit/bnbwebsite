@@ -1,3 +1,5 @@
+/** @format */
+
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
@@ -18,7 +20,7 @@ export default function DigitalProduct() {
   return (
     <div>
       <Head>
-        <title>B&B</title>
+        <title>Boolean & Beyond</title>
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
