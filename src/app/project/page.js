@@ -30,7 +30,11 @@ export default function Project() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner bannerData={projectBannerData} hideBorder />
+        <Banner
+          bannerData={projectBannerData}
+          hideBorder
+          contactUs={"Talk to Us"}
+        />
         <MvpStartUpCard data={mvpCardContent} />
         <PlatformCardContainer />
         <ProductDevelopment
