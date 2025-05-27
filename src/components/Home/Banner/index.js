@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 
-export default function Banner({ bannerData, hideBorder = false }) {
+export default function Banner({ bannerData, hideBorder = false, contactUs }) {
   return (
     <section className={styles.banner} id="bannerTop">
       <div className={styles.content}>
@@ -28,9 +28,11 @@ export default function Banner({ bannerData, hideBorder = false }) {
           >
             {bannerData.subheading}
           </h2>
-          <div className={styles.bannerContactUsButton}>
-            <div className={styles.contactUsButton}>Talk to Us</div>
-          </div>
+          {contactUs && (
+            <div className={styles.bannerContactUsButton}>
+              <div className={styles.contactUsButton}>{contactUs}</div>
+            </div>
+          )}
         </div>
         {bannerData.showScroll && <div className={styles.scroll}>(Scroll)</div>}
         <div
