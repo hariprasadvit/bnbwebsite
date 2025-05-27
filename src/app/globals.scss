@@ -1,9 +1,10 @@
+/** @format */
+
 :root {
   font-family: var(--font-titillium), sans-serif;
-  --background: #FEFDF5;
+  --background: #fefdf5;
   --foreground: #171717;
 }
-
 
 html,
 body {
@@ -14,7 +15,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: "Titillium Web", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
