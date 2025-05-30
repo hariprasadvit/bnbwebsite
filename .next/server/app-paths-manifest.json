@@ -1,4 +1,5 @@
 {
-  "/project/page": "app/project/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/services/page": "app/services/page.js",
+  "/case-study-detail/page": "app/case-study-detail/page.js"
 }
