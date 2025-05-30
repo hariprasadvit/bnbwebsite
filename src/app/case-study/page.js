@@ -1,22 +1,12 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import {
-  mvpCardContent,
-  productDevelopmentData,
-  projectBannerData,
-} from "@/components/data";
-import OurWorks from "@/components/Projects/OurWorks";
-import MvpStartUpCard from "@/components/Projects/MvpStartUpCard";
-import PlatformCardContainer from "@/components/Projects/PlatformCard";
+import { projectBannerData } from "@/components/data";
 import DataDriven from "@/components/Home/DataDriven";
-import ProductDevelopment from "@/components/Projects/ProductDevelopment";
+import OurClients from "@/components/Home/OurClients";
+import ListCardContainer from "@/components/CaseStudy/ListCard";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
-const BannerImage = dynamic(() =>
-  import("@/components/DigitalProducts/BannerImage")
-);
-const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
 const InsightsAndBlog = dynamic(() =>
   import("@/components/Home/InsightsAndBlog")
 );
@@ -34,15 +24,10 @@ export default function Project() {
           bannerData={projectBannerData}
           hideBorder
           contactUs={"Talk to Us"}
+          whiteBG={true}
         />
-        <MvpStartUpCard data={mvpCardContent} />
-        <PlatformCardContainer />
-        <ProductDevelopment
-          title={
-            " We don’t just build MVPs for startups,we create clarity, ignitemomentum, and lay the foundation for scalable success."
-          }
-          productDevelopmentData={productDevelopmentData}
-        />
+        <ListCardContainer />
+        <OurClients />
         <DataDriven />
         <Testimonials />
         <InsightsAndBlog />

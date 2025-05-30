@@ -14,6 +14,10 @@
   @media screen and (max-width: 768px) {
     padding: 180px 16px 0;
   }
+
+  &.whiteBG {
+    background: #fff;
+  }
 }
 
 .bannerImage {

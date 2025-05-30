@@ -1,11 +1,5 @@
 {
   "pages": {
-    "/case-study-detail/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/case-study-detail/page.css",
-      "static/chunks/app/case-study-detail/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -17,6 +11,11 @@
       "static/chunks/main-app.js",
       "static/css/app/case-study/page.css",
       "static/chunks/app/case-study/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
