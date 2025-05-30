@@ -2,13 +2,14 @@ import React from "react";
 import styles from "../../../styles/page.module.scss";
 
 export default function Banner({
-  bannerData,
   data = {},
   hideBorder = false,
   contactUs,
   whiteBG,
+  showScroll = true,
+  highlightFirst = false,
 }) {
-  let { title, hightlighted_title, sub_title } = data;
+  let { title, highlighted_title, sub_title, description } = data;
   return (
     <section
       className={`${styles.banner} ${whiteBG ? styles.whiteBG : ""}`}
@@ -18,31 +19,33 @@ export default function Banner({
         <div>
           <h1
             className={`${styles.bannerHeading} ${
-              bannerData.highlightFirst ? styles.smallHeading : ""
+              highlightFirst ? styles.smallHeading : ""
             }`}
           >
-            {bannerData.highlightFirst ? (
+            {highlightFirst ? (
               <>
-                <span>{bannerData.highlight}</span> {bannerData.heading}
+                <span>{highlighted_title}</span> {title}
               </>
             ) : (
               <>
                 {/* {bannerData.heading} <span>{bannerData.highlight}</span> */}
-                {title} <span> {hightlighted_title} </span>
+                {title} <span> {highlighted_title} </span>
               </>
             )}
           </h1>
           <h2
             className={`${styles.subheading} ${
-              bannerData.highlightFirst ? styles.smallSubheading : ""
+              highlightFirst ? styles.smallSubheading : ""
             }`}
           >
             {/* {bannerData.subheading} */}
-            {sub_title}
+            {sub_title || description}
           </h2>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
-              <div className={styles.contactUsButton}>{contactUs}</div>
+              <div className={styles.contactUsButton}>
+                {contactUs.button_text}
+              </div>
             </div>
           )}
         </div>
