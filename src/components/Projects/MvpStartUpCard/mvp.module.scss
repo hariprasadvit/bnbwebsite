@@ -1,0 +1,90 @@
+.mvpStartUpCardContainer{
+    background-color: #F2F2F2;
+    padding: 80px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 58.18px;
+    // margin-bottom: 80px;
+
+    @media screen and (max-width: 1200px) {
+        padding: 40px ;
+        // margin-bottom: 40px;
+          }
+    @media screen and (max-width: 768px) {
+    padding: 40px 16px;
+    gap: 32px;
+      }
+  
+
+    h2{
+        font-size: 32px;
+        line-height: 42px;
+        max-width: 600px;
+        letter-spacing: -0.22px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+            line-height: 24px;
+            max-width: 100%;
+          }
+    }
+}
+
+.paragraph{
+  color: #000000;
+    font-size: 21px;
+    line-height: 42px;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 30px;
+
+      }
+    
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 26px;
+
+      }
+}
+.mvpStartUpHeading{
+    font-size: 21px;
+    line-height: 36px;
+    font-weight: bold;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 30px;
+
+      }
+    
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 26px;
+
+      }
+}
+.content{
+    display: grid;
+    grid-template-columns: minmax(auto, 425px) minmax(auto, 574px);
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    max-width: 574px;
+    width: 100%;
+    gap: 30px;
+
+    @media screen and (max-width: 768px) {
+       max-width: 100%;
+       gap: 16px;
+      }
+}
