@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
-export default function Banner({ data = {} }) {
+export default function Banner({
+  data = {},
+  hideBorder = false,
+  showScroll = true,
+}) {
   let { title, hightlighted_title, sub_title } = data;
   return (
     <section className={styles.banner} id="bannerTop">
@@ -11,7 +15,7 @@ export default function Banner({ data = {} }) {
           </h1>
           <h2>{sub_title}</h2>
         </div>
-        {bannerData.showScroll && <div className={styles.scroll}>(Scroll)</div>}
+        {showScroll && <div className={styles.scroll}>(Scroll)</div>}
         <div
           className={`${styles.dashedBorder} ${
             hideBorder ? styles.noBorder : ""

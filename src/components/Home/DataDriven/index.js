@@ -89,9 +89,6 @@ export default function DataDriven({ data = {}, showDataDrivenImg = true }) {
                 </div>
               ))}
             </div>
-            <div className={styles.imgWrap}>
-              <Image src={dataDrivenImg} alt="Data Driven" />
-            </div>
             {showDataDrivenImg && (
               <div className={styles.imgWrap}>
                 <Image src={dataDrivenImg} alt="Data Driven" />
