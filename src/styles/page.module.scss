@@ -14,32 +14,38 @@
   @media screen and (max-width: 768px) {
     padding: 180px 16px 0;
   }
+
+  &.whiteBG {
+    background: #fff;
+  }
 }
 
-.bannerImage{
+.bannerImage {
   display: flex;
   flex-direction: column;
   width: 100%;
 
   overflow: hidden;
 
-  img{
+  img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
 }
 
-.bannerImageBottomContainer{
+.bannerImageBottomContainer {
   border: 1px solid #707070;
   border-top: unset;
 }
-.contactBanner{
+
+.contactBanner {
   display: flex;
   background-color: red;
 
 }
-.contactBannerContent{
+
+.contactBannerContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,26 +55,30 @@
   padding: 65px;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 16px ;
+    padding: 40px 16px;
     gap: 16px;
   }
 }
 
-.contactUsButton{
+.contactUsButton {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 211px;
   height: 56px;
   background: #000000;
-  border-radius: 28px;
+  border-radius: 4px;
   font-size: 21px;
   line-height: 36px;
   letter-spacing: -0.15px;
   font-weight: 300;
   color: #FFFFFF;
-  pointer-events: none;
   margin-top: 22px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 18px;
@@ -76,7 +86,7 @@
   }
 }
 
-.bannerContactUsButton{
+.bannerContactUsButton {
   padding-top: 36.18px;
 }
 
@@ -86,7 +96,7 @@
   flex-direction: column;
 }
 
-.contactBannerTitle{
+.contactBannerTitle {
   font-size: 65px;
   letter-spacing: -0.25px;
   color: #FFFFFF;
@@ -103,7 +113,7 @@
   }
 }
 
-.contactBannerDescription{
+.contactBannerDescription {
   max-width: 760px;
   font-size: 21px;
   line-height: 36px;
@@ -270,8 +280,7 @@
   }
 }
 
-.splitSectionLeft img {
-}
+.splitSectionLeft img {}
 
 .splitSectionRight {
   max-width: 100%;
@@ -469,12 +478,12 @@
           max-width: 97%;
         }
 
-        > div {
+        >div {
           margin-bottom: -216px;
         }
 
         .workItem {
-          > div {
+          >div {
             min-height: 545px;
             max-width: 480px;
             margin-right: 25px;
@@ -605,6 +614,7 @@
     &.custompadding {
       padding: 80px 80px 80px;
     }
+
     padding: 290px 80px 80px;
     display: flex;
     justify-content: space-between;
@@ -614,6 +624,7 @@
       &.custompadding {
         padding: 80px 40px 80px;
       }
+
       padding: 290px 40px 80px;
     }
 
@@ -625,6 +636,7 @@
       &.custompadding {
         padding: 40px 16px 40px;
       }
+
       padding: 250px 16px 40px;
     }
 
@@ -765,7 +777,7 @@
     }
 
     .clientItem {
-      > div {
+      >div {
         max-width: 300px;
         display: flex;
         justify-content: center;
@@ -1028,20 +1040,20 @@
           }
         }
 
-        .imgWrap {
-        }
+        .imgWrap {}
       }
+
       .sectionBottomContainer.noImage {
         grid-template-columns: 33% 67%;
-      
+
         .desc {
           width: 100% !important;
-      
+
           div {
             max-width: 100%;
           }
         }
-      
+
         .points {
           width: 100% !important;
         }
@@ -1072,7 +1084,7 @@
     }
 
     .testimonialItem {
-      > div {
+      >div {
         .desc {
           font-size: 27px;
           line-height: 42px;
@@ -1179,7 +1191,7 @@
   }
 }
 
-.overviewCardWrapper{
+.overviewCardWrapper {
   display: flex;
   flex-direction: column;
   padding: 10.06588579vw 8.27232796vw 5.6368960vw 5.7467057vw;
@@ -1196,7 +1208,7 @@
   }
 }
 
-.overviewCardTitle{
+.overviewCardTitle {
   font-size: 36px;
   line-height: 65px;
   font-weight: 600;
@@ -1214,7 +1226,8 @@
     line-height: 40px;
   }
 }
-.overviewCardDescription{
+
+.overviewCardDescription {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1226,8 +1239,8 @@
   padding-left: 17.8257686vw;
 
   @media screen and (max-width: 1200px) {
-   padding-left: 8.333333vw;
-   gap: 16px;
+    padding-left: 8.333333vw;
+    gap: 16px;
   }
 
   @media screen and (max-width: 768px) {

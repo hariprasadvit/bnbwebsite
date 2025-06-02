@@ -152,6 +152,9 @@
       line-height: 26px;
       padding: 0 0 40px 20px;
     }
+    @media (max-width: 680px) {
+      padding-left: 0;
+    }
   }
 }
 

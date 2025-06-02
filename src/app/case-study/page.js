@@ -1,20 +1,18 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import { digitalProductBannerData } from "@/components/data";
-import OurWorks from "@/components/Projects/OurWorks";
+import { projectBannerData } from "@/components/data";
+import DataDriven from "@/components/Home/DataDriven";
+import OurClients from "@/components/Home/OurClients";
+import ListCardContainer from "@/components/CaseStudy/ListCard";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
-const BannerImage = dynamic(() =>
-  import("@/components/DigitalProducts/BannerImage")
-);
-const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
 const InsightsAndBlog = dynamic(() =>
   import("@/components/Home/InsightsAndBlog")
 );
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export default function DigitalProduct() {
+export default function Project() {
   return (
     <div>
       <Head>
@@ -22,11 +20,16 @@ export default function DigitalProduct() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner bannerData={digitalProductBannerData} hideBorder />
-        <BannerImage />
-        <NumberSection disableTopPadding={true} />
+        <Banner
+          bannerData={projectBannerData}
+          hideBorder
+          contactUs={"Talk to Us"}
+          whiteBG={true}
+        />
+        <ListCardContainer />
+        <OurClients />
+        <DataDriven />
         <Testimonials />
-        <OurWorks />
         <InsightsAndBlog />
       </div>
     </div>

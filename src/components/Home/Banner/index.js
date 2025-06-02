@@ -1,9 +1,17 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 
-export default function Banner({ bannerData, hideBorder = false, contactUs }) {
+export default function Banner({
+  bannerData,
+  hideBorder = false,
+  contactUs,
+  whiteBG,
+}) {
   return (
-    <section className={styles.banner} id="bannerTop">
+    <section
+      className={`${styles.banner} ${whiteBG ? styles.whiteBG : ""}`}
+      id="bannerTop"
+    >
       <div className={styles.content}>
         <div>
           <h1
