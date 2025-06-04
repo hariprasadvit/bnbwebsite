@@ -22,7 +22,7 @@ const InsightsAndBlog = dynamic(() =>
 );
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export default function Project() {
+export default function ServiceDetails() {
   return (
     <div>
       <Head>

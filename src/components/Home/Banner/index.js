@@ -38,7 +38,11 @@ export default function Banner({
           </h2>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
-              <div className={styles.contactUsButton}>{contactUs}</div>
+              <div
+                className={`${styles.contactUsButton} ${styles.CustomBorderRadius}`}
+              >
+                {contactUs}
+              </div>
             </div>
           )}
         </div>
