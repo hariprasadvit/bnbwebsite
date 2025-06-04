@@ -101,15 +101,11 @@ border-radius: 4px;
 }
 
 .contactBannerTitle {
-  font-size: 65px;
+  font-size: 27px;
+  line-height: 65px;
   letter-spacing: -0.25px;
   color: #FFFFFF;
   font-weight: 600;
-
-  @media screen and (max-width: 1440px) {
-    font-size: 27px;
-    line-height: 65px;
-  }
 
   @media screen and (max-width: 768px) {
     font-size: 27px;
@@ -136,18 +132,13 @@ border-radius: 4px;
 }
 
 .content h1 {
-  font-size: 67px;
-  line-height: 67px;
+  font-size: 48px;
+  line-height: 48px;
   color: #000;
   font-weight: bold;
   margin-bottom: 45px;
   max-width: 685px;
   width: 100%;
-
-  @media screen and (max-width: 1440px) {
-    font-size: 48px;
-    line-height: 48px;
-  }
 
   @media screen and (max-width: 768px) {
     font-size: 27px;
@@ -179,17 +170,12 @@ border-radius: 4px;
 }
 
 .content h2 {
-  font-size: 39px;
-  line-height: 50px;
+  font-size: 27px;
+  line-height: 37px;
   color: #000;
   font-weight: normal;
   width: 100%;
   max-width: 940px;
-
-  @media screen and (max-width: 1440px) {
-    font-size: 27px;
-    line-height: 37px;
-  }
 
   @media screen and (max-width: 768px) {
     font-size: 19px;
@@ -293,14 +279,9 @@ border-radius: 4px;
 }
 
 .splitSectionRight h2 {
-  font-size: 36px;
-  line-height: 65px;
+  font-size: 27px;
+  line-height: 49px;
   margin-bottom: 10px;
-
-  @media screen and (max-width: 1440px) {
-    font-size: 27px;
-    line-height: 49px;
-  }
 
   @media screen and (max-width: 768px) {
     font-size: 22px;
@@ -416,16 +397,11 @@ border-radius: 4px;
       }
 
       h2 {
-        font-size: 56px;
-        line-height: 68px;
+        font-size: 42px;
+        line-height: 52px;
         font-weight: 300;
         max-width: 320px;
         width: 100%;
-
-        @media screen and (max-width: 1440px) {
-          font-size: 42px;
-          line-height: 52px;
-        }
 
         @media screen and (max-width: 768px) {
           font-size: 27px;
@@ -542,16 +518,10 @@ border-radius: 4px;
 
         p {
           color: #090b0f;
-          font-size: 31px;
-          line-height: 42px;
-
-          @media screen and (max-width: 1440px) {
-            font-size: 24px;
-            line-height: 32px;
-          }
+          font-size: 24px;
+          line-height: 32px;
 
           @media screen and (max-width: 768px) {
-            font-size: 24px;
             line-height: 34px;
           }
 
@@ -660,15 +630,10 @@ border-radius: 4px;
       width: 100%;
 
       h3 {
-        font-size: 49px;
-        line-height: 59px;
+        font-size: 36px;
+        line-height: 42px;
         margin-bottom: 30px;
         font-weight: 400;
-
-        @media screen and (max-width: 1440px) {
-          font-size: 36px;
-          line-height: 42px;
-        }
 
         @media screen and (max-width: 768px) {
           font-size: 25px;
@@ -703,15 +668,10 @@ border-radius: 4px;
           align-items: flex-start;
 
           strong {
-            font-size: 64px;
+            font-size: 42px;
             line-height: 36px;
             font-weight: 500;
             margin-bottom: 10px;
-
-            @media screen and (max-width: 1440px) {
-              font-size: 42px;
-              line-height: 36px;
-            }
 
             @media screen and (max-width: 768px) {
               font-size: 35px;
@@ -815,13 +775,8 @@ border-radius: 4px;
     }
 
     h2 {
-      font-size: 49px;
+      font-size: 36px;
       line-height: 59px;
-
-      @media screen and (max-width: 1440px) {
-        font-size: 36px;
-        line-height: 59px;
-      }
 
       @media screen and (max-width: 768px) {
         font-size: 25px;
@@ -920,17 +875,12 @@ border-radius: 4px;
 
     .sectionTop {
       h2 {
-        font-size: 49px;
-        line-height: 59px;
+        font-size: 36px;
+        line-height: 42px;
         max-width: 435px;
         width: 100%;
         margin-bottom: 35px;
         font-weight: 400;
-
-        @media screen and (max-width: 1440px) {
-          font-size: 36px;
-          line-height: 42px;
-        }
 
         @media screen and (max-width: 768px) {
           font-size: 25px;
