@@ -98,8 +98,8 @@ export default function SectionList() {
                   src={section.imageSrc}
                   alt={section.imageAlt}
                   layout="intrinsic"
-                  width={315}
-                  height={360}
+                  width={267}
+                  height={306}
                   sizes="(max-width: 768px) 100vw, 315px"
                 />
               )}

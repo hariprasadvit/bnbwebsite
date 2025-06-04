@@ -24,7 +24,12 @@ export default function CaseStudyDetails() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner bannerData={digitalProductBannerData} hideBorder />
+        <Banner
+          headingMaxWidth={"555px"}
+          descriptionMaxWidth={"650px"}
+          bannerData={digitalProductBannerData}
+          hideBorder
+        />
         <BannerImage />
         <NumberSection disableTopPadding={true} />
         <Testimonials />

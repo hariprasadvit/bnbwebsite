@@ -11,6 +11,7 @@ import MvpStartUpCard from "@/components/Projects/MvpStartUpCard";
 import PlatformCardContainer from "@/components/Projects/PlatformCard";
 import DataDriven from "@/components/Home/DataDriven";
 import ProductDevelopment from "@/components/Projects/ProductDevelopment";
+import { servicePlatformCards } from "@/components/CaseStudy/ListCard/platformCardData";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const BannerImage = dynamic(() =>
@@ -34,9 +35,10 @@ export default function ServiceDetails() {
           bannerData={projectBannerData}
           hideBorder
           contactUs={"Talk to Us"}
+          descriptionMaxWidth={"828px"}
         />
         <MvpStartUpCard data={mvpCardContent} />
-        <PlatformCardContainer />
+        <PlatformCardContainer platformCards={servicePlatformCards} />
         <ProductDevelopment
           title={
             " We don’t just build MVPs for startups,we create clarity, ignitemomentum, and lay the foundation for scalable success."

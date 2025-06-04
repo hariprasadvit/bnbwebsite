@@ -6,6 +6,8 @@ export default function Banner({
   hideBorder = false,
   contactUs,
   whiteBG,
+  headingMaxWidth,
+  descriptionMaxWidth,
 }) {
   return (
     <section
@@ -15,6 +17,7 @@ export default function Banner({
       <div className={styles.content}>
         <div>
           <h1
+            style={{ maxWidth: headingMaxWidth }}
             className={`${styles.bannerHeading} ${
               bannerData.highlightFirst ? styles.smallHeading : ""
             }`}
@@ -30,6 +33,7 @@ export default function Banner({
             )}
           </h1>
           <h2
+            style={{ maxWidth: descriptionMaxWidth }}
             className={`${styles.subheading} ${
               bannerData.highlightFirst ? styles.smallSubheading : ""
             }`}

@@ -23,7 +23,11 @@ export default function Home() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner bannerData={homeBannerData} />
+        <Banner
+          headingMaxWidth={"490px"}
+          descriptionMaxWidth={"650px"}
+          bannerData={homeBannerData}
+        />
         <SectionList />
         <ContactBanner />
         <OurWorks />

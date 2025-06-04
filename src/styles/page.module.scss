@@ -137,7 +137,7 @@ border-radius: 4px;
   color: #000;
   font-weight: bold;
   margin-bottom: 45px;
-  max-width: 685px;
+  // max-width: 685px;
   width: 100%;
 
   @media screen and (max-width: 768px) {
@@ -175,7 +175,7 @@ border-radius: 4px;
   color: #000;
   font-weight: normal;
   width: 100%;
-  max-width: 940px;
+  // max-width: 940px;
 
   @media screen and (max-width: 768px) {
     font-size: 19px;
@@ -186,7 +186,7 @@ border-radius: 4px;
 .content .smallSubheading {
   font-size: 27px;
   line-height: 32px;
-  max-width: 900px;
+  max-width: 850px;
 
   // @media screen and (max-width: 1200px) {
   //   font-size: 29px;
@@ -260,7 +260,7 @@ border-radius: 4px;
 }
 
 .splitSectionLeft {
-  max-width: 360px;
+  max-width: 270px;
   width: 100%;
 
   @media screen and (max-width: 768px) {
@@ -433,10 +433,10 @@ border-radius: 4px;
 
       .scrollDown {
         position: absolute;
-        top: 59%;
+        top: 45%;
         transform: rotate(270deg);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
           top: 39%;
         }
 
@@ -465,19 +465,22 @@ border-radius: 4px;
 
         .workItem {
           >div {
-            min-height: 545px;
-            max-width: 480px;
-            margin-right: 25px;
+            min-height: 414px;
+            min-width: 483px;
+            max-width: 483px;
+            width: 100%;
+            // margin-right: 25px;
             background: rgb(255, 255, 255);
             display: flex;
             flex-direction: column;
-            padding: 100px 50px;
+            padding: 61px 50px 54px 50px;
             align-items: flex-start;
 
             @media screen and (max-width: 1200px) {
-              min-height: 485px;
-              max-width: 420px;
+              min-height: 310px;
+              max-width: 380px;
               padding: 30px 40px;
+              min-width: 380px;
             }
 
             @media screen and (max-width: 768px) {
@@ -495,11 +498,11 @@ border-radius: 4px;
         }
 
         .imageWrap {
-          margin-bottom: 75px;
+          margin-bottom: 48px;
 
-          @media screen and (max-width: 768px) {
-            margin-bottom: 50px;
-          }
+          // @media screen and (max-width: 768px) {
+          //   margin-bottom: 50px;
+          // }
 
           @media screen and (max-width: 550px) {
             margin-bottom: 30px;

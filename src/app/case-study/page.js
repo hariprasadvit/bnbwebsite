@@ -5,6 +5,7 @@ import { projectBannerData } from "@/components/data";
 import DataDriven from "@/components/Home/DataDriven";
 import OurClients from "@/components/Home/OurClients";
 import ListCardContainer from "@/components/CaseStudy/ListCard";
+import { caseStudyPlatformCards } from "@/components/CaseStudy/ListCard/platformCardData";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 const InsightsAndBlog = dynamic(() =>
@@ -26,7 +27,7 @@ export default function CaseStudy() {
           contactUs={"Talk to Us"}
           whiteBG={true}
         />
-        <ListCardContainer />
+        <ListCardContainer platformCards={caseStudyPlatformCards} />
         <OurClients />
         <DataDriven />
         <Testimonials />
