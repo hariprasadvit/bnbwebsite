@@ -16,7 +16,7 @@ const InsightsAndBlog = dynamic(() =>
 );
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export default function DigitalProduct() {
+export default function CaseStudyDetails() {
   return (
     <div>
       <Head>

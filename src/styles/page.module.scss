@@ -86,6 +86,10 @@
   }
 }
 
+.CustomBorderRadius{
+border-radius: 4px;
+}
+
 .bannerContactUsButton {
   padding-top: 36.18px;
 }
@@ -184,7 +188,7 @@
 
   @media screen and (max-width: 1440px) {
     font-size: 27px;
-    line-height: 32px;
+    line-height: 37px;
   }
 
   @media screen and (max-width: 768px) {
@@ -1210,17 +1214,17 @@
 }
 
 .overviewCardTitle {
-  font-size: 36px;
+  font-size: 27px;
   line-height: 65px;
   font-weight: 600;
   letter-spacing: -0.25px;
   color: #000000;
 
 
-  @media screen and (max-width: 1200px) {
-    font-size: 30px;
-    line-height: 60px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 30px;
+  //   line-height: 60px;
+  // }
 
   @media screen and (max-width: 768px) {
     font-size: 22px;
