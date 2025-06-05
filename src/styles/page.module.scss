@@ -52,10 +52,10 @@
   align-items: center;
   gap: 32px;
   width: 100%;
-  padding: 65px;
+  padding: 35px 45px 50px;
 
   @media screen and (max-width: 768px) {
-    padding: 40px 16px;
+    padding: 35px 16px;
     gap: 16px;
   }
 }
@@ -102,7 +102,7 @@ border-radius: 4px;
 
 .contactBannerTitle {
   font-size: 27px;
-  line-height: 65px;
+  // line-height: 65px;
   letter-spacing: -0.25px;
   color: #FFFFFF;
   font-weight: 600;
@@ -169,6 +169,10 @@ border-radius: 4px;
   color: #d44116;
 }
 
+.descriptionContainerWithScroll{
+  display: flex;
+  justify-content: space-between;
+}
 .content h2 {
   font-size: 27px;
   line-height: 37px;
@@ -200,17 +204,19 @@ border-radius: 4px;
 }
 
 .scroll {
+  display: flex;
+  align-items: flex-end;
   font-size: 18px;
   line-height: 14px;
   color: #000;
-  margin-top: 30px;
-  width: 100%;
+  margin-bottom: 30px;
+  // width: 100%;
   text-align: right;
 }
 
 .dashedBorder {
   border-bottom: 2px dashed #000;
-  padding-top: 80px;
+  padding-top: 62px;
 
   @media screen and (max-width: 768px) {
     padding-top: 40px;
@@ -232,7 +238,7 @@ border-radius: 4px;
 /* MVP section */
 
 .splitSection {
-  padding: 80px 80px 0;
+  padding: 62px 80px 0;
 
   @media screen and (max-width: 1200px) {
     padding: 80px 40px 0;
@@ -251,11 +257,12 @@ border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 150px;
   position: relative;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    gap: 40px;
   }
 }
 
@@ -292,7 +299,7 @@ border-radius: 4px;
 .splitSectionRight p {
   font-size: 21px;
   line-height: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   font-weight: 300;
 
   @media screen and (max-width: 1200px) {
@@ -384,7 +391,7 @@ border-radius: 4px;
     .topContent {
       display: flex;
       justify-content: space-between;
-      padding-right: 80px;
+      padding: 55px 80px 55px 0px;
       gap: 40px;
 
       @media screen and (max-width: 1200px) {
@@ -434,11 +441,14 @@ border-radius: 4px;
       .scrollDown {
         position: absolute;
         top: 45%;
+        left: -40px;
         transform: rotate(270deg);
 
         @media screen and (max-width: 1200px) {
           top: 39%;
+          left: unset;
         }
+       
 
         @media screen and (max-width: 550px) {
           top: 23%;
@@ -593,17 +603,21 @@ border-radius: 4px;
       padding: 80px 80px 80px;
     }
 
-    padding: 290px 80px 80px;
+    padding: 290px 80px 54px;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 189px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 40px;
+    }
 
     @media screen and (max-width: 1200px) {
       &.custompadding {
         padding: 80px 40px 80px;
       }
 
-      padding: 290px 40px 80px;
+      padding: 290px 40px 54px;
     }
 
     @media screen and (max-width: 900px) {
@@ -623,13 +637,13 @@ border-radius: 4px;
         font-weight: 600;
         font-size: 18px;
         line-height: 23px;
-        max-width: 250px;
+        max-width: 340px;
         width: 100%;
       }
     }
 
     .nSectionRight {
-      max-width: 860px;
+      // max-width: 710px;
       width: 100%;
 
       h3 {
@@ -637,6 +651,12 @@ border-radius: 4px;
         line-height: 42px;
         margin-bottom: 30px;
         font-weight: 400;
+        max-width: 580px;
+        width: 100%;
+
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
+        }
 
         @media screen and (max-width: 768px) {
           font-size: 25px;
@@ -648,12 +668,15 @@ border-radius: 4px;
         font-size: 21px;
         line-height: 36px;
         margin-bottom: 50px;
+        max-width: 642px;
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;
           line-height: 25px;
         }
-
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
+        }
         @media screen and (max-width: 768px) {
           font-size: 16px;
           line-height: 20px;
@@ -726,10 +749,10 @@ border-radius: 4px;
   background: #ece3da;
 
   .container {
-    padding: 40px 80px 80px;
+    padding: 40px 80px 60px;
 
     @media screen and (max-width: 1200px) {
-      padding: 40px 40px 80px;
+      padding: 40px 40px 60px;
     }
 
     @media screen and (max-width: 768px) {
@@ -741,7 +764,7 @@ border-radius: 4px;
       line-height: 36px;
       font-weight: 600;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .clientItem {
@@ -767,7 +790,7 @@ border-radius: 4px;
 
 .InsightsAndBlog {
   .container {
-    padding: 80px 80px 0;
+    padding: 20px 80px 0;
 
     @media screen and (max-width: 1200px) {
       padding: 40px 40px 0;
@@ -866,7 +889,7 @@ border-radius: 4px;
 
 .dataDriven {
   .container {
-    padding: 50px 80px;
+    padding: 60px 80px 40px;
 
     @media screen and (max-width: 1200px) {
       padding: 50px 40px;
@@ -1152,7 +1175,7 @@ border-radius: 4px;
 .overviewCardWrapper {
   display: flex;
   flex-direction: column;
-  padding: 10.06588579vw 8.27232796vw 5.6368960vw 5.7467057vw;
+  padding: 72.5px 95.75px 0 95.75px;
   gap: 52.5px;
 
   @media screen and (max-width: 1200px) {

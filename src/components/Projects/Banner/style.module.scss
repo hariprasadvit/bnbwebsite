@@ -107,7 +107,7 @@
     line-height: 48px;
     color: #a0a0a0;
     font-weight: bold;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
     max-width: 660px;
     // max-width: 780px;
     width: 100%;
@@ -131,6 +131,12 @@
       font-size: 20px;
       line-height: 42px;
     }
+  }
+
+  .descriptionContainerWithScroll{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
   h2 {
@@ -160,11 +166,12 @@
 }
 
 .scroll {
+  display: flex;
   font-size: 18px;
   line-height: 14px;
   color: #fefdf5;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 125px;
+  // width: 100%;
   text-align: right;
 
   @media (max-width: 768px) {

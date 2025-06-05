@@ -179,6 +179,11 @@ img {
   display: flex;
   gap: 25px;
 }
+@media screen and (max-width: 500px) {
+  .slick-list .slick-track {
+    margin-top: 15px;
+  }
+}
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[9].use[5]!./src/components/Common/Footer/footer.module.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -277,13 +282,11 @@ img {
   font-size: 21px;
   line-height: 36px;
   font-weight: 600;
-  margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   .footer_footerWrapper__plMsW .footer_container__wa0BM .footer_quickLinksWrapper__MGeW_ .footer_linksWrap__k_NSk h5 {
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 10px;
   }
 }
 .footer_footerWrapper__plMsW .footer_container__wa0BM .footer_quickLinksWrapper__MGeW_ .footer_linksWrap__k_NSk ul {

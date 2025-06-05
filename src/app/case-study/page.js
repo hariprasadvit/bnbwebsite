@@ -26,6 +26,7 @@ export default function CaseStudy() {
           hideBorder
           contactUs={"Talk to Us"}
           whiteBG={true}
+          headingMarginBottom={30}
         />
         <ListCardContainer platformCards={caseStudyPlatformCards} />
         <OurClients />
