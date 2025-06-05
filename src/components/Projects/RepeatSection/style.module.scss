@@ -232,7 +232,7 @@
 .repeatSection {
   .container {
     // 🔧 Adjusted padding for large screens
-    padding: 80px 80px 0 80px;
+    padding: 40px 80px 0 80px;
 
     h2 {
       letter-spacing: -1.2px;
@@ -255,10 +255,10 @@
     }
 
     .contentWrapper {
-      margin-bottom: 10px;
+      margin-bottom: 25px;
 
       .topSection {
-        padding-bottom: 37px;
+        padding-bottom: 40px;
 
         strong {
           display: block;
@@ -305,6 +305,12 @@
           }
         }
       }
+    }
+
+    .contentWrapper:last-child {
+      padding-bottom: 75px;
+      border-bottom: 2px dashed #00000033;
+      margin-bottom: 55px;
     }
   }
 

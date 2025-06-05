@@ -32,7 +32,7 @@ export default function CaseStudyDetails() {
         />
         <BannerImage />
         <NumberSection disableTopPadding={true} />
-        <Testimonials />
+        <Testimonials testimonialPaddingTop={0} />
         <OurWorks />
         <InsightsAndBlog />
       </div>

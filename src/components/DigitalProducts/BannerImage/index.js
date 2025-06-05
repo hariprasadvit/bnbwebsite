@@ -15,7 +15,11 @@ const BannerImage = () => {
       <Image src={bannerImage} alt="Banner Image" width={0} height={0} />
       <div className={styles.bannerImageBottomContainer}>
         <OverViewCard overviewData={digitalProductoverviewData} />
-        <DataDriven showDataDrivenImg={false} />
+        <DataDriven
+          showDataDrivenImg={false}
+          titleMaxWidth={"305px"}
+          titleMarginBottom={"70px"}
+        />
       </div>
     </section>
   );
