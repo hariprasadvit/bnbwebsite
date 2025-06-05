@@ -7,6 +7,7 @@ export default function Banner({
   contactUs,
   whiteBG,
   headingMaxWidth,
+  headingMarginBottom,
   descriptionMaxWidth,
 }) {
   return (
@@ -17,7 +18,10 @@ export default function Banner({
       <div className={styles.content}>
         <div>
           <h1
-            style={{ maxWidth: headingMaxWidth }}
+            style={{
+              maxWidth: headingMaxWidth,
+              marginBottom: headingMarginBottom,
+            }}
             className={`${styles.bannerHeading} ${
               bannerData.highlightFirst ? styles.smallHeading : ""
             }`}

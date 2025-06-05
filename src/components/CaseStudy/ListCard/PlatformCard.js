@@ -3,7 +3,14 @@ import React from "react";
 import styles from "./platformCard.module.scss";
 import Image from "next/image";
 
-const PlatformCard = ({ number, label, title, image, description }) => {
+const PlatformCard = ({
+  number,
+  label,
+  title,
+  image,
+  description,
+  hideBorderBottom,
+}) => {
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
@@ -16,7 +23,7 @@ const PlatformCard = ({ number, label, title, image, description }) => {
           <Image src={image} alt={title} />
         </div>
         <p>{description}</p>
-        <div className={styles.bottomBorder}></div>
+        {!hideBorderBottom && <div className={styles.bottomBorder}></div>}
       </div>
     </div>
   );

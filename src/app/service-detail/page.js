@@ -36,6 +36,7 @@ export default function ServiceDetails() {
           hideBorder
           contactUs={"Talk to Us"}
           descriptionMaxWidth={"828px"}
+          headingMarginBottom={30}
         />
         <MvpStartUpCard data={mvpCardContent} />
         <PlatformCardContainer platformCards={servicePlatformCards} />
@@ -45,7 +46,7 @@ export default function ServiceDetails() {
           }
           productDevelopmentData={productDevelopmentData}
         />
-        <DataDriven />
+        <DataDriven titleMaxWidth={"305px"} titleMarginBottom={"70px"} />
         <Testimonials />
         <InsightsAndBlog />
       </div>

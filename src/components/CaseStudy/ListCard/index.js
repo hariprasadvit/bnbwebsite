@@ -13,6 +13,7 @@ const ListCardContainer = ({ platformCards }) => {
           title={card.title}
           image={card.image}
           description={card.description}
+          hideBorderBottom={true}
         />
       ))}
     </div>
