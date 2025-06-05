@@ -25,7 +25,7 @@ export default function Home() {
         <Header />
         <Banner
           headingMaxWidth={"490px"}
-          descriptionMaxWidth={"650px"}
+          descriptionMaxWidth={"660px"}
           bannerData={homeBannerData}
         />
         <SectionList />

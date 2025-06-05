@@ -32,14 +32,19 @@ export default function Banner({
               </>
             )}
           </h1>
-          <h2
-            style={{ maxWidth: descriptionMaxWidth }}
-            className={`${styles.subheading} ${
-              bannerData.highlightFirst ? styles.smallSubheading : ""
-            }`}
-          >
-            {bannerData.subheading}
-          </h2>
+          <div className={styles.descriptionContainerWithScroll}>
+            <h2
+              style={{ maxWidth: descriptionMaxWidth }}
+              className={`${styles.subheading} ${
+                bannerData.highlightFirst ? styles.smallSubheading : ""
+              }`}
+            >
+              {bannerData.subheading}
+            </h2>
+            {bannerData.showScroll && (
+              <div className={styles.scroll}>(Scroll)</div>
+            )}
+          </div>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
               <div
@@ -50,7 +55,6 @@ export default function Banner({
             </div>
           )}
         </div>
-        {bannerData.showScroll && <div className={styles.scroll}>(Scroll)</div>}
         <div
           className={`${styles.dashedBorder} ${
             hideBorder ? styles.noBorder : ""
