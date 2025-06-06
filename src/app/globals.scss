@@ -107,8 +107,15 @@ img {
   display: flex;
   gap: 25px;
 
+
+
+  @media screen and (max-width: 1200px) {
+    margin-right: 25px;
+    gap: unset;
+  }
   @media screen and (max-width: 500px) {
     margin-top: 15px;
   }
 
 }
+
