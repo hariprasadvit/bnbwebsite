@@ -424,15 +424,35 @@ img {
     padding: 40px;
   }
 }
+@media screen and (max-width: 950px) {
+  .header_headerWrapper__EsJV7 .header_container___P_f5 {
+    grid-template-columns: 161px 65%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header_headerWrapper__EsJV7 .header_container___P_f5 {
+    grid-template-columns: 161px 40%;
+  }
+}
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_logo__4ZnIb {
   text-align: center;
 }
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_logo__4ZnIb img {
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 950px) {
+  .header_headerWrapper__EsJV7 .header_container___P_f5 .header_menu__EanLW {
+    display: none;
+  }
+}
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_menu__EanLW ul {
   display: flex;
   gap: 50px;
+}
+@media screen and (max-width: 950px) {
+  .header_headerWrapper__EsJV7 .header_container___P_f5 .header_menu__EanLW ul {
+    display: none;
+  }
 }
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_menu__EanLW ul li a {
   display: block;
@@ -449,6 +469,7 @@ img {
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_submenu__hN258 {
   display: grid;
   grid-template-columns: 10px 10px;
+  justify-content: flex-end;
   grid-gap: 5px;
   gap: 5px;
   cursor: pointer;
@@ -558,9 +579,9 @@ img {
   gap: 24px;
   align-items: flex-start;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem_1__zYJfC nav {
-    gap: 10px;
+    gap: 15px;
   }
 }
 .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem_1__zYJfC nav a {
@@ -576,7 +597,7 @@ img {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem_1__zYJfC nav a {
     font-size: 14px;
   }
@@ -667,9 +688,10 @@ img {
   margin: 10px 0;
   font-size: 18px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl .header_menuItem_3__HlseW ul li {
     font-size: 14px;
+    margin: 15px 0;
   }
 }
 @media screen and (max-width: 550px) {
@@ -713,7 +735,7 @@ img {
   font-size: 10px;
   margin-top: 8px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .header_headerWrapper__EsJV7 .header_container___P_f5 .header_mainMenu__FdGSl {
     display: flex !important;
     flex-direction: column;
