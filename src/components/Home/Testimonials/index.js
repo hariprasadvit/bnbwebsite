@@ -9,7 +9,7 @@ import client2 from "/public/Home/client2.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function Testimonials({ data = {} }) {
+export default function Testimonials({ data = {}, testimonialPaddingTop }) {
   let { testimonial_card } = data;
 
   function SampleNextArrow(props) {
@@ -64,7 +64,10 @@ export default function Testimonials({ data = {} }) {
   };
 
   return (
-    <section className={styles.Testimonials}>
+    <section
+      className={styles.Testimonials}
+      style={{ paddingTop: testimonialPaddingTop }}
+    >
       <div className={styles.container}>
         <div className={styles.clientSlider}>
           <Slider {...settings}>

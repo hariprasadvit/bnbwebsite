@@ -6,7 +6,12 @@ import dataDrivenImg from "../../../../public/Home/dataDriven.svg";
 import Image from "next/image";
 import Select from "react-select";
 
-export default function DataDriven({ data = {}, showDataDrivenImg = true }) {
+export default function DataDriven({
+  data = {},
+  showDataDrivenImg = true,
+  titleMaxWidth,
+  titleMarginBottom,
+}) {
   let { title = "Make data driven decisions with real - Time insights", card } =
     data;
   const isMobileView = () => window.innerWidth <= 978;
@@ -32,7 +37,14 @@ export default function DataDriven({ data = {}, showDataDrivenImg = true }) {
   return (
     <section className={styles.dataDriven}>
       <div className={styles.container}>
-        <div className={styles.sectionTop}>
+        <div
+          className={styles.sectionTop}
+          style={
+            mobile
+              ? {}
+              : { maxWidth: titleMaxWidth, marginBottom: titleMarginBottom }
+          }
+        >
           <h2>{title}</h2>
         </div>
         <div className={styles.sectionBottom}>

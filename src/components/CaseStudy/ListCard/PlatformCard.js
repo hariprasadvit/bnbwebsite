@@ -4,7 +4,15 @@ import styles from "./platformCard.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-const PlatformCard = ({ number, label, title, image, description, link }) => {
+const PlatformCard = ({
+  number,
+  label,
+  title,
+  image,
+  description,
+  link,
+  hideBorderBottom,
+}) => {
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
@@ -18,7 +26,7 @@ const PlatformCard = ({ number, label, title, image, description, link }) => {
             <Image src={image} alt={title} width={314} height={250} />
           </div>
           <p>{description}</p>
-          <div className={styles.bottomBorder}></div>
+          {!hideBorderBottom && <div className={styles.bottomBorder}></div>}
         </div>
       </Link>
     </div>

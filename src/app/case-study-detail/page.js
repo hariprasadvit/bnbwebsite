@@ -16,7 +16,7 @@ const InsightsAndBlog = dynamic(() =>
 );
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export default function DigitalProduct() {
+export default function CaseStudyDetails() {
   return (
     <div>
       <Head>
@@ -24,10 +24,15 @@ export default function DigitalProduct() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner bannerData={digitalProductBannerData} hideBorder />
+        <Banner
+          headingMaxWidth={"555px"}
+          descriptionMaxWidth={"650px"}
+          bannerData={digitalProductBannerData}
+          hideBorder
+        />
         <BannerImage />
         <NumberSection disableTopPadding={true} />
-        <Testimonials />
+        <Testimonials testimonialPaddingTop={0} />
         <OurWorks />
         <InsightsAndBlog />
       </div>

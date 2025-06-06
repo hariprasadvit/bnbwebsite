@@ -128,7 +128,9 @@ export default function OurWorks({ data = {} }) {
                       {/* <p>
                         {item.text} <strong>{item.highlight}</strong>
                       </p> */}
-                      <ReactMarkdown>{item.description}</ReactMarkdown>
+                      <div style={{ maxWidth: item.highlightMaxWidth }}>
+                        <ReactMarkdown>{item.description}</ReactMarkdown>
+                      </div>
                     </div>
                   </div>
                 );

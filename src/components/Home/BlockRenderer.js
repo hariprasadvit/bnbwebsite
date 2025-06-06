@@ -13,7 +13,14 @@ export default function BlockRenderer({ blocks }) {
   return blocks.map((block, index) => {
     switch (block.__component) {
       case "landing-page.hero-section":
-        return <Banner key={index} data={block} />;
+        return (
+          <Banner
+            key={index}
+            data={block}
+            headingMaxWidth={"490px"}
+            descriptionMaxWidth={"660px"}
+          />
+        );
       case "landing-page.common-section-list":
         return <SectionList key={index} data={block} />;
       case "landing-page.portfolio-section":

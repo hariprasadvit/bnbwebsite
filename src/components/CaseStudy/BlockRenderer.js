@@ -14,12 +14,20 @@ export default function BlockRenderer({ blocks }) {
           <ListCardContainer
             key={index}
             data={block?.case_study_listing_card || []}
+            headingMarginBottom={30}
           />
         );
       case "landing-page.clients-section":
         return <OurClients key={index} data={block} />;
       case "landing-page.insight-section":
-        return <DataDriven key={index} data={block} />;
+        return (
+          <DataDriven
+            key={index}
+            data={block}
+            titleMaxWidth={"305px"}
+            titleMarginBottom={"70px"}
+          />
+        );
       case "landing-page.testimonials-section":
         return <Testimonials key={index} data={block} />;
       case "landing-page.insights-blogs-section":

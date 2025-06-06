@@ -8,6 +8,9 @@ export default function Banner({
   whiteBG,
   showScroll = true,
   highlightFirst = false,
+  headingMaxWidth,
+  headingMarginBottom,
+  descriptionMaxWidth,
 }) {
   let { title, highlighted_title, sub_title, description } = data;
   return (
@@ -18,6 +21,10 @@ export default function Banner({
       <div className={styles.content}>
         <div>
           <h1
+            style={{
+              maxWidth: headingMaxWidth,
+              marginBottom: headingMarginBottom,
+            }}
             className={`${styles.bannerHeading} ${
               highlightFirst ? styles.smallHeading : ""
             }`}
@@ -33,14 +40,18 @@ export default function Banner({
               </>
             )}
           </h1>
-          <h2
-            className={`${styles.subheading} ${
-              highlightFirst ? styles.smallSubheading : ""
-            }`}
-          >
-            {/* {bannerData.subheading} */}
-            {sub_title || description}
-          </h2>
+          <div className={styles.descriptionContainerWithScroll}>
+            <h2
+              style={{ maxWidth: descriptionMaxWidth }}
+              className={`${styles.subheading} ${
+                highlightFirst ? styles.smallSubheading : ""
+              }`}
+            >
+              {/* {bannerData.subheading} */}
+              {sub_title || description}
+            </h2>
+            {showScroll && <div className={styles.scroll}>(Scroll)</div>}
+          </div>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
               <div className={styles.contactUsButton}>
@@ -49,7 +60,6 @@ export default function Banner({
             </div>
           )}
         </div>
-        {showScroll && <div className={styles.scroll}>(Scroll)</div>}
         <div
           className={`${styles.dashedBorder} ${
             hideBorder ? styles.noBorder : ""

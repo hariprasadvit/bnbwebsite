@@ -34,8 +34,9 @@ async function loader() {
   return { blocks, pageContent };
 }
 
-export default async function Project() {
+export default async function CaseStudy() {
   const blockData = await loader();
+
   return (
     <div>
       <Head>
@@ -51,11 +52,6 @@ export default async function Project() {
           highlightFirst={true}
         />
         <BlockRenderer blocks={blockData?.pageContent?.dynamic_section} />
-        {/* <ListCardContainer />
-        <OurClients />
-        <DataDriven />
-        <Testimonials />
-        <InsightsAndBlog /> */}
       </div>
     </div>
   );
