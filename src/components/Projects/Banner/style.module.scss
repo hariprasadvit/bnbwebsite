@@ -102,6 +102,10 @@
   position: relative;
   z-index: 2;
 
+  @media (max-width: 768px) {
+   padding-bottom: 60px;
+  }
+
   h1 {
     font-size: 48px;
     line-height: 48px;
@@ -137,6 +141,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+     flex-direction: column;
+    }
   }
 
   h2 {
@@ -174,10 +182,16 @@
   // width: 100%;
   text-align: right;
 
+  @media (max-width: 1024px) {
+  margin-top: unset;
+  width: 100%;
+  justify-content: flex-end;
+   }
+
   @media (max-width: 768px) {
     text-align: left;
     font-size: 16px;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
 }
 
