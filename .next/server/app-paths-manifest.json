@@ -1,6 +1,7 @@
 {
-  "/services/page": "app/services/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
   "/case-study/page": "app/case-study/page.js",
-  "/case-study-detail/page": "app/case-study-detail/page.js"
+  "/case-study-detail/page": "app/case-study-detail/page.js",
+  "/services/page": "app/services/page.js"
 }
