@@ -71,10 +71,11 @@ function SamplePrevArrow(props) {
   );
 }
 
-const OurWorks = () => {
+const OurWorks = ({ data = {} }) => {
+  let { card = [] } = data;
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -94,24 +95,29 @@ const OurWorks = () => {
       </div>
 
       <Slider {...settings}>
-        {workItems.map((item, index) => (
-          <div key={index} className={styles.slide}>
-            <div className={styles.cardLayout}>
-              <div className={styles.imageSection}>
-                <Image
-                  src={item.image}
-                  alt="Our Work"
-                  width={582}
-                  height={431}
-                />
-              </div>
-              <div className={styles.textSection}>
-                <h3>{item.text}</h3>
-                <p>{item.highlight}</p>
+        {card?.map((item, index) => {
+          const imageUrl = item.image?.url
+            ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
+            : "/fallback-image.png"; // fallback image
+          return (
+            <div key={index} className={styles.slide}>
+              <div className={styles.cardLayout}>
+                <div className={styles.imageSection}>
+                  <Image
+                    src={imageUrl}
+                    alt="Our Work"
+                    width={582}
+                    height={431}
+                  />
+                </div>
+                <div className={styles.textSection}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </Slider>
     </div>
   );

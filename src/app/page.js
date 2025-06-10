@@ -1,21 +1,37 @@
+import qs from "qs";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import { homeBannerData } from "@/components/data";
+import { getStrapiURL } from "@/lib/utils";
+import { notFound } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache";
+import { fetchAPI } from "@/lib/fetch-api";
+import BlockRenderer from "@/components/Home/BlockRenderer";
 
-const Banner = dynamic(() => import("@/components/Home/Banner"));
-const SectionList = dynamic(() => import("@/components/Home/SectionList"));
-const ContactBanner = dynamic(() => import("@/components/Home/ContactBanner"));
-const OurWorks = dynamic(() => import("@/components/Home/OurWorks"));
-const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
-const OurClients = dynamic(() => import("@/components/Home/OurClients"));
-const InsightsAndBlog = dynamic(() =>
-  import("@/components/Home/InsightsAndBlog")
-);
-const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
-const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
+async function loader() {
+  noStore();
+  const BASE_URL = getStrapiURL();
+  const path = "/api/landing-page";
 
-export default function Home() {
+  const query = qs.stringify(
+    {
+      pLevel: "5",
+    },
+    { encodeValuesOnly: true }
+  );
+
+  const url = new URL(path + "?" + query, BASE_URL);
+  const data = await fetchAPI(url.href, {
+    method: "GET",
+  });
+  if (!data.data) notFound();
+  const blocks = data?.data?.common || [];
+  const pageContent = data?.data || {};
+
+  return { blocks, pageContent };
+}
+
+export default async function Home(props) {
+  const blockData = await loader();
   return (
     <div>
       <Head>
@@ -23,19 +39,17 @@ export default function Home() {
       </Head>
       <div style={{ width: "100%" }}>
         <Header />
-        <Banner
-          headingMaxWidth={"490px"}
-          descriptionMaxWidth={"660px"}
-          bannerData={homeBannerData}
-        />
+        <BlockRenderer blocks={blockData.blocks} />
+        {/* 
+        <Banner />
         <SectionList />
         <ContactBanner />
         <OurWorks />
         <NumberSection />
         <OurClients />
         <DataDriven />
-        <Testimonials />
-        <InsightsAndBlog />
+        <Testimonials /> */}
+        {/* <InsightsAndBlog /> */}
       </div>
     </div>
   );

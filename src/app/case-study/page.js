@@ -1,19 +1,42 @@
+import qs from "qs";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import { projectBannerData } from "@/components/data";
-import DataDriven from "@/components/Home/DataDriven";
-import OurClients from "@/components/Home/OurClients";
-import ListCardContainer from "@/components/CaseStudy/ListCard";
-import { caseStudyPlatformCards } from "@/components/CaseStudy/ListCard/platformCardData";
+import BlockRenderer from "@/components/CaseStudy/BlockRenderer";
+import { unstable_noStore as noStore } from "next/cache";
+
+import { getStrapiURL } from "@/lib/utils";
+import { fetchAPI } from "@/lib/fetch-api";
+import { notFound } from "next/navigation";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
-const InsightsAndBlog = dynamic(() =>
-  import("@/components/Home/InsightsAndBlog")
-);
-const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export default function CaseStudy() {
+async function loader() {
+  noStore();
+  const BASE_URL = getStrapiURL();
+  const path = "/api/case-study";
+
+  const query = qs.stringify(
+    {
+      pLevel: "5",
+    },
+    { encodeValuesOnly: true }
+  );
+
+  const url = new URL(path + "?" + query, BASE_URL);
+  const data = await fetchAPI(url.href, {
+    method: "GET",
+  });
+  if (!data.data) notFound();
+  const blocks = data?.data?.common || [];
+  const pageContent = data?.data || {};
+
+  return { blocks, pageContent };
+}
+
+export default async function CaseStudy() {
+  const blockData = await loader();
+
   return (
     <div>
       <Head>
@@ -22,17 +45,13 @@ export default function CaseStudy() {
       <div style={{ width: "100%" }}>
         <Header />
         <Banner
-          bannerData={projectBannerData}
+          data={blockData?.pageContent || {}}
           hideBorder
-          contactUs={"Talk to Us"}
+          contactUs={blockData?.pageContent?.button_text}
           whiteBG={true}
-          headingMarginBottom={30}
+          highlightFirst={true}
         />
-        <ListCardContainer platformCards={caseStudyPlatformCards} />
-        <OurClients />
-        <DataDriven />
-        <Testimonials />
-        <InsightsAndBlog />
+        <BlockRenderer blocks={blockData?.pageContent?.dynamic_section} />
       </div>
     </div>
   );

@@ -2,14 +2,17 @@ import React from "react";
 import styles from "../../../styles/page.module.scss";
 
 export default function Banner({
-  bannerData,
+  data = {},
   hideBorder = false,
   contactUs,
   whiteBG,
+  showScroll = true,
+  highlightFirst = false,
   headingMaxWidth,
   headingMarginBottom,
   descriptionMaxWidth,
 }) {
+  let { title, highlighted_title, sub_title, description } = data;
   return (
     <section
       className={`${styles.banner} ${whiteBG ? styles.whiteBG : ""}`}
@@ -23,16 +26,17 @@ export default function Banner({
               marginBottom: headingMarginBottom,
             }}
             className={`${styles.bannerHeading} ${
-              bannerData.highlightFirst ? styles.smallHeading : ""
+              highlightFirst ? styles.smallHeading : ""
             }`}
           >
-            {bannerData.highlightFirst ? (
+            {highlightFirst ? (
               <>
-                <span>{bannerData.highlight}</span> {bannerData.heading}
+                <span>{highlighted_title}</span> {title}
               </>
             ) : (
               <>
-                {bannerData.heading} <span>{bannerData.highlight}</span>
+                {/* {bannerData.heading} <span>{bannerData.highlight}</span> */}
+                {title} <span> {highlighted_title} </span>
               </>
             )}
           </h1>
@@ -40,21 +44,18 @@ export default function Banner({
             <h2
               style={{ maxWidth: descriptionMaxWidth }}
               className={`${styles.subheading} ${
-                bannerData.highlightFirst ? styles.smallSubheading : ""
+                highlightFirst ? styles.smallSubheading : ""
               }`}
             >
-              {bannerData.subheading}
+              {/* {bannerData.subheading} */}
+              {sub_title || description}
             </h2>
-            {bannerData.showScroll && (
-              <div className={styles.scroll}>(Scroll)</div>
-            )}
+            {showScroll && <div className={styles.scroll}>(Scroll)</div>}
           </div>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
-              <div
-                className={`${styles.contactUsButton} ${styles.CustomBorderRadius}`}
-              >
-                {contactUs}
+              <div className={styles.contactUsButton}>
+                {contactUs.button_text}
               </div>
             </div>
           )}

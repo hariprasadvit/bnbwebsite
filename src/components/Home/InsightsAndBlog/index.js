@@ -1,41 +1,23 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function InsightsAndBlog() {
-  const content = [
-    {
-      heading: "Scalable Search",
-      subHead: "Discovery Engine for Sports Network",
-      desc: "Our AI-driven intelligent agents enhance automation, decision-making, and personalization across industries",
-      link: "#",
-    },
-    {
-      heading: "Architecture Resilence",
-      subHead: "Discovery Engine for Sports Network",
-      desc: "Our AI-driven intelligent agents enhance automation, decision-making, and personalization across industries",
-      link: "#",
-    },
-    {
-      heading: "Blockchain Powered",
-      subHead: "Discovery Engine for Sports Network",
-      desc: "Our AI-driven intelligent agents enhance automation, decision-making, and personalization across industries",
-      link: "#",
-    },
-  ];
+export default function InsightsAndBlog({ data = {} }) {
+  let { insights_blogs_card, title = "Our Insights and Blog" } = data;
+
   return (
     <section className={styles.InsightsAndBlog}>
       <div className={styles.container}>
-        <h2>Our Insights and Blog</h2>
+        <h2>{title}</h2>
         <div className={styles.contentList}>
-          {content.map((item, index) => (
+          {insights_blogs_card?.map((item, index) => (
             <div className={styles.content} key={index}>
-              <div className={styles.heading}>{item.heading}</div>
+              <div className={styles.heading}>{item.title}</div>
               <div className={styles.desc}>
-                <h4>{item.subHead}</h4>
-                <p>{item.desc}</p>
+                <h4>{item.sub_title}</h4>
+                <p>{item.description}</p>
               </div>
-              <Link href={item.link} className="knowMoreLink">
-                Know More
+              <Link href={item.link.link_path} className="knowMoreLink">
+                {item.link.button_text}
               </Link>
             </div>
           ))}
