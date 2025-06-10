@@ -17,30 +17,35 @@ export default function OurWorks() {
       text: "Digital Product Development for",
       highlight: "BCCI to Engage Cricket Fans",
       bg: "#E7F2E7",
+      highlightMaxWidth: "240px",
     },
     {
       image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#FFFFFF",
+      highlightMaxWidth: "275.5px",
     },
     {
       image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#ECE3DA",
+      highlightMaxWidth: "275.5px",
     },
     {
       image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#E7F2E7",
+      highlightMaxWidth: "275.5px",
     },
     {
       image: workImg1,
       text: "Digital Product Development for",
       highlight: "BCCI to Engage Cricket Fans",
       bg: "#FFFFFF",
+      highlightMaxWidth: "240px",
     },
   ];
 
@@ -127,9 +132,11 @@ export default function OurWorks() {
                     <div className={styles.imageWrap}>
                       <Image src={item.image} alt="Our Works" />
                     </div>
-                    <p>
-                      {item.text} <strong>{item.highlight}</strong>
-                    </p>
+                    <div>
+                      <p style={{ maxWidth: item.highlightMaxWidth }}>
+                        {item.text} <strong>{item.highlight}</strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}

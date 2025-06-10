@@ -14,6 +14,84 @@
   @media screen and (max-width: 768px) {
     padding: 180px 16px 0;
   }
+
+  &.whiteBG {
+    background: #fff;
+  }
+}
+
+.bannerImage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.bannerImageBottomContainer {
+  border: 1px solid #707070;
+  border-top: unset;
+}
+
+.contactBanner {
+  display: flex;
+  background-color: red;
+
+}
+
+.contactBannerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  padding: 35px 45px 50px;
+
+  @media screen and (max-width: 768px) {
+    padding: 35px 16px;
+    gap: 16px;
+  }
+}
+
+.contactUsButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 56px;
+  background: #000000;
+  border-radius: 28px;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: -0.15px;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-top: 22px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+.CustomBorderRadius{
+border-radius: 4px;
+}
+
+.bannerContactUsButton {
+  padding-top: 36.18px;
 }
 
 .content {
@@ -22,19 +100,63 @@
   flex-direction: column;
 }
 
+.contactBannerTitle {
+  font-size: 27px;
+  // line-height: 65px;
+  letter-spacing: -0.25px;
+  color: #FFFFFF;
+  font-weight: 600;
+
+  @media screen and (max-width: 768px) {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
+}
+
+.contactBannerDescription {
+  max-width: 760px;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: -0.15px;
+  font-weight: 300;
+  color: #FFFFFF;
+  pointer-events: none;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
 .content h1 {
-  font-size: 67px;
-  line-height: 67px;
+  font-size: 48px;
+  line-height: 48px;
   color: #000;
   font-weight: bold;
   margin-bottom: 45px;
-  max-width: 685px;
+  // max-width: 685px;
   width: 100%;
 
-  @media screen and (max-width: 1200px) {
-    font-size: 47px;
-    line-height: 57px;
+  @media screen and (max-width: 768px) {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
   }
+}
+
+.content .smallHeading {
+  font-size: 48px;
+  line-height: 48px;
+  max-width: 700px;
+
+
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 47px;
+  //   line-height: 57px;
+  // }
 
   @media screen and (max-width: 768px) {
     font-size: 27px;
@@ -47,18 +169,38 @@
   color: #d44116;
 }
 
+.descriptionContainerWithScroll{
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+   }
+}
 .content h2 {
-  font-size: 39px;
-  line-height: 50px;
+  font-size: 27px;
+  line-height: 37px;
   color: #000;
   font-weight: normal;
   width: 100%;
-  max-width: 940px;
+  // max-width: 940px;
 
-  @media screen and (max-width: 1200px) {
-    font-size: 29px;
-    line-height: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+    line-height: 30px;
   }
+}
+
+.content .smallSubheading {
+  font-size: 27px;
+  line-height: 32px;
+  max-width: 850px;
+
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 29px;
+  //   line-height: 40px;
+  // }
 
   @media screen and (max-width: 768px) {
     font-size: 19px;
@@ -67,20 +209,32 @@
 }
 
 .scroll {
+  display: flex;
+  align-items: flex-end;
   font-size: 18px;
   line-height: 14px;
   color: #000;
-  margin-top: 30px;
-  width: 100%;
+  margin-bottom: 30px;
+  // width: 100%;
   text-align: right;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: unset;
+     }
 }
 
 .dashedBorder {
   border-bottom: 2px dashed #000;
-  padding-top: 80px;
+  padding-top: 62px;
 
   @media screen and (max-width: 768px) {
     padding-top: 40px;
+  }
+
+  &.noBorder {
+    border-bottom: none;
   }
 }
 
@@ -95,7 +249,7 @@
 /* MVP section */
 
 .splitSection {
-  padding: 80px 80px 0;
+  padding: 62px 80px 0;
 
   @media screen and (max-width: 1200px) {
     padding: 80px 40px 0;
@@ -114,16 +268,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 150px;
   position: relative;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    gap: 40px;
   }
 }
 
 .splitSectionLeft {
-  max-width: 360px;
+  max-width: 270px;
   width: 100%;
 
   @media screen and (max-width: 768px) {
@@ -134,8 +289,7 @@
   }
 }
 
-.splitSectionLeft img {
-}
+.splitSectionLeft img {}
 
 .splitSectionRight {
   max-width: 100%;
@@ -143,14 +297,9 @@
 }
 
 .splitSectionRight h2 {
-  font-size: 36px;
-  line-height: 65px;
+  font-size: 27px;
+  line-height: 49px;
   margin-bottom: 10px;
-
-  @media screen and (max-width: 1200px) {
-    font-size: 30px;
-    line-height: 60px;
-  }
 
   @media screen and (max-width: 768px) {
     font-size: 22px;
@@ -161,7 +310,7 @@
 .splitSectionRight p {
   font-size: 21px;
   line-height: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   font-weight: 300;
 
   @media screen and (max-width: 1200px) {
@@ -253,7 +402,7 @@
     .topContent {
       display: flex;
       justify-content: space-between;
-      padding-right: 80px;
+      padding: 55px 80px 55px 0px;
       gap: 40px;
 
       @media screen and (max-width: 1200px) {
@@ -266,16 +415,11 @@
       }
 
       h2 {
-        font-size: 56px;
-        line-height: 68px;
+        font-size: 42px;
+        line-height: 52px;
         font-weight: 300;
         max-width: 320px;
         width: 100%;
-
-        @media screen and (max-width: 1200px) {
-          font-size: 46px;
-          line-height: 55px;
-        }
 
         @media screen and (max-width: 768px) {
           font-size: 27px;
@@ -288,7 +432,7 @@
         line-height: 36px;
         max-width: 640px;
         width: 100%;
-        margin-top: 85px;
+        // margin-top: 85px;
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;
@@ -307,12 +451,15 @@
 
       .scrollDown {
         position: absolute;
-        top: 59%;
+        top: 45%;
+        left: -40px;
         transform: rotate(270deg);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
           top: 39%;
+          left: unset;
         }
+       
 
         @media screen and (max-width: 550px) {
           top: 23%;
@@ -333,55 +480,60 @@
           max-width: 97%;
         }
 
-        > div {
+        >div {
           margin-bottom: -216px;
         }
 
         .workItem {
-          > div {
-            min-height: 545px;
-            max-width: 480px;
-            margin-right: 25px;
+          margin-right: 20px;
+          >div {
+            min-height: 414px;
+            min-width: 483px;
+            max-width: 483px;
+            width: 100%;
+            // margin-right: 25px;
             background: rgb(255, 255, 255);
             display: flex;
             flex-direction: column;
-            padding: 100px 50px;
+            padding: 61px 50px 54px 50px;
             align-items: flex-start;
 
             @media screen and (max-width: 1200px) {
-              min-height: 485px;
-              max-width: 420px;
+              min-height: 310px;
+              max-width: 380px;
               padding: 30px 40px;
+              min-width: 380px;
             }
 
             @media screen and (max-width: 768px) {
               min-height: 375px;
               max-width: 360px;
+              min-width: 360px;
               padding: 30px 40px;
             }
-
             @media screen and (max-width: 550px) {
               min-height: 290px;
               max-width: 270px;
+              min-width: 270px;
               padding: 25px;
             }
           }
         }
 
         .imageWrap {
-          margin-bottom: 75px;
+          margin-bottom: 48px;
 
-          @media screen and (max-width: 768px) {
-            margin-bottom: 50px;
-          }
+          // @media screen and (max-width: 768px) {
+          //   margin-bottom: 50px;
+          // }
 
           @media screen and (max-width: 550px) {
             margin-bottom: 30px;
           }
 
           img {
-            width: 100%;
-            max-width: 300px;
+            width: auto;
+            // max-width: 300px;
             height: 150px;
 
             @media screen and (max-width: 1200px) {
@@ -392,16 +544,10 @@
 
         p {
           color: #090b0f;
-          font-size: 31px;
-          line-height: 42px;
-
-          @media screen and (max-width: 1200px) {
-            font-size: 28px;
-            line-height: 40px;
-          }
+          font-size: 24px;
+          line-height: 32px;
 
           @media screen and (max-width: 768px) {
-            font-size: 24px;
             line-height: 34px;
           }
 
@@ -469,16 +615,22 @@
     &.custompadding {
       padding: 80px 80px 80px;
     }
-    padding: 290px 80px 80px;
+
+    padding: 290px 80px 54px;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 189px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 40px;
+    }
 
     @media screen and (max-width: 1200px) {
       &.custompadding {
         padding: 80px 40px 80px;
       }
-      padding: 290px 40px 80px;
+
+      padding: 290px 40px 54px;
     }
 
     @media screen and (max-width: 900px) {
@@ -489,6 +641,7 @@
       &.custompadding {
         padding: 40px 16px 40px;
       }
+
       padding: 250px 16px 40px;
     }
 
@@ -497,24 +650,25 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 23px;
-        max-width: 250px;
+        max-width: 340px;
         width: 100%;
       }
     }
 
     .nSectionRight {
-      max-width: 860px;
+      // max-width: 710px;
       width: 100%;
 
       h3 {
-        font-size: 49px;
-        line-height: 59px;
+        font-size: 36px;
+        line-height: 42px;
         margin-bottom: 30px;
         font-weight: 400;
+        max-width: 580px;
+        width: 100%;
 
-        @media screen and (max-width: 1200px) {
-          font-size: 39px;
-          line-height: 49px;
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
         }
 
         @media screen and (max-width: 768px) {
@@ -527,12 +681,15 @@
         font-size: 21px;
         line-height: 36px;
         margin-bottom: 50px;
+        max-width: 642px;
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;
           line-height: 25px;
         }
-
+        @media screen and (max-width: 1024px) {
+          max-width: 100%;
+        }
         @media screen and (max-width: 768px) {
           font-size: 16px;
           line-height: 20px;
@@ -550,15 +707,10 @@
           align-items: flex-start;
 
           strong {
-            font-size: 64px;
+            font-size: 42px;
             line-height: 36px;
             font-weight: 500;
             margin-bottom: 10px;
-
-            @media screen and (max-width: 1200px) {
-              font-size: 54px;
-              line-height: 36px;
-            }
 
             @media screen and (max-width: 768px) {
               font-size: 35px;
@@ -592,7 +744,6 @@
 
         @media screen and (max-width: 768px) {
           font-size: 16px;
-          line-height: 20px;
         }
 
         a {
@@ -610,10 +761,10 @@
   background: #ece3da;
 
   .container {
-    padding: 40px 80px 80px;
+    padding: 40px 80px 60px;
 
     @media screen and (max-width: 1200px) {
-      padding: 40px 40px 80px;
+      padding: 40px 40px 60px;
     }
 
     @media screen and (max-width: 768px) {
@@ -625,22 +776,25 @@
       line-height: 36px;
       font-weight: 600;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .clientItem {
-      > div {
+      >div {
         max-width: 300px;
         display: flex;
+        gap: 20px;
         justify-content: center;
       }
 
       .imageWrap {
+        margin-right: 20px;
         img {
           width: 100%;
           max-width: 300px;
           max-height: 51px;
           height: auto;
+          object-fit: contain;
         }
       }
     }
@@ -651,7 +805,7 @@
 
 .InsightsAndBlog {
   .container {
-    padding: 80px 80px 0;
+    padding: 20px 80px 0;
 
     @media screen and (max-width: 1200px) {
       padding: 40px 40px 0;
@@ -662,13 +816,8 @@
     }
 
     h2 {
-      font-size: 49px;
+      font-size: 36px;
       line-height: 59px;
-
-      @media screen and (max-width: 1200px) {
-        font-size: 39px;
-        line-height: 49px;
-      }
 
       @media screen and (max-width: 768px) {
         font-size: 25px;
@@ -705,8 +854,8 @@
         }
 
         .heading {
-          font-size: 27px;
-          line-height: 35px;
+          font-size: 24px;
+          line-height: 65px;
           font-weight: 600;
 
           @media screen and (max-width: 768px) {
@@ -755,7 +904,7 @@
 
 .dataDriven {
   .container {
-    padding: 50px 80px;
+    padding: 60px 80px 40px;
 
     @media screen and (max-width: 1200px) {
       padding: 50px 40px;
@@ -767,17 +916,12 @@
 
     .sectionTop {
       h2 {
-        font-size: 49px;
-        line-height: 59px;
+        font-size: 36px;
+        line-height: 42px;
         max-width: 435px;
         width: 100%;
         margin-bottom: 35px;
         font-weight: 400;
-
-        @media screen and (max-width: 1200px) {
-          font-size: 39px;
-          line-height: 49px;
-        }
 
         @media screen and (max-width: 768px) {
           font-size: 25px;
@@ -851,6 +995,7 @@
 
         .desc {
           position: relative;
+          width: 100%;
 
           @media screen and (max-width: 978px) {
             width: 50%;
@@ -872,6 +1017,10 @@
             font-weight: 300;
             pointer-events: none;
 
+            @media screen and (max-width: 978px) {
+              position: unset;
+            }
+
             @media screen and (max-width: 768px) {
               max-width: 100%;
               font-size: 18px;
@@ -887,7 +1036,22 @@
           }
         }
 
-        .imgWrap {
+        .imgWrap {}
+      }
+
+      .sectionBottomContainer.noImage {
+        grid-template-columns: 33% 67%;
+
+        .desc {
+          width: 100% !important;
+
+          div {
+            max-width: 100%;
+          }
+        }
+
+        .points {
+          width: 100% !important;
         }
       }
     }
@@ -916,7 +1080,7 @@
     }
 
     .testimonialItem {
-      > div {
+      >div {
         .desc {
           font-size: 27px;
           line-height: 42px;
@@ -1021,4 +1185,65 @@
       }
     }
   }
+}
+
+.overviewCardWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 72.5px 95.75px 0 95.75px;
+  gap: 52.5px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 50px 40px;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 16px;
+    gap: 16px;
+  }
+}
+
+.overviewCardTitle {
+  font-size: 27px;
+  line-height: 65px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  color: #000000;
+
+
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 30px;
+  //   line-height: 60px;
+  // }
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+.overviewCardDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: -0.15px;
+  font-weight: 300;
+  color: #000000;
+  padding-left: 17.8257686vw;
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 8.333333vw;
+    gap: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: unset;
+  }
+}
+
+.bannerHeading .smallHeading {
+  font-size: 48px;
 }

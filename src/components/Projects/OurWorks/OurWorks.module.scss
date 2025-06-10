@@ -156,17 +156,21 @@
   padding: 1rem 3rem;
   position: relative;
 
+  .slick-list .slick-track{
+    gap: 0px !important;
+  }
+
   .topHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 40px;
     position: relative;
     left: 50px;
 
     h2 {
-      font-size: 2.8rem;
-      line-height: 1.2;
+      font-size: 36px;
+      line-height: 42px;
       font-weight: 300;
 
       strong {
@@ -179,16 +183,23 @@
   .cardLayout {
     display: flex;
     gap: 1rem;
-    align-items: center;
-    background: white;
-    border-radius: 16px;
-    padding: 1rem 3rem;
+    // align-items: center;
+    // background: white;
+    // border-radius: 16px;
+    padding: 0 25px;
     width: 100%;
     max-width: 1300px;
     justify-content: center;
 
+    @media (max-width: 1200px) {
+      padding-left: unset;
+    }
+
+   
+
     .imageSection {
-      width: 500px;
+      max-width: 500px;
+      width: 100%;
       flex-shrink: 0;
 
       img {
@@ -201,23 +212,31 @@
 
     .textSection {
       flex: 1;
-      padding-left: 2rem;
+      padding-left: 50px;
+
+      @media (max-width: 768px) {
+        padding-left: unset;
+      }
 
       h3 {
-        font-size: 2.5rem;
+        font-size: 32px;
         font-weight: 700;
         font-family: "Titillium Web", sans-serif;
-        line-height: 1.2;
+        line-height: 49px;
         letter-spacing: -1px;
         color: #000000;
         margin-bottom: 1rem;
+        max-width: 470px;
+        width: 100%;
       }
 
       p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 21px;
+        line-height: 36px;
         color: #333;
         padding: 1rem 0;
+        max-width: 490px;
+        width: 100%;
       }
     }
   }
@@ -233,11 +252,15 @@
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    top: -120px;
-    right: 155px !important;
+    top: -80px;
+    right: 8% !important;
     left: auto;
     z-index: 1;
     position: absolute;
+
+    @media screen and (max-width: 1200px) {
+      right: 50px !important;
+    }
 
     &:before {
       display: none;
@@ -258,7 +281,11 @@
   }
 
   .customArrowLeft {
-    right: 262px !important;
+    right: 17% !important;
+
+    @media screen and (max-width: 1200px) {
+      right: 156px !important;
+    }
   }
 
   // Breakpoint: ≤1200px
@@ -300,11 +327,12 @@
       }
 
       .textSection {
-        width: 50%;
-        padding-left: 1rem;
+        // width: 50%;
+        // padding-left: 1rem;
         h3 {
           font-size: 20px;
           margin-bottom: 0.5rem;
+          line-height: 30px;
         }
         p {
           font-size: 16px;
@@ -328,9 +356,10 @@
     }
 
     .cardLayout {
-      padding: 1rem 2rem;
+      padding: 1rem 0;
       flex-direction: column;
       text-align: center;
+      align-items: center;
 
       .imageSection {
         width: 100%;
@@ -354,10 +383,22 @@
       height: 40px;
       top: -50px;
       right: 35px !important;
+
+      @media (max-width: 500px) {
+        top: -10px;
+      }
     }
 
     .customArrowLeft {
       right: 100px !important;
     }
   }
+
+    // Breakpoint: ≤680px
+    @media screen and (max-width:680px) {
+
+      .cardLayout {
+        text-align: left;
+      }
+    }
 }

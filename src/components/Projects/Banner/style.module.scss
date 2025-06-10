@@ -81,7 +81,7 @@
   padding: 180px 80px 0;
   position: relative;
   background: #000;
-  min-height: 100vh;
+  // min-height: 100vh;
   flex-direction: row;
 
   @media (max-width: 1024px) {
@@ -102,13 +102,18 @@
   position: relative;
   z-index: 2;
 
+  @media (max-width: 768px) {
+   padding-bottom: 60px;
+  }
+
   h1 {
-    font-size: 67px;
-    line-height: 67px;
+    font-size: 48px;
+    line-height: 48px;
     color: #a0a0a0;
     font-weight: bold;
-    margin-bottom: 45px;
-    max-width: 1045px;
+    margin-bottom: 60px;
+    max-width: 660px;
+    // max-width: 780px;
     width: 100%;
 
     span {
@@ -132,13 +137,23 @@
     }
   }
 
+  .descriptionContainerWithScroll{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+     flex-direction: column;
+    }
+  }
+
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 27px;
+    line-height: 42px;
     color: #fefdf5;
     font-weight: normal;
     width: 100%;
-    max-width: 990px;
+    max-width: 960px;
     padding: 0 0 90px 90px;
 
     @media (max-width: 1024px) {
@@ -152,21 +167,31 @@
       line-height: 26px;
       padding: 0 0 40px 20px;
     }
+    @media (max-width: 680px) {
+      padding-left: 0;
+    }
   }
 }
 
 .scroll {
+  display: flex;
   font-size: 18px;
   line-height: 14px;
   color: #fefdf5;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 125px;
+  // width: 100%;
   text-align: right;
+
+  @media (max-width: 1024px) {
+  margin-top: unset;
+  width: 100%;
+  justify-content: flex-end;
+   }
 
   @media (max-width: 768px) {
     text-align: left;
     font-size: 16px;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
 }
 

@@ -16,6 +16,13 @@
     @media screen and (max-width: 1200px) {
       padding: 40px;
     }
+    @media screen and (max-width: 950px) {
+      grid-template-columns: 161px 65%;
+    }
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 161px 40%;
+    }
+    
 
     .logo {
       text-align: center;
@@ -26,9 +33,18 @@
     }
 
     .menu {
+
+      @media screen and (max-width:950px) {
+        display: none;
+               }
+
       ul {
         display: flex;
         gap: 50px;
+
+        @media screen and (max-width: 950px) {
+ display: none;
+        }
 
         li {
           a {
@@ -52,6 +68,7 @@
     .submenu {
       display: grid;
       grid-template-columns: 10px 10px;
+      justify-content: flex-end;
       gap: 5px;
       cursor: pointer;
 
@@ -162,6 +179,7 @@
         "item4 item5 item1";
       pointer-events: auto;
 
+
       .closeIcon {
         position: absolute;
         top: 20px;
@@ -185,6 +203,7 @@
         color: white;
         cursor: pointer;
 
+
         &:hover {
           transform: scale(1.05);
         }
@@ -192,6 +211,22 @@
         ul li a,
         .joinNow a {
           cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            font-size: 14px;    
+          }
+          @media screen and (max-width: 550px) {
+            font-size: 12px;    
+          }
+        }
+
+        h3{
+          @media screen and (max-width: 600px) {
+            font-size: 14px;    
+          }
+          @media screen and (max-width: 550px) {
+            font-size: 12px;    
+          }
         }
       }
 
@@ -207,6 +242,10 @@
           gap: 24px;
           align-items: flex-start;
 
+          @media screen and (max-width: 950px) {
+            gap: 15px;
+          }
+
           a {
             position: relative;
             font-size: 48px;
@@ -214,6 +253,25 @@
             text-decoration: none;
             transition: color 0.3s ease;
             text-transform: uppercase;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 40px;
+            }
+            @media screen and (max-width: 950px) {
+              font-size: 14px;
+            }
+            @media screen and (max-width: 550px) {
+              font-size: 12px;    
+            }
+            // @media screen and (max-width: 768px) {
+            //   font-size: 36px;
+            // }
+            // @media screen and (max-width: 600px) {
+            //   font-size: 30px;
+            // }
+            // @media screen and (max-width: 425px) {
+            //   font-size: 22px;
+            // }
 
             &::after {
               content: "";
@@ -314,6 +372,19 @@
           li {
             margin: 10px 0;
             font-size: 18px;
+
+            @media screen and (max-width: 950px) {
+              font-size: 14px;
+              margin: 15px 0;
+            }
+
+            // @media screen and (max-width: 600px) {
+            //   font-size: 14px;    
+            // }
+            @media screen and (max-width: 550px) {
+              font-size: 12px;    
+            }
+
           }
 
           li:last-child a {
@@ -346,6 +417,7 @@
 
         .joinNow {
           color: rgb(120, 14, 14);
+          font-size: 10px;
 
           span {
             display: block;
@@ -358,6 +430,44 @@
             font-size: 10px;
             margin-top: 8px;
           }
+        }
+      }
+
+      // Responsive Menu Items
+      @media screen and (max-width: 950px) {
+        display: flex !important; 
+        flex-direction: column;
+        grid-template-areas: none;
+        grid-template-columns: none;
+        grid-template-rows: none;
+      
+        .menuItem_1 {
+          width: 100%;
+          height: auto;
+          min-height: 37.5vh; 
+          display: flex;
+          flex-direction: column;
+        }
+
+        .menuItem_2 {
+          width: 100%;
+          height: auto;
+          min-height: 25vh;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .menuItem_3 {
+          width: 100%;
+          height: auto;
+          min-height: 37.5vh;
+          display: flex;
+          flex-direction: column;
+        }
+      
+        .menuItem_4,
+        .menuItem_5 {
+          display: none !important;
         }
       }
 

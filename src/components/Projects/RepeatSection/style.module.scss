@@ -232,15 +232,16 @@
 .repeatSection {
   .container {
     // 🔧 Adjusted padding for large screens
-    padding: 80px 80px 0 80px;
+    padding: 40px 80px 0 80px;
 
     h2 {
       letter-spacing: -1.2px;
       color: #000000;
-      font-size: 60px;
-      line-height: 61px;
+      font-size: 42px;
+      line-height: 48px;
       margin-bottom: 30px;
-      max-width: 950px;
+      max-width: 585px;
+      // max-width: 585px;
       width: 100%;
 
       span {
@@ -254,10 +255,10 @@
     }
 
     .contentWrapper {
-      margin-bottom: 10px;
+      margin-bottom: 25px;
 
       .topSection {
-        padding-bottom: 37px;
+        padding-bottom: 40px;
 
         strong {
           display: block;
@@ -270,8 +271,8 @@
 
       .contentLeft {
         h3 {
-          font-size: 36px;
-          line-height: 48px;
+          font-size: 27px;
+          line-height: 65px;
           font-weight: 600;
           margin-bottom: 20px;
         }
@@ -286,9 +287,9 @@
 
         p {
           font-size: 21px;
-          line-height: 26px;
+          line-height: 36px;
           font-weight: 300;
-          max-width: 800px;
+          max-width: 755px;
           width: 100%;
         }
 
@@ -298,12 +299,18 @@
 
           li {
             font-size: 21px;
-            line-height: 26px;
+            line-height: 36px;
             font-weight: 300;
             margin-bottom: 5px;
           }
         }
       }
+    }
+
+    .contentWrapper:last-child {
+      padding-bottom: 75px;
+      border-bottom: 2px dashed #00000033;
+      margin-bottom: 55px;
     }
   }
 
