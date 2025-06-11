@@ -161,7 +161,7 @@ export default function Header({ whiteHeader, active }) {
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src={logo} alt="Logo" width={127.81} height={49.12} />
+          <Image src={logo} alt="Logo" />
         </Link>
         <nav className={styles.menu}>
           <ul>

@@ -34,8 +34,20 @@
       text-align: center;
       width: 127.81px;
 
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        width: 90px;
+      }
+
       img {
+        width: 127.81px;
+        height: 49.2px;
         transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          width: 90px;
+        }
       }
     }
 
@@ -524,10 +536,20 @@
 
     .logo {
       width: 100px;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        width: 80px;
+      }
       img {
         width: 100px;
         height: auto;
         transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          width: 80px;
+        }
       }
     }
 
