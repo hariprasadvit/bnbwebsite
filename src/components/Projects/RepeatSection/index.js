@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./style.module.scss";
+import Link from "next/link";
 
-export default function RepeatSection() {
+export default function RepeatSection({ data = [] }) {
   const sections = [
     {
       id: "01",
@@ -68,25 +69,27 @@ export default function RepeatSection() {
     <section className={styles.repeatSection}>
       <div className={styles.container}>
         <h2>
-          <span>Erase the average embrace the bold</span>
-          From Concept to execution, our Services designed to set you apart
+          <span>{data?.hightlighted_title}</span>
+          {data?.title}
         </h2>
-        {sections.map((section, index) => (
+        {data?.listing_card?.map((section, index) => (
           <div key={index} className={styles.contentWrapper}>
             <div className={styles.topSection}>
-              <strong>{section.id}</strong>
+              <strong>{String(index + 1).padStart(2, "0")}</strong>
             </div>
-            <div className={styles.contentLeft}>
-              <h3>{section.title}</h3>
-              <div className={styles.content}>
-                <p>{section.description}</p>
-                <ul>
-                  {section.points.map((point, idx) => (
-                    <li key={idx}>{point}</li>
-                  ))}
-                </ul>
+            <Link href={`/services/${section?.service_detail?.slug}`}>
+              <div className={styles.contentLeft}>
+                <h3>{section.title}</h3>
+                <div className={styles.content}>
+                  <p>{section.description}</p>
+                  <ul>
+                    {section.points.map((point, idx) => (
+                      <li key={idx}>{point.content}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

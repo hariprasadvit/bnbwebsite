@@ -6,12 +6,15 @@ import Image from "next/image";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header({ whiteHeader, active }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+
+  const [activeLabel, setActiveLabel] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +23,34 @@ export default function Header({ whiteHeader, active }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setActiveLabel("Home");
+        break;
+      case "/services":
+        setActiveLabel("Services");
+        break;
+      case "/clients":
+        setActiveLabel("Clients");
+        break;
+      case "/about":
+        setActiveLabel("About");
+        break;
+      case "/hiring":
+        setActiveLabel("Hiring");
+        break;
+      case "/portfolio":
+        setActiveLabel("Portfolio");
+        break;
+      case "/contact-us":
+        setActiveLabel("Contact Us");
+        break;
+      default:
+        setActiveLabel("");
+    }
+  }, [pathname]);
 
   const toggleMainMenu = () => {
     setIsMainMenuOpen(!isMainMenuOpen);
@@ -61,7 +92,7 @@ export default function Header({ whiteHeader, active }) {
 
   const transition = {
     type: "ease",
-    duration: 0.3, // Adjust duration as needed
+    duration: 0.3,
   };
 
   const fadeUpStaggerContainer = {
@@ -93,6 +124,7 @@ export default function Header({ whiteHeader, active }) {
   };
 
   const handleMenuNavClick = (label) => {
+    setActiveLabel(label);
     closeMainMenu();
     switch (label) {
       case "Home":
@@ -129,7 +161,7 @@ export default function Header({ whiteHeader, active }) {
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src={logo} alt="Logo" width={127.81} height={49.12} />
+          <Image src={logo} alt="Logo" />
         </Link>
         <nav className={styles.menu}>
           <ul>
@@ -203,6 +235,9 @@ export default function Header({ whiteHeader, active }) {
                       variants={fadeUpItem}
                       role="button"
                       tabIndex={0}
+                      className={
+                        label === activeLabel ? styles.activeMenuItem : ""
+                      }
                     >
                       {label}
                     </motion.a>

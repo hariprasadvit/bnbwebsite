@@ -5,6 +5,7 @@ import styles from "../../../styles/page.module.scss";
 import dataDrivenImg from "../../../../public/Home/dataDriven.svg";
 import Image from "next/image";
 import Select from "react-select";
+import { formatIndex } from "@/lib/utils";
 
 export default function DataDriven({
   data = {},
@@ -85,7 +86,7 @@ export default function DataDriven({
                     onMouseEnter={() => setActiveMenu(item.id)}
                     onClick={() => setActiveMenu(item.id)}
                   >
-                    <span>{`0${index + 1}`}</span>
+                    <span>{formatIndex(index)}</span>
                     {/* <strong>{item.label.replace(`${item.value} `, "")}</strong> */}
                     <strong>{item.title}</strong>
                   </div>
