@@ -2,23 +2,16 @@ import React from "react";
 import styles from "./style.module.scss";
 import Spline from "@splinetool/react-spline/next";
 
-export default function Banner() {
+export default function Banner({ title, description, hightlighted_text }) {
   return (
     <section className={styles.banner} id="bannerTop">
       <div className={`${styles.content}`}>
         <div>
           <h1>
-            EMPOWERING YOUR BUSINESS WITH CREATIVE AND{" "}
-            <span> TECH-DRIVEN SOLUTIONS </span>
+            {title} <span> {hightlighted_text} </span>
           </h1>
           <div className={styles.descriptionContainerWithScroll}>
-            <h2>
-              At Boolean and Beyond, we offer a range of tech-driven solutions
-              to help businesses achieve their goals. From AI and ML to cloud
-              solutions, AR and VR, and big data analytics, we’re committed to
-              delivering exceptional results that help our clients stay ahead in
-              today’s rapidly evolving digital landscape.
-            </h2>
+            <h2>{description}</h2>
             <div className={styles.scroll}>(Scroll)</div>
           </div>
         </div>

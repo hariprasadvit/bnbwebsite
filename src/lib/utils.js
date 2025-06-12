@@ -12,3 +12,6 @@ export function extractListItems(text) {
 
   return matches;
 }
+export function formatIndex(index, digits = 2) {
+  return String(index + 1).padStart(digits, "0");
+}

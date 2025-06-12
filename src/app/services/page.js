@@ -1,7 +1,13 @@
+import qs from "qs";
 import Header from "@/components/Common/Header";
+import BlockRenderer from "@/components/Services/BlockRenderer";
+import { fetchAPI } from "@/lib/fetch-api";
+import { getStrapiURL } from "@/lib/utils";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
+import { notFound } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache";
 
 const Banner = dynamic(() => import("@/components/Projects/Banner"));
 const RepeatSection = dynamic(() =>
@@ -16,22 +22,53 @@ const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 const OurWorks = dynamic(() => import("@/components/Projects/OurWorks"));
 
-export default function Projects() {
+async function loader() {
+  noStore();
+  const BASE_URL = getStrapiURL();
+  const path = "/api/service";
+
+  const query = qs.stringify(
+    {
+      pLevel: "5",
+    },
+    { encodeValuesOnly: true }
+  );
+
+  const url = new URL(path + "?" + query, BASE_URL);
+  const data = await fetchAPI(url.href, {
+    method: "GET",
+  });
+  if (!data.data) notFound();
+  const blocks = data?.data?.common || [];
+  const pageContent = data?.data || {};
+
+  return { blocks, pageContent };
+}
+
+export default async function Projects() {
+  const blockData = await loader();
+  const { pageContent: data = {} } = blockData;
   return (
     <div>
       <Head>
         <title>Projects || B&B</title>
       </Head>
       <div style={{ width: "100%" }}>
+        {console.log(data, "++")}
         <Header whiteHeader active="services" />
-        <Banner />
-        <RepeatSection />
+        <Banner
+          title={data?.title}
+          description={data?.description}
+          hightlighted_text={data?.highlighted_title}
+        />
+        {/* <RepeatSection />
         <OurWorks />
         <NumberSection disableTopPadding />
         <OurClients />
         <DataDriven />
         <Testimonials />
-        <InsightsAndBlog />
+        <InsightsAndBlog /> */}
+        <BlockRenderer blocks={data?.dynamic_section} />
       </div>
     </div>
   );

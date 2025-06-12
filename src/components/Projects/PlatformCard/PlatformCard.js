@@ -13,7 +13,7 @@ const PlatformCard = ({ number, label, title, image, description }) => {
       <div className={styles.platformCardRight}>
         <h2>{title}</h2>
         <div className={styles.imageContainer}>
-          <Image src={image} alt={title} />
+          <Image src={image} alt={title} width={100} height={250} />
         </div>
         <p>{description}</p>
         <div className={styles.bottomBorder}></div>
