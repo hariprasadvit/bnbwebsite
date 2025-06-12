@@ -12,9 +12,10 @@
   }
 
   @media screen and (max-width: 768px) {
-    padding: 180px 16px 0;
+    padding: 120px 26px 0;
   }
 
+  
   &.whiteBG {
     background: #fff;
   }
@@ -55,7 +56,7 @@
   padding: 35px 45px 50px;
 
   @media screen and (max-width: 768px) {
-    padding: 35px 16px;
+    padding: 35px 26px;
     gap: 16px;
   }
 }
@@ -256,7 +257,7 @@ border-radius: 4px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 16px 0;
+    padding: 40px 26px 0;
   }
 }
 
@@ -485,6 +486,7 @@ border-radius: 4px;
         }
 
         .workItem {
+          margin-right: 20px;
           >div {
             min-height: 414px;
             min-width: 483px;
@@ -507,12 +509,13 @@ border-radius: 4px;
             @media screen and (max-width: 768px) {
               min-height: 375px;
               max-width: 360px;
+              min-width: 360px;
               padding: 30px 40px;
             }
-
             @media screen and (max-width: 550px) {
               min-height: 290px;
               max-width: 270px;
+              min-width: 270px;
               padding: 25px;
             }
           }
@@ -530,8 +533,8 @@ border-radius: 4px;
           }
 
           img {
-            width: 100%;
-            max-width: 300px;
+            width: auto;
+            // max-width: 300px;
             height: 150px;
 
             @media screen and (max-width: 1200px) {
@@ -637,10 +640,10 @@ border-radius: 4px;
 
     @media screen and (max-width: 768px) {
       &.custompadding {
-        padding: 40px 16px 40px;
+        padding: 40px 26px 40px;
       }
 
-      padding: 250px 16px 40px;
+      padding: 250px 26px 40px;
     }
 
     .nSectionLeft {
@@ -742,7 +745,6 @@ border-radius: 4px;
 
         @media screen and (max-width: 768px) {
           font-size: 16px;
-          line-height: 20px;
         }
 
         a {
@@ -767,7 +769,7 @@ border-radius: 4px;
     }
 
     @media screen and (max-width: 768px) {
-      padding: 40px 16px;
+      padding: 40px 26px;
     }
 
     h2 {
@@ -782,15 +784,18 @@ border-radius: 4px;
       >div {
         max-width: 300px;
         display: flex;
+        gap: 20px;
         justify-content: center;
       }
 
       .imageWrap {
+        margin-right: 20px;
         img {
           width: 100%;
           max-width: 300px;
           max-height: 51px;
           height: auto;
+          object-fit: contain;
         }
       }
     }
@@ -808,7 +813,7 @@ border-radius: 4px;
     }
 
     @media screen and (max-width: 768px) {
-      padding: 40px 16px 0;
+      padding: 40px 26px 0;
     }
 
     h2 {
@@ -907,7 +912,7 @@ border-radius: 4px;
     }
 
     @media screen and (max-width: 768px) {
-      padding: 40px 16px;
+      padding: 40px 26px;
     }
 
     .sectionTop {
@@ -1064,7 +1069,7 @@ border-radius: 4px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 16px 40px;
+    padding: 40px 26px 40px;
   }
 
   .container {
@@ -1195,7 +1200,7 @@ border-radius: 4px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 16px;
+    padding: 40px 26px;
     gap: 16px;
   }
 }
