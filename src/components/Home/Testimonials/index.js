@@ -9,7 +9,10 @@ import client2 from "/public/Home/client2.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function Testimonials({ testimonialPaddingTop }) {
+export default function Testimonials({
+  testimonialPaddingTop,
+  isCustomContainer = false,
+}) {
   const sliderItems = [
     {
       desc: "“ They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.”",
@@ -87,7 +90,11 @@ export default function Testimonials({ testimonialPaddingTop }) {
       className={styles.Testimonials}
       style={{ paddingTop: testimonialPaddingTop }}
     >
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${
+          isCustomContainer ? styles.testimonialContainer : ""
+        }`}
+      >
         <div className={styles.clientSlider}>
           <Slider {...settings}>
             {sliderItems.map((item, index) => (

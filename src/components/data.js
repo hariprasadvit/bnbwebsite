@@ -1,3 +1,4 @@
+// Home Page Data
 export const homeBannerData = {
   heading: "WE BUILD MVPS, ENTERPRISE APPS &",
   highlight: "AI-POWERED SYSTEMS",
@@ -6,6 +7,7 @@ export const homeBannerData = {
   showScroll: true,
 };
 
+// Case Study Detail Page Data
 export const digitalProductBannerData = {
   heading: "DIGITAL PRODUCT DEVELOPMENT FOR BCCI",
   highlight: "TO ENGAGE CRICKET FANS",
@@ -23,6 +25,7 @@ export const digitalProductoverviewData = {
   ],
 };
 
+// Service Details Page Date
 export const projectBannerData = {
   highlight: "FROM ZERO TO LAUNCH—",
   heading: "WITHOUT WASTING MONTHS.",
@@ -74,3 +77,13 @@ export const productDevelopmentData = [
     description: "",
   },
 ];
+
+// Service Listing Page Data
+export const serviceListingBannerData = {
+  highlight: "BEAUTIFUL, FUNCTIONAL DESIGNS",
+  heading: "THAT DRIVE ENGAGEMENT",
+  subheading:
+    "At Boolean and Beyond, we offer a range of tech-driven solutions to help businesses achieve their goals.We don’t just build MVPs, we build what your users will love—and your investors will notice.",
+  showScroll: false,
+  highlightFirst: true,
+};
