@@ -6,6 +6,12 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/service-listing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/service-listing/page.css",
+      "static/chunks/app/service-listing/page.js"
+    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -35,6 +41,12 @@
       "static/chunks/main-app.js",
       "static/css/app/case-study-detail/page.css",
       "static/chunks/app/case-study-detail/page.js"
+    ],
+    "/service-listing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/service-listing/page.css",
+      "static/chunks/app/service-listing/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

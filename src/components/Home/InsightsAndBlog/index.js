@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function InsightsAndBlog() {
+export default function InsightsAndBlog({ showKnowMore = true }) {
   const content = [
     {
       heading: "Scalable Search",
@@ -34,9 +34,11 @@ export default function InsightsAndBlog() {
                 <h4>{item.subHead}</h4>
                 <p>{item.desc}</p>
               </div>
-              <Link href={item.link} className="knowMoreLink">
-                Know More
-              </Link>
+              {showKnowMore && (
+                <Link href={item.link} className="knowMoreLink">
+                  Know More
+                </Link>
+              )}
             </div>
           ))}
         </div>
