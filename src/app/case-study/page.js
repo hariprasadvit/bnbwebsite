@@ -12,7 +12,6 @@ import { notFound } from "next/navigation";
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
 async function loader() {
-  noStore();
   const BASE_URL = getStrapiURL();
   const path = "/api/case-study";
 
@@ -35,6 +34,7 @@ async function loader() {
 }
 
 export default async function CaseStudy() {
+  noStore();
   const blockData = await loader();
 
   return (

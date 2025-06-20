@@ -10,10 +10,22 @@ import ListCardContainer from "./ListCard";
 export default function BlockRendererDetail({ blocks }) {
   if (!blocks?.length) return null;
 
+  const MainSection = ({ data } = {}) => {
+    return (
+      <>
+        {data?.detail_card?.map((_item, index) => (
+          <React.Fragment key={index}>
+            <OverviewCard key={index} data={_item} />
+          </React.Fragment>
+        ))}
+      </>
+    );
+  };
+
   return blocks.map((block, index) => {
     switch (block.__component) {
       case "case-study.overview-section":
-        return <OverviewCard key={index} data={block} />;
+        return <MainSection key={index} data={block} />;
       case "case-study.our-work-section":
         return <OurWorks key={index} data={block} />;
       case "landing-page.clients-section":
