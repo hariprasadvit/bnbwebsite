@@ -25,7 +25,7 @@ export const digitalProductoverviewData = {
   ],
 };
 
-// Service Details Page Date
+// Service Inner Page Data
 export const projectBannerData = {
   highlight: "FROM ZERO TO LAUNCH—",
   heading: "WITHOUT WASTING MONTHS.",
@@ -87,3 +87,90 @@ export const serviceListingBannerData = {
   showScroll: false,
   highlightFirst: true,
 };
+
+// Service Detail Page Data
+export const serviceDetailBannerData = {
+  highlight: "CREATING EXPERIENCES FOR AN",
+  heading: "AI-DRIVEN FUTURE",
+  subheading:
+    "At Boolean and Beyond, we offer a range of tech-driven solutions to help businesses achieve their goals.We don’t just build MVPs, we build what your users will love—and your investors will notice.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+export const solutionData = [
+  {
+    title: "User-focused designs for Gen-AI Solutions",
+    description:
+      "By incorporating empathy-driven design principles, we deliver solutions that enhance productivity in a variety of use cases and feel natural.",
+  },
+  {
+    title: "User-Controlled Parameters",
+    description:
+      "Let users fine-tune stylistic elements, such as color, format, or tone, to create outputs aligned with their unique preferences.",
+  },
+  {
+    title: "User-focused designs for Gen-AI Solutions",
+    description:
+      "By incorporating empathy-driven design principles, we deliver solutions that enhance productivity in a variety of use cases and feel natural.",
+  },
+  {
+    title: "User-Controlled Parameters",
+    description:
+      "Let users fine-tune stylistic elements, such as color, format, or tone, to create outputs aligned with their unique preferences.",
+  },
+];
+
+export const processData = [
+  {
+    label: "Research",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+  {
+    label: "Design",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+  {
+    label: "Develop",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+];
