@@ -18,6 +18,36 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
+    "/service-detail/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/service-detail/page.css",
+      "static/chunks/app/service-detail/page.js"
+    ],
+    "/case-study/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/case-study/page.css",
+      "static/chunks/app/case-study/page.js"
+    ],
+    "/service-inner/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/service-inner/page.css",
+      "static/chunks/app/service-inner/page.js"
+    ],
+    "/service-listing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/service-listing/page.css",
+      "static/chunks/app/service-listing/page.js"
+    ],
+    "/case-study-detail/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/case-study-detail/page.css",
+      "static/chunks/app/case-study-detail/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
