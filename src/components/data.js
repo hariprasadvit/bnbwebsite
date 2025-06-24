@@ -1,3 +1,6 @@
+import serviceDetailBannerImage1 from "../../public/serviceDetailBannerImage1.png";
+import serviceDetailBannerImage2 from "../../public/serviceDetailBannerImage2.png";
+
 // Home Page Data
 export const homeBannerData = {
   heading: "WE BUILD MVPS, ENTERPRISE APPS &",
@@ -171,6 +174,65 @@ export const processData = [
         value:
           "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
       },
+    ],
+  },
+];
+
+// Service Detail 1 Page Data
+export const serviceDetail1BannerData = {
+  highlight: "EXPLORING THE HUMAN EXPERIENCE:",
+  heading: "A CUSTOMER-CENTRIC APPROACH TO ETHNOGRAPHIC RESEARCH",
+  subheading:
+    "By observing users in their natural environment, designers can understand how they use technology, what their pain points are, and what features they value most.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+export const serviceDetailBannerImageData = [
+  {
+    bannerImage: serviceDetailBannerImage1,
+    altText: "Ethnographic Research Banner",
+    leftSections: [
+      {
+        title: "Ethnographic Research: An introduction",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+      {
+        title: "What is Ethnographic Research?",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+    ],
+    rightParagraphs: [
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+    ],
+  },
+  {
+    bannerImage: serviceDetailBannerImage2,
+    altText: "User Research Methods",
+    leftSections: [
+      {
+        title: "What is Ethnographic Research?",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+        ],
+      },
+    ],
+    rightParagraphs: [
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
     ],
   },
 ];
