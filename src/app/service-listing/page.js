@@ -1,17 +1,10 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
-import {
-  processData,
-  serviceDetailBannerData,
-  solutionData,
-} from "@/components/data";
+import { serviceListingBannerData } from "@/components/data";
 const Banner = dynamic(() => import("@/components/Home/Banner"));
-const AiSolutions = dynamic(() =>
-  import("@/components/ServiceDetail/AiSolutions")
-);
-const OurProcess = dynamic(() =>
-  import("@/components/ServiceDetail/OurProcess")
+const OurService = dynamic(() =>
+  import("@/components/ServiceListing/OurService")
 );
 const OurWorks = dynamic(() => import("@/components/Home/OurWorks"));
 const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
@@ -24,7 +17,7 @@ const IndustryWeServe = dynamic(() =>
   import("@/components/ServiceListing/IndustryWeServe")
 );
 
-export default function ServiceDetail() {
+export default function ServiceListing() {
   return (
     <div>
       <Head>
@@ -33,15 +26,14 @@ export default function ServiceDetail() {
       <div style={{ width: "100%" }}>
         <Header />
         <Banner
-          bannerData={serviceDetailBannerData}
+          bannerData={serviceListingBannerData}
           hideBorder
           contactUs={"Talk to Us"}
           descriptionMaxWidth={"828px"}
           headingMarginBottom={30}
           headingMaxWidth={"730px"}
         />
-        <AiSolutions solutionData={solutionData} />
-        <OurProcess processData={processData} />
+        <OurService />
         <OurWorks />
         <NumberSection />
         <OurClients />

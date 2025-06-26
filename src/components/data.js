@@ -1,3 +1,7 @@
+import serviceDetailBannerImage1 from "../../public/serviceDetailBannerImage1.png";
+import serviceDetailBannerImage2 from "../../public/serviceDetailBannerImage2.png";
+
+// Home Page Data
 export const homeBannerData = {
   heading: "WE BUILD MVPS, ENTERPRISE APPS &",
   highlight: "AI-POWERED SYSTEMS",
@@ -6,6 +10,7 @@ export const homeBannerData = {
   showScroll: true,
 };
 
+// Case Study Detail Page Data
 export const digitalProductBannerData = {
   heading: "DIGITAL PRODUCT DEVELOPMENT FOR BCCI",
   highlight: "TO ENGAGE CRICKET FANS",
@@ -23,6 +28,7 @@ export const digitalProductoverviewData = {
   ],
 };
 
+// Service Inner Page Data
 export const projectBannerData = {
   highlight: "FROM ZERO TO LAUNCH—",
   heading: "WITHOUT WASTING MONTHS.",
@@ -72,5 +78,161 @@ export const productDevelopmentData = [
     number: "06",
     title: "Testing",
     description: "",
+  },
+];
+
+// Service Listing Page Data
+export const serviceListingBannerData = {
+  highlight: "BEAUTIFUL, FUNCTIONAL DESIGNS",
+  heading: "THAT DRIVE ENGAGEMENT",
+  subheading:
+    "At Boolean and Beyond, we offer a range of tech-driven solutions to help businesses achieve their goals.We don’t just build MVPs, we build what your users will love—and your investors will notice.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+// Service Detail Page Data
+export const serviceDetailBannerData = {
+  highlight: "CREATING EXPERIENCES FOR AN",
+  heading: "AI-DRIVEN FUTURE",
+  subheading:
+    "At Boolean and Beyond, we offer a range of tech-driven solutions to help businesses achieve their goals.We don’t just build MVPs, we build what your users will love—and your investors will notice.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+export const solutionData = [
+  {
+    title: "User-focused designs for Gen-AI Solutions",
+    description:
+      "By incorporating empathy-driven design principles, we deliver solutions that enhance productivity in a variety of use cases and feel natural.",
+  },
+  {
+    title: "User-Controlled Parameters",
+    description:
+      "Let users fine-tune stylistic elements, such as color, format, or tone, to create outputs aligned with their unique preferences.",
+  },
+  {
+    title: "User-focused designs for Gen-AI Solutions",
+    description:
+      "By incorporating empathy-driven design principles, we deliver solutions that enhance productivity in a variety of use cases and feel natural.",
+  },
+  {
+    title: "User-Controlled Parameters",
+    description:
+      "Let users fine-tune stylistic elements, such as color, format, or tone, to create outputs aligned with their unique preferences.",
+  },
+];
+
+export const processData = [
+  {
+    label: "Research",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+  {
+    label: "Design",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+  {
+    label: "Develop",
+    description:
+      "We undertake research by holding discovery workshops based on industry data, client data, and internal network industry expertise to find genuine audience needs and pain points.",
+    lists: [
+      {
+        label: "Customer Assessment",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+      {
+        label: "User Personas",
+        value:
+          "We create solutions, keeping focus on the users and their needs in each phase of the design process.",
+      },
+    ],
+  },
+];
+
+// Service Detail 1 Page Data
+export const serviceDetail1BannerData = {
+  highlight: "EXPLORING THE HUMAN EXPERIENCE:",
+  heading: "A CUSTOMER-CENTRIC APPROACH TO ETHNOGRAPHIC RESEARCH",
+  subheading:
+    "By observing users in their natural environment, designers can understand how they use technology, what their pain points are, and what features they value most.",
+  showScroll: false,
+  highlightFirst: true,
+};
+
+export const serviceDetailBannerImageData = [
+  {
+    bannerImage: serviceDetailBannerImage1,
+    altText: "Ethnographic Research Banner",
+    leftSections: [
+      {
+        title: "Ethnographic Research: An introduction",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+      {
+        title: "What is Ethnographic Research?",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+    ],
+    rightParagraphs: [
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+    ],
+  },
+  {
+    bannerImage: serviceDetailBannerImage2,
+    altText: "User Research Methods",
+    leftSections: [
+      {
+        title: "What is Ethnographic Research?",
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+          "In this blog, we will explore the basics of ethnographic research for UI/UX design, including what it is, why it is important, and how it can be conducted. We will also discuss some of the benefits of ethnographic research, as well as some tips for conducting successful studies.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Ethnographic research for UI/UX design is an essential process that helps to understand the needs and preferences of the users. It is a qualitative research method that involves observing people in their natural environment and analyzing their behavior, interactions, and cultural patterns. Ethnographic research is an effective way to gain insights into how people use products and services, and how they interact with technology.",
+        ],
+      },
+    ],
+    rightParagraphs: [
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+      "We improve the overall customer experience through different digital channels with a focus on ease of use, accessibility, and personalization.",
+    ],
   },
 ];

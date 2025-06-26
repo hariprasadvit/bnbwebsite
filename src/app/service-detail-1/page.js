@@ -2,16 +2,12 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import {
-  processData,
-  serviceDetailBannerData,
-  solutionData,
+  serviceDetail1BannerData,
+  serviceDetailBannerImageData,
 } from "@/components/data";
 const Banner = dynamic(() => import("@/components/Home/Banner"));
-const AiSolutions = dynamic(() =>
-  import("@/components/ServiceDetail/AiSolutions")
-);
-const OurProcess = dynamic(() =>
-  import("@/components/ServiceDetail/OurProcess")
+const ServiceDetailBannerImage = dynamic(() =>
+  import("@/components/ServiceDetail/ServiceDetailBannerImage")
 );
 const OurWorks = dynamic(() => import("@/components/Home/OurWorks"));
 const NumberSection = dynamic(() => import("@/components/Home/NumberSection"));
@@ -24,7 +20,7 @@ const IndustryWeServe = dynamic(() =>
   import("@/components/ServiceListing/IndustryWeServe")
 );
 
-export default function ServiceDetail() {
+export default function ServiceDetail1() {
   return (
     <div>
       <Head>
@@ -33,15 +29,22 @@ export default function ServiceDetail() {
       <div style={{ width: "100%" }}>
         <Header />
         <Banner
-          bannerData={serviceDetailBannerData}
+          bannerData={serviceDetail1BannerData}
           hideBorder
           contactUs={"Talk to Us"}
-          descriptionMaxWidth={"828px"}
+          descriptionMaxWidth={"945px"}
           headingMarginBottom={30}
-          headingMaxWidth={"730px"}
+          headingMaxWidth={"805px"}
         />
-        <AiSolutions solutionData={solutionData} />
-        <OurProcess processData={processData} />
+        {serviceDetailBannerImageData.map((data, index) => (
+          <ServiceDetailBannerImage
+            key={index}
+            {...data}
+            removeRightMarginTop={index === 1}
+            isSecondBanner={index === 1}
+          />
+        ))}
+
         <OurWorks />
         <NumberSection />
         <OurClients />

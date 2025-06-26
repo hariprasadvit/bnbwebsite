@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import logo from "/public/logo.svg";
+import servicePagelogo from "/public/footerLogo.png";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import Link from "next/link";
@@ -157,11 +158,14 @@ export default function Header({ whiteHeader, active }) {
     <header
       className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""} ${
         whiteHeader ? styles.whiteHeader : ""
-      }`}
+      } ${scrolled && pathname === "/services" ? styles.servicesShrink : ""}`}
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src={logo} alt="Logo" />
+          <Image
+            src={pathname === "/services" ? servicePagelogo : logo}
+            alt="Logo"
+          />
         </Link>
         <nav className={styles.menu}>
           <ul>

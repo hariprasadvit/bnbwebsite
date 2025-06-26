@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function InsightsAndBlog({ data = {} }) {
+export default function InsightsAndBlog({ data = {}, showKnowMore = true }) {
   let { insights_blogs_card, title = "Our Insights and Blog" } = data;
 
   return (
@@ -16,9 +16,11 @@ export default function InsightsAndBlog({ data = {} }) {
                 <h4>{item.sub_title}</h4>
                 <p>{item.description}</p>
               </div>
-              <Link href={item.link.link_path} className="knowMoreLink">
-                {item.link.button_text}
-              </Link>
+              {showKnowMore && (
+                <Link href={item.link} className="knowMoreLink">
+                  {item.link.button_text}
+                </Link>
+              )}
             </div>
           ))}
         </div>

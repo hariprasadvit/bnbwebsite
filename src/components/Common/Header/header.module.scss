@@ -44,6 +44,8 @@
         width: 127.81px;
         height: 49.2px;
         transition: all 0.2s ease-in-out;
+        object-fit: contain;
+
 
         @media screen and (max-width: 768px) {
           width: 90px;
@@ -527,7 +529,7 @@
         ul {
           li {
             a {
-              color: #000 !important;
+              color: #000;
             }
           }
         }
@@ -556,7 +558,6 @@
     
   }
 }
-
 
 .whiteHeader {
   .container {
@@ -587,4 +588,22 @@
 
 .activeMenuItem {
   color: #f2164b !important;
+}
+
+// Service Page header shrink
+.servicesShrink {
+  .container {
+    background-color: black !important;
+    box-shadow: none !important;
+
+    .menu {
+      ul {
+        li {
+          a {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
 }

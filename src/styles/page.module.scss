@@ -846,7 +846,7 @@ border-radius: 4px;
         }
 
         @media screen and (max-width: 768px) {
-          padding: 20px 0 0;
+          padding: 20px 0 20px;
           gap: 20px;
         }
 
@@ -1071,7 +1071,14 @@ border-radius: 4px;
   @media screen and (max-width: 768px) {
     padding: 40px 26px 40px;
   }
+.testimonialContainer{
+  background: #010104 !important;
+  color: #FFFFFF !important;
 
+  .customArrow{
+    border: 1px solid #fff !important;
+  }
+}
   .container {
     background: #ece3da;
     padding: 40px 50px;
