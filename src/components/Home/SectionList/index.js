@@ -13,14 +13,14 @@ export default function SectionList() {
     {
       title: "MVP and Beyond",
       description:
-        "At Boolean and Beyond, we transform ideas into functional, market-ready Minimum Viable Products (MVPs) with precision and speed. Our approach balances rapid iteration with user-centric design, ensuring your product reaches the market efficiently while staying adaptable for future growth.",
+        "At Boolean and Beyond, we specialize in MVP development services that help you transform your ideas into functional, market-ready products with speed and precision. Our agile, user-centric approach combines rapid prototyping, iterative development, and scalable architecture to ensure your Minimum Viable Product reaches the market quickly while staying flexible for future enhancements.",
       imageSrc: mvp,
       imageAlt: "How we build MVP",
       listItems: [
-        "SaaS products, B2C platforms",
-        "Scalable backend, smart frontend",
-        "Marketplaces & AI Ready Stack",
-        "Rapid iterations with tight feedback loops",
+        "Custom MVPs for B2B SaaS and B2C Products",
+        "Scalable Backend and User-Centric Frontends",
+        "AI-Ready E-commerce and Marketplace MVPs",
+        "Rapid Prototyping and Feedback-Driven MVP Validation",
       ],
       link: "#",
       isReverse: false,
@@ -29,14 +29,14 @@ export default function SectionList() {
     {
       title: "Business Software, Tailored",
       description:
-        "At Boolean and Beyond, we craft scalable, secure, and high-performance enterprise applications tailored to your business needs. Whether streamlining operations or integrating complex workflows, our solutions ensure efficiency, flexibility, and future-ready adaptability.",
+        "At Boolean and Beyond, we build scalable, secure, and high-performance business management applications tailored to your unique workflows. From streamlining operations to integrating critical business processes, our custom software ensures your teams work smarter, faster, and with greater flexibility.",
       imageSrc: entApp,
       imageAlt: "Enterprise Applications",
       listItems: [
-        "ERP, CRM, inventory, invoicing",
-        "Web or desktop apps for Operations",
-        "Integrations with your tools",
-        "Enterprise AI & Automation",
+        "ERP, CRM, inventory, and invoicing systems",
+        "Web and desktop applications for operational management",
+        "Seamless integrations with your existing business tools",
+        "Business Reports & Dashboards",
       ],
       link: "#",
       isReverse: true,
@@ -61,14 +61,14 @@ export default function SectionList() {
     {
       title: "Enterprise Intelligence Stack",
       description:
-        "At Boolean and Beyond, we build knowledge graphs that connect structured and unstructured data to uncover meaningful relationships, enabling advanced search, recommendation systems, and AI-driven insights.",
+        "At Boolean and Beyond, we build advanced enterprise intelligence systems that connect and enrich your structured and unstructured data, revealing meaningful relationships and unlocking powerful AI-driven insights. From knowledge graphs to recommendation engines, our solutions deliver smarter search, enhanced decision-making, and seamless data orchestration.",
       imageSrc: AnimatedSVG,
       imageAlt: "AI Agents",
       listItems: [
-        "Scalable, secure architecture",
-        "AI Agents, Knowledge Graphs, RAG pipelines",
+        "AI Agents and Knowledge Graphs",
+        "Retrieval-Augmented Generation (RAG) Pipelines",
         "Workflow orchestration with CRM",
-        "Big Data processing and analytics",
+        "Big Data Processing and Analytics",
       ],
       // link: "#",
       isReverse: false,

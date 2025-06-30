@@ -25,11 +25,11 @@ export default function DataDriven({
 
   // Format for react-select
   const options = [
-    { value: "01", label: "01 Banking and Fintech" },
-    { value: "02", label: "02 Ecommerce" },
-    { value: "03", label: "03 News and Media" },
-    { value: "04", label: "04 E-Learning & Education" },
-    { value: "05", label: "05 E-Learning & Education" },
+    { value: "01", label: "Banking and Fintech" },
+    { value: "02", label: "Ecommerce" },
+    { value: "03", label: "News and Media" },
+    { value: "04", label: "E-Learning & Education" },
+    { value: "05", label: "Healthcare" },
   ];
 
   return (
@@ -43,7 +43,10 @@ export default function DataDriven({
               : { maxWidth: titleMaxWidth, marginBottom: titleMarginBottom }
           }
         >
-          <h2>Make data driven decisions with real - Time insights</h2>
+          <h2>
+            Serving Clients Across Industries with Smart, Scalable Digital
+            Solutions
+          </h2>
         </div>
         <div className={styles.sectionBottom}>
           <div
@@ -87,38 +90,42 @@ export default function DataDriven({
             <div className={styles.desc}>
               {activeMenu === "01" && (
                 <div className={activeMenu === "01" ? styles.showDesc : null}>
-                  Our AI-driven intelligent agents enhance automation,
-                  decision-making, and personalization across industries. At
-                  Boolean and Beyond, we design AI agents that integrate NLP,
-                  knowledge graphs, and machine learning to provide
-                  context-aware solutions.
+                  Modernize legacy systems, automate compliance, and deliver
+                  seamless digital banking with secure enterprise applications,
+                  robust MVP builds, and AI agents for fraud detection and
+                  customer service.
                 </div>
               )}
               {activeMenu === "02" && (
                 <div className={activeMenu === "02" ? styles.showDesc : null}>
-                  Personalization across industries. At Boolean and Beyond, we
-                  design AI agents that integrate NLP, knowledge graphs, and
-                  machine learning to provide context-aware solutions.
+                  Accelerate your go-to-market with scalable ecommerce MVPs,
+                  intelligent enterprise platforms, and AI-powered agents that
+                  personalize shopping, manage inventory, and enhance customer
+                  engagement.
                 </div>
               )}
               {activeMenu === "03" && (
                 <div className={activeMenu === "03" ? styles.showDesc : null}>
-                  AI agents that integrate NLP, knowledge graphs, and machine
-                  learning to provide context-aware solutions.
+                  Transform content operations with enterprise-grade publishing
+                  systems, rapid MVP experiments for new formats, and AI agents
+                  that power recommendations, editorial workflows, and audience
+                  personalization.
                 </div>
               )}
               {activeMenu === "04" && (
                 <div className={activeMenu === "04" ? styles.showDesc : null}>
-                  Intelligent that integrate NLP, knowledge graphs, and machine
-                  learning to provide context-aware solutions.
+                  Build engaging, scalable education platforms through tailored
+                  enterprise applications, MVP prototypes for interactive tools,
+                  and AI-driven agents that personalize learning experiences and
+                  student support.
                 </div>
               )}
               {activeMenu === "05" && (
                 <div className={activeMenu === "05" ? styles.showDesc : null}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab
-                  deserunt illo iure impedit similique fugiat laborum suscipit
-                  est perferendis totam debitis dolorem numquam nisi architecto,
-                  cum eos placeat quam ipsam?
+                  Enable secure, efficient healthcare operations with
+                  enterprise-grade software, MVPs for telemedicine and patient
+                  apps, and intelligent agents supporting decision-making,
+                  triage, and workflow automation.
                 </div>
               )}
             </div>

@@ -106,14 +106,17 @@ export default function OurWorks() {
       <div className={styles.container}>
         <div className={styles.topContent}>
           <h2>
-            Some of our <br />
-            Pride Works
+            Some of our
+            <br />
+            Featured Works
           </h2>
           <p>
             Our AI-driven intelligent agents enhance automation,
-            decision-making, and personalization across industries. At Boolean
-            and Beyond, we design AI agents that integrate NLP, knowledge
-            graphs, and machine learning to provide context-aware solutions.
+            decision-making, and personalization across MVPs, enterprise
+            applications, and business platforms. At Boolean and Beyond, we
+            design AI agents that seamlessly integrate with your existing
+            systems, leveraging NLP, knowledge graphs, and machine learning to
+            deliver context-aware, scalable, and future-ready solutions.
           </p>
         </div>
         <div className={styles.bottomContent}>
