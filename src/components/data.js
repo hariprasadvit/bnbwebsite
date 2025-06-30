@@ -3,10 +3,10 @@ import serviceDetailBannerImage2 from "../../public/serviceDetailBannerImage2.pn
 
 // Home Page Data
 export const homeBannerData = {
-  heading: "WE BUILD MVPS, ENTERPRISE APPS &",
+  heading: "WE BUILD MVPS, ENTERPRISE APPLICATIONS &",
   highlight: "AI-POWERED SYSTEMS",
   subheading:
-    "From rapid MVP development to enterprise-scale applications, we build tailored solutions—leveraging knowledge graphs and AI agents—to power automation, intelligence, and efficiency.",
+    "From rapid MVP development to enterprise-grade business applications, we build custom solutions that harness AI agents to drive automation, intelligence, and operational excellence.",
   showScroll: true,
 };
 

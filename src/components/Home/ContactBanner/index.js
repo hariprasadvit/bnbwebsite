@@ -10,7 +10,7 @@ export default function ContactBanner() {
           <p>Need hands-on talent to speed up your roadmap?</p>
           <p>
             Embed our developers, designers, and AI engineers into your team. We
-            bring deep expertise in modern stacks—so you can ship faster,
+            bring deep expertise in modern stacks, so you can ship faster,
             without the hiring overhead.
           </p>
         </div>

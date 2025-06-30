@@ -12,7 +12,6 @@ const titillium = Titillium_Web({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={titillium.variable}>
-      <head />
       <body>
         {children}
         <Footer />
