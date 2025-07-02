@@ -13,35 +13,35 @@ const Slider = dynamic(() => import("react-slick"), { ssr: false });
 export default function OurWorks() {
   const workItems = [
     {
-      image: workImg1,
+      // image: workImg1,
       text: "Digital Product Development for",
       highlight: "BCCI to Engage Cricket Fans",
       bg: "#E7F2E7",
       highlightMaxWidth: "240px",
     },
     {
-      image: workImg2,
+      // image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#FFFFFF",
       highlightMaxWidth: "275.5px",
     },
     {
-      image: workImg2,
+      // image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#ECE3DA",
       highlightMaxWidth: "275.5px",
     },
     {
-      image: workImg2,
+      // image: workImg2,
       text: "Teaming Up with the Global FMCG Chain",
       highlight: "for Creating a Digital Platform",
       bg: "#E7F2E7",
       highlightMaxWidth: "275.5px",
     },
     {
-      image: workImg1,
+      // image: workImg1,
       text: "Digital Product Development for",
       highlight: "BCCI to Engage Cricket Fans",
       bg: "#FFFFFF",
@@ -130,11 +130,17 @@ export default function OurWorks() {
                   <div
                     style={{
                       background: item.bg,
+                      height: "100%", // take full height of .workItem
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
                     }}
                   >
-                    <div className={styles.imageWrap}>
-                      <Image src={item.image} alt="Our Works" />
-                    </div>
+                    {item.image && (
+                      <div className={styles.imageWrap}>
+                        <Image src={item.image} alt="Our Works" />
+                      </div>
+                    )}
                     <div>
                       <p style={{ maxWidth: item.highlightMaxWidth }}>
                         {item.text} <strong>{item.highlight}</strong>

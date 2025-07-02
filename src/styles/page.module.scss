@@ -290,7 +290,6 @@ border-radius: 4px;
   }
 }
 
-.splitSectionLeft img {}
 
 .splitSectionRight {
   max-width: 100%;
@@ -484,13 +483,19 @@ border-radius: 4px;
         }
 
         >div {
-          margin-bottom: -216px;
+          // margin-bottom: -216px;
+          margin-bottom: -125px;
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: -100px;
+          }
         }
 
         .workItem {
           margin-right: 20px;
           >div {
-            min-height: 414px;
+            // min-height: 414px;
+       min-height: 154px;
             min-width: 483px;
             max-width: 483px;
             width: 100%;
@@ -502,20 +507,20 @@ border-radius: 4px;
             align-items: flex-start;
 
             @media screen and (max-width: 1200px) {
-              min-height: 310px;
+              // min-height: 310px;
               max-width: 380px;
               padding: 30px 40px;
               min-width: 380px;
             }
 
             @media screen and (max-width: 768px) {
-              min-height: 375px;
+              // min-height: 375px;
               max-width: 360px;
               min-width: 360px;
               padding: 30px 40px;
             }
             @media screen and (max-width: 550px) {
-              min-height: 290px;
+              // min-height: 290px;
               max-width: 270px;
               min-width: 270px;
               padding: 25px;
@@ -619,7 +624,8 @@ border-radius: 4px;
       padding: 80px 80px 80px;
     }
 
-    padding: 290px 80px 54px;
+    // padding: 290px 80px 54px;
+    padding: 200px 80px 54px;
     display: flex;
     justify-content: space-between;
     gap: 189px;
@@ -633,7 +639,8 @@ border-radius: 4px;
         padding: 80px 40px 80px;
       }
 
-      padding: 290px 40px 54px;
+      // padding: 290px 40px 54px;
+      padding: 200px 40px 54px;
     }
 
     @media screen and (max-width: 900px) {
@@ -645,7 +652,8 @@ border-radius: 4px;
         padding: 40px 26px 40px;
       }
 
-      padding: 250px 26px 40px;
+      // padding: 250px 26px 40px;
+      padding: 150px 26px 40px;
     }
 
     .nSectionLeft {
@@ -1062,7 +1070,6 @@ border-radius: 4px;
           }
         }
 
-        .imgWrap {}
       }
 
       .sectionBottomContainer.noImage {
