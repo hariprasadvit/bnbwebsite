@@ -1,6 +1,4 @@
-import Header from "@/components/Common/Header";
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import React from "react";
 
 const Banner = dynamic(() => import("@/components/Projects/Banner"));
@@ -18,21 +16,15 @@ const OurWorks = dynamic(() => import("@/components/Projects/OurWorks"));
 
 export default function Projects() {
   return (
-    <div>
-      <Head>
-        <title>Projects || B&B</title>
-      </Head>
-      <div style={{ width: "100%" }}>
-        <Header whiteHeader active="services" />
-        <Banner />
-        <RepeatSection />
-        <OurWorks />
-        <NumberSection disableTopPadding />
-        <OurClients />
-        <DataDriven />
-        <Testimonials />
-        <InsightsAndBlog />
-      </div>
+    <div style={{ width: "100%" }}>
+      <Banner />
+      <RepeatSection />
+      <OurWorks />
+      <NumberSection disableTopPadding />
+      <OurClients />
+      <DataDriven />
+      <Testimonials />
+      <InsightsAndBlog />
     </div>
   );
 }

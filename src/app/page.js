@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import { homeBannerData } from "@/components/data";
@@ -15,18 +15,11 @@ const InsightsAndBlog = dynamic(() =>
 const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
 const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
 
-export const metadata = {
-  title:
-    "Boolean and Beyond - Building MVPs, Enterprise Apps & Intelligent AI Solutions",
-  description:
-    "From MVP development to enterprise software and AI agents, Boolean and Beyond powers intelligent, future-ready solutions across industries.",
-};
-
 export default function Home() {
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <Header />
+        {/* <Header /> */}
         <Banner
           headingMaxWidth={"490px"}
           descriptionMaxWidth={"660px"}

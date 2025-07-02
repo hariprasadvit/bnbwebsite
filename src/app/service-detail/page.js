@@ -1,6 +1,4 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
-import Header from "@/components/Common/Header";
 import {
   processData,
   serviceDetailBannerData,
@@ -26,29 +24,23 @@ const IndustryWeServe = dynamic(() =>
 
 export default function ServiceDetail() {
   return (
-    <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
-      <div style={{ width: "100%" }}>
-        <Header />
-        <Banner
-          bannerData={serviceDetailBannerData}
-          hideBorder
-          contactUs={"Talk to Us"}
-          descriptionMaxWidth={"828px"}
-          headingMarginBottom={30}
-          headingMaxWidth={"730px"}
-        />
-        <AiSolutions solutionData={solutionData} />
-        <OurProcess processData={processData} />
-        <OurWorks />
-        <NumberSection />
-        <OurClients />
-        <Testimonials isCustomContainer />
-        <InsightsAndBlog showKnowMore={false} />
-        <IndustryWeServe />
-      </div>
+    <div style={{ width: "100%" }}>
+      <Banner
+        bannerData={serviceDetailBannerData}
+        hideBorder
+        contactUs={"Talk to Us"}
+        descriptionMaxWidth={"828px"}
+        headingMarginBottom={30}
+        headingMaxWidth={"730px"}
+      />
+      <AiSolutions solutionData={solutionData} />
+      <OurProcess processData={processData} />
+      <OurWorks />
+      <NumberSection />
+      <OurClients />
+      <Testimonials isCustomContainer />
+      <InsightsAndBlog showKnowMore={false} />
+      <IndustryWeServe />
     </div>
   );
 }
