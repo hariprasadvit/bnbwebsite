@@ -29,7 +29,9 @@ export default function InsightsAndBlog({ showKnowMore = true }) {
         <div className={styles.contentList}>
           {content.map((item, index) => (
             <div className={styles.content} key={index}>
-              <div className={styles.heading}>{item.heading}</div>
+              <div className={`${styles.heading} ${styles.headingAlignment}`}>
+                {item.heading}
+              </div>
               <div className={styles.desc}>
                 <h4>{item.subHead}</h4>
                 <p>{item.desc}</p>
