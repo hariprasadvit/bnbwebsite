@@ -1,6 +1,4 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
-import Header from "@/components/Common/Header";
 import {
   serviceDetail1BannerData,
   serviceDetailBannerImageData,
@@ -22,36 +20,30 @@ const IndustryWeServe = dynamic(() =>
 
 export default function ServiceDetail1() {
   return (
-    <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
-      <div style={{ width: "100%" }}>
-        <Header />
-        <Banner
-          bannerData={serviceDetail1BannerData}
-          hideBorder
-          contactUs={"Talk to Us"}
-          descriptionMaxWidth={"945px"}
-          headingMarginBottom={30}
-          headingMaxWidth={"805px"}
+    <div style={{ width: "100%" }}>
+      <Banner
+        bannerData={serviceDetail1BannerData}
+        hideBorder
+        contactUs={"Talk to Us"}
+        descriptionMaxWidth={"945px"}
+        headingMarginBottom={30}
+        headingMaxWidth={"805px"}
+      />
+      {serviceDetailBannerImageData.map((data, index) => (
+        <ServiceDetailBannerImage
+          key={index}
+          {...data}
+          removeRightMarginTop={index === 1}
+          isSecondBanner={index === 1}
         />
-        {serviceDetailBannerImageData.map((data, index) => (
-          <ServiceDetailBannerImage
-            key={index}
-            {...data}
-            removeRightMarginTop={index === 1}
-            isSecondBanner={index === 1}
-          />
-        ))}
+      ))}
 
-        <OurWorks />
-        <NumberSection />
-        <OurClients />
-        <Testimonials isCustomContainer />
-        <InsightsAndBlog showKnowMore={false} />
-        <IndustryWeServe />
-      </div>
+      <OurWorks />
+      <NumberSection />
+      <OurClients />
+      <Testimonials isCustomContainer />
+      <InsightsAndBlog showKnowMore={false} />
+      <IndustryWeServe />
     </div>
   );
 }

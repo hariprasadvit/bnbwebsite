@@ -102,6 +102,17 @@ img {
   align-items: center;
 }
 
+  .slick-track{
+padding-top: 50px !important;
+
+@media screen and (max-width: 768px) {
+  padding-top: 15px !important;
+}
+@media screen and (max-width: 550px) {
+  padding-top: 0px !important;
+}
+
+  }
 
 .slick-list .slick-track{
   display: flex;
@@ -114,7 +125,7 @@ img {
     gap: unset;
   }
   @media screen and (max-width: 500px) {
-    margin-top: 15px;
+    // margin-top: 15px;
   }
 
 }

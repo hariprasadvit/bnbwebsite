@@ -290,7 +290,6 @@ border-radius: 4px;
   }
 }
 
-.splitSectionLeft img {}
 
 .splitSectionRight {
   max-width: 100%;
@@ -337,22 +336,23 @@ border-radius: 4px;
 }
 
 .splitSectionRight ul li {
-  font-size: 21px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 25px;
+  // font-size: 14px;
   margin-bottom: 26px;
   font-weight: 300;
   width: 50%;
   padding-left: 35px;
   position: relative;
 
-  @media screen and (max-width: 1200px) {
-    font-size: 18px;
-    line-height: 30px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 18px;
+  //   line-height: 30px;
+  // }
 
   @media screen and (max-width: 768px) {
-    font-size: 16px;
-    line-height: 25px;
+    // font-size: 16px;
+    // line-height: 25px;
     width: 100%;
     margin-bottom: 10px;
   }
@@ -366,7 +366,8 @@ border-radius: 4px;
   background: #000;
   border-radius: 100%;
   left: 0;
-  top: 10px;
+  // top: 10px;
+  top: 5px;
 
   @media screen and (max-width: 1200px) {
     width: 13px;
@@ -482,13 +483,19 @@ border-radius: 4px;
         }
 
         >div {
-          margin-bottom: -216px;
+          // margin-bottom: -216px;
+          margin-bottom: -125px;
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: -100px;
+          }
         }
 
         .workItem {
           margin-right: 20px;
           >div {
-            min-height: 414px;
+            // min-height: 414px;
+       min-height: 154px;
             min-width: 483px;
             max-width: 483px;
             width: 100%;
@@ -500,20 +507,20 @@ border-radius: 4px;
             align-items: flex-start;
 
             @media screen and (max-width: 1200px) {
-              min-height: 310px;
+              // min-height: 310px;
               max-width: 380px;
               padding: 30px 40px;
               min-width: 380px;
             }
 
             @media screen and (max-width: 768px) {
-              min-height: 375px;
+              // min-height: 375px;
               max-width: 360px;
               min-width: 360px;
               padding: 30px 40px;
             }
             @media screen and (max-width: 550px) {
-              min-height: 290px;
+              // min-height: 290px;
               max-width: 270px;
               min-width: 270px;
               padding: 25px;
@@ -617,7 +624,8 @@ border-radius: 4px;
       padding: 80px 80px 80px;
     }
 
-    padding: 290px 80px 54px;
+    // padding: 290px 80px 54px;
+    padding: 200px 80px 54px;
     display: flex;
     justify-content: space-between;
     gap: 189px;
@@ -631,7 +639,8 @@ border-radius: 4px;
         padding: 80px 40px 80px;
       }
 
-      padding: 290px 40px 54px;
+      // padding: 290px 40px 54px;
+      padding: 200px 40px 54px;
     }
 
     @media screen and (max-width: 900px) {
@@ -643,7 +652,8 @@ border-radius: 4px;
         padding: 40px 26px 40px;
       }
 
-      padding: 250px 26px 40px;
+      // padding: 250px 26px 40px;
+      padding: 150px 26px 40px;
     }
 
     .nSectionLeft {
@@ -700,7 +710,13 @@ border-radius: 4px;
       .numbersWrap {
         display: flex;
         justify-content: space-between;
-        max-width: 580px;
+        // max-width: 580px;
+        gap: 10px;
+
+        @media screen and (max-width: 590px) {
+          flex-direction: column;
+          gap: 25px;
+        }
 
         .number {
           display: flex;
@@ -720,13 +736,20 @@ border-radius: 4px;
           }
 
           span {
-            font-size: 21px;
+            font-size: 18px;
             line-height: 36px;
             font-weight: 300;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1200px) {
+              font-size: 16px;
+            line-height: unset;
+            }
+
+            @media screen and (max-width: 660px) {
+              font-size: 14px;
+            }
+            @media screen and (max-width: 590px) {
               font-size: 18px;
-              line-height: 36px;
             }
           }
         }
@@ -858,6 +881,16 @@ border-radius: 4px;
           font-size: 24px;
           line-height: 65px;
           font-weight: 600;
+
+          @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .headingAlignment {
+          line-height: unset;
 
           @media screen and (max-width: 768px) {
             font-size: 20px;
@@ -1037,7 +1070,6 @@ border-radius: 4px;
           }
         }
 
-        .imgWrap {}
       }
 
       .sectionBottomContainer.noImage {

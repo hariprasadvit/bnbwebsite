@@ -18,14 +18,14 @@ export default function Banner({ title, description, hightlighted_text }) {
 
         <div className={styles.dashedBorder}></div>
       </div>
-      <div className={styles.splineWrap}>
+      {/* <div className={styles.splineWrap}>
         <Spline
           className={styles.spline}
           scene="https://prod.spline.design/uyq7dF5D1Z1ksQZy/scene.splinecode"
           width={849}
           height={549}
         />
-      </div>
+      </div> */}
     </section>
   );
 }

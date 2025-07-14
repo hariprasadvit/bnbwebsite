@@ -34,9 +34,6 @@ export default async function Home(props) {
   const blockData = await loader();
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Header />
         <BlockRenderer blocks={blockData.blocks} />

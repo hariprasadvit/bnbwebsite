@@ -73,10 +73,10 @@ export default function OurWorks({ data = {} }) {
   };
 
   function formatTitleWithBreaks(title, wordsPerLine = 3) {
-    const words = title.split(" ");
+    const words = title?.split(" ");
     const lines = [];
 
-    for (let i = 0; i < words.length; i += wordsPerLine) {
+    for (let i = 0; i < words?.length; i += wordsPerLine) {
       lines.push(words.slice(i, i + wordsPerLine).join(" "));
     }
 
@@ -105,16 +105,18 @@ export default function OurWorks({ data = {} }) {
           </div>
           <div className={styles.workSlider}>
             <Slider {...settings}>
-              {data.card.map((item, index) => {
+              {data?.card?.map((item, index) => {
                 const imageUrl = item.image?.url
                   ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
                   : "/fallback-image.png"; // fallback image
-
+                {
+                  console.log(item, "item");
+                }
                 return (
                   <div className={styles.workItem} key={index}>
                     <div
                       style={{
-                        background: item.bg,
+                        background: item.color_code,
                       }}
                     >
                       <div className={styles.imageWrap}>
