@@ -47,7 +47,6 @@ export default async function ServiceDetails({ params }) {
         <title>B&B</title>
       </Head>
       <div style={{ width: "100%" }}>
-        <Header />
         <Banner
           data={blockData?.pageContent}
           hideBorder

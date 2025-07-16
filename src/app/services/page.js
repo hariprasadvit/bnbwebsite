@@ -37,8 +37,6 @@ export default async function ServiceListing() {
   const { pageContent: data = {} } = blockData;
   return (
     <div style={{ width: "100%" }}>
-      <Header active={"services"} />
-      {console.log(data, "data whole")}
       <Banner
         data={data}
         highlightFirst

@@ -1,5 +1,4 @@
 import qs from "qs";
-import Head from "next/head";
 import Header from "@/components/Common/Header";
 import { getStrapiURL } from "@/lib/utils";
 import { notFound } from "next/navigation";
@@ -35,18 +34,7 @@ export default async function Home(props) {
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <Header />
         <BlockRenderer blocks={blockData.blocks} />
-        {/* 
-        <Banner />
-        <SectionList />
-        <ContactBanner />
-        <OurWorks />
-        <NumberSection />
-        <OurClients />
-        <DataDriven />
-        <Testimonials /> */}
-        {/* <InsightsAndBlog /> */}
       </div>
     </div>
   );
