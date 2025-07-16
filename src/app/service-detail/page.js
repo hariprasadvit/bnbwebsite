@@ -19,7 +19,7 @@ const InsightsAndBlog = dynamic(() =>
   import("@/components/Home/InsightsAndBlog")
 );
 const IndustryWeServe = dynamic(() =>
-  import("@/components/ServiceListing/IndustryWeServe")
+  import("@/components/Services/IndustryWeServe")
 );
 
 export default function ServiceDetail() {

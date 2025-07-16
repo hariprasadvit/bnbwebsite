@@ -158,14 +158,11 @@ export default function Header({ whiteHeader, active }) {
     <header
       className={`${styles.headerWrapper} ${scrolled ? styles.shrink : ""} ${
         whiteHeader ? styles.whiteHeader : ""
-      } ${scrolled && pathname === "/services" ? styles.servicesShrink : ""}`}
+      } `}
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image
-            src={pathname === "/services" ? servicePagelogo : logo}
-            alt="Logo"
-          />
+          <Image src={logo} alt="Logo" />
         </Link>
         <nav className={styles.menu}>
           <ul>

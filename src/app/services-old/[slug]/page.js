@@ -6,7 +6,7 @@ import { getStrapiURL } from "@/lib/utils";
 import { unstable_noStore as noStore } from "next/cache";
 import { notFound } from "next/navigation";
 
-import BlockRendererDetail from "@/components/Services/BlockRendererDetail";
+import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
 import { fetchAPI } from "@/lib/fetch-api";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));

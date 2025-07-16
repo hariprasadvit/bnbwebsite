@@ -119,14 +119,14 @@ export default function OurWorks({ data = {} }) {
                         background: item.color_code,
                       }}
                     >
-                      <div className={styles.imageWrap}>
+                      {/* <div className={styles.imageWrap}>
                         <Image
                           src={imageUrl}
                           width={300}
                           height={150}
                           alt="Our Works"
                         />
-                      </div>
+                      </div> */}
                       {/* <p>
                         {item.text} <strong>{item.highlight}</strong>
                       </p> */}

@@ -16,19 +16,23 @@
     @media screen and (max-width: 1200px) {
       padding: 40px;
     }
+
     @media screen and (max-width: 950px) {
       grid-template-columns: 130px 70% 5%;
     }
+
     @media screen and (max-width: 768px) {
       padding: 26px;
     }
+
     @media screen and (max-width: 767px) {
       grid-template-columns: 161px 65%;
     }
+
     @media screen and (max-width: 500px) {
       grid-template-columns: 161px 40%;
     }
-    
+
 
     .logo {
       text-align: center;
@@ -57,7 +61,7 @@
 
       @media screen and (max-width:767px) {
         display: none;
-               }
+      }
 
       ul {
         display: flex;
@@ -66,10 +70,11 @@
 
         @media screen and (max-width:950px) {
           justify-content: flex-end;
-                 }
+        }
+
         @media screen and (max-width:767px) {
           display: none;
-                 }
+        }
 
         li {
           a {
@@ -80,8 +85,9 @@
             text-align: center;
             opacity: 0.8;
 
-            &:active{
+            &.active {
               color: #f2164b;
+              font-weight: 700;
             }
 
             &:hover {
@@ -242,19 +248,21 @@
           cursor: pointer;
 
           @media screen and (max-width: 600px) {
-            font-size: 14px;    
+            font-size: 14px;
           }
+
           @media screen and (max-width: 550px) {
-            font-size: 12px;    
+            font-size: 12px;
           }
         }
 
-        h3{
+        h3 {
           @media screen and (max-width: 600px) {
-            font-size: 14px;    
+            font-size: 14px;
           }
+
           @media screen and (max-width: 550px) {
-            font-size: 12px;    
+            font-size: 12px;
           }
         }
       }
@@ -286,11 +294,13 @@
             @media screen and (max-width: 1200px) {
               font-size: 40px;
             }
+
             @media screen and (max-width: 950px) {
               font-size: 14px;
             }
+
             @media screen and (max-width: 550px) {
-              font-size: 12px;    
+              font-size: 12px;
             }
 
             &::after {
@@ -306,7 +316,7 @@
               transition: transform 0.3s ease;
 
               @media screen and (max-width: 768px) {
-               display: none; 
+                display: none;
               }
             }
 
@@ -314,12 +324,12 @@
               color: #4c4c4c;
 
               @media screen and (max-width: 768px) {
-                color:#f2164b;
-               }
+                color: #f2164b;
+              }
 
               &::after {
                 transform: scaleX(1);
-                
+
               }
             }
           }
@@ -411,7 +421,7 @@
             //   font-size: 14px;    
             // }
             @media screen and (max-width: 550px) {
-              font-size: 12px;    
+              font-size: 12px;
             }
 
           }
@@ -464,16 +474,16 @@
 
       // Responsive Menu Items
       @media screen and (max-width: 950px) {
-        display: flex !important; 
+        display: flex !important;
         flex-direction: column;
         grid-template-areas: none;
         grid-template-columns: none;
         grid-template-rows: none;
-      
+
         .menuItem_1 {
           width: 100%;
           height: auto;
-          min-height: 37.5vh; 
+          min-height: 37.5vh;
           display: flex;
           flex-direction: column;
         }
@@ -493,7 +503,7 @@
           display: flex;
           flex-direction: column;
         }
-      
+
         .menuItem_4,
         .menuItem_5 {
           display: none !important;
@@ -521,6 +531,7 @@
       @media screen and (max-width: 1200px) {
         padding: 10px 40px;
       }
+
       @media screen and (max-width: 768px) {
         padding: 10px 26px;
       }
@@ -530,6 +541,12 @@
           li {
             a {
               color: #000;
+
+              &.active,
+              &:hover {
+                color: #f2164b;
+                font-weight: 700;
+              }
             }
           }
         }
@@ -544,6 +561,7 @@
         align-items: center;
         width: 80px;
       }
+
       img {
         width: 100px;
         height: auto;
@@ -555,7 +573,7 @@
       }
     }
 
-    
+
   }
 }
 

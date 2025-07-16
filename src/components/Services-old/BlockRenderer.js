@@ -2,34 +2,32 @@ import DataDriven from "../Home/DataDriven";
 import InsightsAndBlog from "../Home/InsightsAndBlog";
 import NumberSection from "../Home/NumberSection";
 import OurClients from "../Home/OurClients";
-import OurWorks from "../Home/OurWorks";
 import Testimonials from "../Home/Testimonials";
-
-import IndustryWeServe from "./IndustryWeServe";
-import OurService from "./OurService";
+import OurWorks from "../Projects/OurWorks";
+import RepeatSection from "../Projects/RepeatSection";
 
 export default function BlockRenderer({ blocks }) {
   if (!blocks?.length) return null;
 
   return blocks.map((block, index) => {
     switch (block.__component) {
-      case "service-listing.our-service-section":
-        return <OurService key={index} data={block} />;
-      case "landing-page.portfolio-section":
+      case "services.services-section":
+        return <RepeatSection key={index} data={block} />;
+      case "case-study.our-work-section":
         return (
           <>
             <OurWorks key={index} data={block} />
-            {/* <NumberSection /> */}
+            <NumberSection disableTopPadding />
           </>
         );
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} addTopPadding={true} />;
+        return <OurClients key={index} data={block} />;
+      case "landing-page.insight-section":
+        return <DataDriven key={index} data={block} />;
       case "landing-page.testimonials-section":
-        return <Testimonials isCustomContainer key={index} data={block} />;
+        return <Testimonials key={index} data={block} />;
       case "landing-page.insights-blogs-section":
         return <InsightsAndBlog key={index} data={block} />;
-      case "landing-page.insights-blogs-section":
-        return <IndustryWeServe key={index} data={block} />;
       default:
         return null;
     }

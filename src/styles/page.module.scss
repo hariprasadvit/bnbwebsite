@@ -15,7 +15,7 @@
     padding: 120px 26px 0;
   }
 
-  
+
   &.whiteBG {
     background: #fff;
   }
@@ -68,7 +68,7 @@
   width: 211px;
   height: 56px;
   background: #000000;
-  border-radius: 28px;
+  border-radius: 4px;
   font-size: 21px;
   line-height: 36px;
   letter-spacing: -0.15px;
@@ -87,8 +87,8 @@
   }
 }
 
-.CustomBorderRadius{
-border-radius: 4px;
+.CustomBorderRadius {
+  border-radius: 4px;
 }
 
 .bannerContactUsButton {
@@ -170,15 +170,16 @@ border-radius: 4px;
   color: #d44116;
 }
 
-.descriptionContainerWithScroll{
+.descriptionContainerWithScroll {
   display: flex;
   justify-content: space-between;
 
   @media (max-width: 1024px) {
     flex-direction: column;
     gap: 20px;
-   }
+  }
 }
+
 .content h2 {
   font-size: 27px;
   line-height: 37px;
@@ -223,7 +224,7 @@ border-radius: 4px;
     width: 100%;
     justify-content: flex-end;
     margin-bottom: unset;
-     }
+  }
 }
 
 .dashedBorder {
@@ -461,7 +462,7 @@ border-radius: 4px;
           top: 39%;
           left: unset;
         }
-       
+
 
         @media screen and (max-width: 550px) {
           top: 23%;
@@ -493,9 +494,10 @@ border-radius: 4px;
 
         .workItem {
           margin-right: 20px;
+
           >div {
             // min-height: 414px;
-       min-height: 154px;
+            min-height: 154px;
             min-width: 483px;
             max-width: 483px;
             width: 100%;
@@ -519,6 +521,7 @@ border-radius: 4px;
               min-width: 360px;
               padding: 30px 40px;
             }
+
             @media screen and (max-width: 550px) {
               // min-height: 290px;
               max-width: 270px;
@@ -698,9 +701,11 @@ border-radius: 4px;
           font-size: 18px;
           line-height: 25px;
         }
+
         @media screen and (max-width: 1024px) {
           max-width: 100%;
         }
+
         @media screen and (max-width: 768px) {
           font-size: 16px;
           line-height: 20px;
@@ -742,12 +747,13 @@ border-radius: 4px;
 
             @media screen and (max-width: 1200px) {
               font-size: 16px;
-            line-height: unset;
+              line-height: unset;
             }
 
             @media screen and (max-width: 660px) {
               font-size: 14px;
             }
+
             @media screen and (max-width: 590px) {
               font-size: 18px;
             }
@@ -784,6 +790,10 @@ border-radius: 4px;
 .OurClients {
   background: #ece3da;
 
+  &.addTopPadding {
+    padding-top: 150px;
+  }
+
   .container {
     padding: 40px 80px 60px;
 
@@ -813,6 +823,7 @@ border-radius: 4px;
 
       .imageWrap {
         margin-right: 20px;
+
         img {
           width: 100%;
           max-width: 300px;
@@ -1103,14 +1114,16 @@ border-radius: 4px;
   @media screen and (max-width: 768px) {
     padding: 40px 26px 40px;
   }
-.testimonialContainer{
-  background: #010104 !important;
-  color: #FFFFFF !important;
 
-  .customArrow{
-    border: 1px solid #fff !important;
+  .testimonialContainer {
+    background: #010104 !important;
+    color: #FFFFFF !important;
+
+    .customArrow {
+      border: 1px solid #fff !important;
+    }
   }
-}
+
   .container {
     background: #ece3da;
     padding: 40px 50px;

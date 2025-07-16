@@ -13,7 +13,7 @@ import client5 from "/public/Home/client5.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function OurClients({ data = {} }) {
+export default function OurClients({ data = {}, addTopPadding }) {
   let { clients = [], title = "Clients who trusted us" } = data;
 
   const settings = {
@@ -55,7 +55,11 @@ export default function OurClients({ data = {} }) {
   };
 
   return (
-    <section className={styles.OurClients}>
+    <section
+      className={`${styles.OurClients} ${
+        addTopPadding ? styles.addTopPadding : ""
+      }`}
+    >
       <div className={styles.container}>
         <h2>{title}</h2>
         <div className={styles.clientSlider}>

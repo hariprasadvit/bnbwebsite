@@ -5,6 +5,7 @@ import serviceImage1 from "../../../../public/ourService.png";
 import serviceImage2 from "../../../../public/ourwork.png";
 import serviceImage3 from "../../../../public/platformCardImage.png";
 import serviceImage4 from "../../../../public/designImage.png";
+import Link from "next/link";
 
 const services = [
   {
@@ -69,67 +70,72 @@ const services = [
   },
 ];
 
-const OurService = () => {
+const OurService = ({ key, data }) => {
   return (
-    <div className={styles.ourServiceWrapper}>
-      {services.map(
-        ({
-          id,
-          leftTitle,
-          rightTitle,
-          description,
-          lists,
-          exploreText,
-          images,
-          wrapClassName,
-          imageWrapClassName,
-        }) => (
-          <React.Fragment key={id}>
-            <div className={`${styles.ourServiceWrap} ${wrapClassName}`}>
+    <div className={styles.ourServiceWrapper} key={key}>
+      {data.service_list_item.map((item, id) => (
+        <React.Fragment key={id}>
+          <div className={styles.ourServiceGroup}>
+            <div className={`${styles.ourServiceWrap}`}>
               <div className={styles.ourServiceLeft}>
-                <div className={styles.ourServiceTitle}>{leftTitle}</div>
+                <div className={styles.ourServiceTitle}>
+                  {id === 0 ? data?.title : ""}
+                </div>
               </div>
+
               <div className={styles.ourServiceRight}>
                 <div className={styles.ourServiceContentTitle}>
-                  {rightTitle}
+                  {item?.title}
                 </div>
                 <div className={styles.ourServiceContentDescription}>
-                  {description}
+                  {item?.desc}
                 </div>
                 <div className={styles.ourServiceContentListContainer}>
-                  {lists.map((listItem, index) => (
-                    <div
-                      className={styles.ourServiceContentList}
-                      key={`${id}-list-${index}`}
-                    >
-                      {listItem}
+                  {item?.points.map((points, index) => (
+                    <div className={styles.ourServiceContentList} key={index}>
+                      {points?.points}
                     </div>
                   ))}
                 </div>
-                <div className={styles.exploreButton}>{exploreText}</div>
+                <Link
+                  href={item?.link?.link_url}
+                  className={styles.exploreButton}
+                >
+                  {item?.link?.link_text}
+                </Link>
               </div>
             </div>
-            <div
-              className={`${styles.ourServiceImageWrap} ${imageWrapClassName}`}
-            >
+            <div className={`${styles.ourServiceImageWrap} `}>
               <div className={styles.ourServiceLeft}></div>
               <div className={styles.ourServiceImageWrapper}>
-                {images.map(({ src, alt, detail }, idx) => (
-                  <div
-                    className={styles.ourServiceImageContainer}
-                    key={`${id}-img-${idx}`}
-                  >
-                    <div className={styles.ourServiceImage}>
-                      <Image src={src} alt={alt} />
+                {item?.card?.map((item, index) => {
+                  const imageUrl = item?.image?.url
+                    ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.image?.url
+                    : "/fallback-image.png";
+                  return (
+                    <div
+                      className={styles.ourServiceImageContainer}
+                      key={index}
+                    >
+                      <div className={styles.ourServiceImage}>
+                        <Image
+                          src={imageUrl}
+                          alt={""}
+                          width={300}
+                          height={51}
+                        />
+                      </div>
+                      <div className={styles.ourServiceImageDetail}>
+                        {item?.desc}
+                      </div>
                     </div>
-                    <div className={styles.ourServiceImageDetail}>{detail}</div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
-          </React.Fragment>
-        )
-      )}
+          </div>
+        </React.Fragment>
+      ))}
     </div>
   );
 };

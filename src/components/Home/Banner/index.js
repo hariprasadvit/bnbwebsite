@@ -12,7 +12,7 @@ export default function Banner({
   headingMarginBottom,
   descriptionMaxWidth,
 }) {
-  let { title, highlighted_title, sub_title, description } = data;
+  let { title, highlighted_title, sub_title, description, link } = data;
   return (
     <section
       className={`${styles.banner} ${whiteBG ? styles.whiteBG : ""}`}
@@ -54,9 +54,9 @@ export default function Banner({
           </div>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
-              <div className={styles.contactUsButton}>
-                {contactUs.button_text}
-              </div>
+              <a href={data?.link} className={styles.contactUsButton}>
+                {data.link_text}
+              </a>
             </div>
           )}
         </div>
