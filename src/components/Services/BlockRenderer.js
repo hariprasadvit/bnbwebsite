@@ -28,7 +28,7 @@ export default function BlockRenderer({ blocks }) {
         return <Testimonials isCustomContainer key={index} data={block} />;
       case "landing-page.insights-blogs-section":
         return <InsightsAndBlog key={index} data={block} />;
-      case "landing-page.insights-blogs-section":
+      case "service-listing.industry-we-serve":
         return <IndustryWeServe key={index} data={block} />;
       default:
         return null;

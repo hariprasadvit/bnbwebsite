@@ -86,14 +86,14 @@
             // opacity: 0.8;
 
             &.active {
-              color: #f2164b;
+              color: #d44116;
               // font-weight: 700;
             }
 
             &:hover {
               // font-weight: 700;
               opacity: 1;
-              color: #f2164b;
+              color: #d44116;
             }
           }
         }
@@ -309,7 +309,7 @@
               left: 0;
               right: 0;
               height: 4px;
-              background-color: #f2164b; // red strike
+              background-color: #d44116; // red strike
               top: 50%;
               transform: scaleX(0);
               transform-origin: center;
@@ -324,7 +324,7 @@
               color: #4c4c4c;
 
               @media screen and (max-width: 768px) {
-                color: #f2164b;
+                color: #d44116;
               }
 
               &::after {
@@ -544,7 +544,7 @@
 
               &.active,
               &:hover {
-                color: #f2164b;
+                color: #d44116;
                 // font-weight: 700;
               }
             }
@@ -605,7 +605,7 @@
 }
 
 .activeMenuItem {
-  color: #f2164b !important;
+  color: #d44116 !important;
 }
 
 // Service Page header shrink

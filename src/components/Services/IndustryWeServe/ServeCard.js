@@ -5,7 +5,7 @@ import Image from "next/image";
 const ServeCard = ({ serveIcon, serveTitle, desc }) => {
   return (
     <div className={styles.ourServeCard}>
-      <Image src={serveIcon} alt="Icon" />
+      <Image src={serveIcon} alt="Icon" width={40} height={40} />
       <div className={styles.serveTitle}>{serveTitle}</div>
       <div className={styles.overlay}>{desc}</div>
     </div>
