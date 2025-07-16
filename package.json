@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.90",
     "antd": "^5.25.0",
