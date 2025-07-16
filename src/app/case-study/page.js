@@ -46,9 +46,9 @@ export default async function CaseStudy() {
         <Banner
           data={blockData?.pageContent || {}}
           hideBorder
-          contactUs={blockData?.pageContent?.button_text}
           whiteBG={true}
           highlightFirst={true}
+          contactUs
         />
         <BlockRenderer blocks={blockData?.pageContent?.dynamic_section} />
       </div>
