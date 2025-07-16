@@ -5,20 +5,38 @@ import {
   projectBannerData,
 } from "@/components/data";
 import { servicePlatformCards } from "@/components/CaseStudy/ListCard/platformCardData";
-const Banner = dynamic(() => import("@/components/Home/Banner"));
-const MvpStartUpCard = dynamic(() =>
-  import("@/components/Projects/MvpStartUpCard")
+const Banner = dynamic(() => import("@/components/Home/Banner"), {
+  ssr: false,
+});
+const MvpStartUpCard = dynamic(
+  () => import("@/components/Projects/MvpStartUpCard"),
+  {
+    ssr: false,
+  }
 );
-const PlatformCardContainer = dynamic(() =>
-  import("@/components/Projects/PlatformCard")
+const PlatformCardContainer = dynamic(
+  () => import("@/components/Projects/PlatformCard"),
+  {
+    ssr: false,
+  }
 );
-const ProductDevelopment = dynamic(() =>
-  import("@/components/Projects/ProductDevelopment")
+const ProductDevelopment = dynamic(
+  () => import("@/components/Projects/ProductDevelopment"),
+  {
+    ssr: false,
+  }
 );
-const DataDriven = dynamic(() => import("@/components/Home/DataDriven"));
-const Testimonials = dynamic(() => import("@/components/Home/Testimonials"));
-const InsightsAndBlog = dynamic(() =>
-  import("@/components/Home/InsightsAndBlog")
+const DataDriven = dynamic(() => import("@/components/Home/DataDriven"), {
+  ssr: false,
+});
+const Testimonials = dynamic(() => import("@/components/Home/Testimonials"), {
+  ssr: false,
+});
+const InsightsAndBlog = dynamic(
+  () => import("@/components/Home/InsightsAndBlog"),
+  {
+    ssr: false,
+  }
 );
 
 export default function ServiceDetails() {
