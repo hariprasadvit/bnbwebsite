@@ -169,7 +169,7 @@ export default function Header({ whiteHeader, active }) {
             <li>
               <Link
                 href="/case-study"
-                className={active === "projects" ? styles.active : ""}
+                // className={active === "projects" ? styles.active : ""}
               >
                 Case Studies
               </Link>
