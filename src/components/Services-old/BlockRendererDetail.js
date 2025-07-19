@@ -8,12 +8,18 @@ import MvpStartUpCard from "../Projects/MvpStartUpCard";
 import OurWorks from "../Projects/OurWorks";
 import PlatformCardContainer from "../Projects/PlatformCard";
 import ProductDevelopment from "../Projects/ProductDevelopment";
+import AiSolutions from "../ServiceDetail/AiSolutions";
+import OurProcess from "../ServiceDetail/OurProcess";
 
 export default function BlockRendererDetail({ blocks }) {
   if (!blocks?.length) return null;
 
   return blocks.map((block, index) => {
     switch (block.__component) {
+      case "service-listing.second-section":
+        return <AiSolutions data={block} />;
+      case "service-listing.our-process":
+        return <OurProcess data={block} />;
       case "services.approach-section":
         return <MvpStartUpCard data={block} />;
       case "services.listing-card":

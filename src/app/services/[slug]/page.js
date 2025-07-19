@@ -46,11 +46,12 @@ export default async function ServiceDetails({ params }) {
       <Head>
         <title>B&B</title>
       </Head>
+      {console.log(blockData?.pageContent?.dynamic_section, "pageContent")}
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData?.pageContent}
           hideBorder
-          contactUs={blockData?.pageContent?.button}
+          contactUs
           highlightFirst
           descriptionMaxWidth={"828px"}
           headingMarginBottom={30}

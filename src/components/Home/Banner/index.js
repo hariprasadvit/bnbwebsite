@@ -54,8 +54,11 @@ export default function Banner({
           </div>
           {contactUs && (
             <div className={styles.bannerContactUsButton}>
-              <a href={data?.link} className={styles.contactUsButton}>
-                {data.link_text}
+              <a
+                href={data?.link || data?.button?.link_path}
+                className={styles.contactUsButton}
+              >
+                {data.link_text || data?.button?.button_text}
               </a>
             </div>
           )}
