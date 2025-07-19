@@ -1,11 +1,9 @@
-import OverviewCard from "../DigitalProducts/OverviewCard";
 import DataDriven from "../Home/DataDriven";
 import InsightsAndBlog from "../Home/InsightsAndBlog";
-import NumberSection from "../Home/NumberSection";
 import OurClients from "../Home/OurClients";
+import OurWorks from "../Home/OurWorks";
 import Testimonials from "../Home/Testimonials";
 import MvpStartUpCard from "../Projects/MvpStartUpCard";
-import OurWorks from "../Projects/OurWorks";
 import PlatformCardContainer from "../Projects/PlatformCard";
 import ProductDevelopment from "../Projects/ProductDevelopment";
 import AiSolutions from "../ServiceDetail/AiSolutions";
@@ -20,10 +18,6 @@ export default function BlockRendererDetail({ blocks }) {
         return <AiSolutions data={block} />;
       case "service-listing.our-process":
         return <OurProcess data={block} />;
-      case "services.approach-section":
-        return <MvpStartUpCard data={block} />;
-      case "services.listing-card":
-        return <PlatformCardContainer key={index} data={block} />;
       case "services.expansion-section":
         return <ProductDevelopment key={index} data={block} />;
       case "landing-page.insight-section":
@@ -41,6 +35,15 @@ export default function BlockRendererDetail({ blocks }) {
         return <Testimonials key={index} data={block} />;
       case "landing-page.insights-blogs-section":
         return <InsightsAndBlog key={index} data={block} />;
+      case "landing-page.portfolio-section":
+        return (
+          <>
+            <OurWorks key={index} data={block} />
+            {/* <NumberSection /> */}
+          </>
+        );
+      case "landing-page.clients-section":
+        return <OurClients key={index} data={block} />;
       default:
         return null;
     }
