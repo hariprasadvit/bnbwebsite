@@ -1,3 +1,13 @@
+/** @format */
+
+import BannerTechLeader from "@/components/Aboutus/Banner";
+import CoreContent from "@/components/Aboutus/Core";
+
 export default function About() {
-  return <div>about us</div>;
+  return (
+    <div>
+      <BannerTechLeader />
+      <CoreContent />
+    </div>
+  );
 }
