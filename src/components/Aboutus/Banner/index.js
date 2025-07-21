@@ -24,14 +24,14 @@ export default function BannerCaseStudy() {
           </div>
         </div>
         <div className={styles.careerBannerWrapper}>
-          <div className={styles.careerBanner}>
-            <Image
+          {/* <div className={styles.careerBanner}> */}
+          {/* <Image
               src="/about-us-banner.gif"
               alt="about us banner"
               width={500}
               height={300}
-            />
-          </div>
+            /> */}
+          {/* </div> */}
           <div className={`${styles.btns} ${styles.btnsRight}`}>
             <a href="/services">Explore Now</a>
             <a href="/careers">To join our team</a>
@@ -40,7 +40,7 @@ export default function BannerCaseStudy() {
       </section>
       <section className={styles.designWrapper}>
         <div className={styles.speaker}>
-          <img src="/speaker.png" alt="speaker" />
+          {/* <img src="/speaker.png" alt="speaker" /> */}
         </div>
         <p>
           Cartoon Mango is a <strong>tech-driven company</strong> with a
@@ -60,7 +60,7 @@ export default function BannerCaseStudy() {
           achieve their goals.
         </p>
         <div className={styles.circle}>
-          <img src="/circle.png" alt="circle" />
+          {/* <img src="/circle.png" alt="circle" /> */}
         </div>
       </section>
     </>
