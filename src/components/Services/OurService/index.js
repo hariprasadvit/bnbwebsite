@@ -73,6 +73,7 @@ const services = [
 const OurService = ({ key, data }) => {
   return (
     <div className={styles.ourServiceWrapper} key={key}>
+      {console.log(data?.service_list_item[0]?.link?.slug, "*****")}
       {data.service_list_item.map((item, id) => (
         <React.Fragment key={id}>
           <div className={styles.ourServiceGroup}>
@@ -98,7 +99,7 @@ const OurService = ({ key, data }) => {
                   ))}
                 </div>
                 <Link
-                  href={item?.link?.link_url}
+                  href={`/services/${item?.link?.service_detail?.slug}`}
                   className={styles.exploreButton}
                 >
                   {item?.link?.link_text}
