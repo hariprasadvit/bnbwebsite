@@ -43,7 +43,7 @@ export default function BlockRendererDetail({ blocks }) {
           </>
         );
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} />;
+        return <OurClients key={index} data={block} addTopPadding />;
       default:
         return null;
     }
