@@ -186,7 +186,7 @@ export default function Header({ whiteHeader, active }) {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/">Clients</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </li>
           </ul>
         </nav>
