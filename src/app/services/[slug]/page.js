@@ -8,6 +8,8 @@ import { notFound } from "next/navigation";
 
 import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
 import { fetchAPI } from "@/lib/fetch-api";
+import FAQ from "@/components/Common/FAQ";
+import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
@@ -68,6 +70,8 @@ export default async function ServiceDetails({ params }) {
         <Testimonials />
         <InsightsAndBlog /> */}
         <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
+        <FAQ />
+        <FooterForm />
       </div>
     </div>
   );

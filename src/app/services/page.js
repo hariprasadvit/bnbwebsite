@@ -6,6 +6,8 @@ import { getStrapiURL } from "@/lib/utils";
 import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
 import BlockRenderer from "@/components/Services/BlockRenderer";
+import FAQ from "@/components/Common/FAQ";
+import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
@@ -49,6 +51,8 @@ export default async function ServiceListing() {
         contactUs
       />
       <BlockRenderer blocks={data?.dynamic_zone} />
+      <FAQ />
+      <FooterForm />
     </div>
   );
 }

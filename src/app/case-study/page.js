@@ -8,6 +8,9 @@ import { unstable_noStore as noStore } from "next/cache";
 import { getStrapiURL } from "@/lib/utils";
 import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
+import FAQ from "@/components/Common/FAQ";
+import Footer from "@/components/Common/Footer";
+import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
@@ -51,6 +54,8 @@ export default async function CaseStudy() {
           contactUs
         />
         <BlockRenderer blocks={blockData?.pageContent?.dynamic_section} />
+        <FAQ />
+        <FooterForm />
       </div>
     </div>
   );

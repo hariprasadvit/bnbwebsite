@@ -21,13 +21,13 @@
   content: "";
   width: 29px;
   height: 4px;
-  background-color: #825c9a;
+  background-color: #d44116;
 }
 
-.successWrapper {
-}
-.successCard {
-}
+.successWrapper {}
+
+.successCard {}
+
 .successCardHeading {
   display: flex;
   align-items: center;
@@ -35,6 +35,7 @@
   padding: 40px 0;
   border-bottom: 1px solid #000000;
 }
+
 .successCardHeading h4 {
   font-size: 35px;
   line-height: 45px;
@@ -44,6 +45,7 @@
   letter-spacing: 0px;
   color: #000000;
 }
+
 .successCardHeading .icon {
   width: 35px;
   height: 35px;
@@ -81,6 +83,7 @@
   align-items: flex-start;
   margin: 40px 0 0;
 }
+
 .successCardBanner {
   flex: 1;
   display: flex;
@@ -89,7 +92,8 @@
 
 .successCardBanner h4 {
   color: #707070;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
   font-size: 100px;
@@ -104,6 +108,7 @@
   flex: 1;
   margin-top: 50px;
 }
+
 .successCardContentWrapper h4 {
   font-size: 26px;
   line-height: 44px;
@@ -115,6 +120,7 @@
   text-transform: capitalize;
   margin: 0 0 24px;
 }
+
 .successCardContentWrapper p {
   font-size: 24px;
   line-height: 30px;
@@ -124,6 +130,7 @@
   letter-spacing: 0px;
   color: #050505;
 }
+
 @media only screen and (max-width: 768px) {
   .successCardHeading .open::after {
     top: 9px;
@@ -131,17 +138,21 @@
     height: 2px;
     width: 10px;
   }
+
   .successCardBanner h4 {
     font-size: 40px;
   }
+
   .successCardContentWrapper {
     margin-top: 10px;
   }
+
   .successCardContentWrapper h4 {
     font-size: 22px;
     line-height: 33px;
     margin: 0 0 20px;
   }
+
   .successCardContentWrapper p {
     font-size: 20px;
     line-height: 30px;
@@ -159,13 +170,16 @@
     font-size: 32px;
     line-height: 50px;
   }
+
   .successCardHeading {
     padding: 20px 0;
   }
+
   .successCardHeading h4 {
     font-size: 22px;
     line-height: 28px;
   }
+
   .successCardHeading .icon {
     width: 20px;
     height: 20px;
@@ -184,19 +198,23 @@
   .successCardBanner .goalsImage {
     max-width: 166px;
   }
+
   .successCardBanner .goalsIcon {
     max-width: 142px;
     top: 0px;
     left: 0px;
   }
+
   .successCardContentWrapper {
     margin-top: 10px;
   }
+
   .successCardContentWrapper h4 {
     font-size: 22px;
     line-height: 33px;
     margin: 0 0 20px;
   }
+
   .successCardContentWrapper p {
     font-size: 20px;
     line-height: 30px;

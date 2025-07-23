@@ -12,6 +12,8 @@ import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
 import BlockRendererDetail from "@/components/CaseStudy/BlockRendererDetail";
 import BannerImage from "@/components/DigitalProducts/BannerImage";
+import FAQ from "@/components/Common/FAQ";
+import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
@@ -62,6 +64,8 @@ export default async function DigitalProduct({ params }) {
         <OurWorks />
         <InsightsAndBlog /> */}
         <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
+        <FAQ />
+        <FooterForm />
       </div>
     </div>
   );

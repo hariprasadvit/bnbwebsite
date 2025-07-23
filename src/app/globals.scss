@@ -1,7 +1,7 @@
 /** @format */
 
 :root {
-  font-family: var(--font-titillium), sans-serif;
+  font-family: var(--font-titillium), sans-serif !important;
   --background: #fefdf5;
   --foreground: #171717;
 }
@@ -20,10 +20,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Titillium Web", sans-serif;
 }
 
 a {
@@ -102,19 +104,20 @@ img {
   align-items: center;
 }
 
-  .slick-track{
-padding-top: 50px !important;
+.slick-track {
+  padding-top: 50px !important;
 
-@media screen and (max-width: 768px) {
-  padding-top: 15px !important;
-}
-@media screen and (max-width: 550px) {
-  padding-top: 0px !important;
-}
-
+  @media screen and (max-width: 768px) {
+    padding-top: 15px !important;
   }
 
-.slick-list .slick-track{
+  @media screen and (max-width: 550px) {
+    padding-top: 0px !important;
+  }
+
+}
+
+.slick-list .slick-track {
   display: flex;
   gap: 25px;
 
@@ -124,9 +127,9 @@ padding-top: 50px !important;
     margin-right: 25px;
     gap: unset;
   }
+
   @media screen and (max-width: 500px) {
     // margin-top: 15px;
   }
 
 }
-

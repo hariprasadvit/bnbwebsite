@@ -3,6 +3,8 @@
 import BannerTechLeader from "@/components/Aboutus/Banner";
 import CoreContent from "@/components/Aboutus/Core";
 import SuccessCard from "@/components/Aboutus/SuccessCard";
+import FAQ from "@/components/Common/FAQ";
+import FooterForm from "@/components/ContactUs/FooterForm";
 import Testimonials from "@/components/Home/Testimonials";
 
 const testimonial = [
@@ -58,7 +60,9 @@ export default function About() {
       <BannerTechLeader />
       <CoreContent />
       <SuccessCard />
-      <Testimonials data={testimonial} />
+      <FAQ />
+      <FooterForm />
+      {/* <Testimonials data={testimonial} /> */}
     </div>
   );
 }

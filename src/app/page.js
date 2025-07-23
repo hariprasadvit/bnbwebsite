@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
 import { fetchAPI } from "@/lib/fetch-api";
 import BlockRenderer from "@/components/Home/BlockRenderer";
+import FAQ from "@/components/Common/FAQ";
+import FooterForm from "@/components/ContactUs/FooterForm";
 
 async function loader() {
   noStore();
@@ -35,6 +37,8 @@ export default async function Home(props) {
     <div>
       <div style={{ width: "100%" }}>
         <BlockRenderer blocks={blockData.blocks} />
+        <FAQ />
+        <FooterForm />
       </div>
     </div>
   );
