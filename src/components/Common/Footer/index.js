@@ -30,8 +30,8 @@ export default function Footer() {
           </div>
           <div>
             <span>Email </span>
-            <Link href="mailto:contact@cartoonmango.com">
-              contact@cartoonmango.com
+            <Link href="mailto:contact@booleanandbeyond.com">
+              contact@booleanandbeyond.com
             </Link>
           </div>
         </div>
@@ -43,19 +43,46 @@ export default function Footer() {
                 <Link href="/">Home </Link>
               </li>
               <li>
-                <Link href="/">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="/">Services</Link>
+                <Link href="/contact-us">Contact Us</Link>
               </li>
               <li>
-                <Link href="/">Our Clients</Link>
+                <Link href="/services">Services</Link>
               </li>
               <li>
-                <Link href="/">News & Blogs </Link>
+                <Link href="/case-study">Case Studies</Link>
               </li>
               <li>
-                <Link href="/">Career</Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Our Clients
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  News & Blogs{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Career
+                </Link>
               </li>
             </ul>
           </div>
@@ -63,40 +90,124 @@ export default function Footer() {
             <h5>Industries</h5>
             <ul>
               <li>
-                <Link href="/">Banking and Fintech </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Banking and Fintech{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Ecommerce </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Ecommerce{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Fantasy Gaming </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Fantasy Gaming{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">E-Sports </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  E-Sports{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Sports </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Sports{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">News and Media </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  News and Media{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Agri-Tech </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Agri-Tech{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Mobility </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Mobility{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Travel </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Travel{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">E-Learning & Education </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  E-Learning & Education{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Real Estate </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Real Estate{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Healthcare </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Healthcare{" "}
+                </Link>
               </li>
             </ul>
           </div>
@@ -104,46 +215,145 @@ export default function Footer() {
             <h5>Techstack</h5>
             <ul>
               <li>
-                <Link href="/">Python </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Python{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">NodeJS </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  NodeJS{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Apache Solr </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Apache Solr{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Elastic Search </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Elastic Search{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Frontend </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Frontend{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/"> ReactJS </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  {" "}
+                  ReactJS{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Flutter </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Flutter{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Blockchain </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Blockchain{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Ethereum </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Ethereum{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Polygon </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Polygon{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Truffle </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Truffle{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Solidity </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Solidity{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Big Data and Analytics </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Big Data and Analytics{" "}
+                </Link>
               </li>
               <li>
-                <Link href="/">Apache Spark </Link>
+                <Link
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // prevents jump
+                  }}
+                >
+                  Apache Spark{" "}
+                </Link>
               </li>
             </ul>
           </div>
@@ -151,22 +361,42 @@ export default function Footer() {
         <div className={styles.socialMedia}>
           <ul>
             <li>
-              <Link href="/">
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // prevents jump
+                }}
+              >
                 <Image src={fb} alt="Logo" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // prevents jump
+                }}
+              >
                 <Image src={insta} alt="Logo" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // prevents jump
+                }}
+              >
                 <Image src={linkedin} alt="Logo" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault(); // prevents jump
+                }}
+              >
                 <Image src={x} alt="Logo" width={24} height={24} />
               </Link>
             </li>
@@ -177,11 +407,10 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.copyright}>
-          <p>Boolean Labs ⓒ 2025 All rights reserved.</p>
-
+          <p>Boolean and Beyond ⓒ 2025 All rights reserved.</p>
           <div>
-            <Link href="/">Privacy</Link>
-            <Link href="/">Cookie Policy</Link>
+            <Link href="#">Privacy</Link>
+            <Link href="#">Cookie Policy</Link>
           </div>
         </div>
       </div>
