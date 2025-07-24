@@ -325,8 +325,8 @@ export default function ContactForm() {
                   <span> Careers Page </span>
                 </a>
                 or drop us a line at{" "}
-                <a href="mailto:hr@cartoonmango.com">
-                  <span>hr@cartoonmango.com</span>
+                <a href="mailto:hr@booleanandbeyond.com">
+                  <span>hr@booleanandbeyond.com</span>
                 </a>
               </p>
             </div>

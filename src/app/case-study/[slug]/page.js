@@ -57,7 +57,11 @@ export default async function DigitalProduct({ params }) {
         <title>Boolean & Beyond</title>
       </Head>
       <div style={{ width: "100%" }}>
-        <Banner data={blockData.pageContent} hideBorder />
+        <Banner
+          data={blockData.pageContent}
+          descriptionMaxWidth={"660px"}
+          hideBorder
+        />
         <BannerImage url={imageUrl} />
         {/*<NumberSection disableTopPadding={true} />
         <Testimonials />

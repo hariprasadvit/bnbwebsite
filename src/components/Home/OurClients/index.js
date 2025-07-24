@@ -5,11 +5,6 @@ import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../../styles/page.module.scss";
-import client1 from "/public/Home/client1.png";
-import client2 from "/public/Home/client2.png";
-import client3 from "/public/Home/client3.png";
-import client4 from "/public/Home/client4.png";
-import client5 from "/public/Home/client5.png";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
