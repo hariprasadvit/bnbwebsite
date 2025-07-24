@@ -1244,13 +1244,13 @@
 .overviewCardWrapper {
   display: flex;
   flex-direction: column;
-  padding: 72.5px 95.75px 0 95.75px;
-  gap: 52.5px;
+  padding: 30px 90px 0 90px;
+  gap: 20px;
 
-  @media screen and (max-width: 1200px) {
-    padding: 50px 40px;
-    gap: 30px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   padding: 50px 40px;
+  //   gap: 30px;
+  // }
 
   @media screen and (max-width: 768px) {
     padding: 40px 26px;
