@@ -92,11 +92,11 @@
 
             &.active {
               color: #d44116;
-              // font-weight: 700;
+              font-weight: 600;
             }
 
             &:hover {
-              // font-weight: 700;
+              font-weight: 600;
               opacity: 1;
               color: #d44116;
             }
@@ -641,6 +641,12 @@
           }
         }
       }
+
+      .submenu {
+        span {
+          background: #000 !important;
+        }
+      }
     }
 
     .logo {
@@ -680,16 +686,20 @@
     }
 
     .submenu {
-      div {
+      span {
         background: #fff;
-        border-color: #fff;
       }
 
-      div:nth-child(2),
-      div:last-child {
-        background: #d44116;
-        border-color: #d44116;
-      }
+      // div {
+      //   background: #fff;
+      //   border-color: #fff;
+      // }
+
+      // div:nth-child(2),
+      // div:last-child {
+      //   background: #d44116;
+      //   border-color: #d44116;
+      // }
     }
   }
 }
@@ -713,5 +723,7 @@
         }
       }
     }
+
+
   }
 }

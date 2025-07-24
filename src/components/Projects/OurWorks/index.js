@@ -71,7 +71,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const OurWorks = ({ data = {} }) => {
+const OurWorks = ({ data = {} }, addTopPadding) => {
   let { card = [] } = data;
   const settings = {
     dots: false,
@@ -86,7 +86,11 @@ const OurWorks = ({ data = {} }) => {
   };
 
   return (
-    <div className={styles.ourWorks}>
+    <div
+      className={`${styles.ourWorks} ${
+        addTopPadding ? styles.addTopPadding : ""
+      }`}
+    >
       <div className={styles.topHeader}>
         <h2>
           Some of our <br />

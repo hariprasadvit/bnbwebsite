@@ -156,6 +156,14 @@
   padding: 1rem 3rem;
   position: relative;
 
+  &.addTopPadding {
+    padding-top: 4rem;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 1rem;
+    }
+  }
+
   .slick-list .slick-track {
     gap: 0px !important;
   }

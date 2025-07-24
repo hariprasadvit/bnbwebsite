@@ -11,7 +11,7 @@ import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 
-const Banner = dynamic(() => import("@/components/Home/Banner"));
+const Banner = dynamic(() => import("@/components/Projects/Banner"));
 
 async function loader({ slug }) {
   if (!slug) {
@@ -51,12 +51,15 @@ export default async function ServiceDetails({ params }) {
       {console.log(blockData?.pageContent?.dynamic_section, "pageContent")}
       <div style={{ width: "100%" }}>
         <Banner
-          data={blockData?.pageContent}
-          hideBorder
-          contactUs
-          highlightFirst
-          descriptionMaxWidth={"828px"}
-          headingMarginBottom={30}
+          // data={blockData?.pageContent}
+          // hideBorder
+          // contactUs
+          // highlightFirst
+          // descriptionMaxWidth={"828px"}
+          // headingMarginBottom={30}
+          title={blockData?.pageContent?.title}
+          description={blockData?.pageContent?.description}
+          hightlighted_text={blockData?.pageContent?.highlighted_title}
         />
         {/* <MvpStartUpCard data={mvpCardContent} />
         <PlatformCardContainer platformCards={servicePlatformCards} />

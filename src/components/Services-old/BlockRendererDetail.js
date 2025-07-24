@@ -1,13 +1,14 @@
 import DataDriven from "../Home/DataDriven";
 import InsightsAndBlog from "../Home/InsightsAndBlog";
+import NumberSection from "../Home/NumberSection";
 import OurClients from "../Home/OurClients";
-import OurWorks from "../Home/OurWorks";
 import Testimonials from "../Home/Testimonials";
-import MvpStartUpCard from "../Projects/MvpStartUpCard";
-import PlatformCardContainer from "../Projects/PlatformCard";
+import OurWorksBlack from "../Home/OurWorks";
+import OurWorks from "../Projects/OurWorks";
 import ProductDevelopment from "../Projects/ProductDevelopment";
 import AiSolutions from "../ServiceDetail/AiSolutions";
-import OurProcess from "../ServiceDetail/OurProcess";
+import OurProcessSmall from "../ServiceDetail/OurProcessSmall";
+import HireOurExperts from "../Home/HireOurExperts";
 
 export default function BlockRendererDetail({ blocks }) {
   if (!blocks?.length) return null;
@@ -16,8 +17,15 @@ export default function BlockRendererDetail({ blocks }) {
     switch (block.__component) {
       case "service-listing.second-section":
         return <AiSolutions data={block} />;
+      case "case-study.our-work-section":
+        return (
+          <>
+            <OurWorks key={index} data={block} addTopPadding />
+            <NumberSection disableTopPadding={true} />
+          </>
+        );
       case "service-listing.our-process":
-        return <OurProcess data={block} />;
+        return <OurProcessSmall data={block} />;
       case "services.expansion-section":
         return <ProductDevelopment key={index} data={block} />;
       case "landing-page.insight-section":
@@ -38,12 +46,12 @@ export default function BlockRendererDetail({ blocks }) {
       case "landing-page.portfolio-section":
         return (
           <>
-            <OurWorks key={index} data={block} />
-            {/* <NumberSection /> */}
+            <HireOurExperts />
+            <OurWorksBlack key={index} data={block} />
           </>
         );
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} addTopPadding />;
+        return <OurClients key={index} data={block} />;
       default:
         return null;
     }
