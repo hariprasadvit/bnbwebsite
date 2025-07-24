@@ -190,11 +190,17 @@ export default function Header({ whiteHeader, active }) {
             </li>
           </ul>
         </nav>
-        <div className={styles.submenu} onClick={toggleMainMenu}>
+        {/* <div className={styles.submenu} onClick={toggleMainMenu}>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
+        </div> */}
+        <div className={`${styles.submenu}`} onClick={toggleMainMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
         <AnimatePresence>

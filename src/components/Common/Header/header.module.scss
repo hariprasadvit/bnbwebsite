@@ -7,7 +7,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: 161px 41% 5%;
+    grid-template-columns: 161px 61% 5%;
     align-items: center;
     padding: 40px 80px;
     justify-content: space-between;
@@ -66,10 +66,10 @@
       ul {
         display: flex;
         gap: 50px;
-
+        justify-content: center;
 
         @media screen and (max-width:950px) {
-          justify-content: flex-end;
+          gap: 30px;
         }
 
         @media screen and (max-width:767px) {
@@ -79,11 +79,16 @@
         li {
           a {
             display: block;
-            min-width: 80px;
+            min-width: 110px;
             font-size: 18px;
             line-height: 14px;
             text-align: center;
+
             // opacity: 0.8;
+            @media screen and (max-width:950px) {
+              min-width: 90px;
+              font-size: 16px;
+            }
 
             &.active {
               color: #d44116;
@@ -101,48 +106,133 @@
     }
 
     .submenu {
-      display: grid;
-      grid-template-columns: 10px 10px;
-      justify-content: flex-end;
-      gap: 5px;
+      width: 25px;
+      height: 20px;
+      position: relative;
+      margin: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
       cursor: pointer;
+      z-index: 111;
 
-      div {
-        width: 9px;
-        height: 9px;
-        border-radius: 100%;
-        background: #333333;
-        border: 1px solid #707070;
-
-        &:nth-child(2) {
-          background: #d44116;
-          border-color: #d44116;
-        }
-
-        &:last-child {
-          background: #d44116;
-          border-color: #d44116;
-        }
-      }
-
-      &:hover {
-        div {
-          transition: 0.3s;
-          background: #d44116;
-          border-color: #d44116;
-
-          &:nth-child(2) {
-            background: #333333;
-            border-color: #707070;
-          }
-
-          &:last-child {
-            background: #333333;
-            border-color: #707070;
-          }
-        }
+      @media screen and (max-width: 768px) {
+        margin: 0 0 0 auto;
       }
     }
+
+    .submenu span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #000;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+
+
+    }
+
+    .submenu span:nth-child(1) {
+      top: 0px;
+    }
+
+    .submenu span:nth-child(2),
+    .submenu span:nth-child(3) {
+      top: 7px;
+      width: 80%;
+    }
+
+    .submenu span:nth-child(4) {
+      top: 14px;
+      width: 50%;
+    }
+
+    .submenu.active span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    .submenu.active span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 100%;
+    }
+
+    .submenu.active span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+
+    .submenu.active span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    // .submenu {
+    //   display: grid;
+    //   grid-template-columns: 10px 10px;
+    //   justify-content: flex-end;
+    //   gap: 5px;
+    //   cursor: pointer;
+
+    //   div {
+    //     width: 9px;
+    //     height: 9px;
+    //     border-radius: 100%;
+    //     background: #333333;
+    //     border: 1px solid #707070;
+
+    //     &:nth-child(2) {
+    //       background: #d44116;
+    //       border-color: #d44116;
+    //     }
+
+    //     &:last-child {
+    //       background: #d44116;
+    //       border-color: #d44116;
+    //     }
+    //   }
+
+    //   &:hover {
+    //     div {
+    //       transition: 0.3s;
+    //       background: #d44116;
+    //       border-color: #d44116;
+
+    //       &:nth-child(2) {
+    //         background: #333333;
+    //         border-color: #707070;
+    //       }
+
+    //       &:last-child {
+    //         background: #333333;
+    //         border-color: #707070;
+    //       }
+    //     }
+    //   }
+    // }
 
     // .mainMenu {
     //   z-index: 200;
