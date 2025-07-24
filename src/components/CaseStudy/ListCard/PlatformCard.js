@@ -16,7 +16,7 @@ const PlatformCard = ({
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
-        <h3>{"0" + number}</h3>
+        <h3>{number < 10 ? "0" + number : number}</h3>
         <h4>({label})</h4>
       </div>
       <Link href={`/case-study/${link}`}>
