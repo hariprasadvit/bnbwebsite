@@ -17,7 +17,14 @@ export default function BannerCaseStudy() {
             help businesses achieve their goals.We don’t just build MVPs, we
             build what your users will love—and your investors will notice.
           </p>
-          <div className={styles.contactUsButton}>Talk to Us</div>
+          <div
+            className={styles.contactUsButton}
+            onClick={() => {
+              window.location.href = "/contact-us";
+            }}
+          >
+            Talk to Us
+          </div>
         </div>
       </div>
     </section>

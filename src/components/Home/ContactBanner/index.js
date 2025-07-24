@@ -14,7 +14,9 @@ export default function ContactBanner() {
             without the hiring overhead.
           </p>
         </div>
-        <div className={styles.contactUsButton}>Talk to Us</div>
+        <div className={styles.contactUsButton} href="/contact-us">
+          Talk to Us
+        </div>
       </div>
     </section>
   );
