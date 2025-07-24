@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
+import Link from "next/link";
 
 export default function HireOurExperts() {
   return (
@@ -14,9 +15,9 @@ export default function HireOurExperts() {
             without the hiring overhead.
           </p>
         </div>
-        <div className={styles.contactUsButton} href="/contact-us">
+        <Link className={styles.contactUsButton} href="/contact-us">
           Talk to Us
-        </div>
+        </Link>
       </div>
     </section>
   );
