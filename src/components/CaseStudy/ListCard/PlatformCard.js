@@ -16,8 +16,8 @@ const PlatformCard = ({
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
-        <h1>{number}</h1>
-        <h2>({label})</h2>
+        <h3>{number}</h3>
+        <h4>({label})</h4>
       </div>
       <Link href={`/case-study/${link}`}>
         <div className={styles.platformCardRight}>

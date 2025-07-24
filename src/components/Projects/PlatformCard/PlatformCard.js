@@ -7,8 +7,8 @@ const PlatformCard = ({ number, label, title, image, description }) => {
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
-        <h1>{number}</h1>
-        <h2>({label})</h2>
+        <h3>{number}</h3>
+        <h4>({label})</h4>
       </div>
       <div className={styles.platformCardRight}>
         <h2>{title}</h2>

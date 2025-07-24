@@ -5,7 +5,7 @@
 
 .platformCardContent {
   display: grid;
-  grid-template-columns: minmax(auto, 425px) minmax(auto, 630px);
+  grid-template-columns: minmax(auto, 356px) minmax(auto, 670px);
   color: #000000;
   background: #F2F2F2;
   padding: 55px 121px;
@@ -33,7 +33,7 @@
     display: flex;
     gap: 6.07613469vw;
     height: max-content;
-    align-items: center;
+    align-items: flex-start;
 
     @media screen and (max-width: 1200px) {
       gap: 2.666666vw;
@@ -45,11 +45,11 @@
 
 
 
-    h1 {
+    h3 {
       font-size: 72px;
       letter-spacing: -0.5px;
-
       font-weight: bold;
+      line-height: 0.5;
 
       @media (max-width: 1200px) {
         font-size: 38px;
@@ -64,7 +64,7 @@
 
     }
 
-    h2 {
+    h4 {
       font-size: 21px;
       line-height: 42px;
       font-weight: unset;
@@ -122,9 +122,9 @@
     }
 
     .imageContainer {
-      max-width: 314px;
+      max-width: 420px;
       width: 100%;
-      height: 250px;
+      height: 258px;
       overflow: hidden;
 
       img {
