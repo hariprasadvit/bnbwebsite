@@ -156,7 +156,7 @@
   padding: 1rem 3rem;
   position: relative;
 
-  .slick-list .slick-track{
+  .slick-list .slick-track {
     gap: 0px !important;
   }
 
@@ -195,7 +195,7 @@
       padding-left: unset;
     }
 
-   
+
 
     .imageSection {
       max-width: 500px;
@@ -221,7 +221,6 @@
       h3 {
         font-size: 32px;
         font-weight: 700;
-        font-family: "Titillium Web", sans-serif;
         line-height: 49px;
         letter-spacing: -1px;
         color: #000000;
@@ -320,6 +319,7 @@
 
       .imageSection {
         width: 50%;
+
         img {
           width: 100%;
           height: auto;
@@ -327,6 +327,7 @@
       }
 
       .textSection {
+
         // width: 50%;
         // padding-left: 1rem;
         h3 {
@@ -334,6 +335,7 @@
           margin-bottom: 0.5rem;
           line-height: 30px;
         }
+
         p {
           font-size: 16px;
           line-height: 1.4;
@@ -394,11 +396,11 @@
     }
   }
 
-    // Breakpoint: ≤680px
-    @media screen and (max-width:680px) {
+  // Breakpoint: ≤680px
+  @media screen and (max-width:680px) {
 
-      .cardLayout {
-        text-align: left;
-      }
+    .cardLayout {
+      text-align: left;
     }
+  }
 }
