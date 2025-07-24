@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "./style.module.scss";
+import Link from "next/link";
 
 export default function BannerCaseStudy() {
   return (
@@ -17,7 +18,9 @@ export default function BannerCaseStudy() {
             help businesses achieve their goals.We don’t just build MVPs, we
             build what your users will love—and your investors will notice.
           </p>
-          <div className={styles.contactUsButton}>Talk to Us</div>
+          <Link className={styles.contactUsButton} href="/contact-us">
+            Talk to Us
+          </Link>
         </div>
       </div>
     </section>
