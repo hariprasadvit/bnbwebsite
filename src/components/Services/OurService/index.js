@@ -106,7 +106,7 @@ const OurService = ({ key, data }) => {
                 </Link>
               </div>
             </div>
-            <div className={`${styles.ourServiceImageWrap} `}>
+            {/* <div className={`${styles.ourServiceImageWrap} `}>
               <div className={styles.ourServiceLeft}></div>
               <div className={styles.ourServiceImageWrapper}>
                 {item?.card?.map((item, index) => {
@@ -133,7 +133,7 @@ const OurService = ({ key, data }) => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </React.Fragment>
       ))}

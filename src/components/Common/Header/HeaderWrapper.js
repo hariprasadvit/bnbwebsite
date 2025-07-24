@@ -6,18 +6,24 @@ import Header from "./index";
 export default function HeaderWrapper() {
   const pathname = usePathname();
 
-  // Normalize path to remove trailing slash
-  const cleanedPath = pathname.replace(/\/$/, "");
+  // Flags
+  const isServiceListing = pathname === "/services";
+  const isCaseStudyListing = pathname === "/case-study";
+  const isServiceDetail =
+    pathname.startsWith("/services/") && !isServiceListing;
+  const isCaseStudyDetail =
+    pathname.startsWith("/case-study/") && !isCaseStudyListing;
 
-  // Split into parts: ['', 'services', 'slug']
-  const pathParts = cleanedPath.split("/");
+  let whiteHeader = false;
+  let active = "";
 
-  // Check if it matches exactly /services/[slug]
-  const isServiceDetailPage =
-    pathParts.length === 3 && pathParts[1] === "services";
-
-  const whiteHeader = isServiceDetailPage;
-  const active = isServiceDetailPage ? "services" : "";
+  if (isServiceListing) {
+    active = "services";
+  } else if (isCaseStudyListing) {
+    active = "caseStudy";
+  } else if (isServiceDetail) {
+    whiteHeader = true; // Only for service detail pages
+  }
 
   return <Header whiteHeader={whiteHeader} active={active} />;
 }

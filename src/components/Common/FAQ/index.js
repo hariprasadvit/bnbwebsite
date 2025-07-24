@@ -13,36 +13,65 @@ export default function FAQ() {
   const Faq = [
     {
       id: 1,
-      title: "Q1. What is the difference between UI and UX Design?",
-      desc: "UI refers to User Interface Design, which deals with the aesthetic elements of a product like colors, typography, and layout. UX, or User Experience Design, on the other hand, focuses on the overall experience a user has with a product, like ease of use and the process of interaction.",
+      title: "1. How do I get started with a project at Boolean & Beyond?",
+      desc: "Getting started is simple — just reach out via our contact form or email with a brief about your business, goals, and any existing material (like wireframes or specs). We'll schedule a discovery call to understand your vision and recommend the best next steps.",
     },
     {
       id: 2,
-      title: "Q2. What are the expected UX Deliverables?",
-      desc: "UX deliverables are outputs that provide insights into the design process. Key deliverables include user stories (users' needs), user flows (users' path through your product), wireframes (basic layout design), prototypes (interactive models of the final product), and a style guide or design system (visual branding rules). The specifics may vary based on the project's requirements.",
+      title: "2. What industries do you specialize in?",
+      desc: "We work across diverse industries like Fintech, Healthcare, E-commerce, Logistics, Education, and Media. Our domain-driven design and development ensures your product fits industry needs while being future-ready.",
     },
     {
       id: 3,
-      title: "Q3. Why are UI/UX design services important for my product?",
-      desc: "Good UI/UX design can make your product more user-friendly, attractive, and efficient, which can lead to higher user satisfaction and ultimately, greater success for your product.",
+      title:
+        "3. Do you only build AI solutions, or can you handle full product development?",
+      desc: "We do both. While we specialize in AI-driven features (like semantic search, recommendations, or autonomous agents), we also design and build complete digital products — including frontend, backend, mobile apps, and user experience design.",
     },
     {
       id: 4,
-      title: "Q4. What will you need from me to get started?",
-      desc: "Our design team usually need a clear understanding of your business, your goals for the product, your target users, and any specific requirements or preferences you have.",
+      title:
+        "4. Can you help if I only have an idea and no technical knowledge?",
+      desc: "Absolutely. We work with founders and teams from napkin sketches to launch. We'll guide you through requirement definition, user flows, MVP scope, and help you make technical decisions without the jargon.",
     },
-
     {
       id: 5,
-      title: "Q5. How long does a typical UI/UX design project take?",
-      desc: "The timeline can depend on many factors including the complexity of the project, the number of iterations, and the client's responsiveness to feedback requests. Our Typical UI/UX Design process takes 6-10 Weeks.",
+      title: "5. What does your project process look like?",
+      desc: `Our process typically includes:
+Discovery & Scoping,
+ UX/UI Design, 
+Architecture & Development, 
+Testing & QA, 
+Launch & Support, 
+We follow an agile approach with weekly check-ins, demos, and transparent communication throughout.`,
     },
     {
       id: 6,
-      title: "Q6. How will the success of the design be measured?",
-      desc: "Design success can be measured through user feedback, usability testing, and metrics like engagement rates, conversion rates, and user retention rates.",
+      title:
+        "6. Do you take on redesign or modernization of existing platforms?",
+      desc: "Yes. We specialize in revamping legacy systems, improving UX/UI, and migrating old architectures into scalable, modern tech stacks — whether it’s a fintech dashboard or a multi-tenant ERP.",
+    },
+    {
+      id: 7,
+      title: "7. How do you integrate AI in projects?",
+      desc: "We implement AI thoughtfully — from contextual search and recommendations to autonomous workflows and agentic systems. Our AI is integrated around your data, goals, and user flows — never as a gimmick.",
+    },
+    {
+      id: 8,
+      title: "8. Do you work with startups and enterprises alike?",
+      desc: "Yes. We work with early-stage startups building MVPs as well as large enterprises with complex systems. Our teams adapt to your scale, whether it’s fast iterations or long-term transformation projects.",
+    },
+    {
+      id: 9,
+      title: "9. Can you handle both design and development in-house?",
+      desc: "Yes — we’re a full-stack product studio. Our UX/UI design team works closely with developers to ensure seamless implementation, consistent branding, and great user experience across all screens and platforms.",
+    },
+    {
+      id: 10,
+      title: "10. What tech stacks and tools do you use?",
+      desc: "We use modern, scalable stacks like React, Next.js, Node.js, Python, and TypeScript. For AI and agentic solutions, we use OpenAI, LangChain, Pinecone, and other LLM frameworks — always picking what’s right for your problem.",
     },
   ];
+
   return (
     <section className={styles.faq}>
       <div className={styles.faqHeading}>

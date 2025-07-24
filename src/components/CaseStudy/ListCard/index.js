@@ -19,6 +19,7 @@ const ListCardContainer = ({ data = [] }) => {
               image={imageUrl}
               description={card.description}
               link={card?.case_study_detail?.slug}
+              hideBorderBottom
             />
           </>
         );

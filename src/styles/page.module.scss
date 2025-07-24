@@ -1288,6 +1288,14 @@
   color: #000000;
   padding-left: 17.8257686vw;
 
+  ul {
+    padding-left: 25px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     padding-left: 8.333333vw;
     gap: 16px;
