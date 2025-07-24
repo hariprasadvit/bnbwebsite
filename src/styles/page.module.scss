@@ -1300,6 +1300,12 @@
     }
   }
 
+  p {
+    strong {
+      font-weight: 700;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     padding-left: 8.333333vw;
     gap: 16px;
