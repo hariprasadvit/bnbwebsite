@@ -41,8 +41,12 @@
   // }
 
   .ourServiceLeft {
-    padding: 46px 8.85797950vw;
-    max-width: 37.11566vw;
+    // padding: 46px 8.85797950vw;
+    // max-width: 37.11566vw;
+    // width: 100%;
+
+    padding: 46px 6.85798vw;
+    max-width: 360px;
     width: 100%;
 
     @media screen and (max-width: 1023px) {
@@ -78,11 +82,17 @@
   }
 
   .ourServiceRight {
+    // display: flex;
+    // flex-direction: column;
+    // gap: 26px;
+    // padding: 46px 121px 46px 0;
+    // max-width: 750px;
+    // width: 100%;
     display: flex;
     flex-direction: column;
     gap: 26px;
-    padding: 46px 121px 46px 0;
-    max-width: 750px;
+    padding: 46px 30px 46px 0;
+    max-width: 1050px;
     width: 100%;
 
     @media screen and (max-width: 1023px) {
@@ -136,10 +146,14 @@
       gap: 10px;
 
       .ourServiceContentList {
-        font-size: 27px;
+        // font-size: 27px;
+        // font-weight: 600;
+        // line-height: 65px;
+        // letter-spacing: -0.19px;
+        font-size: 22px;
         font-weight: 600;
-        line-height: 65px;
-        letter-spacing: -0.19px;
+        line-height: 58px;
+        letter-spacing: -.19px;
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;

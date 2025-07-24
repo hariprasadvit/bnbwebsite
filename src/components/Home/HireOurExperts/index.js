@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 
-export default function ContactBanner() {
+export default function HireOurExperts() {
   return (
     <section className={styles.contactBanner} id="bannerTop">
       <div className={`${styles.contactBannerContent}`}>

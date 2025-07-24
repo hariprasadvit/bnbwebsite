@@ -6,18 +6,18 @@ import Header from "./index";
 export default function HeaderWrapper() {
   const pathname = usePathname();
 
-  // Define config for each route
-  const routeConfig = [
-    { path: "/services", whiteHeader: false, active: "services" },
-    { path: "/case-study", whiteHeader: false, active: "caseStudy" },
-  ];
+  // Normalize path to remove trailing slash
+  const cleanedPath = pathname.replace(/\/$/, "");
 
-  const matchedRoute = routeConfig.find((route) =>
-    pathname.startsWith(route.path)
-  );
+  // Split into parts: ['', 'services', 'slug']
+  const pathParts = cleanedPath.split("/");
 
-  const whiteHeader = matchedRoute?.whiteHeader || false;
-  const active = matchedRoute?.active || "";
+  // Check if it matches exactly /services/[slug]
+  const isServiceDetailPage =
+    pathParts.length === 3 && pathParts[1] === "services";
+
+  const whiteHeader = isServiceDetailPage;
+  const active = isServiceDetailPage ? "services" : "";
 
   return <Header whiteHeader={whiteHeader} active={active} />;
 }

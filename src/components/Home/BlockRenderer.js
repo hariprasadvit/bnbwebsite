@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import DataDriven from "./DataDriven";
+import HireOurExperts from "./HireOurExperts";
 import InsightsAndBlog from "./InsightsAndBlog";
 import NumberSection from "./NumberSection";
 import OurClients from "./OurClients";
@@ -26,6 +27,7 @@ export default function BlockRenderer({ blocks }) {
       case "landing-page.portfolio-section":
         return (
           <>
+            <HireOurExperts />
             <OurWorks key={index} data={block} />
             <NumberSection />
           </>
