@@ -18,7 +18,7 @@ const ListCardContainer = ({ data = [] }) => {
               title={card.title}
               image={imageUrl}
               description={card.description}
-              link={card.case_study_detail.slug}
+              link={card?.case_study_detail?.slug}
             />
           </>
         );
