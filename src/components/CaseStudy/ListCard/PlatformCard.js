@@ -16,7 +16,7 @@ const PlatformCard = ({
   return (
     <div className={styles.platformCardContent}>
       <div className={styles.platformCardLeft}>
-        <h3>{number}</h3>
+        <h3>{"0" + number}</h3>
         <h4>({label})</h4>
       </div>
       <Link href={`/case-study/${link}`}>
