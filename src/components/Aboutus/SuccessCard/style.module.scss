@@ -1,15 +1,14 @@
 /** @format */
 
 .success {
-  padding: 100px 80px;
+  padding: 80px;
   background-color: #f5f5f5;
   position: relative;
 }
 
 .successTitle h3 {
-  font-size: 64px;
-  line-height: 74px;
-
+  font-size: 35px;
+  line-height: 64px;
   letter-spacing: 0px;
   color: #050505;
   text-transform: capitalize;
@@ -31,15 +30,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 25px 0;
   border-bottom: 1px solid #000000;
 }
 
 .successCardHeading h4 {
-  font-size: 35px;
-  line-height: 45px;
+  font-size: 25px;
+  line-height: 35px;
   font-weight: bold;
-
   letter-spacing: 0px;
   color: #000000;
 }
@@ -79,7 +77,6 @@
 .successCardContent {
   display: flex;
   align-items: flex-start;
-  margin: 40px 0 0;
 }
 
 .successCardBanner {
@@ -94,7 +91,7 @@
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
-  font-size: 100px;
+  font-size: 70px;
   font-family: "", sans-serif;
 
   font-weight: bold;
@@ -108,8 +105,8 @@
 }
 
 .successCardContentWrapper h4 {
-  font-size: 26px;
-  line-height: 44px;
+  font-size: 22px;
+  line-height: 4px;
   font-weight: bold;
 
   letter-spacing: 0px;
@@ -119,8 +116,8 @@
 }
 
 .successCardContentWrapper p {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 300;
 
   letter-spacing: 0px;
@@ -168,12 +165,12 @@
   }
 
   .successCardHeading {
-    padding: 20px 0;
+    padding: 15px 0;
   }
 
   .successCardHeading h4 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 25px;
   }
 
   .successCardHeading .icon {
@@ -184,7 +181,7 @@
   .successCardContent {
     margin: 10px 0 0;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
   }
 
   .successCardBanner {
@@ -206,13 +203,16 @@
   }
 
   .successCardContentWrapper h4 {
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 16px;
+    line-height: 25px;
     margin: 0 0 20px;
+    // text-align: center;
   }
 
   .successCardContentWrapper p {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 25px;
+    // text-align: center;
+    margin-bottom: 20px;
   }
 }

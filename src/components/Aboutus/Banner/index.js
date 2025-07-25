@@ -12,28 +12,14 @@ export default function BannerCaseStudy() {
           <h4>Disruptive Tech Leaders</h4>
           <h1>Crafting Tech-Driven Solutions with Exceptional Design.</h1>
           <p>
-            Through exceptional design and tech expertise, Cartoon Mango creates
-            tailored solutions that help businesses achieve their goals and
-            stand out in the digital landscape.
+            Through exceptional design and tech expertise, Boolean and Beyond
+            creates tailored solutions that help businesses achieve their goals
+            and stand out in the digital landscape.
           </p>
           <div className={styles.btns}>
             <a href="/services" type="button">
               Explore Now
             </a>
-            <a href="/careers">To join our team</a>
-          </div>
-        </div>
-        <div className={styles.careerBannerWrapper}>
-          {/* <div className={styles.careerBanner}> */}
-          {/* <Image
-              src="/about-us-banner.gif"
-              alt="about us banner"
-              width={500}
-              height={300}
-            /> */}
-          {/* </div> */}
-          <div className={`${styles.btns} ${styles.btnsRight}`}>
-            <a href="/services">Explore Now</a>
             <a href="/careers">To join our team</a>
           </div>
         </div>
@@ -43,7 +29,7 @@ export default function BannerCaseStudy() {
           {/* <img src="/speaker.png" alt="speaker" /> */}
         </div>
         <p>
-          Cartoon Mango is a <strong>tech-driven company</strong> with a
+          Boolean and Beyond is a <strong>tech-driven company</strong> with a
           <strong> passion for exceptional design</strong>, that offers
           customized solutions to help businesses succeed. We help our{" "}
           <strong>clients grow their business</strong> by understanding their
