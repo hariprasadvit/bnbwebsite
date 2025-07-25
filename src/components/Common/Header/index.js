@@ -246,10 +246,20 @@ export default function Header({ whiteHeader, active }) {
               </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link
+                href="/about"
+                className={active === "about" ? styles.active : ""}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/contact-us">Contact Us</Link>
+              <Link
+                href="/contact-us"
+                className={active === "contact" ? styles.active : ""}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
         </nav>
