@@ -261,6 +261,16 @@
   @media screen and (max-width: 768px) {
     padding: 40px 26px 0;
   }
+
+  &:nth-of-type(3) {
+    .splitSectionContainer {
+      .splitSectionLeft {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
 }
 
 .lastSection {
@@ -271,24 +281,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 150px;
+  gap: 70px;
   position: relative;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
 }
 
 .splitSectionLeft {
-  max-width: 270px;
+  max-width: 310px;
   width: 100%;
 
   @media screen and (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 200px;
+    max-width: 250px;
   }
 }
 
@@ -344,7 +354,7 @@
   margin-bottom: 26px;
   font-weight: 300;
   width: 50%;
-  padding-left: 35px;
+  padding-left: 25px;
   position: relative;
 
   // @media screen and (max-width: 1200px) {
@@ -363,17 +373,16 @@
 .splitSectionRight ul li::before {
   position: absolute;
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background: #000;
   border-radius: 100%;
   left: 0;
-  // top: 10px;
-  top: 5px;
+  top: 7px;
 
   @media screen and (max-width: 1200px) {
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     left: 10px;
     top: 7px;
   }

@@ -8,7 +8,9 @@ const OurProcessSmall = ({ data }) => {
         <div key={index} className={styles.ourProcessBottom}>
           <div className={styles.label}>{item.main_title}</div>
           <div className={styles.ourProcessDetails}>
-            <div className={styles.description}>{item.main_desc}</div>
+            {item.main_desc && (
+              <div className={styles.description}>{item.main_desc}</div>
+            )}
             <div className={styles.listsContainer}>
               <div className={styles.listsWrapper}>
                 <div className={styles.listsLabel}>{item.sub_title_one}</div>

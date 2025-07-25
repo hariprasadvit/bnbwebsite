@@ -13,20 +13,20 @@ const emailRegex = (data) => {
 
 const InterestedTabs = [
   {
-    id: "Product Development",
-    label: "Product Development",
+    id: "MVP Product development",
+    label: "MVP Product development",
   },
   {
-    id: "UI/UX Design",
-    label: "UI/UX Design",
+    id: "Custom Application Development",
+    label: "Custom Application Development",
+  },
+  {
+    id: "Agentic AI",
+    label: "Agentic AI",
   },
   {
     id: "Web/Mobile Application Development",
     label: "Web/Mobile Application Development",
-  },
-  {
-    id: "AR/VR Application",
-    label: "AR/VR Application",
   },
   {
     id: "Others",
@@ -170,7 +170,7 @@ export default function FooterForm() {
     <>
       <section className={styles.joinUs}>
         <div className={styles.joinUsTitle}>
-          <h4>Lets Connect And Help You in Your Project</h4>
+          <h4>Lets connect & Help you for your Project</h4>
         </div>
 
         <div className={styles.contactUsForm}>
