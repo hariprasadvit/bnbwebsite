@@ -3,9 +3,11 @@
 .core {
   padding: 70px 80px;
 }
+
 .coreTitle {
   margin: 0 0 70px;
 }
+
 .coreTitle h3 {
   letter-spacing: 0px;
   color: #f30000;
@@ -21,13 +23,15 @@
   font-size: 30px;
   line-height: 42px;
 }
+
 .coreWrapper {
   padding: 0 100px;
 }
 
-.coreWrapper > :last-child {
+.coreWrapper> :last-child {
   border-bottom: none;
 }
+
 .coreCardTitle {
   display: flex;
   align-items: flex-start;
@@ -39,9 +43,11 @@
   border-bottom: 1px dashed #bababa;
   padding: 40px 0;
 }
+
 .coreCardTitle {
   flex: 0.3;
 }
+
 .coreCardTitle h3 {
   font-size: 38px;
   line-height: 48px;
@@ -64,6 +70,7 @@
   right: 0;
   background-color: #707070;
 }
+
 .coreCardTitle h2 {
   font-weight: bold;
   letter-spacing: 0px;
@@ -76,6 +83,7 @@
 .coreCardContent {
   flex: 0.7;
 }
+
 .coreCardContent p {
   letter-spacing: 0px;
   color: #050505;
@@ -89,26 +97,34 @@
   .core {
     padding: 40px 20px;
   }
+
   .coreTitle {
-    margin: 0 0 40px;
+    margin: 0 0 10px;
     max-width: 300px;
   }
+
   .coreTitle h3 {
     font-size: 20px;
     line-height: 30px;
   }
 
   .coreTitle h2 {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
+
+    br {
+      display: none;
+    }
   }
+
   .coreWrapper {
     padding: 0px;
   }
 
-  .coreWrapper > :last-child {
+  .coreWrapper> :last-child {
     border-bottom: none;
   }
+
   .coreCardTitle {
     display: flex;
     align-items: center;
@@ -118,6 +134,7 @@
     flex-direction: column;
     padding: 20px 0;
   }
+
   .coreCardTitle h3 {
     font-size: 32px;
     line-height: 48px;
@@ -129,6 +146,7 @@
     width: 20px;
     top: 20px;
   }
+
   .coreCardTitle h2 {
     font-size: 22px;
     line-height: 28px;
@@ -137,6 +155,7 @@
   .coreCardContent {
     flex: 0.7;
   }
+
   .coreCardContent p {
     font-size: 16px;
     line-height: 28px;
