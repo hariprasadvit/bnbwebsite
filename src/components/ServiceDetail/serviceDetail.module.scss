@@ -374,6 +374,7 @@
           display: flex;
           flex-direction: column;
           gap: 15px;
+          max-width: 450px;
 
           .listsLabel {
             font-size: 27px;
@@ -398,7 +399,7 @@
             font-size: 21px;
             line-height: 42px;
             letter-spacing: -0.15px;
-            max-width: 370px;
+            max-width: 100%;
             width: 100%;
 
             @media screen and (max-width: 1200px) {
