@@ -35,6 +35,16 @@ export default function DataDriven({
     }
   }, [card]);
 
+  const selectOptions = card?.map((item) => ({
+    id: item.id,
+    value: item.id,
+    label: item.title,
+  }));
+
+  const selectedOption = selectOptions.find(
+    (option) => option.id === activeMenu
+  );
+
   return (
     <section className={styles.dataDriven}>
       <div className={styles.container}>
@@ -58,18 +68,34 @@ export default function DataDriven({
               {mobile ? (
                 <div className={styles.mobilePoints}>
                   <Select
-                    options={card?.map((_item) => {
-                      return {
-                        ..._item,
-                        label: _item.title,
-                      };
-                    })}
-                    // defaultValue={card.find((o) => o.id === activeMenu)}
+                    options={selectOptions}
+                    value={selectedOption}
                     onChange={(selected) => setActiveMenu(selected.id)}
+                    getOptionValue={(option) => option.id}
                     styles={{
+                      option: (base, state) => ({
+                        ...base,
+                        backgroundColor:
+                          state.isSelected || state.isFocused ? "#000" : "#fff",
+                        color:
+                          state.isSelected || state.isFocused ? "#fff" : "#000",
+                        cursor: "pointer",
+                      }),
                       container: (base) => ({
                         ...base,
                         width: "100%",
+                      }),
+                      control: (base) => ({
+                        ...base,
+                        borderColor: "#000",
+                        boxShadow: "none",
+                        "&:hover": {
+                          borderColor: "#000",
+                        },
+                      }),
+                      singleValue: (base) => ({
+                        ...base,
+                        color: "#000",
                       }),
                     }}
                   />
@@ -97,6 +123,7 @@ export default function DataDriven({
               {card?.map((_item, index) => (
                 <div
                   className={activeMenu === _item.id ? styles.showDesc : null}
+                  key={_item.id}
                 >
                   {_item.description}
                 </div>

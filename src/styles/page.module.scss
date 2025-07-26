@@ -381,16 +381,16 @@
   top: 7px;
 
   @media screen and (max-width: 1200px) {
-    width: 12px;
-    height: 12px;
-    left: 10px;
-    top: 7px;
+    width: 8px;
+    height: 8px;
+    left: 6px;
+    top: 9px;
   }
 }
 
 .splitSectionRight a {
   @media screen and (max-width: 768px) {
-    margin: 0 20px 0 auto;
+    // margin: 0 20px 0 auto;
     display: table;
   }
 
@@ -1076,9 +1076,9 @@
             font-weight: 300;
             pointer-events: none;
 
-            @media screen and (max-width: 978px) {
-              position: unset;
-            }
+            // @media screen and (max-width: 978px) {
+            //   position: unset;
+            // }
 
             @media screen and (max-width: 768px) {
               max-width: 100%;
