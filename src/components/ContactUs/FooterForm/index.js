@@ -177,8 +177,8 @@ export default function FooterForm() {
           <form className={styles.contactForm}>
             <div className={styles.inputWidth}>
               <div className={styles.inputWrapper}>
+                <label>Your Full Name*</label>
                 <input
-                  placeholder="Name*"
                   type="text"
                   // required
                   onChange={(e) => onChange(e.target.value, "name")}
@@ -187,9 +187,10 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.name}</span>
               </div>
               <div className={styles.inputWrapper}>
+                <label>Your Email Id*</label>
+
                 <input
                   placeholder="Email*"
-                  type="email"
                   // required
                   onChange={(e) => onChange(e.target.value, "email_id")}
                   value={details.data.email_id}
@@ -200,8 +201,8 @@ export default function FooterForm() {
 
             <div className={styles.inputWidth}>
               <div className={styles.inputWrapper}>
+                <label>Your Company/Product Name*</label>
                 <input
-                  placeholder="Company/Product Name*"
                   type="text"
                   onChange={(e) => onChange(e.target.value, "company_name")}
                   value={details.data.company_name}
@@ -209,8 +210,8 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.company_name}</span>
               </div>
               <div className={styles.inputWrapper}>
+                <label>Your Mobile Number*</label>
                 <input
-                  placeholder="Mobile Number"
                   type="number"
                   onChange={(e) => onChange(e.target.value, "phone_number")}
                   onKeyDown={(e) => {
@@ -231,9 +232,10 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.phone_number}</span>
               </div>
             </div>
+
             <div className={styles.textareaWrapper}>
+              <label>Project Requirement / Goals*</label>
               <textarea
-                placeholder="Project Requirements and Goals"
                 type="text"
                 onChange={(e) => onChange(e.target.value, "project_goal")}
                 value={details.data.project_goal}

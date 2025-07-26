@@ -65,11 +65,11 @@ export default function SectionList({ data = {} }) {
                 </Link> */}
               </div>
             </div>
-            <div
+            {/* <div
               className={`${styles.dashedBorder} ${
                 index === common_section_list.length - 1 ? styles.noBorder : ""
               }`}
-            ></div>
+            ></div> */}
           </section>
         );
       })}
