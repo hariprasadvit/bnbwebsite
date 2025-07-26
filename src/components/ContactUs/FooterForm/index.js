@@ -190,7 +190,6 @@ export default function FooterForm() {
                 <label>Your Email Id*</label>
 
                 <input
-                  placeholder="Email*"
                   // required
                   onChange={(e) => onChange(e.target.value, "email_id")}
                   value={details.data.email_id}
