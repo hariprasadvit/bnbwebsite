@@ -13,20 +13,20 @@ const emailRegex = (data) => {
 
 const InterestedTabs = [
   {
-    id: "Product Development",
-    label: "Product Development",
+    id: "MVP Product development",
+    label: "MVP Product development",
   },
   {
-    id: "UI/UX Design",
-    label: "UI/UX Design",
+    id: "Custom Application Development",
+    label: "Custom Application Development",
+  },
+  {
+    id: "Agentic AI",
+    label: "Agentic AI",
   },
   {
     id: "Web/Mobile Application Development",
     label: "Web/Mobile Application Development",
-  },
-  {
-    id: "AR/VR Application",
-    label: "AR/VR Application",
   },
   {
     id: "Others",
@@ -170,15 +170,15 @@ export default function FooterForm() {
     <>
       <section className={styles.joinUs}>
         <div className={styles.joinUsTitle}>
-          <h4>Lets Connect And Help You in Your Project</h4>
+          <h4>Lets connect & Help you for your Project</h4>
         </div>
 
         <div className={styles.contactUsForm}>
           <form className={styles.contactForm}>
             <div className={styles.inputWidth}>
               <div className={styles.inputWrapper}>
+                <label>Your Full Name*</label>
                 <input
-                  placeholder="Name*"
                   type="text"
                   // required
                   onChange={(e) => onChange(e.target.value, "name")}
@@ -187,9 +187,9 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.name}</span>
               </div>
               <div className={styles.inputWrapper}>
+                <label>Your Email Id*</label>
+
                 <input
-                  placeholder="Email*"
-                  type="email"
                   // required
                   onChange={(e) => onChange(e.target.value, "email_id")}
                   value={details.data.email_id}
@@ -200,8 +200,8 @@ export default function FooterForm() {
 
             <div className={styles.inputWidth}>
               <div className={styles.inputWrapper}>
+                <label>Your Company/Product Name*</label>
                 <input
-                  placeholder="Company/Product Name*"
                   type="text"
                   onChange={(e) => onChange(e.target.value, "company_name")}
                   value={details.data.company_name}
@@ -209,8 +209,8 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.company_name}</span>
               </div>
               <div className={styles.inputWrapper}>
+                <label>Your Mobile Number*</label>
                 <input
-                  placeholder="Mobile Number"
                   type="number"
                   onChange={(e) => onChange(e.target.value, "phone_number")}
                   onKeyDown={(e) => {
@@ -231,9 +231,10 @@ export default function FooterForm() {
                 <span style={{ opacity: 1 }}>{details.error.phone_number}</span>
               </div>
             </div>
+
             <div className={styles.textareaWrapper}>
+              <label>Project Requirement / Goals*</label>
               <textarea
-                placeholder="Project Requirements and Goals"
                 type="text"
                 onChange={(e) => onChange(e.target.value, "project_goal")}
                 value={details.data.project_goal}

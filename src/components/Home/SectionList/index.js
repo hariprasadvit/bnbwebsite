@@ -12,10 +12,10 @@ export default function SectionList({ data = {} }) {
     <>
       {common_section_list.map((section, index) => {
         let _img = "";
-        if (section.image_name === "mvp") {
-          _img = "/Home/mvp.svg";
-        } else if (section.image_name === "entApp") {
-          _img = "/Home/entApp.svg";
+        if (section.image_name === "animated-two") {
+          _img = "/Home/animated-two.svg";
+        } else if (section.image_name === "animated-three") {
+          _img = "/Home/animated-three.svg";
         } else if (section.image_name === "kGraph") {
           _img = "/Home/kGraph.svg";
         } else if (section.image_name === "animated") {
@@ -65,11 +65,11 @@ export default function SectionList({ data = {} }) {
                 </Link> */}
               </div>
             </div>
-            <div
+            {/* <div
               className={`${styles.dashedBorder} ${
                 index === common_section_list.length - 1 ? styles.noBorder : ""
               }`}
-            ></div>
+            ></div> */}
           </section>
         );
       })}
