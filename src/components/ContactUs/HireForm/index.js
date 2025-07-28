@@ -330,6 +330,14 @@ export default function FooterForm() {
             Submit Form
           </button>
         </form>
+        {/* 
+        <div className={styles.successMessageWrapper}>
+          <span>
+            <p>
+              Thanks for Contacting Us. Our Team Will Get Back to You Shortly
+            </p>
+          </span>
+        </div> */}
 
         {successMessage && (
           <div className={styles.successMessageWrapper}>
