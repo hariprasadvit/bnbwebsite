@@ -31,7 +31,7 @@ export default function BlockRenderer({ blocks }) {
           <>
             <HireOurExperts />
             <OurWorks key={index} data={block} />
-            <NumberSection />
+            <NumberSection whiteBG />
           </>
         );
       case "landing-page.clients-section":

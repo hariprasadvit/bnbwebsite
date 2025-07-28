@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 180px 80px 0;
+  padding: 180px 80px 32px;
   position: relative;
 
   @media screen and (max-width: 1200px) {
@@ -642,6 +642,10 @@
 // Number section
 
 .numberSection {
+  &.whiteBG {
+    background: #f5f5f5;
+  }
+
   .container {
     &.custompadding {
       padding: 80px 80px 80px;

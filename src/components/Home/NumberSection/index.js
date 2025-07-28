@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function NumberSection({ disableTopPadding = false }) {
+export default function NumberSection({ disableTopPadding = false, whiteBG }) {
   return (
-    <section className={styles.numberSection}>
+    <section
+      className={`${styles.numberSection} ${whiteBG ? styles.whiteBG : ""}`}
+    >
       <div
         className={`${styles.container} ${
           disableTopPadding ? styles.custompadding : ""
@@ -40,7 +42,7 @@ export default function NumberSection({ disableTopPadding = false }) {
           </div>
           <div className={` ${styles.learnMore}`}>
             <Link href={"/services"} className="knowMoreLink">
-              Explore More{"    "}
+              Explore more{"    "}
             </Link>
             on how we help companies bring digital products to life — faster,
             smarter, and built to scale.

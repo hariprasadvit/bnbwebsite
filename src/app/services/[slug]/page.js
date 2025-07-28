@@ -53,6 +53,7 @@ export default async function ServiceDetails({ params }) {
           title={blockData?.pageContent?.title}
           description={blockData?.pageContent?.description}
           hightlighted_text={blockData?.pageContent?.highlighted_title}
+          blackBg
         />
         <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
         <FAQ />
