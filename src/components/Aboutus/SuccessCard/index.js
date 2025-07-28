@@ -55,7 +55,7 @@ export default function SuccessCard() {
           outLineText="Growth"
           imageTwo="/2nd.gif"
           heading="Team empowerment for innovation and success"
-          desc="At Cartoon Mango, we believe that strong leadership is essential to creating a culture of growth and innovation. We are committed to fostering a work environment that encourages creativity, risk-taking, and continuous learning, allowing us to deliver exceptional solutions that help our clients achieve their goals."
+          desc="At Boolean and Beyond, we believe that strong leadership is essential to creating a culture of growth and innovation. We are committed to fostering a work environment that encourages creativity, risk-taking, and continuous learning, allowing us to deliver exceptional solutions that help our clients achieve their goals."
         />
         <Accordion
           title="Design Process with Drive"
@@ -69,7 +69,7 @@ export default function SuccessCard() {
           outLineText="Teams"
           imageTwo="/4th.gif"
           heading="Bringing diverse perspectives for greater success"
-          desc="Collaboration is at the heart of what we do at Cartoon Mango. We believe that diverse perspectives and cross-functional teams are essential to creating innovative solutions that meet the unique needs of our clients. Our team members work closely together, sharing ideas and expertise to create solutions that drive growth and success."
+          desc="Collaboration is at the heart of what we do at Boolean and Beyond. We believe that diverse perspectives and cross-functional teams are essential to creating innovative solutions that meet the unique needs of our clients. Our team members work closely together, sharing ideas and expertise to create solutions that drive growth and success."
         />
         <Accordion
           title="Design Experiences with Empathy"

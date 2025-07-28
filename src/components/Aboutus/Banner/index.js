@@ -10,13 +10,7 @@ export default function BannerCaseStudy() {
       <section className={styles.careersTitleBanner}>
         <div className={styles.careersTitleContent}>
           <div className={styles.careersTopTitle}>
-            <span
-              style={{
-                textTransform: "uppercase",
-              }}
-            >
-              Disruptive Tech Leaders
-            </span>
+            <span>Disruptive Tech Leaders</span>
             <h2>Crafting Tech-Driven Solutions with Exceptional Design.</h2>
           </div>
           <p>

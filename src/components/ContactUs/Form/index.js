@@ -57,7 +57,7 @@ export default function ContactForm() {
     "email_id",
     "service_list",
     "budget",
-    // "phone_number",
+    "phone_number",
   ];
   const ERR_NAMES = {
     project_goal: "Project Goal",
@@ -66,7 +66,7 @@ export default function ContactForm() {
     email_id: "Email ID",
     service_list: "Service",
     budget: "Budget",
-    // phone_number: "Mobile Number",
+    phone_number: "Mobile Number",
   };
 
   const onChange = (val, key) => {

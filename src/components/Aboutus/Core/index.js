@@ -37,7 +37,7 @@ export default function CoreContent() {
             </div>
             <div className={styles.coreCardContent}>
               <p>
-                At Cartoon Mango, we believe that a well-defined process is
+                At Boolean and Beyond, we believe that a well-defined process is
                 essential to delivering consistent, high-quality results. We
                 have developed a rigorous methodology that ensures each project
                 is delivered on time and within budget, while still maintaining
@@ -87,7 +87,7 @@ export default function CoreContent() {
             </div>
             <div className={styles.coreCardContent}>
               <p>
-                At Cartoon Mango, we are committed to helping our clients
+                At Boolean and Beyond, we are committed to helping our clients
                 achieve their goals and drive business growth. We measure our
                 success by the success of our clients, and we are dedicated to
                 providing solutions that deliver exceptional results and help
