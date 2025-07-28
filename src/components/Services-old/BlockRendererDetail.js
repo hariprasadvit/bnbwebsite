@@ -1,14 +1,20 @@
-import DataDriven from "../Home/DataDriven";
-import InsightsAndBlog from "../Home/InsightsAndBlog";
-import NumberSection from "../Home/NumberSection";
-import OurClients from "../Home/OurClients";
-import Testimonials from "../Home/Testimonials";
-import OurWorksBlack from "../Home/OurWorks";
-import OurWorks from "../Projects/OurWorks";
-import ProductDevelopment from "../Projects/ProductDevelopment";
-import AiSolutions from "../ServiceDetail/AiSolutions";
-import OurProcessSmall from "../ServiceDetail/OurProcessSmall";
-import HireOurExperts from "../Home/HireOurExperts";
+import dynamic from "next/dynamic";
+
+const DataDriven = dynamic(() => import("../Home/DataDriven"));
+const InsightsAndBlog = dynamic(() => import("../Home/InsightsAndBlog"));
+const NumberSection = dynamic(() => import("../Home/NumberSection"));
+const OurClients = dynamic(() => import("../Home/OurClients"));
+const Testimonials = dynamic(() => import("../Home/Testimonials"));
+const OurWorksBlack = dynamic(() => import("../Home/OurWorks"));
+const OurWorks = dynamic(() => import("../Projects/OurWorks"));
+const ProductDevelopment = dynamic(() =>
+  import("../Projects/ProductDevelopment")
+);
+const AiSolutions = dynamic(() => import("../ServiceDetail/AiSolutions"));
+const OurProcessSmall = dynamic(() =>
+  import("../ServiceDetail/OurProcessSmall")
+);
+const HireOurExperts = dynamic(() => import("../Home/HireOurExperts"));
 
 export default function BlockRendererDetail({ blocks }) {
   if (!blocks?.length) return null;
@@ -42,7 +48,7 @@ export default function BlockRendererDetail({ blocks }) {
       case "landing-page.testimonials-section":
         return <Testimonials key={index} data={block} />;
       case "landing-page.insights-blogs-section":
-        return <InsightsAndBlog key={index} data={block} />;
+        return <InsightsAndBlog key={index} data={block} addPaddingTop />;
       case "landing-page.portfolio-section":
         return (
           <>

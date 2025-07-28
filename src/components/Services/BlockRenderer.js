@@ -23,9 +23,16 @@ export default function BlockRenderer({ blocks }) {
           </>
         );
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} addTopPadding={true} />;
+        return <OurClients key={index} data={block} />;
       case "landing-page.testimonials-section":
-        return <Testimonials isCustomContainer key={index} data={block} />;
+        return (
+          <Testimonials
+            isCustomContainer
+            key={index}
+            data={block}
+            addTopPadding
+          />
+        );
       case "landing-page.insights-blogs-section":
         return <InsightsAndBlog key={index} data={block} />;
       case "service-listing.industry-we-serve":

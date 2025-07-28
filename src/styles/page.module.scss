@@ -42,7 +42,7 @@
 
 .contactBanner {
   display: flex;
-  background-color: red;
+  background-color: #d44116;
 
 }
 
@@ -252,21 +252,21 @@
 /* MVP section */
 
 .splitSection {
-  padding: 62px 80px 0;
+  padding: 62px 80px 50px;
 
   @media screen and (max-width: 1200px) {
-    padding: 80px 40px 0;
+    padding: 80px 40px 40px;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 26px 0;
+    padding: 40px 26px 30px;
   }
 
-  &:nth-of-type(3) {
+  &:nth-of-type(4) {
     background: #fff;
   }
 
-  &:nth-of-type(3) {
+  &:nth-of-type(4) {
     .splitSectionContainer {
       .splitSectionLeft {
         img {
@@ -814,10 +814,10 @@
   }
 
   .container {
-    padding: 40px 80px 60px;
+    padding: 40px 80px;
 
     @media screen and (max-width: 1200px) {
-      padding: 40px 40px 60px;
+      padding: 40px;
     }
 
     @media screen and (max-width: 768px) {
@@ -838,6 +838,7 @@
         display: flex;
         gap: 20px;
         justify-content: center;
+        align-items: center;
       }
 
       .imageWrap {
@@ -853,11 +854,20 @@
       }
     }
   }
+
 }
 
 // InsightsAndBlog Section\
 
 .InsightsAndBlog {
+  &.addTopPadding {
+    margin-top: 150px;
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 100px;
+    }
+  }
+
   .container {
     padding: 20px 80px 0;
 
@@ -1132,6 +1142,16 @@
 
   @media screen and (max-width: 768px) {
     padding: 40px 26px 40px;
+  }
+
+  &.addTopPadding {
+    margin-top: 150px;
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 100px;
+    }
+
+    @media screen and (max-width: 768px) {}
   }
 
   .testimonialContainer {

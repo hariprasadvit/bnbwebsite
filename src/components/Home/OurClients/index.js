@@ -56,7 +56,7 @@ export default function OurClients({ data = {}, addTopPadding }) {
       }`}
     >
       <div className={styles.container}>
-        <h2>{title}</h2>
+        {/* <h2>{title}</h2> */}
         <div className={styles.clientSlider}>
           <Slider {...settings}>
             {clients?.map((item, index) => {

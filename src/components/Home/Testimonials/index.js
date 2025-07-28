@@ -13,6 +13,7 @@ export default function Testimonials({
   data = {},
   testimonialPaddingTop,
   isCustomContainer = false,
+  addTopPadding,
 }) {
   let { testimonial_card } = data;
 
@@ -69,8 +70,10 @@ export default function Testimonials({
 
   return (
     <section
-      className={styles.Testimonials}
       style={{ paddingTop: testimonialPaddingTop }}
+      className={`${styles.Testimonials} ${
+        addTopPadding ? styles.addTopPadding : ""
+      }`}
     >
       <div
         className={`${styles.container} ${

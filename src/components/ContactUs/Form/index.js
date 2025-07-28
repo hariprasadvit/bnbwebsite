@@ -332,10 +332,10 @@ export default function ContactForm() {
             </div>
           </div>
           <div className={styles.contactUsRight}>
-            <div className={styles.careersbox}>
+            {/* <div className={styles.careersbox}>
               <h5>Bangalore</h5>
               <p>#6, Millers Tannk Bund Road, Vasanth Nagar, Bangalore</p>
-            </div>
+            </div> */}
             <div className={styles.careersbox}>
               <h5>Coimbatore</h5>
               <p>#509, Red Rose Plaza, DB Road, RS Puram, Coimbatore</p>
