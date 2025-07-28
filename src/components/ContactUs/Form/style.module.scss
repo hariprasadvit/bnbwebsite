@@ -90,19 +90,19 @@
   margin: 20px 0 0;
 }
 
-.inputWidth> :first-child {
+.inputWidth > :first-child {
   width: 50%;
   margin-right: 20px;
 }
 
-.inputWidth> :last-child {
+.inputWidth > :last-child {
   width: 50%;
 }
 
 @media only screen and (max-width: 768px) {
   .contactUsForm {
     background-color: #fefcf9;
-    padding: 0;
+    padding: 0px 10px 10px;
     margin: 20px 0 0;
   }
 
@@ -111,13 +111,13 @@
     margin: 0 0 0px;
   }
 
-  .inputWidth> :first-child {
+  .inputWidth > :first-child {
     width: 100%;
     margin-right: 0px;
     margin-bottom: 10px;
   }
 
-  .inputWidth> :last-child {
+  .inputWidth > :last-child {
     width: 100%;
   }
 }
@@ -254,7 +254,8 @@
   cursor: pointer;
 }
 
-.careersbox {}
+.careersbox {
+}
 
 .careersbox h5 {
   color: #050505;
