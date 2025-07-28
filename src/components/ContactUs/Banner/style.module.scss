@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #fefdf5;
 }
 
 .careersTitleBanner .careerBanner {
@@ -26,25 +27,25 @@
   object-fit: contain;
 }
 
+.careersTopTitle {
+  line-height: 48px;
+}
 .careersTitleContent {
-  max-width: 540px;
   margin-right: 40px;
-  width: 50%;
 }
 
 .careersTitleContent h4 {
   letter-spacing: 0px;
   color: #d44116;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 48px;
   line-height: 30px;
   margin: 0 0 12px;
 }
 
-.careersTitleContent h1 {
+.careersTitleContent span {
   font-size: 50px;
-  line-height: 60px;
-
+  line-height: 48px;
   font-weight: bold;
   letter-spacing: 0px;
   color: #050505;
@@ -52,11 +53,11 @@
 }
 
 .careersTitleContent p {
-  letter-spacing: 0px;
-  color: #050505;
-  opacity: 0.6;
-  font-size: 20px;
-  line-height: 30px;
+  margin-top: 40px;
+  color: #000000;
+  font-size: 27px;
+  line-height: 32px;
+  max-width: 863px;
   // margin-bottom: 32px;
 }
 
@@ -65,7 +66,7 @@
   align-items: center;
 }
 
-.careersTitleContent .btns> :first-child {
+.careersTitleContent .btns > :first-child {
   // width: 148px;
   // height: 48px;
   // background-color: #825c9a;
@@ -107,7 +108,7 @@
   }
 }
 
-.careersTitleContent .btns> :last-child {
+.careersTitleContent .btns > :last-child {
   font-size: 20px;
   line-height: 30px;
   // font-weight: bold;
@@ -126,7 +127,7 @@
   align-items: center;
 }
 
-.careerBannerWrapper .btns> :first-child {
+.careerBannerWrapper .btns > :first-child {
   width: 148px;
   height: 48px;
   background-color: #825c9a;
@@ -145,7 +146,7 @@
   cursor: pointer;
 }
 
-.careerBannerWrapper .btns> :last-child {
+.careerBannerWrapper .btns > :last-child {
   font-size: 20px;
   line-height: 30px;
   font-weight: bold;
@@ -157,7 +158,7 @@
 
 @media only screen and (max-width: 768px) {
   .careersTitleBanner {
-    padding: 0px 20px;
+    padding: 0px 25px;
     margin: 120px 0px 50px;
     flex-direction: column;
     align-items: center;
@@ -182,19 +183,21 @@
   }
 
   .careersTitleContent h4 {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 27px;
+    line-height: 37px;
+    margin: 0px 0px 0px;
   }
 
-  .careersTitleContent h1 {
+  .careersTitleContent span {
     font-size: 25px;
     line-height: 40px;
     margin: 0 0 20px;
   }
 
   .careersTitleContent p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 19px;
+    line-height: 30px;
+    margin-top: 15px;
   }
 
   .careersTitleBanner .btns {
@@ -214,7 +217,7 @@
     display: flex;
   }
 
-  .careerBannerWrapper .btns> :first-child {
+  .careerBannerWrapper .btns > :first-child {
     width: 120px;
     height: 42px;
     margin-right: 10px;
@@ -223,7 +226,7 @@
     margin-right: 16px;
   }
 
-  .careerBannerWrapper .btns> :last-child {
+  .careerBannerWrapper .btns > :last-child {
     font-size: 14px;
     line-height: 20px;
   }

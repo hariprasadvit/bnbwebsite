@@ -259,9 +259,10 @@ export default function Header({ whiteHeader, active }) {
                     "Home",
                     "About",
                     "Services",
-                    "Hiring",
-                    "Portfolio",
-                    "Clients",
+                    // "Hiring",
+                    // "Portfolio",
+                    // "Clients",
+                    "Case Stuides",
                     "Contact Us",
                   ].map((label, index) => (
                     <motion.a
@@ -282,11 +283,19 @@ export default function Header({ whiteHeader, active }) {
                 <div onClick={closeMainMenu} className={styles.closeIcon}>
                   &times;
                 </div>
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    justifyContent: "flex-start",
+                    alignItems: "flex-start",
+                    marginLeft: "40px",
+                  }}
+                >
                   <div
                     style={{
                       ...menuIconFooter,
-                      paddingLeft: "15px",
                       fontSize: "15px",
                     }}
                   >
@@ -300,8 +309,8 @@ export default function Header({ whiteHeader, active }) {
                     style={{
                       width: "100%",
                       display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      justifyContent: "flex-start",
+                      alignItems: "flex-start",
                       paddingTop: "20px",
                     }}
                   >
@@ -386,9 +395,10 @@ export default function Header({ whiteHeader, active }) {
                     "Home",
                     "About",
                     "Services",
-                    "Hiring",
-                    "Portfolio",
-                    "Clients",
+                    "Case Stuides",
+                    // "Hiring",
+                    // "Portfolio",
+                    // "Clients",
                     "Contact Us",
                   ].map((label, index) => (
                     <a
