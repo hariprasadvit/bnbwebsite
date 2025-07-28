@@ -263,6 +263,7 @@ export default function FooterForm() {
                   "&:hover": {
                     borderColor: "#707070", // keep the same border color on hover
                   },
+                  height: "48px",
                 }),
                 menu: (base) => ({
                   ...base,
