@@ -27,7 +27,7 @@ export default function Header({ whiteHeader, active }) {
   const [activeLabel, setActiveLabel] = useState("");
 
   //Mobile Screen Capture
-  const isMobileView = () => window.innerWidth <= 978;
+  const isMobileView = () => window.innerWidth <= 768;
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
@@ -82,23 +82,8 @@ export default function Header({ whiteHeader, active }) {
   };
 
   const mainMenuVariants = {
-    open: { display: "grid" },
+    open: { display: "flex" },
     closed: { display: "none" },
-  };
-
-  const item1Variants = {
-    open: { scaleY: 1, opacity: 1, transformOrigin: "bottom" },
-    closed: { scaleY: 0, opacity: 1, transformOrigin: "bottom" },
-  };
-
-  const item2Variants = {
-    open: { scaleX: 1, opacity: 1, transformOrigin: "left" },
-    closed: { scaleX: 0, opacity: 1, transformOrigin: "left" },
-  };
-
-  const item3Variants = {
-    open: { scaleY: 1, opacity: 1, transformOrigin: "bottom" },
-    closed: { scaleY: 0, opacity: 1, transformOrigin: "bottom" },
   };
 
   const item4Variants = {
@@ -106,42 +91,9 @@ export default function Header({ whiteHeader, active }) {
     closed: { scaleX: 0, opacity: 1, transformOrigin: "right" },
   };
 
-  const item5Variants = {
-    open: { scaleY: 1, opacity: 1, transformOrigin: "top" },
-    closed: { scaleY: 0, opacity: 1, transformOrigin: "top" },
-  };
-
   const transition = {
     type: "ease",
     duration: 0.3,
-  };
-
-  const fadeUpStaggerContainer = {
-    open: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-    closed: {
-      transition: {
-        staggerChildren: 0.05,
-        staggerDirection: -1,
-      },
-    },
-  };
-
-  const fadeUpItem = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: "easeOut" },
-    },
-    closed: {
-      opacity: 0,
-      y: 20,
-      transition: { duration: 0.3, ease: "easeIn" },
-    },
   };
 
   const handleMenuNavClick = (label) => {
@@ -204,6 +156,13 @@ export default function Header({ whiteHeader, active }) {
         ease: "easeOut",
       },
     },
+  };
+
+  const menuIconFooter = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "self-start",
   };
 
   const IconbackgroundStyle = {
@@ -281,21 +240,18 @@ export default function Header({ whiteHeader, active }) {
             <motion.div
               className={styles.mainMenu}
               variants={mainMenuVariants}
+              transition={transition}
               initial="closed"
               animate="open"
               exit="closed"
             >
               <motion.div
                 className={`${styles.menuItem} ${styles.menuItem_1}`}
-                variants={item1Variants}
+                variants={item4Variants}
                 transition={transition}
               >
-                <div onClick={closeMainMenu} className={styles.closeIcon}>
-                  &times;
-                </div>
-
                 <motion.nav
-                  variants={fadeUpStaggerContainer}
+                  variants={item4Variants}
                   initial="closed"
                   animate="open"
                 >
@@ -312,7 +268,7 @@ export default function Header({ whiteHeader, active }) {
                       key={index}
                       onClick={() => handleMenuNavClick(label)}
                       // href="#"
-                      variants={fadeUpItem}
+                      variants={item4Variants}
                       role="button"
                       tabIndex={0}
                       className={
@@ -323,74 +279,62 @@ export default function Header({ whiteHeader, active }) {
                     </motion.a>
                   ))}
                 </motion.nav>
-              </motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_2}`}
-                variants={item2Variants}
-                transition={transition}
-              >
-                <div className={styles.locationCard}>
-                  <img src="/image.png" alt="Map" className={styles.mapImage} />
-                  <div className={styles.hoverOverlay}>
-                    <a
-                      href="/your-location-link"
-                      className={styles.locationText}
-                    >
-                      The Location
-                    </a>
-                  </div>
+                <div onClick={closeMainMenu} className={styles.closeIcon}>
+                  &times;
                 </div>
-              </motion.div>
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_3}`}
-                variants={item3Variants}
-                transition={transition}
-              >
-                <motion.ul
-                  variants={fadeUpStaggerContainer}
-                  initial="closed"
-                  animate="open"
-                >
-                  {[
-                    "THE GAMEPLAY",
-                    "ABOUT LARP",
-                    "THE RULES",
-                    "HISTORY",
-                    "PEOPLE",
-                    "JOIN",
-                    "...",
-                  ].map((text, index) => (
-                    <motion.li key={index} variants={fadeUpItem}>
-                      <a href="#">{text}</a>
-                    </motion.li>
-                  ))}
-                </motion.ul>
-              </motion.div>
-
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_4}`}
-                variants={item4Variants}
-                transition={transition}
-              >
-                <motion.div
-                  className={styles.joinNow}
-                  variants={fadeUpStaggerContainer}
-                  initial="closed"
-                  animate="open"
-                >
-                  <motion.h3 variants={fadeUpItem}>
-                    <a href="#">Learn how to participate</a>
-                  </motion.h3>
-                </motion.div>
-              </motion.div>
-
-              <motion.div
-                className={`${styles.menuItem} ${styles.menuItem_5}`}
-                variants={item5Variants}
-                transition={transition}
-              >
                 <div>
-                  <h3>Learn how to participate</h3>
+                  <div
+                    style={{
+                      ...menuIconFooter,
+                      paddingLeft: "15px",
+                      fontSize: "15px",
+                    }}
+                  >
+                    <p className={styles.text_1}>Start a Conversation</p>
+                    <p className={styles.text_2}>
+                      contact@booleanandbeyond.com
+                    </p>
+                    <p className={styles.text_3}>We are available here</p>
+                  </div>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    <ul
+                      style={{
+                        display: "flex",
+                        gap: "30px",
+                        paddingBottom: "15px",
+                      }}
+                    >
+                      {[fb, insta, linkedin, x].map((icon, idx) => (
+                        <li key={idx}>
+                          <Link
+                            href="#"
+                            style={{
+                              ...IconbackgroundStyle,
+                              backgroundColor: "#fff",
+                            }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                            }}
+                          >
+                            <Image
+                              src={icon}
+                              alt="Icon"
+                              width={24}
+                              height={24}
+                            />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -464,15 +408,7 @@ export default function Header({ whiteHeader, active }) {
                   className={`${styles.menuItem} ${styles.menuItem_4}`}
                 ></div>
                 <div className={`${styles.menuItem} ${styles.menuItem_5}`}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "flex-start",
-                      alignItems: "self-start",
-                      paddingLeft: "18px",
-                    }}
-                  >
+                  <div style={{ ...menuIconFooter, paddingLeft: "18px" }}>
                     <p className={styles.text_1}>Start a Conversation</p>
                     <p className={styles.text_2}>
                       contact@booleanandbeyond.com
