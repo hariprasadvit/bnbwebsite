@@ -8,7 +8,7 @@ import styles from "../../../styles/page.module.scss";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-export default function OurClients({ data = {}, addTopPadding }) {
+export default function OurClients({ data = {}, addTopPadding, greyBG }) {
   let { clients = [], title = "Clients who trusted us" } = data;
 
   const settings = {
@@ -53,10 +53,10 @@ export default function OurClients({ data = {}, addTopPadding }) {
     <section
       className={`${styles.OurClients} ${
         addTopPadding ? styles.addTopPadding : ""
-      }`}
+      } ${greyBG ? styles.greyBG : ""}`}
     >
       <div className={styles.container}>
-        <h2>{title}</h2>
+        {/* <h2>{title}</h2> */}
         <div className={styles.clientSlider}>
           <Slider {...settings}>
             {clients?.map((item, index) => {

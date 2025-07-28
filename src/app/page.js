@@ -35,6 +35,10 @@ export default async function Home(props) {
   const blockData = await loader();
   return (
     <div>
+      {/* {console.log(
+        blockData?.blocks[1].common_section_list[0].bulletins[0],
+        "asdf"
+      )} */}
       <div style={{ width: "100%" }}>
         <BlockRenderer blocks={blockData.blocks} />
         <FAQ />

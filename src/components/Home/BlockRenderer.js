@@ -20,6 +20,8 @@ export default function BlockRenderer({ blocks }) {
             data={block}
             headingMaxWidth={"490px"}
             descriptionMaxWidth={"660px"}
+            hideBorder
+            whiteBG
           />
         );
       case "landing-page.common-section-list":
@@ -33,7 +35,7 @@ export default function BlockRenderer({ blocks }) {
           </>
         );
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} />;
+        return <OurClients key={index} data={block} greyBG />;
       case "landing-page.insight-section":
         return <DataDriven key={index} data={block} />;
       case "landing-page.testimonials-section":

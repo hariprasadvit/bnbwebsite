@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import FullPageLoader from "./FullPageLoader";
-
+import "./FullPageLoader.scss"; // Assuming you have a global style for the loader
+import LoaderGif from "../../../../public/Home/loader.gif"; // Adjust the path as necessary
+import Image from "next/image";
 export default function PageLoaderWrapper({ children }) {
   const pathname = usePathname();
   const [showLoader, setShowLoader] = useState(true);
@@ -55,8 +56,8 @@ export default function PageLoaderWrapper({ children }) {
     <>
       {children}
       {showLoader && (
-        <div className={`full-page-loader ${exitAnim ? "fade-out" : ""}`}>
-          <div className="spinner" />
+        <div className={`fullPageLoader ${exitAnim ? "fade-out" : ""}`}>
+          <Image src={LoaderGif} alt="loader" width={200} height={0} />
         </div>
       )}
     </>

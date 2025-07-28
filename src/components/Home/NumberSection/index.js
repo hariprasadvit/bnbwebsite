@@ -40,7 +40,7 @@ export default function NumberSection({ disableTopPadding = false }) {
           </div>
           <div className={` ${styles.learnMore}`}>
             <Link href={"/services"} className="knowMoreLink">
-              Learn More{"    "}
+              Explore More{"    "}
             </Link>
             on how we help companies bring digital products to life — faster,
             smarter, and built to scale.

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./style.module.scss";
-import Spline from "@splinetool/react-spline/next";
 
 export default function Banner({ title, description, hightlighted_text }) {
   return (
