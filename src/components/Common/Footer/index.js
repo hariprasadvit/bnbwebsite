@@ -43,18 +43,18 @@ export default function Footer() {
                 <Link href="/">Home </Link>
               </li>
               <li>
-                <Link href="/about">About Us</Link>
-              </li>
-              <li>
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/case-study">Case Studies</Link>
               </li>
               <li>
                 <Link href="/services">Services</Link>
               </li>
               <li>
-                <Link href="/case-study">Case Studies</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
+                <Link href="/contact-us">Contact Us</Link>
+              </li>
+              {/* <li>
                 <Link
                   href="#"
                   onClick={(e) => {
@@ -83,7 +83,7 @@ export default function Footer() {
                 >
                   Career
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className={styles.linksWrap}>

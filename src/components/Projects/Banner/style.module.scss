@@ -98,12 +98,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px;
+  // padding-bottom: 90px;
   position: relative;
   z-index: 2;
 
   @media (max-width: 768px) {
-   padding-bottom: 60px;
+    padding-bottom: 60px;
   }
 
   h1 {
@@ -134,18 +134,18 @@
     @media screen and (max-width: 768px) {
       font-size: 27px;
       line-height: 37px;
-    margin-bottom: 20px;
+      margin-bottom: 20px;
 
     }
   }
 
-  .descriptionContainerWithScroll{
+  .descriptionContainerWithScroll {
     display: flex;
     width: 100%;
     justify-content: space-between;
 
     @media (max-width: 1024px) {
-     flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -169,6 +169,7 @@
       line-height: 26px;
       padding: 0 0 40px 20px;
     }
+
     @media (max-width: 680px) {
       padding-left: 0;
     }
@@ -185,10 +186,10 @@
   text-align: right;
 
   @media (max-width: 1024px) {
-  margin-top: unset;
-  width: 100%;
-  justify-content: flex-end;
-   }
+    margin-top: unset;
+    width: 100%;
+    justify-content: flex-end;
+  }
 
   @media (max-width: 768px) {
     text-align: left;
