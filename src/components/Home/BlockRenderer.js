@@ -21,6 +21,7 @@ export default function BlockRenderer({ blocks }) {
             headingMaxWidth={"490px"}
             descriptionMaxWidth={"660px"}
             hideBorder
+            whiteBG
           />
         );
       case "landing-page.common-section-list":
