@@ -136,6 +136,10 @@
     .faqCard h4 {
         font-size: 16px;
         line-height: 20px;
+
+        @media screen and (max-width: 768px) {
+            max-width: 90%;
+        }
     }
 
     .faqCard p {

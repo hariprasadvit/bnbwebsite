@@ -119,6 +119,10 @@
     span {
       color: #fff;
       display: block;
+
+      @media screen and (max-width: 768px) {
+        display: initial;
+      }
     }
 
     // @media (max-width: 1200px) {

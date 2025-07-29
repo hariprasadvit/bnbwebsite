@@ -169,6 +169,10 @@
 .content h1 span {
   color: #d44116;
   display: block;
+
+  @media screen and (max-width: 768px) {
+    display: initial;
+  }
 }
 
 .descriptionContainerWithScroll {
@@ -680,6 +684,8 @@
     }
 
     @media screen and (max-width: 768px) {
+      gap: 10px;
+
       &.custompadding {
         padding: 40px 26px 40px;
       }
@@ -715,8 +721,9 @@
         }
 
         @media screen and (max-width: 768px) {
-          font-size: 25px;
-          line-height: 35px;
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 25px;
         }
       }
 
@@ -764,8 +771,8 @@
             margin-bottom: 10px;
 
             @media screen and (max-width: 768px) {
-              font-size: 35px;
-              line-height: 36px;
+              font-size: 30px;
+              line-height: 25px;
             }
           }
 
@@ -779,12 +786,8 @@
               line-height: unset;
             }
 
-            @media screen and (max-width: 660px) {
-              font-size: 14px;
-            }
-
-            @media screen and (max-width: 590px) {
-              font-size: 18px;
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
             }
           }
         }
@@ -805,10 +808,10 @@
           font-size: 16px;
         }
 
-        a {
-          font-size: 21px;
-          font-weight: 700;
-        }
+        // a {
+        //   font-size: 21px;
+        //   font-weight: 700;
+        // }
       }
     }
   }
@@ -821,6 +824,10 @@
 
   &.addTopPadding {
     margin-top: 150px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
   }
 
   &.greyBG {
@@ -982,6 +989,12 @@
         a {
           display: inline-block;
           width: fit-content;
+        }
+
+        .knowMoreLink {
+          @media screen and (max-width: 768px) {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -1305,12 +1318,14 @@
   // }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 26px;
+    padding: 30px 16px 0;
     gap: 16px;
   }
 
   .overviewCardDescription {
     max-width: 1000px;
+    font-size: 18px;
+    line-height: 1.5;
   }
 }
 
@@ -1348,7 +1363,7 @@
     padding-left: 25px;
 
     @media screen and (max-width: 768px) {
-      padding-left: 16px;
+      padding-left: 25px;
     }
 
     li {
