@@ -119,6 +119,9 @@ export default function Header({ whiteHeader, active }) {
         break;
       case "Clients":
         router.push("#");
+      case "Case Studies":
+        router.push("/case-study");
+        closeMainMenu();
         break;
       case "Contact Us":
         router.push("/contact-us");
@@ -262,7 +265,7 @@ export default function Header({ whiteHeader, active }) {
                     // "Hiring",
                     // "Portfolio",
                     // "Clients",
-                    "Case Stuides",
+                    "Case Studies",
                     "Contact Us",
                   ].map((label, index) => (
                     <motion.a
@@ -395,7 +398,7 @@ export default function Header({ whiteHeader, active }) {
                     "Home",
                     "About",
                     "Services",
-                    "Case Stuides",
+                    "Case Studies",
                     // "Hiring",
                     // "Portfolio",
                     // "Clients",
