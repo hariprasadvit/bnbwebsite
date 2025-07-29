@@ -36,6 +36,14 @@ async function loader() {
   return { blocks, pageContent };
 }
 
+export async function generateMetadata() {
+  const { pageContent } = await loader();
+  return {
+    title: pageContent?.meta_title || "B&B",
+    description: pageContent?.meta_description || "B&B",
+  };
+}
+
 export default async function CaseStudy() {
   noStore();
   const blockData = await loader();

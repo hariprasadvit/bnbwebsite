@@ -38,6 +38,15 @@ async function loader({ slug }) {
   return { blocks, pageContent };
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const { pageContent } = await loader({ slug });
+  return {
+    title: pageContent?.meta_title || "B&B",
+    description: pageContent?.meta_decscription || "B&B",
+  };
+}
+
 export default async function ServiceDetails({ params }) {
   const blockData = await loader({
     slug: params?.slug,

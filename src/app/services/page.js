@@ -34,6 +34,15 @@ async function loader() {
   return { blocks, pageContent };
 }
 
+export async function generateMetadata() {
+  const { pageContent } = await loader();
+
+  return {
+    title: pageContent?.meta_title || "B&B",
+    description: pageContent?.meta_decscription || "B&B",
+  };
+}
+
 export default async function ServiceListing() {
   const blockData = await loader();
   const { pageContent: data = {} } = blockData;

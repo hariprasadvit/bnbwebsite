@@ -43,6 +43,15 @@ async function loader({ slug }) {
   return { blocks, pageContent };
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const { pageContent } = await loader({ slug });
+  return {
+    title: pageContent?.meta_title || "B&B",
+    description: pageContent?.meta_desc || "B&B",
+  };
+}
+
 export default async function DigitalProduct({ params }) {
   const blockData = await loader({
     slug: params?.slug,
@@ -53,9 +62,6 @@ export default async function DigitalProduct({ params }) {
     : "/fallback-image.png";
   return (
     <div>
-      <Head>
-        <title>Boolean & Beyond</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData.pageContent}

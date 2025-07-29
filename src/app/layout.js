@@ -10,13 +10,6 @@ const titillium = Titillium_Web({
   variable: "--font-titillium",
 });
 
-export const metadata = {
-  title:
-    "Boolean and Beyond - Building MVPs, Enterprise Apps & Intelligent AI Solutions",
-  description:
-    "From MVP development to enterprise software and AI agents, Boolean and Beyond powers intelligent, future-ready solutions across industries.",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={titillium.variable}>

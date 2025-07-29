@@ -77,7 +77,6 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
           <strong>Impactful work</strong>
         </h2>
       </div>
-      {console.log(card, "OurWorks data card")}
       <Slider {...settings}>
         {card?.map((item, index) => {
           const imageUrl = item.image?.url

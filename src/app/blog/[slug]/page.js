@@ -68,7 +68,6 @@ export default async function BlogDetail({ params }) {
         <OurWorks />
         <InsightsAndBlog /> */}
         <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
-        {console.log(blockData?.pageContent?.dynamic_section[0], "***")}
         <FAQ />
         <FooterForm />
       </div>

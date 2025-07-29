@@ -1,5 +1,6 @@
+// app/page.js or app/(group)/page.js
+
 import qs from "qs";
-import Header from "@/components/Common/Header";
 import { getStrapiURL } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
@@ -31,19 +32,22 @@ async function loader() {
   return { blocks, pageContent };
 }
 
-export default async function Home(props) {
-  const blockData = await loader();
+export async function generateMetadata() {
+  const { pageContent } = await loader();
+  return {
+    title: pageContent?.meta_title || "B&B",
+    description: pageContent?.meta_description || "B&B",
+  };
+}
+
+export default async function Home() {
+  const { blocks } = await loader();
+
   return (
-    <div>
-      {/* {console.log(
-        blockData?.blocks[1].common_section_list[0].bulletins[0],
-        "asdf"
-      )} */}
-      <div style={{ width: "100%" }}>
-        <BlockRenderer blocks={blockData.blocks} />
-        <FAQ />
-        <FooterForm />
-      </div>
+    <div style={{ width: "100%" }}>
+      <BlockRenderer blocks={blocks} />
+      <FAQ />
+      <FooterForm />
     </div>
   );
 }

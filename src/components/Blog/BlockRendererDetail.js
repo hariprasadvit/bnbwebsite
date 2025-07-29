@@ -22,10 +22,6 @@ export default function BlockRendererDetail({ blocks }) {
     );
   };
 
-  {
-    console.log(blocks, "blocks");
-  }
-
   return blocks.map((block, index) => {
     switch (block.__component) {
       case "case-study.overview-section":
