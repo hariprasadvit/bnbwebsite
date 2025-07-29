@@ -30,11 +30,11 @@ export default function BlockRendererDetail({ blocks }) {
       case "case-study.our-work-section":
         return <OurWorks key={index} data={block} />;
       case "landing-page.clients-section":
-        return <OurClients key={index} data={block} addTopPadding />;
+        return <OurClients key={index} data={block} addTopPadding={true} />;
       case "landing-page.insight-section":
         return (
           <>
-            <DataDriven key={index} data={block} />;
+            <DataDriven key={index} data={block} whiteBg />;
             <NumberSection disableTopPadding={true} />
           </>
         );

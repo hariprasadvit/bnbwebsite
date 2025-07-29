@@ -14,7 +14,7 @@ const emailRegex = (data) => {
 };
 
 const InterestedTabs = [
-  { id: "MVP Product development", label: "MVP Product development" },
+  { id: "MVP Product Development", label: "MVP Product Development" },
   {
     id: "Custom Application Development",
     label: "Custom Application Development",

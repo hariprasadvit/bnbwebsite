@@ -1004,6 +1004,10 @@
 // DataDriven Section
 
 .dataDriven {
+  &.whiteBg {
+    background: #fff;
+  }
+
   .container {
     padding: 60px 80px 40px;
 

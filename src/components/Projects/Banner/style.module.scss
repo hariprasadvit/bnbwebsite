@@ -83,6 +83,7 @@
   background: #000;
   // min-height: 100vh;
   flex-direction: row;
+  min-height: 82vh;
 
   @media (max-width: 1024px) {
     flex-direction: column;

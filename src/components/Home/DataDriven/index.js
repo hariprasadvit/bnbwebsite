@@ -12,6 +12,7 @@ export default function DataDriven({
   showDataDrivenImg = true,
   titleMaxWidth,
   titleMarginBottom,
+  whiteBg,
 }) {
   let { title = "Make data driven decisions with real - Time insights", card } =
     data;
@@ -46,7 +47,9 @@ export default function DataDriven({
   );
 
   return (
-    <section className={styles.dataDriven}>
+    <section
+      className={`${styles.dataDriven} ${whiteBg ? styles.whiteBg : ""}`}
+    >
       <div className={styles.container}>
         <div
           className={styles.sectionTop}
