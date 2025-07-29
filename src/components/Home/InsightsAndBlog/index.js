@@ -29,7 +29,7 @@ export default function InsightsAndBlog({
                   href={"/blog/" + item?.link?.blog_detail?.slug}
                   className="knowMoreLink"
                 >
-                  {item.link.button_text}
+                  {item?.link?.button_text}
                 </Link>
               )}
             </div>
