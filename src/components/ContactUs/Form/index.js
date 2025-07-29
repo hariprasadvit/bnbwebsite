@@ -317,11 +317,12 @@ export default function ContactForm() {
             <div className={styles.careersbox}>
               <h5>Careers</h5>
               <p>
-                Looking to join our team?, Check out our
+                {/* Looking to join our team?, Check out our
                 <a href="/careers">
                   <span> Careers Page </span>
                 </a>
-                or drop us a line at{" "}
+                or drop us a line at{" "} */}
+                Drop us a line at{" "}
                 <a href="mailto:hr@booleanandbeyond.com">
                   <span>hr@booleanandbeyond.com</span>
                 </a>
