@@ -59,7 +59,7 @@ export default async function BlogDetail({ params }) {
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData.pageContent}
-          descriptionMaxWidth={"660px"}
+          descriptionMaxWidth={"820px"}
           hideBorder
         />
         <BannerImage url={imageUrl} />
