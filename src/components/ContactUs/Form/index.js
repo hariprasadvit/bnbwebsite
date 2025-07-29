@@ -241,7 +241,7 @@ export default function ContactForm() {
               </div>
               <div className={styles.inputWrapper}>
                 <input
-                  placeholder="Mobile Number"
+                  placeholder="Mobile Number*"
                   type="number"
                   onChange={(e) => onChange(e.target.value, "phone_number")}
                   onKeyDown={(e) => {
