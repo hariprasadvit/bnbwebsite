@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "../../../styles/page.module.scss";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -130,6 +131,12 @@ export default function OurWorks({ data = {} }) {
                       </p> */}
                       <div style={{ maxWidth: item.highlightMaxWidth }}>
                         <ReactMarkdown>{item.description}</ReactMarkdown>
+                        <Link
+                          className="knowMoreLink"
+                          href={"/case-study/" + item.case_study_detail?.slug}
+                        >
+                          Read More
+                        </Link>
                       </div>
                     </div>
                   </div>

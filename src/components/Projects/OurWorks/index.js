@@ -6,29 +6,9 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./OurWorks.module.scss"; // keep your original SCSS
+import Link from "next/link";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
-
-const workItems = [
-  {
-    image: "/ourwork.png",
-    text: "Mapping the Eco Friendly Route for Mahindra Glyd",
-    highlight:
-      "Our collaboration with Mahindra involved creating an experience for their users that reflected their brand values and eco-friendly services. Mahindra was seeking a design that embodied the principles of Glyd and enabled them to launch their first electric cab service, which we were able to deliver successfully.",
-  },
-  {
-    image: "/ourwork.png",
-    text: "Mapping the Eco Friendly Route for Mahindra Glyd",
-    highlight:
-      "Our collaboration with Mahindra involved creating an experience for their users that reflected their brand values and eco-friendly services. Mahindra was seeking a design that embodied the principles of Glyd and enabled them to launch their first electric cab service, which we were able to deliver successfully.",
-  },
-  {
-    image: "/ourwork.png",
-    text: "Mapping the Eco Friendly Route for Mahindra Glyd",
-    highlight:
-      "Our collaboration with Mahindra involved creating an experience for their users that reflected their brand values and eco-friendly services. Mahindra was seeking a design that embodied the principles of Glyd and enabled them to launch their first electric cab service, which we were able to deliver successfully.",
-  },
-];
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -97,7 +77,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
           <strong>Impactful work</strong>
         </h2>
       </div>
-
+      {console.log(card, "OurWorks data card")}
       <Slider {...settings}>
         {card?.map((item, index) => {
           const imageUrl = item.image?.url
@@ -105,7 +85,10 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
             : "/fallback-image.png"; // fallback image
           return (
             <div key={index} className={styles.slide}>
-              <div className={styles.cardLayout}>
+              <Link
+                href={"/case-study/" + item?.case_study_detail?.slug}
+                className={styles.cardLayout}
+              >
                 <div className={styles.imageSection}>
                   <Image
                     src={imageUrl}
@@ -118,7 +101,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}
