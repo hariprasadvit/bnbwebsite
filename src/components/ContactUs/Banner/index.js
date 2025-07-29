@@ -9,7 +9,7 @@ export default function BannerContactUs() {
       <section className={styles.careersTitleBanner}>
         <div className={styles.careersTitleContent}>
           <div className={styles.careersTopTitle}>
-            <h4>Let's Collaborate</h4>
+            <h1>Let's Collaborate</h1>
             <span>Your Success is Our Priority!</span>
             <p>
               At Boolean and Beyond, we have a proven track record of success.

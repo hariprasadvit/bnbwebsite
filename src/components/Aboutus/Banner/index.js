@@ -11,7 +11,7 @@ export default function BannerCaseStudy() {
         <div className={styles.careersTitleContent}>
           <div className={styles.careersTopTitle}>
             <span>Disruptive Tech Leaders</span>
-            <h2>Crafting Tech-Driven Solutions with Exceptional Design.</h2>
+            <h1>Crafting Tech-Driven Solutions with Exceptional Design.</h1>
           </div>
           <p>
             Through exceptional design and tech expertise, Boolean and Beyond
