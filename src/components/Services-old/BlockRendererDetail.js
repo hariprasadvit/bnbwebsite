@@ -14,7 +14,8 @@ const AiSolutions = dynamic(() => import("../ServiceDetail/AiSolutions"));
 const OurProcessSmall = dynamic(() =>
   import("../ServiceDetail/OurProcessSmall")
 );
-const HireOurExperts = dynamic(() => import("../Home/HireOurExperts"));
+
+const HireWithForm = dynamic(() => import("../Home/HireWithForm"));
 
 export default function BlockRendererDetail({ blocks }) {
   if (!blocks?.length) return null;
@@ -52,7 +53,7 @@ export default function BlockRendererDetail({ blocks }) {
       case "landing-page.portfolio-section":
         return (
           <>
-            <HireOurExperts />
+            <HireWithForm />
             <OurWorksBlack key={index} data={block} />
           </>
         );

@@ -53,7 +53,10 @@ export default function SectionList({ data = {} }) {
                 <ul>
                   {section.bulletins.map((item, idx) => (
                     <li key={idx}>
-                      <Link href={"services/" + item?.service_detail?.slug}>
+                      <Link
+                        className="knowMoreLink"
+                        href={"services/" + item?.service_detail?.slug}
+                      >
                         {" "}
                         {item.content}
                       </Link>
