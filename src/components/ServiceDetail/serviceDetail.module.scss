@@ -571,7 +571,7 @@
 
 
       &:first-child {
-        border-top: 15px solid red;
+        border-top: 15px solid #f00;
         padding-top: 20px;
 
         @media screen and (max-width: 768px) {
@@ -581,7 +581,7 @@
       }
 
       &:last-child {
-        border-bottom: 15px solid red;
+        border-bottom: 15px solid #f00;
         padding-bottom: 20px;
 
         @media screen and (max-width: 768px) {

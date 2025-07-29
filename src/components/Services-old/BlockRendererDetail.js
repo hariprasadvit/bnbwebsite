@@ -17,7 +17,7 @@ const OurProcessSmall = dynamic(() =>
 
 const HireWithForm = dynamic(() => import("../Home/HireWithForm"));
 
-export default function BlockRendererDetail({ blocks }) {
+export default function BlockRendererDetail({ blocks, pageTitle }) {
   if (!blocks?.length) return null;
 
   return blocks.map((block, index) => {
@@ -53,7 +53,7 @@ export default function BlockRendererDetail({ blocks }) {
       case "landing-page.portfolio-section":
         return (
           <>
-            <HireWithForm />
+            <HireWithForm pageTitle={pageTitle} />
             <OurWorksBlack key={index} data={block} />
           </>
         );

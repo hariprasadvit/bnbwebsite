@@ -25,7 +25,10 @@ export default function InsightsAndBlog({
                 <p>{item.description}</p>
               </div>
               {showKnowMore && (
-                <Link href={item.link} className="knowMoreLink">
+                <Link
+                  href={"/blog/" + item?.link?.blog_detail?.slug}
+                  className="knowMoreLink"
+                >
                   {item.link.button_text}
                 </Link>
               )}

@@ -109,9 +109,7 @@ export default function OurWorks({ data = {} }) {
                 const imageUrl = item.image?.url
                   ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
                   : "/fallback-image.png"; // fallback image
-                {
-                  console.log(item, "item");
-                }
+
                 return (
                   <div className={styles.workItem} key={index}>
                     <div

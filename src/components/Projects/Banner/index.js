@@ -7,7 +7,7 @@ export default function Banner({ title, description, hightlighted_text }) {
       <div className={`${styles.content}`}>
         <div>
           <h1>
-            {/* {title}  */}
+            {title}
             <span> {hightlighted_text} </span>
           </h1>
           <div className={styles.descriptionContainerWithScroll}>

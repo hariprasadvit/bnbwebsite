@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./mvp.module.scss";
 
 const MvpStartUpCard = ({ data }) => {
-  console.log(data);
   return (
     <div className={styles.mvpStartUpCardContainer}>
       <h2>{data.title}</h2>

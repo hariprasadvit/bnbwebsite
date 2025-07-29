@@ -3,16 +3,25 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import axios from "axios";
 
-export default function HireWithForm() {
+const emailRegex = (data) => {
+  const emailReg = new RegExp(
+    "^([\\w\\.\\+\\-]+\\@[a-zA-Z0-9\\.\\-]+\\.[a-zA-z0-9]{2,4})$"
+  );
+  return !emailReg.test(data.trim());
+};
+
+export default function HireWithForm({ pageTitle }) {
   const [successMessage, setSuccessMessage] = useState("");
   const [disabled, setDisabled] = useState(false);
+  const pageTitleFormatted = String(pageTitle);
   const [details, setDetails] = useState({
     data: {
-      service_list: [],
+      service_list: [pageTitleFormatted],
       project_goal: "",
       name: "",
-      company_name: "",
+      company_name: "Hire Form Data",
       email_id: "",
       phone_number: "",
       budget: "Can't Reveal",
@@ -23,19 +32,19 @@ export default function HireWithForm() {
   const KEYS_FOR_VALIDATION = [
     "project_goal",
     "name",
-    "company_name",
+    // "company_name",
     "email_id",
-    "service_list",
-    "budget",
+    // "service_list",
+    // "budget",
     "phone_number",
   ];
   const ERR_NAMES = {
     project_goal: "Project Goal",
     name: "Name",
-    company_name: "Company Name",
+    // company_name: "Company Name",
     email_id: "Email ID",
-    service_list: "Service",
-    budget: "Budget",
+    // service_list: "Service",
+    // budget: "Budget",
     phone_number: "Mobile Number",
   };
 
@@ -68,7 +77,6 @@ export default function HireWithForm() {
           ? !details.data[d].length
           : !details.data[d])
     );
-    console.log(detailsData.data);
 
     if (filters.length > 0) {
       filters.map((d) => {
@@ -77,7 +85,6 @@ export default function HireWithForm() {
       error = true;
       setDetails(detailsData);
     }
-    console.log(detailsData.data);
 
     let regexResponse = emailRegex(detailsData.data.email_id);
     if (regexResponse) {
@@ -85,7 +92,6 @@ export default function HireWithForm() {
       setDetails(detailsData);
       error = true;
     }
-    console.log(detailsData.data);
     if (error) {
       return;
     }
@@ -98,13 +104,13 @@ export default function HireWithForm() {
       .then((res) => {
         setDetails({
           data: {
-            service_list: [],
+            // service_list: [],
             project_goal: "",
             name: "",
-            company_name: "",
+            // company_name: "",
             email_id: "",
             phone_number: "",
-            budget: "",
+            // budget: "",
           },
           error: {},
         });
@@ -167,17 +173,29 @@ export default function HireWithForm() {
             </div>
             <div className={styles.inputWrapper}>
               <input
-                placeholder="Email*"
-                type="email"
-                // required
-                onChange={(e) => onChange(e.target.value, "email_id")}
-                value={details.data.email_id}
+                placeholder="Mobile Number"
+                type="number"
+                onChange={(e) => onChange(e.target.value, "phone_number")}
+                onKeyDown={(e) => {
+                  if (
+                    e.key === "ArrowUp" ||
+                    e.key === "ArrowDown" ||
+                    e.key === "-" ||
+                    e.key === "+" ||
+                    e.key === "e" ||
+                    e.key === "E"
+                  ) {
+                    e.preventDefault();
+                  }
+                }}
+                onWheel={(e) => e.target.blur()}
+                value={details.data.phone_number}
               />
-              <span style={{ opacity: 1 }}>{details.error.email_id}</span>
+              <span style={{ opacity: 1 }}>{details.error.phone_number}</span>
             </div>
           </div>
 
-          <div className={styles.inputWidth}>
+          {/* <div className={styles.inputWidth}>
             <div className={styles.inputWrapper}>
               <input
                 placeholder="Company/Product Name*"
@@ -209,7 +227,18 @@ export default function HireWithForm() {
               />
               <span style={{ opacity: 1 }}>{details.error.phone_number}</span>
             </div>
+          </div> */}
+          <div className={styles.inputWrapper}>
+            <input
+              placeholder="Email*"
+              type="email"
+              // required
+              onChange={(e) => onChange(e.target.value, "email_id")}
+              value={details.data.email_id}
+            />
+            <span style={{ opacity: 1 }}>{details.error.email_id}</span>
           </div>
+
           <div className={styles.textareaWrapper}>
             <textarea
               placeholder="Project Requirements and Goals"

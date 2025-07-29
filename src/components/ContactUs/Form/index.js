@@ -98,7 +98,6 @@ export default function ContactForm() {
           ? !details.data[d].length
           : !details.data[d])
     );
-    console.log(detailsData.data);
 
     if (filters.length > 0) {
       filters.map((d) => {
@@ -107,7 +106,6 @@ export default function ContactForm() {
       error = true;
       setDetails(detailsData);
     }
-    console.log(detailsData.data);
 
     let regexResponse = emailRegex(detailsData.data.email_id);
     if (regexResponse) {
@@ -115,7 +113,6 @@ export default function ContactForm() {
       setDetails(detailsData);
       error = true;
     }
-    console.log(detailsData.data);
     if (error) {
       return;
     }

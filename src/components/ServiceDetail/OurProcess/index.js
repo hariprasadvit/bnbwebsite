@@ -6,7 +6,6 @@ import processImage from "../../../../public/processImage.svg";
 const OurProcess = ({ data }) => {
   return (
     <div className={styles.ourProcessSection}>
-      {console.log(data, "OurProcess data")}
       <div className={styles.ourProcessTopContainer}>
         <h2>Our Process</h2>
         <div className={styles.ourProcessTop}>

@@ -1,20 +1,22 @@
-import dynamic from "next/dynamic";
 import qs from "qs";
+import Head from "next/head";
+import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
+import BlockRenderer from "@/components/CaseStudy/BlockRenderer";
 import { unstable_noStore as noStore } from "next/cache";
+
 import { getStrapiURL } from "@/lib/utils";
 import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
-import BlockRenderer from "@/components/Services/BlockRenderer";
 import FAQ from "@/components/Common/FAQ";
+import Footer from "@/components/Common/Footer";
 import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
 async function loader() {
-  noStore();
   const BASE_URL = getStrapiURL();
-  const path = "/api/service-listing";
+  const path = "/api/blog-details";
 
   const query = qs.stringify(
     {
@@ -24,6 +26,7 @@ async function loader() {
   );
 
   const url = new URL(path + "?" + query, BASE_URL);
+
   const data = await fetchAPI(url.href, {
     method: "GET",
   });
@@ -34,24 +37,27 @@ async function loader() {
   return { blocks, pageContent };
 }
 
-export default async function ServiceListing() {
+export default async function Blog() {
+  noStore();
   const blockData = await loader();
-  const { pageContent: data = {} } = blockData;
+
   return (
-    <div style={{ width: "100%" }}>
-      <Banner
-        data={data}
-        highlightFirst
-        hideBorder
-        descriptionMaxWidth={"828px"}
-        headingMarginBottom={30}
-        headingMaxWidth={"730px"}
-        showScroll={false}
-        contactUs
-      />
-      <BlockRenderer blocks={data?.dynamic_zone} />
-      <FAQ />
-      <FooterForm />
+    <div>
+      <Head>
+        <title>B&B</title>
+      </Head>
+      <div style={{ width: "100%" }}>
+        <Banner
+          data={blockData?.pageContent || {}}
+          hideBorder
+          whiteBG={true}
+          highlightFirst={true}
+          contactUs
+        />
+        <BlockRenderer blocks={blockData?.pageContent?.dynamic_section} />
+        <FAQ />
+        <FooterForm />
+      </div>
     </div>
   );
 }

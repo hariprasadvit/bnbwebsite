@@ -47,7 +47,6 @@ export default async function ServiceDetails({ params }) {
       <Head>
         <title>B&B</title>
       </Head>
-      {console.log(blockData?.pageContent?.dynamic_section, "pageContent")}
       <div style={{ width: "100%" }}>
         <Banner
           title={blockData?.pageContent?.title}
@@ -55,7 +54,14 @@ export default async function ServiceDetails({ params }) {
           hightlighted_text={blockData?.pageContent?.highlighted_title}
           blackBg
         />
-        <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
+        <BlockRendererDetail
+          blocks={blockData?.pageContent?.dynamic_section}
+          pageTitle={
+            blockData?.pageContent?.title +
+            blockData?.pageContent?.highlighted_title
+          }
+        />
+
         <FAQ />
         <FooterForm />
       </div>

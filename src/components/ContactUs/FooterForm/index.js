@@ -168,7 +168,6 @@ export default function FooterForm() {
           return;
         }
       });
-    console.log(detailsData.data, "Form Data Submitted");
   };
 
   return (

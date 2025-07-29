@@ -41,7 +41,7 @@ export default function DataDriven({
     label: item.title,
   }));
 
-  const selectedOption = selectOptions.find(
+  const selectedOption = selectOptions?.find(
     (option) => option.id === activeMenu
   );
 

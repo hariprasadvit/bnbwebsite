@@ -5,7 +5,6 @@ import ServeCard from "./ServeCard";
 const IndustryWeServe = ({ key, data }) => {
   return (
     <div className={styles.ourServeWrapper}>
-      {console.log(data, "IndustryWeServe data")}
       <div className={styles.ourServeTitle}>{data?.title}</div>
       <div className={styles.ourServeCardContainer}>
         {data?.industry_card?.map((item, index) => {
