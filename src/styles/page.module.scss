@@ -403,6 +403,10 @@
   line-height: 1.2;
   display: inline-block;
   margin-bottom: 0;
+
+  &:before {
+    bottom: -7px;
+  }
 }
 
 // Our Works section
