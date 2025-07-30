@@ -16,7 +16,7 @@ export default function NumberSection({ disableTopPadding = false, whiteBG }) {
         </div>
         <div className={styles.nSectionRight}>
           <h3>
-            Design, build, and scale digital platforms — from MVPs to enterprise
+            Design, build, and scale digital platforms from MVPs to enterprise
             systems.
           </h3>
           <p>
