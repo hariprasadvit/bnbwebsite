@@ -211,151 +211,139 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className={`${styles.linksWrap} ${styles.lastWrap}`}>
+          <div className={`${styles.linksWrapTech} ${styles.lastWrap}`}>
             <h5>Techstack</h5>
-            <ul>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Python{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  NodeJS{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Apache Solr{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Elastic Search{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Frontend{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  {" "}
-                  ReactJS{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Flutter{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Blockchain{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Ethereum{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Polygon{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Truffle{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Solidity{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Big Data and Analytics{" "}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
-                  Apache Spark{" "}
-                </Link>
-              </li>
-            </ul>
+            <div className={styles.linksWrapTechContainer}>
+              <ul>
+                <li>
+                  <strong>Backend</strong>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Python{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Rust{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    NodeJS
+                  </Link>
+                </li>
+                <li>
+                  <strong>Search & Indexing</strong>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Apache Solr
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Elastic Search
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <strong>Frontend</strong>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    ReactJS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Flutter
+                  </Link>
+                </li>
+                <li>
+                  <strong>Big Data and Analytics</strong>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Apache Spark
+                  </Link>
+                </li>
+                <li>
+                  <strong>Agentic AI</strong>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    LLM Integration
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    LangGraph
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); // prevents jump
+                    }}
+                  >
+                    Vector Dbs
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className={styles.socialMedia}>
