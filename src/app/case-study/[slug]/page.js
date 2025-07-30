@@ -1,19 +1,19 @@
 /** @format */
 
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
-import Header from "@/components/Common/Header";
-import { digitalProductBannerData } from "@/components/data";
-import OurWorks from "@/components/Projects/OurWorks";
 import { getStrapiURL } from "@/lib/utils";
 import { unstable_noStore as noStore } from "next/cache";
 import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
-import BlockRendererDetail from "@/components/CaseStudy/BlockRendererDetail";
-import BannerImage from "@/components/DigitalProducts/BannerImage";
-import FAQ from "@/components/Common/FAQ";
-import FooterForm from "@/components/ContactUs/FooterForm";
+const BlockRendererDetail = dynamic(() =>
+  import("@/components/CaseStudy/BlockRendererDetail")
+);
+const BannerImage = dynamic(() =>
+  import("@/components/DigitalProducts/BannerImage")
+);
+const FAQ = dynamic(() => import("@/components/Common/FAQ"));
+const FooterForm = dynamic(() => import("@/components/ContactUs/FooterForm"));
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
 
@@ -69,10 +69,6 @@ export default async function DigitalProduct({ params }) {
           hideBorder
         />
         <BannerImage url={imageUrl} />
-        {/*<NumberSection disableTopPadding={true} />
-        <Testimonials />
-        <OurWorks />
-        <InsightsAndBlog /> */}
         <BlockRendererDetail blocks={blockData?.pageContent?.dynamic_section} />
         <FAQ />
         <FooterForm />
