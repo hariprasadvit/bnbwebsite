@@ -21,7 +21,7 @@ export default function NumberSection({ disableTopPadding = false, whiteBG }) {
           </h3>
           <p>
             At Boolean and Beyond, we specialize in end-to-end product
-            development — from user-centric design and scalable architectures to
+            development from user-centric design and scalable architectures to
             full-stack engineering. Whether you're launching a SaaS platform,
             modernizing legacy systems, or integrating enterprise tools, we help
             you deliver robust, high-impact software aligned with your goals.
@@ -44,7 +44,7 @@ export default function NumberSection({ disableTopPadding = false, whiteBG }) {
             <Link href={"/services"} className="knowMoreLink">
               Explore more{"    "}
             </Link>
-            on how we help companies bring digital products to life — faster,
+            on how we help companies bring digital products to life faster,
             smarter, and built to scale.
           </div>
         </div>
