@@ -10,7 +10,6 @@ const BannerImage = ({ url = "" }) => {
         alt="Banner Image"
         width={1470}
         height={916}
-        loading="lazy"
         fetchPriority="high"
       />
       {/* <div className={styles.bannerImageBottomContainer}>

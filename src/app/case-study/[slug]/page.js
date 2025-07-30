@@ -6,12 +6,11 @@ import { getStrapiURL } from "@/lib/utils";
 import { unstable_noStore as noStore } from "next/cache";
 import { fetchAPI } from "@/lib/fetch-api";
 import { notFound } from "next/navigation";
+import BannerImage from "@/components/DigitalProducts/BannerImage";
 const BlockRendererDetail = dynamic(() =>
   import("@/components/CaseStudy/BlockRendererDetail")
 );
-const BannerImage = dynamic(() =>
-  import("@/components/DigitalProducts/BannerImage")
-);
+
 const FAQ = dynamic(() => import("@/components/Common/FAQ"));
 const FooterForm = dynamic(() => import("@/components/ContactUs/FooterForm"));
 
