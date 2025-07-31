@@ -5,11 +5,12 @@ import { getStrapiURL } from "@/lib/utils";
 import { unstable_noStore as noStore } from "next/cache";
 import { notFound } from "next/navigation";
 
-import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
+// import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
 import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 import Banner from "@/components/Home/Banner";
+import BlockRendererDetail from "@/components/Industry/BlockRendererDetail";
 
 // const Banner = dynamic(() => import("@/components/Projects/Banner"));
 
