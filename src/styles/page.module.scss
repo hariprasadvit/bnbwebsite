@@ -1024,10 +1024,12 @@
     }
 
     .sectionTop {
+      max-width: 495px !important;
+
       h2 {
         font-size: 36px;
         line-height: 42px;
-        max-width: 435px;
+        max-width: 495px;
         width: 100%;
         margin-bottom: 35px;
         font-weight: 400;
