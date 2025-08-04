@@ -112,6 +112,29 @@
     }
   }
 
+  &.whiteBG {
+    .container {
+      background-color: #000;
+
+      h2 {
+        color: #fff;
+
+        span {
+          color: #fff;
+
+        }
+      }
+
+      .description {
+        color: #fff;
+      }
+
+      .title {
+        color: #fff;
+      }
+    }
+  }
+
   // 🔧 Adjust container and h2 inside media queries
   @media screen and (max-width: 1200px) {
     .container {

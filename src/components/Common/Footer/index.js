@@ -90,122 +90,63 @@ export default function Footer() {
             <h5>Industries</h5>
             <ul>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/future-ready-banking-tech-solutions">
                   Banking and Fintech{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/enhancing-e-commerce-for-modern-retailers">
                   Ecommerce{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/fantasy-gaming-for-sports-fans">
                   Fantasy Gaming{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/live-sports-innovation-through-technology">
                   E-Sports{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/innovative-tech-for-competitive-gaming">
                   Sports{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/news-and-media-application-deployment">
                   News and Media{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/smart-technology-solutions-for-agriculture">
                   Agri-Tech{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/powering-mobility-with-intelligent-solutions">
                   Mobility{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/custom-travel-platforms-that-connect">
                   Travel{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/powering-digital-classrooms-with-technology">
                   E-Learning & Education{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/simplifying-property-management-with-technology">
                   Real Estate{" "}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // prevents jump
-                  }}
-                >
+                <Link href="/industry/improving-healthcare-through-custom-tech">
+                  {" "}
                   Healthcare{" "}
                 </Link>
               </li>

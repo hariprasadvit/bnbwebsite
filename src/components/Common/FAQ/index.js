@@ -14,7 +14,7 @@ export default function FAQ() {
     {
       id: 1,
       title: "1. How do I get started with a project at Boolean & Beyond?",
-      desc: "Getting started is simple — just reach out via our contact form or email with a brief about your business, goals, and any existing material (like wireframes or specs). We'll schedule a discovery call to understand your vision and recommend the best next steps.",
+      desc: "Getting started is simple just reach out via our contact form or email with a brief about your business, goals, and any existing material (like wireframes or specs). We'll schedule a discovery call to understand your vision and recommend the best next steps.",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function FAQ() {
       id: 3,
       title:
         "3. Do you only build AI solutions, or can you handle full product development?",
-      desc: "We do both. While we specialize in AI-driven features (like semantic search, recommendations, or autonomous agents), we also design and build complete digital products — including frontend, backend, mobile apps, and user experience design.",
+      desc: "We do both. While we specialize in AI-driven features (like semantic search, recommendations, or autonomous agents), we also design and build complete digital products including frontend, backend, mobile apps, and user experience design.",
     },
     {
       id: 4,
@@ -48,12 +48,12 @@ We follow an agile approach with weekly check-ins, demos, and transparent commun
       id: 6,
       title:
         "6. Do you take on redesign or modernization of existing platforms?",
-      desc: "Yes. We specialize in revamping legacy systems, improving UX/UI, and migrating old architectures into scalable, modern tech stacks — whether it’s a fintech dashboard or a multi-tenant ERP.",
+      desc: "Yes. We specialize in revamping legacy systems, improving UX/UI, and migrating old architectures into scalable, modern tech stacks whether it’s a fintech dashboard or a multi-tenant ERP.",
     },
     {
       id: 7,
       title: "7. How do you integrate AI in projects?",
-      desc: "We implement AI thoughtfully — from contextual search and recommendations to autonomous workflows and agentic systems. Our AI is integrated around your data, goals, and user flows — never as a gimmick.",
+      desc: "We implement AI thoughtfully from contextual search and recommendations to autonomous workflows and agentic systems. Our AI is integrated around your data, goals, and user flows never as a gimmick.",
     },
     {
       id: 8,
@@ -63,12 +63,12 @@ We follow an agile approach with weekly check-ins, demos, and transparent commun
     {
       id: 9,
       title: "9. Can you handle both design and development in-house?",
-      desc: "Yes — we’re a full-stack product studio. Our UX/UI design team works closely with developers to ensure seamless implementation, consistent branding, and great user experience across all screens and platforms.",
+      desc: "Yes, we’re a full-stack product studio. Our UX/UI design team works closely with developers to ensure seamless implementation, consistent branding, and great user experience across all screens and platforms.",
     },
     {
       id: 10,
       title: "10. What tech stacks and tools do you use?",
-      desc: "We use modern, scalable stacks like React, Next.js, Node.js, Python, and TypeScript. For AI and agentic solutions, we use OpenAI, LangChain, Pinecone, and other LLM frameworks — always picking what’s right for your problem.",
+      desc: "We use modern, scalable stacks like React, Next.js, Node.js, Python, and TypeScript. For AI and agentic solutions, we use OpenAI, LangChain, Pinecone, and other LLM frameworks always picking what’s right for your problem.",
     },
   ];
 

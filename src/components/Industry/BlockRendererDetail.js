@@ -23,7 +23,7 @@ export default function BlockRendererDetail({ blocks, pageTitle }) {
   return blocks.map((block, index) => {
     switch (block.__component) {
       case "service-listing.second-section":
-        return <AiSolutions data={block} />;
+        return <AiSolutions data={block} whiteBG />;
       case "case-study.our-work-section":
         return (
           <>

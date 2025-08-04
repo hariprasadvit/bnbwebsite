@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "../serviceDetail.module.scss";
 
-export default function AiSolutions({ data }) {
+export default function AiSolutions({ data, whiteBG }) {
   return (
-    <section className={styles.aiSolutionsSection}>
+    <section
+      className={`${styles.aiSolutionsSection} ${
+        whiteBG ? styles.whiteBG : ""
+      }`}
+    >
       <div className={styles.container}>
         <h2>
           <span>{data.pre_title}</span>
