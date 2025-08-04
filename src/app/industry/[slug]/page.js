@@ -55,9 +55,6 @@ export default async function ServiceDetails({ params }) {
   });
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData?.pageContent || {}}

@@ -78,6 +78,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
         </h2>
       </div>
       <Slider {...settings}>
+        {console.log(card[0], "card")}
         {card?.map((item, index) => {
           const imageUrl = item.image?.url
             ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
