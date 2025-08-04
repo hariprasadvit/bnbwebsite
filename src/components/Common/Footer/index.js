@@ -105,12 +105,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/industry/live-sports-innovation-through-technology">
+                <Link href="/industry/innovative-tech-for-competitive-gaming">
                   E-Sports{" "}
                 </Link>
               </li>
               <li>
-                <Link href="/industry/innovative-tech-for-competitive-gaming">
+                <Link href="/industry/live-sports-innovation-through-technology">
                   Sports{" "}
                 </Link>
               </li>
