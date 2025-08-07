@@ -320,7 +320,7 @@ export default function Header({ whiteHeader, active }) {
                     <ul
                       style={{
                         display: "flex",
-                        gap: "30px",
+                        gap: "20px",
                         paddingBottom: "15px",
                       }}
                     >
