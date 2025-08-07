@@ -1,6 +1,6 @@
 // app/sitemap.xml/route.js
 export async function GET() {
-  const baseUrl = "https://www.yourdomain.com";
+  const baseUrl = "https://www.booleanbeyond.com";
 
   const paths = [
     "/",
