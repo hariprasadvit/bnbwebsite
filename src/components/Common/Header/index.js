@@ -340,7 +340,7 @@ export default function Header({ whiteHeader, active }) {
                           />
                         </Link>
                       </li>
-                      <li key={idx}>
+                      <li>
                         <Link
                           href="https://x.com/booleanbeyond"
                           style={{
