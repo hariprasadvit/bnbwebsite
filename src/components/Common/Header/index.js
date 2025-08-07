@@ -324,27 +324,33 @@ export default function Header({ whiteHeader, active }) {
                         paddingBottom: "15px",
                       }}
                     >
-                      {[fb, insta, linkedin, x].map((icon, idx) => (
-                        <li key={idx}>
-                          <Link
-                            href="#"
-                            style={{
-                              ...IconbackgroundStyle,
-                              backgroundColor: "#fff",
-                            }}
-                            onClick={(e) => {
-                              e.preventDefault();
-                            }}
-                          >
-                            <Image
-                              src={icon}
-                              alt="Icon"
-                              width={24}
-                              height={24}
-                            />
-                          </Link>
-                        </li>
-                      ))}
+                      <li>
+                        <Link
+                          href="https://www.linkedin.com/company/booleanbeyond"
+                          style={{
+                            ...IconbackgroundStyle,
+                            backgroundColor: "#fff",
+                          }}
+                        >
+                          <Image
+                            src={linkedin}
+                            alt="Linkedin Icon"
+                            width={24}
+                            height={24}
+                          />
+                        </Link>
+                      </li>
+                      <li key={idx}>
+                        <Link
+                          href="https://x.com/booleanbeyond"
+                          style={{
+                            ...IconbackgroundStyle,
+                            backgroundColor: "#fff",
+                          }}
+                        >
+                          <Image src={x} alt="X Icon" width={24} height={24} />
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -432,38 +438,50 @@ export default function Header({ whiteHeader, active }) {
                     style={{
                       width: "100%",
                       display: "flex",
-                      justifyContent: "center",
+                      justifyContent: "flex-start",
                       alignItems: "center",
-                      paddingTop: "20px",
+                      padding: "20px 20px 0",
                     }}
                   >
                     <ul
                       style={{
                         display: "flex",
-                        gap: "30px",
+                        gap: "20px",
                         paddingBottom: "15px",
                       }}
                     >
-                      {[footerfb, footerinsta, footerlinkedin, footerx].map(
-                        (icon, idx) => (
-                          <li key={idx}>
-                            <Link
-                              href="#"
-                              style={IconbackgroundStyle}
-                              onClick={(e) => {
-                                e.preventDefault();
-                              }}
-                            >
-                              <Image
-                                src={icon}
-                                alt="Icon"
-                                width={24}
-                                height={24}
-                              />
-                            </Link>
-                          </li>
-                        )
-                      )}
+                      <li>
+                        <Link
+                          href="https://www.linkedin.com/company/booleanbeyond"
+                          style={IconbackgroundStyle}
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          <Image
+                            src={footerlinkedin}
+                            alt="Icon"
+                            width={24}
+                            height={24}
+                          />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="https://x.com/booleanbeyond"
+                          style={IconbackgroundStyle}
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          <Image
+                            src={footerx}
+                            alt="Icon"
+                            width={24}
+                            height={24}
+                          />
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

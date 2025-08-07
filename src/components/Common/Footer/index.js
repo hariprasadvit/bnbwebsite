@@ -289,7 +289,7 @@ export default function Footer() {
         </div>
         <div className={styles.socialMedia}>
           <ul>
-            <li>
+            {/* <li>
               <Link
                 href="#"
                 onClick={(e) => {
@@ -298,8 +298,8 @@ export default function Footer() {
               >
                 <Image src={fb} alt="Logo" width={24} height={24} />
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 href="#"
                 onClick={(e) => {
@@ -308,24 +308,14 @@ export default function Footer() {
               >
                 <Image src={insta} alt="Logo" width={24} height={24} />
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault(); // prevents jump
-                }}
-              >
+              <Link href="https://www.linkedin.com/company/booleanbeyond">
                 <Image src={linkedin} alt="Logo" width={24} height={24} />
               </Link>
             </li>
             <li>
-              <Link
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault(); // prevents jump
-                }}
-              >
+              <Link href="https://x.com/booleanbeyond">
                 <Image src={x} alt="Logo" width={24} height={24} />
               </Link>
             </li>
