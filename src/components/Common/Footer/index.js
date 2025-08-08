@@ -160,12 +160,7 @@ export default function Footer() {
                   <strong>Backend</strong>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault(); // prevents jump
-                    }}
-                  >
+                  <Link href="/technology/python-application-development">
                     Python{" "}
                   </Link>
                 </li>
@@ -180,12 +175,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault(); // prevents jump
-                    }}
-                  >
+                  <Link href="/technology/node-js-application-development">
                     NodeJS
                   </Link>
                 </li>
@@ -218,22 +208,12 @@ export default function Footer() {
                   <strong>Frontend</strong>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault(); // prevents jump
-                    }}
-                  >
+                  <Link href="/technology/react-application-development">
                     ReactJS
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault(); // prevents jump
-                    }}
-                  >
+                  <Link href="/technology/flutter-application-development">
                     Flutter
                   </Link>
                 </li>
