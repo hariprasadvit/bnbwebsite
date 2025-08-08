@@ -48,6 +48,10 @@ export async function GET() {
     "/industry/powering-mobility-with-intelligent-solutions",
     "/industry/powering-digital-classrooms-with-technology",
     "/industry/improving-healthcare-through-custom-tech",
+    "/technology/python-application-development",
+    "/technology/node-js-application-development",
+    "/technology/react-application-development",
+    "/technology/flutter-application-development",
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
