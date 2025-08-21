@@ -1,11 +1,20 @@
 .CardSection {
     background: #19191C;
 
+    @media screen and (max-width: 1024px) {
+        padding-top: 30px;
+    }
+
     .CardContainer {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 37px;
+        padding: 0 16px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
 
         .cardItem {
             background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -14,6 +23,10 @@
             padding: 25px;
             max-width: 337px;
             width: 100%;
+
+            @media screen and (max-width: 978px) {
+                padding: 15px;
+            }
 
             .imageContainer {
                 display: flex;
@@ -36,12 +49,22 @@
                 font-weight: 600;
                 color: #000000;
                 margin-bottom: 9px;
+
+                @media screen and (max-width: 978px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
 
             p {
                 text-align: center;
                 font-size: 18px;
                 line-height: 27px;
+
+                @media screen and (max-width: 978px) {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
             }
         }
     }
