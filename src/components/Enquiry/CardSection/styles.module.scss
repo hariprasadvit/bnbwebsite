@@ -1,0 +1,48 @@
+.CardSection {
+    background: #19191C;
+
+    .CardContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 37px;
+
+        .cardItem {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            border-radius: 8px;
+            padding: 25px;
+            max-width: 337px;
+            width: 100%;
+
+            .imageContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 64px;
+                height: 64px;
+                background: #19191C;
+                border-radius: 100%;
+                margin: 0 auto 16px;
+
+                img {}
+            }
+
+            strong {
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                line-height: 36px;
+                font-weight: 600;
+                color: #000000;
+                margin-bottom: 9px;
+            }
+
+            p {
+                text-align: center;
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+    }
+}

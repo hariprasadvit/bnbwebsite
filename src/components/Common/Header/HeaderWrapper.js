@@ -11,6 +11,7 @@ export default function HeaderWrapper() {
   const isCaseStudyListing = pathname === "/case-study";
   const isAboutUs = pathname === "/about";
   const isContactUs = pathname === "/contact-us";
+  const isEnquiry = pathname === "/enquiry";
   const isServiceDetail =
     pathname.startsWith("/services/") && !isServiceListing;
   const isCaseStudyDetail =
@@ -29,6 +30,8 @@ export default function HeaderWrapper() {
     active = "contact";
   } else if (isServiceDetail) {
     whiteHeader = true; // Only for service detail pages
+  } else if (isEnquiry) {
+    whiteHeader = true;
   }
 
   return <Header whiteHeader={whiteHeader} active={active} />;

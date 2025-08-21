@@ -80,10 +80,18 @@
   justify-content: space-between;
   padding: 180px 80px 32px;
   position: relative;
-  background: #000;
+  background: #19191C;
   // min-height: 100vh;
   flex-direction: row;
   min-height: 82vh;
+
+  &.removevhHeight {
+    min-height: auto;
+  }
+
+  &.blackBg {
+    background: #000;
+  }
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -178,6 +186,22 @@
 
     @media (max-width: 680px) {
       padding-left: 0;
+    }
+  }
+
+  &.centerText {
+    text-align: center;
+
+    >div {
+      text-align: center;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
     }
   }
 }

@@ -1,10 +1,25 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-export default function Banner({ title, description, hightlighted_text }) {
+export default function Banner({
+  title,
+  description,
+  hightlighted_text,
+  centerText,
+  hideScroll,
+  blackBg,
+  removevhHeight,
+}) {
   return (
-    <section className={styles.banner} id="bannerTop">
-      <div className={`${styles.content}`}>
+    <section
+      className={`${styles.banner} ${blackBg ? styles.blackBg : ""} ${
+        removevhHeight ? styles.removevhHeight : ""
+      }`}
+      id="bannerTop"
+    >
+      <div
+        className={`${styles.content} ${centerText ? styles.centerText : ""}`}
+      >
         <div>
           <h1>
             {title}
@@ -12,20 +27,16 @@ export default function Banner({ title, description, hightlighted_text }) {
           </h1>
           <div className={styles.descriptionContainerWithScroll}>
             <h2>{description}</h2>
-            <div className={styles.scroll}>(Scroll)</div>
+            {hideScroll ? null : (
+              <div className={styles.scroll}>
+                <span>Scroll</span>
+              </div>
+            )}
           </div>
         </div>
 
         <div className={styles.dashedBorder}></div>
       </div>
-      {/* <div className={styles.splineWrap}>
-        <Spline
-          className={styles.spline}
-          scene="https://prod.spline.design/uyq7dF5D1Z1ksQZy/scene.splinecode"
-          width={849}
-          height={549}
-        />
-      </div> */}
     </section>
   );
 }
