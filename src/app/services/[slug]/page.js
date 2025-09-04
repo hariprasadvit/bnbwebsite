@@ -9,6 +9,7 @@ import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
 import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
+import Script from "next/script";
 
 const Banner = dynamic(() => import("@/components/Projects/Banner"));
 
@@ -53,9 +54,17 @@ export default async function ServiceDetails({ params }) {
   });
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
+      {blockData?.pageContent?.faq_script && (
+        <script
+          id="faq-schema"
+          key={params?.slug}
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blockData?.pageContent?.faq_script, null, 2),
+          }}
+        />
+      )}
       <div style={{ width: "100%" }}>
         <Banner
           title={blockData?.pageContent?.title}
