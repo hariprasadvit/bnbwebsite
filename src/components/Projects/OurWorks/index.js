@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./OurWorks.module.scss"; // keep your original SCSS
 import Link from "next/link";
+import { useEffect, useRef } from 'react';
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
