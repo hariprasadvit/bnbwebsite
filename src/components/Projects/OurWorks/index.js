@@ -127,7 +127,6 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
           return (
             <div key={index} className={styles.slide}>
               <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout}>
-                <div className={styles.cardGraphic} aria-hidden="true"></div>
                 <div className={styles.textSection}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>

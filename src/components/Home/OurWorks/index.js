@@ -113,7 +113,6 @@ export default function OurWorks({ data = {} }) {
                 return (
                   <div className={styles.workItem} key={index}>
                     <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout}>
-                      <div className={styles.cardGraphic} aria-hidden="true"></div>
                       <div className={styles.textSection}>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
