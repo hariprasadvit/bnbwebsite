@@ -263,12 +263,13 @@ export default function FooterForm() {
             <h4>Choose Purpose</h4>
             <Select
               isMulti
-              name="services" instanceId="footerServiceSelect"
+              name="services"
+              instanceId="footerServiceSelect"
               options={InterestedDropdownOptions}
               value={InterestedDropdownOptions.filter((option) =>
                 details.data.service_list.includes(option.value)
               )}
-              // placeholder="Select Services..."
+              placeholder="Select services..."
               onChange={(selected) =>
                 onChange(
                   Array.isArray(selected)
@@ -283,10 +284,7 @@ export default function FooterForm() {
                   backgroundColor: "#1F1F1F",
                   borderRadius: 8,
                   border: "1px solid #707070",
-                  boxShadow: "none", // optionally remove default box-shadow
-                  "&:hover": {
-                    borderColor: "#707070", // keep the same border color on hover
-                  },
+                  boxShadow: "none",
                   minHeight: "48px",
                 }),
                 menu: (base) => ({
@@ -295,16 +293,12 @@ export default function FooterForm() {
                 }),
                 option: (base, state) => ({
                   ...base,
-                  backgroundColor: state.isFocused
-                    ? "black"
-                    : base.backgroundColor,
-                  color: state.isFocused ? "white" : base.color,
-                  cursor: "pointer",
+                  backgroundColor: state.isFocused ? "#111" : base.backgroundColor,
+                  color: state.isFocused ? "#fff" : base.color,
                 }),
-                // optionally style the placeholder text
                 placeholder: (base) => ({
                   ...base,
-                  color: "#bbb", // lighter text color to contrast dark bg
+                  color: "#bbb",
                 }),
                 singleValue: (base) => ({
                   ...base,
@@ -322,42 +316,44 @@ export default function FooterForm() {
                 multiValueRemove: (base) => ({
                   ...base,
                   color: "#999",
-                  ":hover": {
-                    backgroundColor: "red",
-                    color: "white",
-                  },
                 }),
               }}
             />
 
             <div className={styles.inputWrapper}>
-              <span style={{ opacity: 1 }}>{details.error.service_list}</span>
+              <span id="error-service" className={details.error.service_list ? styles.errorActive : ""}>{details.error.service_list}</span>
             </div>
           </div>
 
           <div className={styles.textareaWrapper}>
-            <label>Project Requirement / Goals*</label>
+            <label htmlFor="project_goal">Project Requirement / Goals*</label>
             <textarea
-              type="text"
+              id="project_goal"
               onChange={(e) => onChange(e.target.value, "project_goal")}
               value={details.data.project_goal}
+              placeholder="Describe your project goals, timeline, and must-have features"
+              aria-describedby="error-goal"
             />
-            <span style={{ opacity: 1 }}>{details.error.project_goal}</span>
+            <span id="error-goal" className={details.error.project_goal ? styles.errorActive : ""}>{details.error.project_goal}</span>
           </div>
 
-          <button
-            type="button"
-            className={styles.submit}
-            disabled={disabled}
-            onClick={onSubmit}
-          >
-            {/* Start a Conversation */}
-            Submit Form
-          </button>
+          <div className={styles.formActions}>
+            <button
+              type="submit"
+              className={styles.submit}
+              disabled={disabled}
+              aria-disabled={disabled}
+            >
+              {disabled ? "Sending..." : "Start a Conversation"}
+            </button>
+            <div className={styles.helperText}>
+              <small>We typically respond within 1 business day. By submitting you agree to our terms.</small>
+            </div>
+          </div>
         </form>
 
         {successMessage && (
-          <div className={styles.successMessageWrapper}>
+          <div className={styles.successMessageWrapper} role="status" aria-live="polite">
             <span>
               <p>{successMessage}</p>
             </span>
