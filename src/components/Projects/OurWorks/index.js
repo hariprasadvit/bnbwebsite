@@ -196,7 +196,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                   >
                     {item.description}
                   </p>
-                  <Link href={'/case-study/' + item?.case_study_detail?.slug} className="knowMoreLink">Read More</Link>
+                  <span className="knowMoreLink" role="link">Read More</span>
                 </div>
               </Link>
             </div>
