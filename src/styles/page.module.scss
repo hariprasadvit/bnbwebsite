@@ -51,7 +51,73 @@
 .contactBanner {
   display: flex;
   background-color: #d44116;
+  position: relative;
+  overflow: hidden;
+}
 
+/* animated gradient layer & decorative blobs */
+.gradientLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(135deg, rgba(212,65,22,0.15) 0%, rgba(255,107,61,0.10) 35%, rgba(255,200,170,0.06) 65%, rgba(20,20,20,0.02) 100%);
+  mix-blend-mode: screen;
+  animation: gradientShift 8s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% { transform: translate3d(-5%, -5%, 0) rotate(0deg); }
+  50% { transform: translate3d(5%, 5%, 0) rotate(1deg); }
+  100% { transform: translate3d(-5%, -5%, 0) rotate(0deg); }
+}
+
+.blob {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(36px);
+  opacity: 0.55;
+  background: radial-gradient(circle at 30% 30%, rgba(255,107,61,0.8), rgba(212,65,22,0.45) 40%, rgba(255,200,170,0.12) 70%);
+  transform: translate3d(-20%, -10%, 0) scale(0.9);
+  top: 10%;
+  left: 10%;
+  animation: floatBlob 6s ease-in-out infinite;
+}
+
+.blob + .blob {
+  top: 55%;
+  left: 65%;
+  width: 380px;
+  height: 380px;
+  opacity: 0.36;
+  animation-duration: 9s;
+}
+
+@keyframes floatBlob {
+  0% { transform: translate3d(-20%, -10%, 0) scale(0.95) rotate(-3deg); }
+  50% { transform: translate3d(-18%, -14%, 0) scale(1.02) rotate(2deg); }
+  100% { transform: translate3d(-20%, -10%, 0) scale(0.95) rotate(-3deg); }
+}
+
+.sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #fff 0%, #ffd 40%, rgba(255,255,255,0) 70%);
+  top: 18%;
+  right: 18%;
+  border-radius: 50%;
+  filter: drop-shadow(0 6px 10px rgba(212,65,22,0.12));
+  opacity: 0.9;
+  animation: sparkle 2.8s linear infinite;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0) scale(0.85); opacity: 0.8; }
+  40% { transform: translateY(-6px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(0.85); opacity: 0.8; }
 }
 
 .contactBannerContent {
