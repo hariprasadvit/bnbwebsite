@@ -797,6 +797,20 @@
   }
 }
 
+.avatarVideo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #000;
+  outline: none;
+
+  @media screen and (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .messageContent {
   max-width: 65%;
   padding: 14px 18px;
