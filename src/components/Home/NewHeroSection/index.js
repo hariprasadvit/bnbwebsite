@@ -375,7 +375,7 @@ export default function NewHeroSection() {
 
     // Create enhanced PDF content
     const pdfContent = `
-════════════════════════════════════════════════���══════════════
+═════════════════════════════════════════════���═════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
 ═══════════════════════════════════════════════════════════════
@@ -677,10 +677,14 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                 {isTyping && (
                   <div className={`${styles.message} ${styles.botMessage}`}>
                     <div className={styles.botAvatar}>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F49228ead32fd497a9eb665f597bb1d9f?format=webp&width=800"
+                      <video
+                        src="https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fa32d500da0c3459f9871b3d2124d0103?alt=media&token=7cea3bcb-dba3-4a28-b846-58ff43ac7d37&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={styles.avatarVideo}
                         alt="Chatbot"
-                        className={styles.avatarImage}
                       />
                     </div>
                     <div className={styles.messageContent}>
