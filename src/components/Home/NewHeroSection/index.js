@@ -668,8 +668,16 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                           onError={(e) => {
                             console.warn('Video load error:', e);
                             e.target.style.display = 'none';
+                            const fallback = e.target.nextElementSibling;
+                            if (fallback) fallback.style.display = 'block';
                           }}
                           onLoadStart={() => console.log('Video loading started')}
+                        />
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F49228ead32fd497a9eb665f597bb1d9f?format=webp&width=800"
+                          alt="Chatbot"
+                          className={styles.avatarVideo}
+                          style={{ display: 'none' }}
                         />
                       </div>
                     )}
