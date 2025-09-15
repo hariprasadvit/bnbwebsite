@@ -118,9 +118,13 @@ export default function OurWorks({ data = {} }) {
                 return (
                   <div className={styles.workItem} key={index}>
                     <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout} style={{ textDecoration: 'none' }}>
-                      <div className={styles.imageSection}>
-                        <Image src={imageUrl} alt="Our Work" width={582} height={431} style={{ borderRadius: 12 }} />
-                      </div>
+                      <div className={styles.cardGraphic} style={{
+                        background: `linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06))`,
+                        borderRadius: 12,
+                        minWidth: 260,
+                        minHeight: 160,
+                        flex: '0 0 340px'
+                      }} aria-hidden="true"></div>
                       <div className={styles.textSection} style={backgroundStyle}>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
