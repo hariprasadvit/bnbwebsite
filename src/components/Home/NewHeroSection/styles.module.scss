@@ -295,7 +295,7 @@
 
   /* gradient border animation variables (conic) */
   --border-angle: 0turn;
-  --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
+  --main-bg: #000000;
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
 
   /* Animated gradient border using layered backgrounds + explicit clipping for consistent rendering */
@@ -725,7 +725,7 @@
   border: 2px solid transparent;
   /* animated gradient border variables */
   --border-angle: 0turn;
-  --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
+  --main-bg: #000000;
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
   background:
     var(--main-bg) padding-box,
