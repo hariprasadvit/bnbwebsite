@@ -798,16 +798,25 @@
 }
 
 .messageContent {
-  max-width: 70%;
-  padding: 12px 16px;
+  max-width: 65%;
+  padding: 14px 18px;
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.5;
   word-wrap: break-word;
-  
+  position: relative;
+
+  .botMessage & {
+    max-width: calc(100% - 64px);
+  }
+
   @media screen and (max-width: 768px) {
-    max-width: 85%;
-    padding: 10px 14px;
+    max-width: 75%;
+    padding: 12px 16px;
     font-size: 14px;
+
+    .botMessage & {
+      max-width: calc(100% - 56px);
+    }
   }
 }
 
