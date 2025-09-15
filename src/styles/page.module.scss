@@ -2602,10 +2602,7 @@
 // Alternative selector removed - using only the first selector with proper class context
 
 /* Strong override: ensure chat input and expanded chat always show animated gradient border */
-[class*="chatInterface"] [class*="inputContainer"],
-[class*="chatInterface"] [class*="expandedChat"],
-[class*="chatInterface"] [class*="inputContainer"]:not([data-no-gradient]),
-[class*="chatInterface"] [class*="expandedChat"]:not([data-no-gradient]) {
+:global([class*="chatInterface"] [class*="inputContainer"], [class*="chatInterface"] [class*="expandedChat"], [class*="chatInterface"] [class*="inputContainer"]:not([data-no-gradient]), [class*="chatInterface"] [class*="expandedChat"]:not([data-no-gradient])) {
   border: 2px solid transparent !important;
   --border-angle: 0turn !important;
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent) !important;
@@ -2619,24 +2616,20 @@
 }
 
 /* Hide any internal opaque overlays that could obscure the border */
-[class*="chatInterface"] [class*="inputContainer"]::after,
-[class*="chatInterface"] [class*="expandedChat"]::after,
-[class*="chatInterface"] [class*="inputContainer"] > .overlay,
-[class*="chatInterface"] [class*="expandedChat"] > .overlay {
+:global([class*="chatInterface"] [class*="inputContainer"]::after, [class*="chatInterface"] [class*="expandedChat"]::after, [class*="chatInterface"] [class*="inputContainer"] > .overlay, [class*="chatInterface"] [class*="expandedChat"] > .overlay) {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
 }
 
 /* Ensure expanded chat retains animated border even when other rules try to add borders */
-[class*="chatInterface"] [class*="expandedChat"] {
+:global([class*="chatInterface"] [class*="expandedChat"]) {
   border-color: transparent !important;
 }
 
 /* Also ensure mobile/tablet show the animated border */
 @media screen and (max-width: 1024px) {
-  [class*="chatInterface"] [class*="inputContainer"],
-  [class*="chatInterface"] [class*="expandedChat"] {
+  :global([class*="chatInterface"] [class*="inputContainer"], [class*="chatInterface"] [class*="expandedChat"]) {
     animation: bg-spin 3s linear infinite !important;
   }
 }
