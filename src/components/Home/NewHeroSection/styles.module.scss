@@ -527,13 +527,14 @@
   }
 
   &::after {
+    /* make inner panel more translucent so animated border reads through */
     content: '';
     position: absolute;
     top: 2px;
     left: 2px;
     right: 2px;
     bottom: 2px;
-    background: rgba(42, 42, 42, 0.95);
+    background: rgba(18, 18, 18, 0.6);
     border-radius: 26px;
     z-index: -1;
   }
@@ -542,7 +543,7 @@
     box-shadow: 0 16px 48px rgba(212, 65, 22, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
     border-color: transparent;
-    
+
     &::before {
       opacity: 1;
     }
