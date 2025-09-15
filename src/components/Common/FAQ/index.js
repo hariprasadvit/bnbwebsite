@@ -87,11 +87,17 @@ We follow an agile approach with weekly check-ins, demos, and transparent commun
           >
             <div className={styles.questionRow} onClick={() => toggleAccordion(items.id)}>
               <h4>{items.title}</h4>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F14fd5949e4c3447aaf43327135ed8e3c?format=webp&width=80"
-                alt="toggle"
+              <svg
                 className={styles.toggleIcon}
-              />
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path d="M8 5l8 7-8 7" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </div>
             {activeId === items.id && <p>{items.desc}</p>}
           </div>
