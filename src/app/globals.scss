@@ -136,6 +136,13 @@ img {
   fill: #ffffff !important;
 }
 
+/* Ensure disabled arrows still visible and clickable appearance */
+.slick-arrow.slick-disabled {
+  opacity: 0.6 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 /* End force overrides */
 
 .slick-track {
