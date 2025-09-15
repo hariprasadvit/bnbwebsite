@@ -9,12 +9,16 @@ const HireExpertSection = () => {
       <div className={styles.container}>
         <div className={styles.illustrationColumn}>
           <div className={styles.illustrationContainer}>
-            {/* Placeholder for rocket illustration - Replace with your design */}
+            {/* Placeholder replaced with actual MVP image */}
             <div className={styles.illustration}>
-              <div className={styles.placeholder}>
-                <span>MVP Illustration Placeholder</span>
-                <span>500x500px</span>
-              </div>
+              <Image
+                src="/mvp.png"
+                alt="MVP Illustration"
+                width={500}
+                height={500}
+                className={styles.mvpImage}
+                priority
+              />
             </div>
           </div>
         </div>
