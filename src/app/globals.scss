@@ -201,3 +201,19 @@ button {
     animation: bg-spin 3s linear infinite !important;
   }
 }
+
+/* Target the actual input to remove inner static border that shows as grey */
+[class*="chatInterface"] input[class*="chatInput"],
+[class*="chatInterface"] textarea[class*="chatInput"] {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Also ensure input padding remains so the hollow outline looks correct */
+[class*="chatInterface"] input[class*="chatInput"] {
+  padding: 16px 24px !important;
+}
