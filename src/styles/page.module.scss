@@ -931,8 +931,8 @@
             div a, & > .textSection .knowMoreLink, & .knowMoreLink {
               margin-top: 8px;
               display: inline-block;
-              margin-bottom: 8px;
-              font-size: 14px;
+              margin-bottom: 0;
+              font-size: 16px;
               line-height: 20px;
               min-width: auto;
               position: relative;
@@ -940,6 +940,8 @@
               text-decoration: none;
               font-weight: 600;
               transition: all 0.2s ease;
+              opacity: 1 !important;
+              visibility: visible !important;
 
               &::after {
                 content: '';
