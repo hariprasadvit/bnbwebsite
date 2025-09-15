@@ -295,14 +295,10 @@
 
   /* gradient border animation variables (conic) */
   --border-angle: 0turn;
-  --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
 
-  /* Always-on animated gradient border (desktop & mobile) */
-  background:
-    var(--main-bg) padding-box,
-    var(--gradient-border) border-box,
-    var(--main-bg) border-box;
+  /* Always-on animated gradient border (desktop & mobile) with hollow center */
+  background: transparent padding-box, var(--gradient-border) border-box;
   animation: bg-spin 3s linear infinite;
 
   &:hover {
@@ -520,17 +516,9 @@
     transition: opacity 0.3s ease;
   }
 
+  /* remove inner filled panel so the chat looks like a hollow outlined control */
   &::after {
-    /* make inner panel more translucent so animated border reads through */
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: rgba(18, 18, 18, 0.45); /* slightly more transparent */
-    border-radius: 26px;
-    z-index: -1;
+    content: none;
   }
 
   &:focus-within {
