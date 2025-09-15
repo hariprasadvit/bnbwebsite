@@ -492,31 +492,37 @@
 
 .inputContainer {
   position: relative;
-  background: #000000 !important;
+  background: transparent !important;
   border-radius: 28px;
   padding: 4px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+  border: 2px solid transparent;
+  overflow: visible;
+
+  /* animated gradient border */
+  --border-angle: 0turn;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
+  background: transparent padding-box, var(--gradient-border) border-box;
+  animation: bg-spin 3s linear infinite;
 
   &::before {
+    /* subtle outer glow to hint motion (kept low opacity) */
     content: '';
     position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    background: linear-gradient(45deg, #d44116, #ff6b3d, #d44116, #ff6b3d);
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background: linear-gradient(45deg, #d44116, #ff6b3d, #d44116);
     background-size: 400% 400%;
-    border-radius: 32px;
+    border-radius: 34px;
     z-index: -2;
     opacity: 0;
-    animation: gradientRotate 3s ease-in-out infinite;
+    animation: gradientRotate 6s ease-in-out infinite;
     transition: opacity 0.3s ease;
   }
 
-  /* remove inner filled panel so the chat looks like a hollow outlined control */
   &::after {
     content: none;
   }
@@ -527,14 +533,13 @@
     border-color: transparent;
 
     &::before {
-      opacity: 1;
+      opacity: 0.12;
     }
   }
 
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 14px 44px rgba(0, 0, 0, 0.18), 0 6px 14px rgba(0, 0, 0, 0.12);
-    border-color: rgba(212, 65, 22, 0.2);
   }
 }
 
