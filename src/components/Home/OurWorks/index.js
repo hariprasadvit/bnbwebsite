@@ -1,6 +1,6 @@
 "use client"; // not necessary in Next 14, but for clarity
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
