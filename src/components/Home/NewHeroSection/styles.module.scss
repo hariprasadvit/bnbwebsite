@@ -695,16 +695,25 @@
 .expandedChat {
   width: 100%;
   max-width: 1000px;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.95);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.7),
+    0 12px 24px rgba(0, 0, 0, 0.5),
+    0 6px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
   overflow: hidden;
   animation: slideInUp 0.5s ease-out;
-  
+  position: relative;
+  z-index: 1000;
+
   @media screen and (max-width: 768px) {
     max-width: 100%;
     border-radius: 16px;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.8),
+      0 8px 16px rgba(0, 0, 0, 0.6);
   }
 }
 
