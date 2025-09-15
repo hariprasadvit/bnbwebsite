@@ -88,8 +88,29 @@ export default function OurWorks({ data = {} }) {
     ));
   }
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const items = containerRef.current.querySelectorAll('.' + styles.workItem);
+            items.forEach(i => i.classList.add('scrolled'));
+            obs.disconnect(); // only once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className={styles.ourWorks}>
+    <section ref={containerRef} className={styles.ourWorks}>
       <div className={styles.container}>
         <div className={styles.topContent}>
           <h2>
