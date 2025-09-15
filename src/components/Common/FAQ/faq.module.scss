@@ -79,42 +79,6 @@
     }
 }
 
-/* Icon lines (plus/minus) */
-.faqCard::after,
-.faqCard::before {
-  position: absolute;
-  content: "";
-  background-color: #ff6b3d;
-  transition: transform 0.22s ease, opacity 0.22s ease, background-color 0.22s ease;
-  border-radius: 2px;
-  right: 18px;
-  top: 50%;
-  transform-origin: center;
-  transform: translateY(-50%);
-}
-
-/* vertical bar */
-.faqCard::after {
-  width: 4px;
-  height: 18px;
-}
-
-/* horizontal bar */
-.faqCard::before {
-  height: 4px;
-  width: 18px;
-}
-
-/* Active state: collapse vertical bar to form a minus and tint the bar */
-.faqCard.active::after {
-  opacity: 0;
-  transform: translateY(-50%) scaleY(0.12);
-}
-
-.faqCard.active::before {
-  transform: translateY(-50%) scaleX(1.06);
-  background-color: #ff8a50;
-}
 
 .questionRow {
     display: flex;
