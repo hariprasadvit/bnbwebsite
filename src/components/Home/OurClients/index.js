@@ -14,12 +14,12 @@ export default function OurClients({ data = {}, addTopPadding, greyBG }) {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1200,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    autoplaySpeed: 3000,
+    cssEase: "ease-in-out",
     className: "clientSlider",
     responsive: [
       {
