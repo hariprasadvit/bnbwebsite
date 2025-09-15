@@ -375,7 +375,7 @@ export default function NewHeroSection() {
 
     // Create enhanced PDF content
     const pdfContent = `
-═════════════════════════════════════════════���═════════════════
+═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
 ═══════════════════════════════════════════════════════════════
@@ -663,8 +663,13 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                           loop
                           muted
                           playsInline
+                          preload="metadata"
                           className={styles.avatarVideo}
-                          alt="Chatbot"
+                          onError={(e) => {
+                            console.warn('Video load error:', e);
+                            e.target.style.display = 'none';
+                          }}
+                          onLoadStart={() => console.log('Video loading started')}
                         />
                       </div>
                     )}
