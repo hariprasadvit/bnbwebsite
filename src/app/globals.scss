@@ -110,6 +110,34 @@ img {
 //   align-items: center;
 // }
 
+/* Force Read More and slider arrows to be visible for Our Works if module-scoped rules are being overridden */
+[class*="ourWorks"] .knowMoreLink,
+[class*="our-works"] .knowMoreLink {
+  font-size: 16px !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  margin-bottom: 0 !important;
+  line-height: 20px !important;
+}
+
+/* Ensure slick arrows are visible and styled */
+[class*="ourWorks"] .slick-arrow,
+[class*="our-works"] .slick-arrow,
+.slick-arrow,
+.customArrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.slick-arrow svg {
+  fill: #ffffff !important;
+}
+
+/* End force overrides */
+
 .slick-track {
   padding-top: 50px !important;
 
