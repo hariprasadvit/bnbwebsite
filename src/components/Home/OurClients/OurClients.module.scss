@@ -92,13 +92,13 @@
 }
 
 // Global slick slider overrides for OurClients
-:global(.clientSlider) {
+:global(.slick-slider) {
   .slick-list .slick-track {
     display: flex;
     align-items: center;
     padding: 0 !important;
   }
-  
+
   .slick-arrow {
     &:before {
       display: none;
