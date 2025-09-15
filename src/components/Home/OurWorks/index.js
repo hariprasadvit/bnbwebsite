@@ -111,34 +111,23 @@ export default function OurWorks({ data = {} }) {
                   ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
                   : "/fallback-image.png"; // fallback image
 
+                const baseColor = item.color_code || '#ffffff';
+                const backgroundStyle = {
+                  background: `linear-gradient(135deg, ${baseColor} 0%, rgba(212,65,22,0.06) 45%, rgba(255,107,61,0.03) 100%)`,
+                };
+
                 return (
                   <div className={styles.workItem} key={index}>
-                    <div
-                      style={{
-                        background: item.color_code,
-                      }}
-                    >
-                      {/* <div className={styles.imageWrap}>
-                        <Image
-                          src={imageUrl}
-                          width={300}
-                          height={150}
-                          alt="Our Works"
-                        />
-                      </div> */}
-                      {/* <p>
-                        {item.text} <strong>{item.highlight}</strong>
-                      </p> */}
-                      <div style={{ maxWidth: item.highlightMaxWidth }}>
-                        <ReactMarkdown>{item.description}</ReactMarkdown>
-                        <Link
-                          className="knowMoreLink"
-                          href={"/case-study/" + item.case_study_detail?.slug}
-                        >
-                          Read More
-                        </Link>
+                    <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout} style={{ textDecoration: 'none' }}>
+                      <div className={styles.imageSection}>
+                        <Image src={imageUrl} alt="Our Work" width={582} height={431} style={{ borderRadius: 12 }} />
                       </div>
-                    </div>
+                      <div className={styles.textSection} style={backgroundStyle}>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                        <Link href={'/case-study/' + item.case_study_detail?.slug} className="knowMoreLink">Read More</Link>
+                      </div>
+                    </Link>
                   </div>
                 );
               })}
