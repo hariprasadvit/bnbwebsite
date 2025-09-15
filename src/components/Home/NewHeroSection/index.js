@@ -633,23 +633,15 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           
           <div className={styles.featureCard}>
             <div className={styles.brainIcon}>
-              {"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800".includes('format=') ? (
-                <img
-                  src={"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800"}
-                  alt="Enterprise Security"
-                  className={styles.featureVideo}
-                />
-              ) : (
-                <video
-                  src={"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800"}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className={styles.featureVideo}
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                />
-              )}
+              <video
+                src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F095960eb18bf4741a05eb6895d1b745e?alt=media&token=4a6e919c-8f98-4c67-af79-82d89b24139e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className={styles.featureVideo}
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+              />
             </div>
             <h3>Enterprise Security</h3>
             <p>SOC2, GDPR compliance with advanced security protocols</p>
