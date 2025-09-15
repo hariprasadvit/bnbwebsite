@@ -86,6 +86,23 @@ function SamplePrevArrow(props) {
 }
 
 const OurWorks = ({ data = {} }, addTopPadding) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const items = containerRef.current.querySelectorAll('.' + styles.workItem);
+          items.forEach(i => i.classList.add('scrolled'));
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
   let { card = [] } = data;
   const settings = {
     dots: false,
