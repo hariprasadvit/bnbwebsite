@@ -63,11 +63,6 @@ export default function Banner({
             </div>
           )}
         </div>
-        <div
-          className={`${styles.dashedBorder} ${
-            hideBorder ? styles.noBorder : ""
-          }`}
-        ></div>
       </div>
     </section>
   );

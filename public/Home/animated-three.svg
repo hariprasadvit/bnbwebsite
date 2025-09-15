@@ -20,9 +20,9 @@
       50% { transform: translateY(-8px); }
     }
 
-    .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#010101;}
+    .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff !important;}
     .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#D44227;}
-    .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#010101;stroke:#010101;stroke-width:0.5669;stroke-miterlimit:22.9256;}
+    .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#ffffff !important;stroke:#ffffff !important;stroke-width:0.5669;stroke-miterlimit:22.9256;}
   </style>
 
   <!-- Outer circle (black) -->

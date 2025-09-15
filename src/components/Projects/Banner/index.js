@@ -34,8 +34,6 @@ export default function Banner({
             )}
           </div>
         </div>
-
-        <div className={styles.dashedBorder}></div>
       </div>
     </section>
   );

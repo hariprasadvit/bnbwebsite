@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import NewHeroSection from "./NewHeroSection";
 import DataDriven from "./DataDriven";
 import HireOurExperts from "./HireOurExperts";
 import InsightsAndBlog from "./InsightsAndBlog";
@@ -14,16 +15,7 @@ export default function BlockRenderer({ blocks }) {
   return blocks.map((block, index) => {
     switch (block.__component) {
       case "landing-page.hero-section":
-        return (
-          <Banner
-            key={index}
-            data={block}
-            headingMaxWidth={"490px"}
-            descriptionMaxWidth={"660px"}
-            hideBorder
-            whiteBG
-          />
-        );
+        return <NewHeroSection key={index} />;
       case "landing-page.common-section-list":
         return <SectionList key={index} data={block} />;
       case "landing-page.portfolio-section":
@@ -37,7 +29,7 @@ export default function BlockRenderer({ blocks }) {
       case "landing-page.clients-section":
         return <OurClients key={index} data={block} greyBG />;
       case "landing-page.insight-section":
-        return <DataDriven key={index} data={block} />;
+        return <DataDriven key={index} data={block} industryPage={false} />;
       case "landing-page.testimonials-section":
         return <Testimonials key={index} data={block} />;
       case "landing-page.insights-blogs-section":

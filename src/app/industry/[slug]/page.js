@@ -9,7 +9,8 @@ import { notFound } from "next/navigation";
 import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
-import Banner from "@/components/Home/Banner";
+import IndustryHeroSection from "@/components/Industry/IndustryHeroSection";
+import IndustryContentSection from "@/components/Industry/IndustryContentSection";
 import BlockRendererDetail from "@/components/Industry/BlockRendererDetail";
 
 // const Banner = dynamic(() => import("@/components/Projects/Banner"));
@@ -34,8 +35,15 @@ async function loader({ slug }) {
     method: "GET",
   });
   if (!data.data) notFound();
+  
+  // Debug: Log the data structure
+  console.log('CMS Data Structure:', JSON.stringify({
+    common: data?.data?.common?.map(block => ({ component: block.__component, title: block.title })),
+    dynamic_section: data?.data?.dynamic_section?.map(block => ({ component: block.__component, title: block.title }))
+  }, null, 2));
+  
   const blocks = data?.data?.common || [];
-  const pageContent = data?.data || {};
+  const pageContent = data?.data;
 
   return { blocks, pageContent };
 }
@@ -53,15 +61,22 @@ export default async function ServiceDetails({ params }) {
   const blockData = await loader({
     slug: params?.slug,
   });
+  
+  // Determine if this should be a black theme based on industry
+  const blackThemeIndustries = ['fantasy-gaming-for-sports-fans', 'e-sports', 'agri-tech', 'mobility'];
+  const isBlackTheme = blackThemeIndustries.includes(params?.slug);
+  
+  
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <Banner
+        <IndustryHeroSection
           data={blockData?.pageContent || {}}
-          hideBorder
-          whiteBG={true}
-          highlightFirst={true}
-          contactUs
+          industrySlug={params?.slug}
+          isBlackTheme={isBlackTheme}
+        />
+        <IndustryContentSection
+          industrySlug={params?.slug}
         />
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
@@ -69,6 +84,7 @@ export default async function ServiceDetails({ params }) {
             blockData?.pageContent?.title +
             blockData?.pageContent?.highlighted_title
           }
+          industrySlug={params?.slug}
         />
 
         <FAQ />

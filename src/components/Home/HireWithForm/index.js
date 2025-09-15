@@ -145,17 +145,10 @@ export default function HireWithForm({ pageTitle }) {
   };
   return (
     <section className={styles.contactBannerWithForm}>
-      <div className={`${styles.contactBannerLeft}`}>
-        <div className={styles.contactBannerWithFormTitle}>
-          Hire Our Experts
-        </div>
-        <div className={styles.contactBannerWithFormDescription}>
-          <p>Need hands-on talent to speed up your roadmap?</p>
-          <p>
-            Embed our developers, designers, and AI engineers into your team. We
-            bring deep expertise in modern stacks, so you can ship faster,
-            without the hiring overhead.
-          </p>
+      <div className={styles.bannerImageContainer}>
+        <img src="/bnb-banner.png" alt="BNB Banner" className={styles.bannerImage} />
+        <div className={styles.bannerContent}>
+          <h2>CTC Talk to Us</h2>
         </div>
       </div>
       <div className={`${styles.contactBannerRight}`}>

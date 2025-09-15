@@ -17,10 +17,18 @@ const OurProcessSmall = dynamic(() =>
 
 const HireWithForm = dynamic(() => import("../Home/HireWithForm"));
 
-export default function BlockRendererDetail({ blocks, pageTitle }) {
+export default function BlockRendererDetail({ blocks, pageTitle, industrySlug }) {
   if (!blocks?.length) return null;
 
-  return blocks.map((block, index) => {
+  // Skip the black section for all industry pages
+  const shouldSkipBlackSection = true;
+
+  // Filter out all insight sections at the component level
+  const filteredBlocks = blocks.filter(block => 
+    block.__component !== "landing-page.insight-section"
+  );
+
+  return filteredBlocks.map((block, index) => {
     switch (block.__component) {
       case "service-listing.second-section":
         return <AiSolutions data={block} whiteBG />;
@@ -28,7 +36,7 @@ export default function BlockRendererDetail({ blocks, pageTitle }) {
         return (
           <>
             <OurWorks key={index} data={block} addTopPadding />
-            <NumberSection disableTopPadding={true} />
+            <NumberSection disableTopPadding={true} industryPage={true} />
           </>
         );
       case "service-listing.our-process":
@@ -36,6 +44,7 @@ export default function BlockRendererDetail({ blocks, pageTitle }) {
       case "services.expansion-section":
         return <ProductDevelopment key={index} data={block} />;
       case "landing-page.insight-section":
+        console.log('Insight section data:', JSON.stringify(block, null, 2));
         return (
           <>
             <DataDriven
@@ -43,6 +52,8 @@ export default function BlockRendererDetail({ blocks, pageTitle }) {
               data={block}
               titleMaxWidth={"305px"}
               titleMarginBottom={"70px"}
+              industryPage={true}
+              industrySlug={industrySlug} // Pass the industry slug to DataDriven
             />
           </>
         );

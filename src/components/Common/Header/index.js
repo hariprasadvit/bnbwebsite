@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import logo from "/public/logo.svg";
+import logo from "/public/footerLogo.png";
 import WhiteLogo from "/public/footerLogo.png";
 import servicePagelogo from "/public/footerLogo.png";
 import Image from "next/image";
@@ -187,7 +187,13 @@ export default function Header({ whiteHeader, active }) {
     >
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src={whiteHeader && !scrolled ? WhiteLogo : logo} alt="Logo" />
+          <Image
+            src={logo}
+            alt="Boolean & Beyond Logo"
+            width={120}
+            height={40}
+            priority
+          />
         </Link>
         <nav className={styles.menu}>
           <ul>

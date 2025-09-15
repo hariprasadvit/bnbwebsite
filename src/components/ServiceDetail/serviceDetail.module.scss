@@ -1,7 +1,7 @@
 .aiSolutionsSection {
   .container {
     padding: 40px 80px 0 80px;
-    background-color: #F2F2F2;
+    background-color: #000000 !important;
 
     h2 {
       letter-spacing: -1.2px;
@@ -170,15 +170,173 @@
 }
 
 
-.ourProcessSection {
-  display: flex;
-  flex-direction: column;
+.deliverSection {
+  padding: 80px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
   color: #000000;
-  padding-bottom: 60px;
+  background: transparent;
 
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+
+    .headerContent {
+      flex: 1;
+
+      .mainTitle {
+        color: #d44116 !important;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+
+      .subTitle {
+        color: #666666 !important;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 600px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .headerArrows {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .headerArrows .sliderArrow {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #333333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  .sliderContainer {
+    position: relative;
+
+    .sliderWrapper {
+      overflow: hidden;
+      border-radius: 20px;
+
+      .sliderTrack {
+        display: flex;
+        gap: 30px;
+
+        .slideCard {
+          background: rgba(255, 255, 255, 0.9) !important;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          padding: 30px;
+          width: 320px;
+          min-width: 320px;
+          max-width: 320px;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          height: auto;
+          min-height: 200px;
+
+          &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 1) !important;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 280px;
+            min-width: 280px;
+            max-width: 280px;
+            padding: 24px 20px;
+          }
+
+          @media screen and (max-width: 480px) {
+            width: 250px;
+            min-width: 250px;
+            max-width: 250px;
+          }
+
+          .cardTitle {
+            color: #d44116 !important;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            background: linear-gradient(135deg, #d44116 0%, #ff6b3d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+
+          .cardDescription {
+            color: #666666 !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ourProcessSection {
   @media screen and (max-width: 768px) {
     padding-bottom: 30px;
-
   }
 
   h2 {
@@ -311,42 +469,53 @@
     }
   }
 
-  .ourProcessBottom {
-    display: flex;
-    gap: 12.875549048vw;
-    padding: 60px 60px 0;
+  .ourProcessCard {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
-    // border-bottom: 2px solid rgba(0, 0, 0, 0.39);
-
-
-    &:last-child {
-      border-bottom: unset;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 1) !important;
     }
 
     @media screen and (max-width: 768px) {
-      flex-direction: column;
-      gap: 20px;
-      padding: 30px 0 0;
+      padding: 24px 20px;
     }
 
-    .label {
-      color: #FF0000;
-      font-size: 32px;
-      font-weight: 600;
-      line-height: 42px;
-      padding: 0 35px;
-      max-width: 200px;
-      width: 100%;
-
-      @media screen and (max-width: 1200px) {
-        font-size: 28px;
-        line-height: 38px;
-      }
+    .cardTitle {
+      color: #d44116 !important;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      background: linear-gradient(135deg, #d44116 0%, #ff6b3d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding: 0;
+      margin-bottom: 16px;
 
       @media screen and (max-width: 768px) {
-        font-size: 24px;
-        line-height: 30px;
-        padding: 0 20px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    .cardDescription {
+      color: #666666 !important;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
       }
 
       @media screen and (max-width: 550px) {
@@ -361,97 +530,74 @@
       gap: 40px;
 
       @media screen and (max-width: 768px) {
-        margin: 0 20px;
-        gap: 20px;
+        gap: 15px;
       }
 
       .description {
-        font-size: 21px;
-        line-height: 42px;
-        letter-spacing: -0.15px;
-        max-width: 580px;
-        width: 100%;
-
-        @media screen and (max-width: 1200px) {
-          font-size: 18px;
-          line-height: 30px;
-        }
+        color: #666666 !important;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 20px;
 
         @media screen and (max-width: 768px) {
           font-size: 16px;
           line-height: 26px;
-          max-width: unset;
         }
       }
 
       .listsContainer {
         display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(2, 1fr);
-
-        @media screen and (max-width: 1023px) {
-          grid-template-columns: repeat(1, 1fr);
-        }
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
 
         @media screen and (max-width: 768px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media screen and (max-width: 550px) {
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: 1fr;
+          gap: 15px;
         }
 
         .listsWrapper {
+          background: rgba(0, 0, 0, 0.02) !important;
+          padding: 24px;
+          border-radius: 16px;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          transition: all 0.3s ease;
           display: flex;
           flex-direction: column;
-          gap: 15px;
-          max-width: 450px;
+          gap: 12px;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.04) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          }
 
           .listsLabel {
-            font-size: 27px;
-            line-height: 37px;
+            color: #333333 !important;
+            font-size: 20px;
             font-weight: 600;
-
-            @media screen and (max-width: 1200px) {
-              font-size: 24px;
-            }
-
-            @media screen and (max-width: 1023px) {
-              font-size: 20px;
-              line-height: 26px;
-            }
+            line-height: 30px;
 
             @media screen and (max-width: 768px) {
-              font-size: 16px;
+              font-size: 18px;
+              line-height: 28px;
             }
           }
 
           .listsValue {
-            font-size: 21px;
-            line-height: 42px;
-            letter-spacing: -0.15px;
-            max-width: 100%;
-            width: 100%;
-
-            @media screen and (max-width: 1200px) {
-              font-size: 18px;
-              line-height: 30px;
-            }
-
-            @media screen and (max-width: 1023px) {
-              max-width: unset;
-            }
+            color: #666666 !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
 
             @media screen and (max-width: 768px) {
-              font-size: 16px;
-              line-height: 26px;
-              max-width: unset;
+              font-size: 14px;
+              line-height: 22px;
             }
           }
         }
       }
     }
-
   }
 }
 

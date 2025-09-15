@@ -80,6 +80,8 @@
             font-size: 18px;
             line-height: 14px;
             text-align: center;
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 
             // opacity: 0.8;
             @media screen and (max-width: 950px) {
@@ -128,7 +130,7 @@
       position: absolute;
       height: 2px;
       width: 100%;
-      background: #000;
+      background: #ffffff;
       border-radius: 9px;
       opacity: 1;
       left: 0;
@@ -679,9 +681,9 @@
   &.shrink {
     .container {
       padding: 10px 80px;
-      box-shadow: 0px 0px 4px 1px #ccc;
+      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease-in-out;
-      background-color: #fefdf6;
+      background-color: #000000;
 
       @media screen and (max-width: 1200px) {
         padding: 10px 40px;
@@ -695,7 +697,8 @@
         ul {
           li {
             a {
-              color: #000;
+              color: #ffffff;
+              text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 
               &.active,
               &:hover {
@@ -709,7 +712,7 @@
 
       .submenu {
         span {
-          background: #000 !important;
+          background: #ffffff !important;
         }
       }
     }
@@ -743,6 +746,7 @@
         li {
           a {
             color: #fff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           }
         }
       }

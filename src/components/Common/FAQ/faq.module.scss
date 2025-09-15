@@ -1,5 +1,5 @@
 .faq {
-    background-color: #f7f3ee;
+    background-color: #1a1a1a;
     padding: 60px;
     transition: all 0.3s ease;
 }
@@ -12,7 +12,7 @@
 .faqHeading h5 {
     text-align: center;
     letter-spacing: 0px;
-    color: #0051d0;
+    color: #ff6b3d;
     text-transform: uppercase;
     font-size: 20px;
     line-height: 30px;
@@ -22,7 +22,7 @@
 .faqHeading h3 {
     text-align: center;
     letter-spacing: 0px;
-    color: #050505;
+    color: #ffffff;
     font-size: 42px;
     line-height: 30px;
 
@@ -30,7 +30,7 @@
 }
 
 .faqWrapper {
-    background: #f7f3ee 0% 0% no-repeat padding-box;
+    background: #2a2a2a;
     border-radius: 10px;
     max-width: 1200px;
     margin: 0 auto;
@@ -43,8 +43,13 @@
 .faqCard {
     position: relative;
     padding: 16px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
 }
 
 .faqCard.active ::after {
@@ -54,8 +59,8 @@
 .faqCard h4 {
     text-align: left;
     letter-spacing: 0px;
-    color: #050505;
-    opacity: 0.8;
+    color: #ffffff;
+    opacity: 1;
     font-size: 20px;
     line-height: 36px;
 
@@ -65,8 +70,8 @@
 .faqCard p {
     text-align: left;
     letter-spacing: 0px;
-    color: #050505;
-    opacity: 0.6;
+    color: #ffffff;
+    opacity: 0.9;
     font-size: 18px;
     line-height: 24px;
 
@@ -80,7 +85,7 @@
     width: 4px;
     right: 22px;
     top: 25px;
-    background-color: #000000;
+    background-color: #ff6b3d;
 }
 
 .faqCard ::before {
@@ -90,12 +95,12 @@
     width: 20px;
     right: 15px;
     top: 33px;
-    background-color: #000000;
+    background-color: #ff6b3d;
 }
 
 @media screen and (max-width: 768px) {
     .faq {
-        background-color: #ffffff;
+        background-color: #1a1a1a;
         padding: 20px;
         margin: 0;
     }
@@ -126,7 +131,7 @@
     .faqCard {
         position: relative;
         padding: 20px;
-        border-bottom: 1px solid #f0f0f7;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .faqCard.active ::after {

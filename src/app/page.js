@@ -7,6 +7,8 @@ import BlockRenderer from "@/components/Home/BlockRenderer";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 import Script from "next/script"; // ✅ Keep this
+import HireExpertSection from "@/components/Home/HireExpertSection";
+import ImageTest from "@/components/ImageTest";
 
 async function loader() {
   noStore();
@@ -126,6 +128,7 @@ export default async function Home() {
 
       <div style={{ width: "100%" }}>
         <BlockRenderer blocks={blocks} />
+        <HireExpertSection />
         <FAQ />
         <FooterForm />
       </div>

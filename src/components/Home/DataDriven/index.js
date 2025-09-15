@@ -2,10 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "../../../styles/page.module.scss";
-import dataDrivenImg from "../../../../public/Home/dataDriven.svg";
 import Image from "next/image";
 import Select from "react-select";
 import { formatIndex } from "@/lib/utils";
+import { getIndustryImage, getImageForCard } from "./images";
 
 export default function DataDriven({
   data = {},
@@ -13,13 +13,49 @@ export default function DataDriven({
   titleMaxWidth,
   titleMarginBottom,
   whiteBg,
+  industryPage = false,
+  industrySlug = '',
 }) {
   let { title = "Make data driven decisions with real - Time insights", card } =
     data;
-  const isMobileView = () => window.innerWidth <= 978;
-
+  
+  // Debug log to verify component is receiving industryPage prop and industrySlug
+  console.log('DataDriven rendering with:', {
+    industryPage,
+    industrySlug,
+    title,
+    'card data': card,
+    'card type': typeof card,
+    'is array': Array.isArray(card),
+    'card keys': card ? Object.keys(card) : 'no card data',
+    'first card': card?.[0] ? {
+      id: card[0].id,
+      slug: card[0].slug,
+      title: card[0].title,
+      'has image': !!card[0].image,
+      'image type': typeof card[0]?.image,
+      'all keys': Object.keys(card[0] || {})
+    } : 'no first card'
+  });
+  
   const [activeMenu, setActiveMenu] = useState("");
   const [mobile, setMobile] = useState(false);
+  const [isFlashing, setIsFlashing] = useState(false);
+  
+  const isMobileView = () => window.innerWidth <= 978;
+
+  // Get the active card based on the current context
+  const activeCard = React.useMemo(() => {
+    console.log('Finding active card with:', { industryPage, industrySlug, activeMenu, card });
+    if (industryPage && industrySlug && card?.length) {
+      const found = card.find(c => c.slug === industrySlug) || card[0];
+      console.log('Industry page - found card:', found);
+      return found;
+    }
+    const found = card?.find(item => item.id === activeMenu) || card?.[0];
+    console.log('Home page - found card:', found);
+    return found;
+  }, [card, industryPage, industrySlug, activeMenu]);
 
   useEffect(() => {
     const handleResize = () => setMobile(isMobileView());
@@ -28,13 +64,37 @@ export default function DataDriven({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Format for react-select
-
+  // Set initial active menu based on the context
   useEffect(() => {
     if (card?.length) {
-      setActiveMenu(card[0].id);
+      // On industry pages, find the matching card by slug
+      if (industryPage && industrySlug) {
+        const matchingCard = card.find(c => c.slug === industrySlug);
+        if (matchingCard) {
+          console.log('Found matching card for industry:', matchingCard);
+          setActiveMenu(matchingCard.id);
+          return;
+        }
+      }
+      // Default to first card if no match or on home page
+      if (card[0]?.id) {
+        setActiveMenu(card[0].id);
+      }
     }
-  }, [card]);
+  }, [card, industryPage, industrySlug]);
+  
+  // Debug effect for active menu changes and trigger flash animation
+  useEffect(() => {
+    console.log('Active menu changed to:', activeMenu);
+    const activeCard = card?.find(item => item.id === activeMenu);
+    if (activeCard) {
+      console.log('Active card details:', activeCard);
+      // Trigger flash animation when menu changes
+      setIsFlashing(true);
+      const timer = setTimeout(() => setIsFlashing(false), 600);
+      return () => clearTimeout(timer);
+    }
+  }, [activeMenu, card]);
 
   const selectOptions = card?.map((item) => ({
     id: item.id,
@@ -48,7 +108,12 @@ export default function DataDriven({
 
   return (
     <section
-      className={`${styles.dataDriven} ${whiteBg ? styles.whiteBg : ""}`}
+      className={`${styles.dataDriven} ${whiteBg ? styles.whiteBg : ""} ${industryPage ? styles.industryEnhanced : ""}`}
+      style={industryPage ? {
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)',
+        position: 'relative',
+        overflow: 'hidden'
+      } : {}}
     >
       <div className={styles.container}>
         <div
@@ -59,7 +124,14 @@ export default function DataDriven({
               : { maxWidth: titleMaxWidth, marginBottom: titleMarginBottom }
           }
         >
-          <h2>{title}</h2>
+          <h2 style={industryPage ? {
+            color: '#ffffff',
+            background: 'linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textShadow: '0 4px 8px rgba(0, 0, 0, 0.3)'
+          } : {}}>{title}</h2>
         </div>
         <div className={styles.sectionBottom}>
           <div
@@ -73,7 +145,11 @@ export default function DataDriven({
                   <Select
                     options={selectOptions}
                     value={selectedOption}
-                    onChange={(selected) => setActiveMenu(selected.id)}
+                    onChange={(selected) => {
+                      setActiveMenu(selected.id);
+                      setIsFlashing(true);
+                      setTimeout(() => setIsFlashing(false), 400);
+                    }}
                     getOptionValue={(option) => option.id}
                     styles={{
                       option: (base, state) => ({
@@ -112,8 +188,30 @@ export default function DataDriven({
                         ? styles.showPoints + " " + styles.pointList
                         : styles.pointList
                     }
-                    onMouseEnter={() => setActiveMenu(item.id)}
-                    onClick={() => setActiveMenu(item.id)}
+                    style={industryPage ? {
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      borderRadius: '16px',
+                      padding: '20px',
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                      color: '#ffffff'
+                    } : {}}
+                    onMouseEnter={() => {
+                      console.log('Hover triggered for:', item.title);
+                      setActiveMenu(item.id);
+                      setIsFlashing(true);
+                      console.log('isFlashing set to true');
+                      setTimeout(() => {
+                        setIsFlashing(false);
+                        console.log('isFlashing set to false');
+                      }, 800);
+                    }}
+                    onClick={() => {
+                      setActiveMenu(item.id);
+                      setIsFlashing(true);
+                      setTimeout(() => setIsFlashing(false), 800);
+                    }}
                   >
                     <span>{formatIndex(index)}</span>
                     {/* <strong>{item.label.replace(`${item.value} `, "")}</strong> */}
@@ -122,11 +220,18 @@ export default function DataDriven({
                 ))
               )}
             </div>
-            <div className={styles.desc}>
+            <div className={styles.desc} style={industryPage ? {
+              color: '#cccccc',
+              background: 'rgba(255, 255, 255, 0.03)',
+              borderRadius: '12px',
+              padding: '24px',
+              border: '1px solid rgba(255, 255, 255, 0.08)'
+            } : {}}>
               {card?.map((_item, index) => (
                 <div
                   className={activeMenu === _item.id ? styles.showDesc : null}
                   key={_item.id}
+                  style={industryPage ? { color: '#cccccc' } : {}}
                 >
                   {_item.description}
                 </div>
@@ -134,7 +239,29 @@ export default function DataDriven({
             </div>
             {showDataDrivenImg && (
               <div className={styles.imgWrap}>
-                <Image src={dataDrivenImg} alt="Data Driven" />
+                <img
+                  className={isFlashing ? styles.flashAnimation : ''}
+                  src={activeCard?.title?.includes('Fintech') ? '/fintech.png' :
+                       activeCard?.title?.includes('Education') ? '/Education.png' :
+                       activeCard?.title?.includes('Healthcare') || activeCard?.title?.includes('Wellness') ? '/medical.png' :
+                       activeCard?.title?.includes('Media') || activeCard?.title?.includes('Content') ? '/media.png' :
+                       activeCard?.title?.includes('Retail') || activeCard?.title?.includes('E-commerce') ? '/retail.png' :
+                       activeCard?.title?.includes('Logistics') || activeCard?.title?.includes('Supply') ? '/logistics.png' :
+                       '/Home/dataDriven.svg'}
+                  alt={activeCard?.title || 'Industry Image'}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxWidth: '900px',
+                    display: 'block',
+                    margin: '0 auto',
+                    transition: 'all 0.3s ease',
+                    borderRadius: '12px'
+                  }}
+                  onError={(e) => {
+                    e.target.src = '/Home/dataDriven.svg';
+                  }}
+                />
               </div>
             )}
           </div>

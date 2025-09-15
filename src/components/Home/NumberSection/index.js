@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "../../../styles/page.module.scss";
 import Link from "next/link";
-export default function NumberSection({ disableTopPadding = false, whiteBG }) {
+export default function NumberSection({ disableTopPadding = false, whiteBG, industryPage = false }) {
   return (
-    <section
-      className={`${styles.numberSection} ${whiteBG ? styles.whiteBG : ""}`}
+    <section 
+      className={`${styles.numberSection} ${industryPage ? styles.industryEnhanced : ""}`}
+      style={{
+        background: '#000000 !important',
+        backgroundColor: '#000000 !important'
+      }}
     >
       <div
         className={`${styles.container} ${
