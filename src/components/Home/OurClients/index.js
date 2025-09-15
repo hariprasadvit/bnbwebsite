@@ -14,7 +14,16 @@ export default function OurClients({ data = {}, addTopPadding, greyBG }) {
       } ${greyBG ? styles.greyBG : ""}`}
     >
       {/* <h2>{title}</h2> */}
-      {clients?.filter(item => !item?.url?.includes('vida_1ef41cc527.png')).map((item, index) => {
+      {clients?.filter(item => {
+        const excludeLogos = [
+          'vida_1ef41cc527.png',
+          'Portea_logo_08b8486aaf.png',
+          'Rapidi_logo_70c7bbef97.png',
+          'Kotak_mahindra_logo_633b4e92ae.png',
+          'Nutrical_logo_714e0cfa19.png'
+        ];
+        return !excludeLogos.some(logo => item?.url?.includes(logo));
+      }).map((item, index) => {
         const imageUrl = item?.url
           ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
           : "/fallback-image.png"; // fallback image
