@@ -279,7 +279,7 @@
 .inputContainer {
   display: flex;
   align-items: center;
-  background: rgba(42, 42, 42, 0.95) !important;
+  background: #000000 !important;
   border-radius: 30px;
   padding: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -475,7 +475,7 @@
 
 .inputContainer {
   position: relative;
-  background: rgba(42, 42, 42, 0.95) !important;
+  background: #000000 !important;
   border-radius: 28px;
   padding: 4px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -563,7 +563,7 @@
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #d44116, #ff6b3d);
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff3c3c 40%, #ff5f40 70%, #ff9966 100%);
   border: none;
   border-radius: 50%;
   color: white;
