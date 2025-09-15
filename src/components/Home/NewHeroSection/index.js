@@ -688,8 +688,13 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                         loop
                         muted
                         playsInline
+                        preload="metadata"
                         className={styles.avatarVideo}
-                        alt="Chatbot"
+                        onError={(e) => {
+                          console.warn('Video load error:', e);
+                          e.target.style.display = 'none';
+                        }}
+                        onLoadStart={() => console.log('Video loading started')}
                       />
                     </div>
                     <div className={styles.messageContent}>
