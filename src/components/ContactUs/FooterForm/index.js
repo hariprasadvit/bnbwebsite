@@ -290,11 +290,21 @@ export default function FooterForm() {
                 menu: (base) => ({
                   ...base,
                   zIndex: 9999,
+                  background: '#1F1F1F',
+                  color: '#fff',
+                  borderRadius: 8,
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.6)',
+                }),
+                menuList: (base) => ({
+                  ...base,
+                  background: '#1F1F1F',
+                  padding: '6px 6px',
                 }),
                 option: (base, state) => ({
                   ...base,
-                  backgroundColor: state.isFocused ? "#111" : base.backgroundColor,
-                  color: state.isFocused ? "#fff" : base.color,
+                  backgroundColor: state.isFocused ? '#2a2a2a' : 'transparent',
+                  color: state.isFocused ? '#fff' : '#e6e6e6',
+                  cursor: 'pointer',
                 }),
                 placeholder: (base) => ({
                   ...base,
