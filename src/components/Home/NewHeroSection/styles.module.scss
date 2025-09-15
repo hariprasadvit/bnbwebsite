@@ -284,7 +284,8 @@
   padding: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* remove static solid border so animated border can show through */
+  border: 2px solid transparent;
   transition: all 0.3s ease;
   cursor: pointer;
   max-width: 1000px;
@@ -297,30 +298,23 @@
   --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
 
+  /* Always-on animated gradient border (desktop & mobile) */
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  animation: bg-spin 3s linear infinite;
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(212, 65, 22, 0.2);
-    border-color: rgba(212, 65, 22, 0.3);
   }
 
-  /* apply animated gradient border on hover or focus within */
-  &:hover, &:focus-within {
-    border: 2px solid transparent;
-    background:
-      var(--main-bg) padding-box,
-      var(--gradient-border) border-box,
-      var(--main-bg) border-box;
-    animation: bg-spin 3s linear infinite;
-  }
-
-  /* on small screens show the animated border by default for prominence */
-  @media screen and (max-width: 768px) {
-    border: 2px solid transparent;
-    background:
-      var(--main-bg) padding-box,
-      var(--gradient-border) border-box,
-      var(--main-bg) border-box;
-    animation: bg-spin 3s linear infinite;
+  /* ensure focus still gives elevated shadow without duplicating backgrounds */
+  &:focus-within {
+    box-shadow: 0 16px 48px rgba(212, 65, 22, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: transparent;
   }
 }
 
@@ -534,7 +528,7 @@
     left: 2px;
     right: 2px;
     bottom: 2px;
-    background: rgba(18, 18, 18, 0.6);
+    background: rgba(18, 18, 18, 0.45); /* slightly more transparent */
     border-radius: 26px;
     z-index: -1;
   }
