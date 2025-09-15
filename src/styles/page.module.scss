@@ -970,6 +970,15 @@
   }
 }
 
+.cardGraphic {
+  min-width: 260px;
+  min-height: 160px;
+  flex: 0 0 340px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  background: linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06));
+}
+
 // Number section
 
 .numberSection {
