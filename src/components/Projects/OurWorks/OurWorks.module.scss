@@ -253,7 +253,7 @@
         font-weight: 700;
         line-height: 38px;
         letter-spacing: -1px;
-        color: #0b0b0b;
+        color: #ffffff;
         margin-bottom: 10px;
         max-width: 560px;
         width: 100%;
@@ -262,7 +262,7 @@
       p {
         font-size: 18px;
         line-height: 30px;
-        color: #2b2b2b;
+        color: rgba(255,255,255,0.9);
         padding: 0.25rem 0 0.5rem 0;
         max-width: 640px;
         width: 100%;
@@ -455,7 +455,7 @@
     }
   }
 
-  // Breakpoint: ≤680px
+  // Breakpoint: ��680px
   @media screen and (max-width:680px) {
 
     .cardLayout {
