@@ -832,6 +832,15 @@
               z-index: 1;
             }
 
+            /* ensure headings and paragraphs inside the card are white */
+            .textSection h3 {
+              color: #ffffff;
+            }
+
+            .textSection p {
+              color: rgba(255,255,255,0.9);
+            }
+
             &:hover {
               transform: translateY(-6px);
               box-shadow: 0 26px 60px rgba(0,0,0,0.6);
