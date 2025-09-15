@@ -276,51 +276,48 @@
   overflow: hidden;
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 .inputContainer {
-  display: flex;
-  align-items: center;
-  background: transparent !important;
-  border-radius: 30px;
-  padding: 8px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  /* remove static solid border so animated border can show through */
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  max-width: 1000px;
+  /* map user's .box styles to inputContainer */
+  display: grid;
+  place-content: center;
   width: 100%;
-  position: relative;
-  overflow: visible;
+  border-radius: 2em;
+  color: white;
+  text-shadow: 0 1px 0 #000;
 
-  /* gradient border animation variables (conic) */
-  --border-angle: 0turn;
-  --main-bg: #000000;
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
+  --border-angle: 0turn; /* For animation. */
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #000,
+      #000 5%,
+      #000 60%,
+      #000 95%
+    );
 
-  /* Animated gradient border using layered backgrounds + explicit clipping for consistent rendering */
-  border: 2px solid transparent;
+  border: solid 3px transparent;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #ea2718, #f03 99%, transparent);
+
   background:
     var(--main-bg) padding-box,
     var(--gradient-border) border-box,
-    var(--main-bg) border-box !important;
-  background-clip: padding-box, border-box, border-box !important;
-  -webkit-background-clip: padding-box, border-box, border-box !important;
-  background-origin: padding-box, border-box, border-box !important;
-  border-color: transparent !important;
+    var(--main-bg) border-box;
+
+  background-position: center center;
   animation: bg-spin 3s linear infinite;
+}
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(212, 65, 22, 0.2);
-  }
+@keyframes bg-spin {
+  to { --border-angle: 1turn; }
+}
 
-  /* ensure focus still gives elevated shadow without duplicating backgrounds */
-  &:focus-within {
-    box-shadow: 0 16px 48px rgba(212, 65, 22, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    border-color: transparent;
-  }
+.inputContainer:hover {
+  animation-play-state: paused;
 }
 
 .chatInput {
@@ -520,58 +517,7 @@
   width: 100%;
 }
 
-.inputContainer {
-  position: relative;
-  background: transparent !important;
-  border-radius: 28px;
-  padding: 4px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
-  overflow: visible;
-
-  /* animated gradient border */
-  --border-angle: 0turn;
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
-  background: transparent padding-box, var(--gradient-border) border-box;
-  animation: bg-spin 3s linear infinite;
-
-  &::before {
-    /* subtle outer glow to hint motion (kept low opacity) */
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    background: linear-gradient(45deg, #d44116, #ff6b3d, #d44116);
-    background-size: 400% 400%;
-    border-radius: 34px;
-    z-index: -2;
-    opacity: 0;
-    animation: gradientRotate 6s ease-in-out infinite;
-    transition: opacity 0.3s ease;
-  }
-
-  &::after {
-    content: none;
-  }
-
-  &:focus-within {
-    box-shadow: 0 16px 48px rgba(212, 65, 22, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    border-color: transparent;
-
-    &::before {
-      opacity: 0.12;
-    }
-  }
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.18), 0 6px 14px rgba(0, 0, 0, 0.12);
-  }
-}
+/* second inputContainer block removed in favor of consolidated animated style above */
 
 .chatInput {
   width: 100%;
