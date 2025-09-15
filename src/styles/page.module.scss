@@ -684,6 +684,24 @@
   background: #000;
   color: #fefdf5;
 
+  /* Ensure Read More CTA inside Our Works is always visible and properly sized */
+  .knowMoreLink {
+    font-size: 16px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    line-height: 20px !important;
+  }
+
+  /* Always show slider arrows in Our Works (don't wait for hover) */
+  .slick-arrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
   .container {
     padding: 55px 0 55px 60px;
 
