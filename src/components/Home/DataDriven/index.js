@@ -314,25 +314,62 @@ export default function DataDriven({
                     }}
                   />
                 ) : (
-                  <img
-                    className={isFlashing ? styles.flashAnimation : ''}
-                    src={activeCard?.title?.includes('Media') || activeCard?.title?.includes('Content') ? '/media.png' :
-                         activeCard?.title?.includes('Logistics') || activeCard?.title?.includes('Supply') ? '/logistics.png' :
-                         '/Home/dataDriven.svg'}
-                    alt={activeCard?.title || 'Industry Image'}
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      maxWidth: '900px',
-                      display: 'block',
-                      margin: '0 auto',
-                      transition: 'all 0.3s ease',
-                      borderRadius: '12px'
-                    }}
-                    onError={(e) => {
-                      e.target.src = '/Home/dataDriven.svg';
-                    }}
-                  />
+                  // Render video for Media and Logistics, otherwise a fallback image
+                  activeCard?.title?.includes('Media') || activeCard?.title?.includes('Content') ? (
+                    <video
+                      className={isFlashing ? styles.flashAnimation : ''}
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F5ab152a3f19b48d8b7eb172aa15621aa?alt=media&token=64c8c1f2-e635-450a-9474-e66b3622c410&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        maxWidth: '900px',
+                        display: 'block',
+                        margin: '0 auto',
+                        transition: 'all 0.3s ease',
+                        borderRadius: '12px'
+                      }}
+                    />
+                  ) : activeCard?.title?.includes('Logistics') || activeCard?.title?.includes('Supply') ? (
+                    <video
+                      className={isFlashing ? styles.flashAnimation : ''}
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fb6602e5f1f0d48fb99ebd570f251f6e5?alt=media&token=55207958-3585-4511-ae21-317b179bf8a8&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        maxWidth: '900px',
+                        display: 'block',
+                        margin: '0 auto',
+                        transition: 'all 0.3s ease',
+                        borderRadius: '12px'
+                      }}
+                    />
+                  ) : (
+                    <img
+                      className={isFlashing ? styles.flashAnimation : ''}
+                      src={'/Home/dataDriven.svg'}
+                      alt={activeCard?.title || 'Industry Image'}
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        maxWidth: '900px',
+                        display: 'block',
+                        margin: '0 auto',
+                        transition: 'all 0.3s ease',
+                        borderRadius: '12px'
+                      }}
+                      onError={(e) => {
+                        e.target.src = '/Home/dataDriven.svg';
+                      }}
+                    />
+                  )
                 )}
               </div>
             )}
