@@ -180,42 +180,64 @@ export default function FooterForm() {
           className={styles.contactForm}
           onSubmit={(e) => {
             e.preventDefault();
+            onSubmit();
           }}
+          aria-label="Contact form"
         >
-          <div className={styles.inputWidth}>
+          <div className={styles.inputGrid}>
             <div className={styles.inputWrapper}>
-              <label>Your Full Name*</label>
+              <label htmlFor="name">Your Full Name*</label>
               <input
+                id="name"
+                name="name"
                 type="text"
+                placeholder="e.g. Jane Doe"
                 onChange={(e) => onChange(e.target.value, "name")}
                 value={details.data.name}
+                aria-required="true"
+                aria-describedby="error-name"
               />
-              <span style={{ opacity: 1 }}>{details.error.name}</span>
+              <span id="error-name" className={details.error.name ? styles.errorActive : ""}>{details.error.name}</span>
             </div>
+
             <div className={styles.inputWrapper}>
-              <label>Your Email Id*</label>
+              <label htmlFor="email">Your Email Address*</label>
               <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="e.g. jane@company.com"
                 onChange={(e) => onChange(e.target.value, "email_id")}
                 value={details.data.email_id}
+                aria-required="true"
+                aria-describedby="error-email"
               />
-              <span style={{ opacity: 1 }}>{details.error.email_id}</span>
+              <span id="error-email" className={details.error.email_id ? styles.errorActive : ""}>{details.error.email_id}</span>
             </div>
-          </div>
 
-          <div className={styles.inputWidth}>
             <div className={styles.inputWrapper}>
-              <label>Your Company/Product Name*</label>
+              <label htmlFor="company">Company / Product Name*</label>
               <input
+                id="company"
+                name="company"
                 type="text"
+                placeholder="e.g. Acme Inc"
                 onChange={(e) => onChange(e.target.value, "company_name")}
                 value={details.data.company_name}
+                aria-required="true"
+                aria-describedby="error-company"
               />
-              <span style={{ opacity: 1 }}>{details.error.company_name}</span>
+              <span id="error-company" className={details.error.company_name ? styles.errorActive : ""}>{details.error.company_name}</span>
             </div>
+
             <div className={styles.inputWrapper}>
-              <label>Your Mobile Number*</label>
+              <label htmlFor="phone">Mobile Number*</label>
               <input
-                type="number"
+                id="phone"
+                name="phone"
+                type="tel"
+                inputMode="numeric"
+                placeholder="e.g. +1 555 555 5555"
                 onChange={(e) => onChange(e.target.value, "phone_number")}
                 onKeyDown={(e) => {
                   if (
@@ -230,10 +252,13 @@ export default function FooterForm() {
                 }}
                 onWheel={(e) => e.target.blur()}
                 value={details.data.phone_number}
+                aria-required="true"
+                aria-describedby="error-phone"
               />
-              <span style={{ opacity: 1 }}>{details.error.phone_number}</span>
+              <span id="error-phone" className={details.error.phone_number ? styles.errorActive : ""}>{details.error.phone_number}</span>
             </div>
           </div>
+
           <div className={styles.interestedWrapper}>
             <h4>Choose Purpose</h4>
             <Select
