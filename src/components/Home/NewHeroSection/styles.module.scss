@@ -285,7 +285,7 @@
 .inputContainer {
   position: relative;
   width: 100%;
-  border-radius: 1px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3px;
 
@@ -294,7 +294,7 @@
     position: absolute;
     inset: -3px;
     background: conic-gradient(from var(--border-angle), transparent 25%, #ea2718, #f03 99%, transparent);
-    border-radius: 1px;
+    border-radius: 8px;
     z-index: -1;
     animation: bg-spin 10s linear infinite;
   }
@@ -304,7 +304,7 @@
     position: absolute;
     inset: 0;
     background: #000000;
-    border-radius: 1px;
+    border-radius: 8px;
     z-index: 0;
   }
 
@@ -330,7 +330,7 @@
   font-size: 16px;
   color: #ffffff;
   outline: none;
-  border-radius: 1px;
+  border-radius: 8px;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -656,7 +656,7 @@
   position: relative;
   width: 100%;
   max-width: 1000px;
-  border-radius: 1px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   animation: slideInUp 0.5s ease-out;
   box-shadow:
@@ -672,7 +672,7 @@
     position: absolute;
     inset: -3px;
     background: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
-    border-radius: 1px;
+    border-radius: 8px;
     z-index: -1;
     animation: bg-spin 10s linear infinite;
   }
@@ -682,7 +682,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.95);
-    border-radius: 1px;
+    border-radius: 8px;
     z-index: 0;
   }
 
@@ -842,7 +842,7 @@
   z-index: 3;
   padding: 14px 18px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1px;
+  border-radius: 8px;
   background: rgba(0, 0, 0, 0.8);
   color: #ffffff;
   font-size: 15px;
