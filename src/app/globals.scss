@@ -141,6 +141,7 @@ img {
   opacity: 0.6 !important;
   visibility: visible !important;
   pointer-events: auto !important;
+  display: block !important; /* override slick default display:none */
 }
 
 /* End force overrides */
