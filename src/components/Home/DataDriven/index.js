@@ -143,6 +143,7 @@ export default function DataDriven({
               {mobile ? (
                 <div className={styles.mobilePoints}>
                   <Select
+                    instanceId="dataDrivenMobileSelect"
                     options={selectOptions}
                     value={selectedOption}
                     onChange={(selected) => {
