@@ -20,7 +20,6 @@ export default function OurClients({ data = {}, addTopPadding, greyBG }) {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "ease-in-out",
-    className: "clientSlider",
     responsive: [
       {
         breakpoint: 1024,
