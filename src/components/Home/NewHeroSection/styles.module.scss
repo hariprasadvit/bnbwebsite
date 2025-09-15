@@ -325,27 +325,48 @@
 
 .chatInput {
   flex: 1;
-  border: none;
-  background: transparent;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
   padding: 16px 24px;
   font-size: 16px;
   color: #ffffff;
-  outline: none;
-  
+  outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
-  
+
   &:focus {
-    outline: none;
-    border-color: rgba(212, 65, 22, 0.6);
-    box-shadow: 0 0 0 3px rgba(212, 65, 22, 0.2);
+    outline: none !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 3px rgba(212, 65, 22, 0.12) !important;
   }
-  
+
   @media screen and (max-width: 768px) {
     padding: 14px 18px;
     font-size: 15px;
   }
+}
+
+/* Feature video used in hero feature cards */
+.featureVideo {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Ensure feature icon container centers the video */
+.brainIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submitScopeButton {
