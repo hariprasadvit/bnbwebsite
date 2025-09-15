@@ -1,3 +1,175 @@
+::root {
+  font-family: var(--font-titillium), sans-serif !important;
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  // font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-titillium), sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.knowMoreLink {
+  font-size: 21px;
+  line-height: 36px;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: #000;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 110px;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+    min-width: 90px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 26px;
+    min-width: 80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    // bottom: -10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #000;
+    transition: border-bottom 0.3s ease;
+  }
+
+  &:hover {
+    color: #d44116;
+
+    &::before {
+      border-bottom: 5px double #000;
+    }
+  }
+}
+
+.slick-slider {
+  .slick-arrow {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+// Removed clientSlider styles - using custom carousel now
+
+/* Force Read More and slider arrows to be visible for Our Works if module-scoped rules are being overridden */
+[class*="ourWorks"] .knowMoreLink,
+[class*="our-works"] .knowMoreLink {
+  font-size: 16px !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  margin-bottom: 0 !important;
+  line-height: 20px !important;
+}
+
+/* Ensure slick arrows are visible and styled */
+[class*="ourWorks"] .slick-arrow,
+[class*="our-works"] .slick-arrow,
+.slick-arrow,
+.customArrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.slick-arrow svg {
+  fill: #ffffff !important;
+}
+
+/* Ensure disabled arrows still visible and clickable appearance */
+.slick-arrow.slick-disabled {
+  opacity: 0.6 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  display: block !important; /* override slick default display:none */
+}
+
+/* End force overrides */
+
+.slick-track {
+  padding-top: 50px !important;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 15px !important;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding-top: 0px !important;
+  }
+
+}
+
+.slick-list .slick-track {
+  display: flex;
+  gap: 25px;
+
+
+
+  @media screen and (max-width: 1200px) {
+    margin-right: 25px;
+    gap: unset;
+  }
+
+  @media screen and (max-width: 500px) {
+    // margin-top: 15px;
+  }
+
+}
+
+a,
+button {
+  outline: 0;
+}
+
 /* Chat animated gradient border overrides (global) */
 [class*="chatInterface"] [class*="inputContainer"],
 [class*="chatInterface"] [class*="expandedChat"] {
