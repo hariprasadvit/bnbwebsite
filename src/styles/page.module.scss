@@ -964,6 +964,18 @@
           }
         }
 
+        /* Flash sweep when scrolled into view (desktop) */
+        .workItem.scrolled > div::after,
+        .workItem.scrolled > a::after {
+          opacity: 1;
+          animation: flashSweep 0.9s ease forwards;
+        }
+
+        @keyframes flashSweep {
+          from { left: -120%; }
+          to { left: 100%; }
+        }
+
         .imageWrap {
           margin-bottom: 48px;
 
