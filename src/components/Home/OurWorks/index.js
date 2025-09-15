@@ -125,7 +125,7 @@ export default function OurWorks({ data = {} }) {
                       <div className={styles.textSection} style={backgroundStyle}>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
-                        <Link href={'/case-study/' + item.case_study_detail?.slug} className="knowMoreLink">Read More</Link>
+                        <span className="knowMoreLink" role="link">Read More</span>
                       </div>
                     </Link>
                   </div>
