@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './CustomCarousel.module.scss';
 
 const CustomCarousel = ({ children, autoplay = true, autoplaySpeed = 3000, speed = 1200 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
