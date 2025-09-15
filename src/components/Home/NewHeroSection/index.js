@@ -378,7 +378,7 @@ export default function NewHeroSection() {
 ═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
-══════════════════════════════════════════════════���════════════
+═══════════════════════════════════════════════════════════════
 
 Generated on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
 
@@ -672,6 +672,13 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                 
                 {isTyping && (
                   <div className={`${styles.message} ${styles.botMessage}`}>
+                    <div className={styles.botAvatar}>
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F49228ead32fd497a9eb665f597bb1d9f?format=webp&width=800"
+                        alt="Chatbot"
+                        className={styles.avatarImage}
+                      />
+                    </div>
                     <div className={styles.messageContent}>
                       <div className={styles.typingIndicator}>
                         <span></span>
