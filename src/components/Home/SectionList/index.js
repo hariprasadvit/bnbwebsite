@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../../styles/page.module.scss";
+import styles from "./SectionList.module.scss";
 import AnimatedSVG from "./animatedgifs";
 
 export default function SectionList({ data = {} }) {
