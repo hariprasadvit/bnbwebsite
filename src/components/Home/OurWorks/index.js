@@ -110,22 +110,11 @@ export default function OurWorks({ data = {} }) {
                   ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item.image?.url
                   : "/fallback-image.png"; // fallback image
 
-                const baseColor = item.color_code || '#ffffff';
-                const backgroundStyle = {
-                  background: `linear-gradient(135deg, ${baseColor} 0%, rgba(212,65,22,0.06) 45%, rgba(255,107,61,0.03) 100%)`,
-                };
-
                 return (
                   <div className={styles.workItem} key={index}>
                     <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout} style={{ textDecoration: 'none' }}>
-                      <div className={styles.cardGraphic} style={{
-                        background: `linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06))`,
-                        borderRadius: 12,
-                        minWidth: 260,
-                        minHeight: 160,
-                        flex: '0 0 340px'
-                      }} aria-hidden="true"></div>
-                      <div className={styles.textSection} style={backgroundStyle}>
+                      <div className={styles.cardGraphic} aria-hidden="true"></div>
+                      <div className={styles.textSection}>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
                         <span className="knowMoreLink" role="link">Read More</span>
