@@ -177,7 +177,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                 <div className={styles.textSection}>
                   <h3
                     style={{
-                      color: '#000000',
+                      color: '#0b0b0b',
                       fontSize: '36px',
                       fontWeight: '700',
                       lineHeight: '1.2',
@@ -188,7 +188,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                   </h3>
                   <p
                     style={{
-                      color: '#666666',
+                      color: '#2b2b2b',
                       fontSize: '18px',
                       lineHeight: '1.7',
                       fontWeight: '400'
@@ -196,6 +196,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                   >
                     {item.description}
                   </p>
+                  <Link href={'/case-study/' + item?.case_study_detail?.slug} className="knowMoreLink">Read More</Link>
                 </div>
               </Link>
             </div>
