@@ -4,7 +4,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "../../../styles/page.module.scss";
+import styles from "./OurClients.module.scss";
 import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
