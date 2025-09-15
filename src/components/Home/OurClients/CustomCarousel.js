@@ -91,11 +91,6 @@ const CustomCarousel = ({ children, autoplay = true, autoplaySpeed = 3000, speed
   return (
     <div
       ref={containerRef}
-      style={{
-        position: 'relative',
-        overflow: 'hidden',
-        width: '100%'
-      }}
     >
       <div
         style={{
