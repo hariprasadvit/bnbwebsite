@@ -283,33 +283,24 @@
 }
 
 .inputContainer {
-  /* map user's .box styles to inputContainer */
-  display: grid;
-  place-content: center;
+  position: relative;
   width: 100%;
   border-radius: 2em;
-  color: white;
-  text-shadow: 0 1px 0 #000;
-
-  --border-angle: 0turn; /* For animation. */
-  --main-bg: conic-gradient(
-      from var(--border-angle),
-      #000,
-      #000 5%,
-      #000 60%,
-      #000 95%
-    );
-
-  border: solid 3px transparent;
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #ea2718, #f03 99%, transparent);
-
-  background:
-    var(--main-bg) padding-box,
-    var(--gradient-border) border-box,
-    var(--main-bg) border-box;
-
-  background-position: center center;
+  padding: 3px;
+  background: conic-gradient(from var(--border-angle), transparent 25%, #ea2718, #f03 99%, transparent);
   animation: bg-spin 3s linear infinite;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #000000;
+    border-radius: calc(2em - 3px);
+    z-index: 1;
+  }
+
+  display: flex;
+  align-items: center;
 }
 
 @keyframes bg-spin {
@@ -321,25 +312,23 @@
 }
 
 .chatInput {
+  position: relative;
+  z-index: 2;
   flex: 1;
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  border: none;
+  background: transparent;
   padding: 16px 24px;
   font-size: 16px;
   color: #ffffff;
-  outline: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
+  outline: none;
+  border-radius: calc(2em - 3px);
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
 
   &:focus {
-    outline: none !important;
-    border-color: transparent !important;
-    box-shadow: 0 0 0 3px rgba(212, 65, 22, 0.12) !important;
+    outline: none;
   }
 
   @media screen and (max-width: 768px) {
@@ -517,39 +506,10 @@
   width: 100%;
 }
 
-/* second inputContainer block removed in favor of consolidated animated style above */
-
-.chatInput {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 22px 60px 22px 28px;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 400;
-  border-radius: 24px;
-  letter-spacing: -0.01em;
-
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 300;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 18px 54px 18px 24px;
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 15px;
-    padding: 16px 50px 16px 20px;
-  }
-}
 
 .submitButton {
   position: absolute;
-  right: 8px;
+  right: 11px;
   top: 50%;
   transform: translateY(-50%);
   width: 40px;
@@ -565,11 +525,11 @@
   justify-content: center;
   box-shadow: 0 4px 12px rgba(212, 65, 22, 0.3);
   z-index: 10;
-  
+
   svg {
     fill: white;
   }
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -580,11 +540,11 @@
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s ease;
   }
-  
+
   &:hover:not(:disabled) {
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 20px rgba(212, 65, 22, 0.4);
-    
+
     &::before {
       left: 100%;
     }
@@ -597,7 +557,7 @@
   @media screen and (max-width: 768px) {
     width: 40px;
     height: 40px;
-    right: 8px;
+    right: 11px;
   }
 }
 
