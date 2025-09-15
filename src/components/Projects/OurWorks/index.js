@@ -138,19 +138,13 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
           return (
             <div key={index} className={styles.slide}>
               <Link
-                href={"/case-study/" + item?.case_study_detail?.slug}
+                href={'/case-study/' + item?.case_study_detail?.slug}
                 className={styles.cardLayout}
                 style={{
-                  background: '#ffffff',
-                  border: '1px solid #e0e0e0',
-                  borderRadius: '24px',
-                  padding: '40px',
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   textDecoration: 'none',
                   display: 'flex',
-                  gap: '3rem',
+                  gap: '2rem',
                   alignItems: 'center',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
@@ -158,7 +152,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.boxShadow = '0 6px 26px rgba(16,16,16,0.08)';
                 }}
               >
                 <div 
