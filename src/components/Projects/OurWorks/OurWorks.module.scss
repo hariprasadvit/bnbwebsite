@@ -270,14 +270,13 @@
 
       .knowMoreLink {
         display: inline-block;
-        margin-top: 12px;
-        font-size: 18px;
+        margin-top: 8px;
+        font-size: 16px;
         font-weight: 700;
-        background: linear-gradient(90deg, #d44116, #ff6b3d);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
+        color: #ffffff !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: unset !important;
         text-decoration: none;
         position: relative;
       }
