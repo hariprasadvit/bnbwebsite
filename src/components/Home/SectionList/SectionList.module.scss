@@ -405,6 +405,21 @@
   }
 }
 
+.sectionVideo {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  transition: transform 0.3s ease;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.sectionVideo:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.05) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(199, 39, 29, 0.7);

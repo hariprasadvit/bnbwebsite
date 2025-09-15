@@ -90,14 +90,15 @@ export default function SectionList({ data = {} }) {
                   {section?.is_gif ? (
                     <AnimatedSVG />
                   ) : (
-                    <Image
-                      src={_img}
-                      alt={section.imageAlt || section.title}
-                      layout="intrinsic"
+                    <video
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fe5611a3b9a1d4c18aefea9abdcc28461?alt=media&token=b27ff0e7-32cf-4818-b375-a5876cebb6bb&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
                       width={315}
                       height={360}
-                      sizes="(max-width: 768px) 100vw, 315px"
-                      className=""
+                      className={styles.sectionVideo}
                     />
                   )}
                 </div>
