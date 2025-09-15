@@ -1,15 +1,22 @@
 .OurClients {
   padding: 40px 80px;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 
   @media screen and (max-width: 1200px) {
     padding: 40px;
+    gap: 30px;
   }
 
   @media screen and (max-width: 768px) {
     padding: 40px 26px;
+    gap: 20px;
   }
-  background: #000000;
-  color: #ffffff;
 
   &.addTopPadding {
     margin-top: 150px;
@@ -23,72 +30,46 @@
     background: #2a2a2a;
   }
 
-  .container {
-    padding: 40px 80px;
-
-    @media screen and (max-width: 1200px) {
-      padding: 40px;
+  .clientItem {
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80px;
     }
 
-    @media screen and (max-width: 768px) {
-      padding: 40px 26px;
-    }
-
-    h2 {
-      color: #ffffff;
-      margin-bottom: 80px;
-      text-align: center;
-      font-size: 58px;
-      line-height: 58px;
-      font-weight: 600;
-      margin-top: 0;
+    .imageWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 200px;
+      min-height: 80px;
+      padding: 15px;
 
       @media screen and (max-width: 768px) {
-        font-size: 40px;
-        line-height: 44px;
-        margin-bottom: 35px;
-      }
-    }
-
-    .clientItem {
-      >div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 80px;
+        min-height: 60px;
+        padding: 10px;
+        max-width: 150px;
       }
 
-      .imageWrap {
-        margin-right: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 300px;
-        min-height: 80px;
-        padding: 15px;
-
-        @media screen and (max-width: 768px) {
-          margin-right: 0;
-          min-height: 60px;
-          padding: 10px;
+      img {
+        width: auto !important;
+        height: 51px !important;
+        max-width: 200px;
+        object-fit: contain;
+        filter: grayscale(100%) opacity(0.7);
+        transition: all 0.4s ease;
+        
+        &:hover {
+          filter: grayscale(0%) opacity(1);
         }
 
-        img {
-          width: auto !important;
-          height: 51px !important;
-          max-width: 300px;
-          object-fit: contain;
-          filter: grayscale(100%) opacity(0.7);
-          transition: all 0.4s ease;
-
-          &:hover {
-            filter: grayscale(0%) opacity(1);
-          }
+        @media screen and (max-width: 768px) {
+          height: 40px !important;
+          max-width: 150px;
         }
       }
     }
   }
 }
-
-// Custom carousel styling handled in CustomCarousel.module.scss
