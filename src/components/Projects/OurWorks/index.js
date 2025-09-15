@@ -154,25 +154,13 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
                   e.currentTarget.style.boxShadow = '0 6px 26px rgba(16,16,16,0.08)';
                 }}
               >
-                <div 
-                  className={styles.imageSection}
-                  style={{
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)'
-                  }}
-                >
-                  <Image
-                    src={imageUrl}
-                    alt="Our Work"
-                    width={582}
-                    height={431}
-                    style={{
-                      transition: 'transform 0.4s ease',
-                      borderRadius: '16px'
-                    }}
-                  />
-                </div>
+                <div className={styles.cardGraphic} style={{
+                  background: `linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06))`,
+                  borderRadius: '12px',
+                  minWidth: 260,
+                  minHeight: 160,
+                  flex: '0 0 340px'
+                }} aria-hidden="true"></div>
                 <div className={styles.textSection}>
                   <h3
                     style={{
