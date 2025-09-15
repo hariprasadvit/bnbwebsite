@@ -14,7 +14,7 @@ export default function OurClients({ data = {}, addTopPadding, greyBG }) {
       } ${greyBG ? styles.greyBG : ""}`}
     >
       {/* <h2>{title}</h2> */}
-      {clients?.map((item, index) => {
+      {clients?.filter(item => !item?.url?.includes('vida_1ef41cc527.png')).map((item, index) => {
         const imageUrl = item?.url
           ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
           : "/fallback-image.png"; // fallback image
