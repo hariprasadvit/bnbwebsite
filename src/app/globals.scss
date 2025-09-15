@@ -202,6 +202,22 @@ button {
   }
 }
 
+/* Explicitly override generated chat input class to remove static border */
+input.styles_chatInput__dHkN0, textarea.styles_chatInput__dHkN0,
+input[class*="chatInput"], textarea[class*="chatInput"] {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Ensure input container has transparent inner background */
+div.styles_inputContainer__EfeEg, [class*="inputContainer"] {
+  background: transparent !important;
+}
+
 /* Target the actual input to remove inner static border that shows as grey */
 [class*="chatInterface"] input[class*="chatInput"],
 [class*="chatInterface"] textarea[class*="chatInput"] {
