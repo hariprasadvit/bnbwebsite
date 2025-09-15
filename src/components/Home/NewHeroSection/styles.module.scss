@@ -295,10 +295,18 @@
 
   /* gradient border animation variables (conic) */
   --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
 
-  /* Always-on animated gradient border (desktop & mobile) with hollow center */
-  background: transparent padding-box, var(--gradient-border) border-box;
+  /* Animated gradient border using layered backgrounds + explicit clipping for consistent rendering */
+  border: 2px solid transparent;
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-clip: padding-box, border-box, border-box;
+  -webkit-background-clip: padding-box, border-box, border-box;
+  background-origin: padding-box, border-box, border-box;
   animation: bg-spin 3s linear infinite;
 
   &:hover {
