@@ -813,24 +813,22 @@
             /* inner subtle shadow for depth */
             box-shadow: inset 0 2px 6px rgba(11,11,11,0.6), 0 8px 24px rgba(0,0,0,0.6);
 
-            /* animated gradient border using pseudo-element with animated background-position */
-            &::before {
-              content: '';
-              position: absolute;
-              top: -2px;
-              left: -2px;
-              right: -2px;
-              bottom: -2px;
-              border-radius: 14px;
-              background: linear-gradient(90deg, #d44116 0%, #ff6b3d 40%, #ff9966 70%, #d44116 100%);
-              background-size: 200% 100%;
-              z-index: 0;
-              pointer-events: none;
-              opacity: 0;
-              transform: translateX(-15%);
-              transition: opacity 0.25s ease, transform 0.5s ease;
-              mix-blend-mode: screen;
-            }
+            /* spinning conic-gradient border (user provided implementation) */
+            --border-angle: 0turn; /* animates via bg-spin */
+            --main-bg: conic-gradient(from var(--border-angle), #000000, #000 5%, #000 60%, #000 95%);
+
+            border: solid 1px transparent;
+            border-radius: 12px;
+            --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent);
+
+            /* stacked backgrounds: main (padding-box), gradient border (border-box), main behind gradient */
+            background:
+              var(--main-bg) padding-box,
+              var(--gradient-border) border-box,
+              var(--main-bg) border-box;
+
+            background-position: center center;
+            animation: bg-spin 3s linear infinite;
 
             /* content above the border effect */
             & > * {
@@ -850,18 +848,11 @@
             &:hover {
               transform: translateY(-6px);
               box-shadow: 0 26px 60px rgba(0,0,0,0.6);
-
-              &::before {
-                opacity: 1;
-                transform: translateX(0);
-                animation: slideGradient 2s linear infinite;
-              }
+              animation-play-state: paused; /* pause rotation on hover */
             }
 
-            @keyframes slideGradient {
-              0% { background-position: 0% 50%; }
-              50% { background-position: 100% 50%; }
-              100% { background-position: 0% 50%; }
+            @keyframes bg-spin {
+              to { --border-angle: 1turn; }
             }
 
             @media screen and (max-width: 1200px) {
