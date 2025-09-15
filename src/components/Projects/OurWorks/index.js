@@ -117,7 +117,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
   };
 
   return (
-    <div className={`${styles.ourWorks} ${addTopPadding ? styles.addTopPadding : ""}`}>
+    <div ref={containerRef} className={`${styles.ourWorks} ${addTopPadding ? styles.addTopPadding : ""}`}>
       <div className={styles.topHeader}>
         <h2
           style={{
