@@ -433,28 +433,28 @@
       gap: 60px;
       align-items: center;
       padding: 0;
-      
+
       .splitSectionLeft {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         img {
           width: 100%;
           height: auto;
           max-width: 280px;
           transition: transform 0.3s ease;
-          
+
           &:hover {
             transform: scale(1.05);
           }
         }
       }
-      
+
       .splitSectionRight {
         display: flex;
         flex-direction: column;
-        
+
         h2 {
           font-size: 42px !important;
           font-weight: 700 !important;
@@ -462,7 +462,7 @@
           margin-bottom: 16px !important;
           color: #ffffff !important;
           position: relative;
-          
+
           &::after {
             content: '';
             position: absolute;
@@ -475,7 +475,7 @@
             box-shadow: 0 0 8px rgba(212, 65, 22, 0.3);
           }
         }
-        
+
         p {
           font-size: 16px !important;
           line-height: 1.5 !important;
@@ -483,6 +483,27 @@
           max-width: 600px;
           margin-bottom: 32px !important;
         }
+      }
+    }
+  }
+
+  /* Apply same gradient underline to other split sections' h2 */
+  .splitSectionContainer {
+    .splitSectionRight {
+      h2 {
+        position: relative;
+      }
+      h2::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #d44116 0%, #ff6b3d 100%);
+        border-radius: 1px;
+        box-shadow: 0 0 8px rgba(212, 65, 22, 0.18);
+        opacity: 0.95;
       }
     }
   }
