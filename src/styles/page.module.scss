@@ -793,7 +793,7 @@
           }
 
           >div, > a {
-            min-height: 150px;
+            min-height: 120px;
             min-width: 380px;
             max-width: 420px;
             width: 100%;
@@ -801,10 +801,10 @@
             /* black gradient background */
             background: linear-gradient(180deg, #0b0b0b 0%, #000000 100%);
             border-radius: 12px;
-            padding: 20px 22px;
+            padding: 18px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* center content vertically */
+            justify-content: flex-start; /* align content to top to avoid empty space below */
             align-items: flex-start;
             position: relative;
             overflow: visible; /* allow border effect */
