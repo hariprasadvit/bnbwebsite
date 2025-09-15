@@ -489,9 +489,11 @@
 
   /* Apply same gradient underline to other split sections' h2 */
   .splitSectionContainer {
-    .splitSectionRight {
+    .splitSectionRight,
+    .splitSectionLeft {
       h2 {
         position: relative;
+        z-index: 2;
       }
       h2::after {
         content: '';
