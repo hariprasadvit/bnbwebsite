@@ -303,10 +303,11 @@
   background:
     var(--main-bg) padding-box,
     var(--gradient-border) border-box,
-    var(--main-bg) border-box;
-  background-clip: padding-box, border-box, border-box;
-  -webkit-background-clip: padding-box, border-box, border-box;
-  background-origin: padding-box, border-box, border-box;
+    var(--main-bg) border-box !important;
+  background-clip: padding-box, border-box, border-box !important;
+  -webkit-background-clip: padding-box, border-box, border-box !important;
+  background-origin: padding-box, border-box, border-box !important;
+  border-color: transparent !important;
   animation: bg-spin 3s linear infinite;
 
   &:hover {
