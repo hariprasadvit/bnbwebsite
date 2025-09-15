@@ -375,7 +375,7 @@ export default function NewHeroSection() {
 
     // Create enhanced PDF content
     const pdfContent = `
-═══════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════��═══
                         BOOLEAN & BEYOND
                      Project Scope Document
 ════════════════════════════════════════════════════���══════════
@@ -634,13 +634,16 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           <div className={styles.featureCard}>
             <div className={styles.brainIcon}>
               <video
-                src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F095960eb18bf4741a05eb6895d1b745e?alt=media&token=4a6e919c-8f98-4c67-af79-82d89b24139e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                src="https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F095960eb18bf4741a05eb6895d1b745e?alt=media&token=4a6e919c-8f98-4c67-af79-82d89b24139e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"
                 autoPlay
                 muted
                 loop
                 playsInline
                 className={styles.featureVideo}
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                onError={(e) => {
+                  console.log('Enterprise Security video failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             <h3>Enterprise Security</h3>
@@ -681,8 +684,6 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                 placeholder="Type your idea and we'll build it together."
                 className={styles.chatInput}
                 readOnly
-                data-no-gradient
-                style={{ border: 'none', background: 'transparent', outline: 'none' }}
               />
               <button className={styles.submitButton}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
