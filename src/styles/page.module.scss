@@ -791,53 +791,71 @@
             min-width: 420px;
             max-width: 420px;
             width: 100%;
-            background: rgb(255, 255, 255);
+            /* subtle brand-gradient background */
+            background: linear-gradient(180deg, #ffffff 0%, #fffaf6 60%);
+            border: 1px solid rgba(212,65,22,0.06);
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            padding: 20px 20px;
             align-items: flex-start;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(11,11,11,0.12), 0 2px 6px rgba(212,65,22,0.02) inset;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
             position: relative;
             overflow: hidden;
             text-decoration: none;
 
+            /* decorative brand accent */
+            &::after {
+              content: '';
+              position: absolute;
+              top: 12px;
+              right: 12px;
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              background: linear-gradient(135deg, rgba(212,65,22,0.16), rgba(255,107,61,0.08));
+              pointer-events: none;
+            }
+
+            /* soft highlight sweep on hover */
             &::before {
               content: '';
               position: absolute;
               top: 0;
-              left: -100%;
-              width: 100%;
+              left: -120%;
+              width: 120%;
               height: 100%;
-              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-              transition: left 0.6s ease;
+              background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+              transform: translateX(0);
+              transition: transform 0.6s ease;
             }
 
             &:hover {
-              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+              transform: translateY(-6px);
+              box-shadow: 0 26px 60px rgba(12,12,12,0.22), 0 6px 12px rgba(212,65,22,0.04) inset;
 
               &::before {
-                left: 100%;
+                transform: translateX(100%);
               }
             }
 
             @media screen and (max-width: 1200px) {
               max-width: 380px;
-              padding: 20px 28px;
-              min-width: 360px;
+              padding: 18px 22px;
+              min-width: 340px;
             }
 
             @media screen and (max-width: 768px) {
               max-width: 360px;
               min-width: 320px;
-              padding: 18px 24px;
+              padding: 16px 18px;
             }
 
             @media screen and (max-width: 550px) {
               max-width: 270px;
               min-width: 240px;
-              padding: 16px;
+              padding: 14px;
             }
 
             div a, & > .textSection .knowMoreLink, & .knowMoreLink {
