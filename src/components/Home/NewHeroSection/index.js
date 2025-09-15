@@ -608,14 +608,24 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div className={styles.featuresGrid}>
           <div className={styles.featureCard}>
             <div className={styles.brainIcon}>
-              <video
-                src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.featureVideo}
-              />
+              {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ||
+              "/8df364e21dd94ffaa28f42c3ba39a273".match(/\.(png|jpg|jpeg|webp)$/i) ? (
+                <img
+                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                  alt="AI Brain"
+                  className={styles.featureVideo}
+                />
+              ) : (
+                <video
+                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.featureVideo}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+              )}
             </div>
             <h3>AI-Powered Development</h3>
             <p>2 features per week with AI-assisted rapid development</p>
@@ -623,14 +633,23 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           
           <div className={styles.featureCard}>
             <div className={styles.brainIcon}>
-              <video
-                src={"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800"}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.featureVideo}
-              />
+              {"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800".includes('format=') ? (
+                <img
+                  src={"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800"}
+                  alt="Enterprise Security"
+                  className={styles.featureVideo}
+                />
+              ) : (
+                <video
+                  src={"https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F2cfc61ff5e6749d0889a2f1c261d1eac?format=webp&width=800"}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.featureVideo}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+              )}
             </div>
             <h3>Enterprise Security</h3>
             <p>SOC2, GDPR compliance with advanced security protocols</p>
@@ -638,14 +657,23 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           
           <div className={styles.featureCard}>
             <div className={styles.brainIcon}>
-              <video
-                src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.featureVideo}
-              />
+              {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ? (
+                <img
+                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                  alt="Architecture"
+                  className={styles.featureVideo}
+                />
+              ) : (
+                <video
+                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.featureVideo}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+              )}
             </div>
             <h3>Scalable Architecture</h3>
             <p>Built to handle growth from startup to enterprise scale</p>
@@ -661,6 +689,8 @@ ${Object.entries(scope.choices).map(([key, value]) => `
                 placeholder="Type your idea and we'll build it together."
                 className={styles.chatInput}
                 readOnly
+                data-no-gradient
+                style={{ border: 'none', background: 'transparent', outline: 'none' }}
               />
               <button className={styles.submitButton}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
