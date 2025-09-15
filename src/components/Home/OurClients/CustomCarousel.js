@@ -89,23 +89,36 @@ const CustomCarousel = ({ children, autoplay = true, autoplaySpeed = 3000, speed
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className={styles.carousel}
+      style={{
+        position: 'relative',
+        overflow: 'hidden',
+        width: '100%'
+      }}
     >
-      <div 
-        className={styles.track}
+      <div
         style={{
+          display: 'flex',
+          alignItems: 'center',
+          width: '100%',
+          willChange: 'transform',
           transform: getTransform(),
           transition: isTransitioning ? `transform ${speed}ms ease-in-out` : 'none',
           width: `${(totalItems / itemsPerView) * 100}%`
         }}
       >
         {React.Children.map(children, (child, index) => (
-          <div 
+          <div
             key={index}
-            className={styles.slide}
-            style={{ width: `${100 / totalItems}%` }}
+            style={{
+              width: `${100 / totalItems}%`,
+              flex: '0 0 auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: window.innerWidth <= 768 ? '0 5px' : '0 10px'
+            }}
           >
             {child}
           </div>
