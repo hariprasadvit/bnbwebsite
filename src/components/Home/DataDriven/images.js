@@ -20,9 +20,9 @@ const industryImages = {
   'fintech.png': '/fintech.png',
   'Education.png': '/Education.png',
   'medical.png': '/medical.png',
-  'media.png': '/media.png',
-  'retail.png': '/retail.png',
-  'logistics.png': '/logistics.png',
+  'media.png': 'https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F5ab152a3f19b48d8b7eb172aa15621aa?alt=media&token=64c8c1f2-e635-450a-9474-e66b3622c410&apiKey=1ba648a6a1694e9aa91b762fb1bf4499',
+    'retail.png': '/retail.png',
+    'logistics.png': 'https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fb6602e5f1f0d48fb99ebd570f251f6e5?alt=media&token=55207958-3585-4511-ae21-317b179bf8a8&apiKey=1ba648a6a1694e9aa91b762fb1bf4499',
   
   // Default fallback image
   default: '/Home/dataDriven.svg'
