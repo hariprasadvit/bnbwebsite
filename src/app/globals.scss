@@ -99,16 +99,7 @@ img {
   }
 }
 
-.clientSlider .slick-list .slick-track {
-  display: flex;
-  align-items: center;
-  padding: 0 !important;
-}
-
-// .clientSlider .slick-list .slick-slide>div {
-//   display: flex;
-//   align-items: center;
-// }
+// Removed clientSlider styles - using custom carousel now
 
 /* Force Read More and slider arrows to be visible for Our Works if module-scoped rules are being overridden */
 [class*="ourWorks"] .knowMoreLink,
