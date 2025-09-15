@@ -681,6 +681,30 @@
 // Our Works section
 
 .ourWorks {
+  /* Force overrides to ensure Read More and arrows are always visible when other rules override them */
+  .workItem .knowMoreLink {
+    font-size: 16px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    line-height: 20px !important;
+  }
+
+  .slick-arrow, .customArrow {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  .slick-arrow svg {
+    fill: #ffffff !important;
+  }
+
+  .slick-arrow.slick-disabled {
+    opacity: 0.5 !important;
+  }
   background: #000;
   color: #fefdf5;
 
