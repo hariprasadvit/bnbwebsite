@@ -200,6 +200,28 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  /* gradient underline for split section headings (left & right) */
+  .splitSectionLeft,
+  .splitSectionRight {
+    h2 {
+      position: relative;
+      z-index: 2;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #d44116 0%, #ff6b3d 100%);
+      border-radius: 1px;
+      box-shadow: 0 0 8px rgba(212, 65, 22, 0.18);
+      opacity: 0.95;
+    }
+  }
 }
 
 .splitSectionLeft {
