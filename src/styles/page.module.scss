@@ -61,38 +61,41 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: linear-gradient(135deg, rgba(212,65,22,0.15) 0%, rgba(255,107,61,0.10) 35%, rgba(255,200,170,0.06) 65%, rgba(20,20,20,0.02) 100%);
-  mix-blend-mode: screen;
-  animation: gradientShift 8s linear infinite;
+  background:
+    radial-gradient(600px circle at 10% 30%, rgba(255,107,61,0.22), rgba(212,65,22,0.08) 40%, transparent 60%),
+    radial-gradient(500px circle at 80% 70%, rgba(255,200,170,0.16), rgba(212,65,22,0.04) 50%, transparent 70%),
+    linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06));
+  background-repeat: no-repeat;
+  animation: gradientShift 12s ease-in-out infinite;
 }
 
 @keyframes gradientShift {
-  0% { transform: translate3d(-5%, -5%, 0) rotate(0deg); }
-  50% { transform: translate3d(5%, 5%, 0) rotate(1deg); }
-  100% { transform: translate3d(-5%, -5%, 0) rotate(0deg); }
+  0% { transform: translate3d(-3%, -3%, 0) rotate(-1deg); }
+  50% { transform: translate3d(3%, 3%, 0) rotate(1deg); }
+  100% { transform: translate3d(-3%, -3%, 0) rotate(-1deg); }
 }
 
 .blob {
   position: absolute;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  filter: blur(36px);
-  opacity: 0.55;
-  background: radial-gradient(circle at 30% 30%, rgba(255,107,61,0.8), rgba(212,65,22,0.45) 40%, rgba(255,200,170,0.12) 70%);
-  transform: translate3d(-20%, -10%, 0) scale(0.9);
-  top: 10%;
-  left: 10%;
-  animation: floatBlob 6s ease-in-out infinite;
+  width: 420px;
+  height: 320px;
+  border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
+  filter: blur(80px);
+  opacity: 0.36;
+  background: radial-gradient(circle at 30% 30%, rgba(255,107,61,0.6), rgba(212,65,22,0.18) 45%, rgba(255,200,170,0.06) 70%);
+  transform: translate3d(-18%, -8%, 0) scale(1);
+  top: 6%;
+  left: 6%;
+  animation: floatBlob 10s ease-in-out infinite;
 }
 
 .blob + .blob {
-  top: 55%;
-  left: 65%;
-  width: 380px;
-  height: 380px;
-  opacity: 0.36;
-  animation-duration: 9s;
+  top: 50%;
+  left: 62%;
+  width: 540px;
+  height: 420px;
+  opacity: 0.28;
+  animation-duration: 14s;
 }
 
 @keyframes floatBlob {
@@ -102,22 +105,23 @@
 }
 
 .sparkle {
+  /* make sparkle subtle to avoid obvious yellow dot */
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #fff 0%, #ffd 40%, rgba(255,255,255,0) 70%);
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,245,200,0.9) 40%, rgba(255,255,255,0) 70%);
   top: 18%;
   right: 18%;
   border-radius: 50%;
-  filter: drop-shadow(0 6px 10px rgba(212,65,22,0.12));
-  opacity: 0.9;
-  animation: sparkle 2.8s linear infinite;
+  filter: blur(4px) drop-shadow(0 6px 10px rgba(212,65,22,0.06));
+  opacity: 0.28;
+  animation: sparkle 4.2s ease-in-out infinite;
 }
 
 @keyframes sparkle {
-  0% { transform: translateY(0) scale(0.85); opacity: 0.8; }
-  40% { transform: translateY(-6px) scale(1.05); opacity: 1; }
-  100% { transform: translateY(0) scale(0.85); opacity: 0.8; }
+  0% { transform: translateY(0) scale(0.9); opacity: 0.22; }
+  40% { transform: translateY(-4px) scale(1.05); opacity: 0.36; }
+  100% { transform: translateY(0) scale(0.9); opacity: 0.22; }
 }
 
 .contactBannerContent {
