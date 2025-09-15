@@ -55,31 +55,29 @@ export default function OurClients({ data = {}, addTopPadding, greyBG }) {
         addTopPadding ? styles.addTopPadding : ""
       } ${greyBG ? styles.greyBG : ""}`}
     >
-      <div className={styles.container}>
-        {/* <h2>{title}</h2> */}
-        <div className={styles.clientSlider}>
-          <Slider {...settings}>
-            {clients?.map((item, index) => {
-              const imageUrl = item?.url
-                ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
-                : "/fallback-image.png"; // fallback image
-              return (
-                <div className={styles.clientItem} key={index}>
-                  <div>
-                    <div className={styles.imageWrap}>
-                      <Image
-                        src={imageUrl}
-                        alt="Our Works"
-                        width={300}
-                        height={51}
-                      />
-                    </div>
+      {/* <h2>{title}</h2> */}
+      <div className={styles.clientSlider}>
+        <Slider {...settings}>
+          {clients?.map((item, index) => {
+            const imageUrl = item?.url
+              ? process.env.NEXT_PUBLIC_STRAPI_BASE_URL + item?.url
+              : "/fallback-image.png"; // fallback image
+            return (
+              <div className={styles.clientItem} key={index}>
+                <div>
+                  <div className={styles.imageWrap}>
+                    <Image
+                      src={imageUrl}
+                      alt="Our Works"
+                      width={300}
+                      height={51}
+                    />
                   </div>
                 </div>
-              );
-            })}
-          </Slider>
-        </div>
+              </div>
+            );
+          })}
+        </Slider>
       </div>
     </section>
   );
