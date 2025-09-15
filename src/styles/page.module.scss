@@ -61,11 +61,13 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  /* Use hero section gradient palette for a cohesive look */
   background:
-    radial-gradient(600px circle at 10% 30%, rgba(255,107,61,0.22), rgba(212,65,22,0.08) 40%, transparent 60%),
-    radial-gradient(500px circle at 80% 70%, rgba(255,200,170,0.16), rgba(212,65,22,0.04) 50%, transparent 70%),
-    linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06));
+    radial-gradient(600px circle at 10% 30%, rgba(255,95,64,0.20), rgba(255,75,43,0.10) 40%, transparent 60%),
+    radial-gradient(500px circle at 80% 70%, rgba(255,153,102,0.14), rgba(255,60,60,0.06) 50%, transparent 70%),
+    linear-gradient(135deg, rgba(255,75,43,0.14), rgba(255,60,60,0.08));
   background-repeat: no-repeat;
+  mix-blend-mode: overlay;
   animation: gradientShift 12s ease-in-out infinite;
 }
 
@@ -81,8 +83,8 @@
   height: 320px;
   border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
   filter: blur(80px);
-  opacity: 0.36;
-  background: radial-gradient(circle at 30% 30%, rgba(255,107,61,0.6), rgba(212,65,22,0.18) 45%, rgba(255,200,170,0.06) 70%);
+  opacity: 0.4;
+  background: radial-gradient(circle at 30% 30%, rgba(255,95,64,0.72), rgba(255,75,43,0.28) 45%, rgba(255,153,102,0.08) 70%);
   transform: translate3d(-18%, -8%, 0) scale(1);
   top: 6%;
   left: 6%;
@@ -94,7 +96,7 @@
   left: 62%;
   width: 540px;
   height: 420px;
-  opacity: 0.28;
+  opacity: 0.32;
   animation-duration: 14s;
 }
 
