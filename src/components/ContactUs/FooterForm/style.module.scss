@@ -91,7 +91,7 @@
 
 .inputWidth {
   display: flex;
-  // margin: 20px 0 0;
+  // legacy fallback
   background: #101010;
 }
 
@@ -103,6 +103,21 @@
 
 .inputWidth> :last-child {
   width: 50%;
+}
+
+/* New responsive two-column grid for improved layout */
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .inputGrid {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,27 +163,39 @@
 
 .inputWrapper input {
   border: none;
-  border: 1px solid #707070;
+  border: 1px solid #333;
   height: 48px;
-  padding: 6px;
-  // border-radius: 4px;
+  padding: 10px 12px;
   color: #fff;
   font-size: 14px;
-  background: #1F1F1F;
-  border-radius: 8px;
+  background: linear-gradient(180deg, #141414, #1f1f1f);
+  border-radius: 10px;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+
+.inputWrapper input:focus {
+  box-shadow: 0 6px 20px rgba(212,65,22,0.12);
+  border-color: rgba(212,65,22,0.9);
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .textareaWrapper textarea {
   border: none;
-  border: 1px solid #707070;
-  min-height: 100px;
-  // border-radius: 4px;
-  padding: 6px;
+  border: 1px solid #333;
+  min-height: 120px;
+  padding: 12px;
   color: #fff;
   font-size: 14px;
   resize: vertical;
-  background: #1F1F1F;
-  border-radius: 8px;
+  background: linear-gradient(180deg, #141414, #1f1f1f);
+  border-radius: 10px;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.textareaWrapper textarea:focus {
+  box-shadow: 0 8px 30px rgba(212,65,22,0.12);
+  border-color: rgba(212,65,22,0.9);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -203,14 +230,14 @@
 
 .inputWrapper span,
 .textareaWrapper span {
-  color: #f00;
+  color: #ff6b3d;
   opacity: 0;
   font-size: 12px;
   margin: 4px 0 0;
 }
 
-.inputWrapper span.active {
-  opacity: 1;
+.errorActive {
+  opacity: 1 !important;
 }
 
 .inputWrapper input::placeholder {
@@ -221,27 +248,49 @@
   color: #6d6b6b;
 }
 
+/* Actions and submit */
+.formActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
 .submit {
-  width: 178px;
-  height: 48px;
-  background-color: #d44116;
+  min-width: 200px;
+  height: 52px;
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff3c3c 40%, #ff9966 100%);
   color: #ffffff;
-  border: 1px solid #d44116;
+  border: none;
   outline: none;
   text-align: center;
-  margin-top: 12px;
   letter-spacing: 0px;
   font-size: 16px;
   line-height: 16px;
   cursor: pointer;
-  transition: .3s;
-  border-radius: 8px;
-  font-weight: 600;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.15s ease;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 0 20px;
+  box-shadow: 0 8px 30px rgba(212,65,22,0.12);
 }
 
-.submit:hover {
-  background-color: #ffffff;
-  color: #d44116;
+.submit[disabled],
+.submit[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submit:active:not([disabled]) {
+  transform: translateY(1px) scale(0.998);
+}
+
+.helperText {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
 }
 
 .contactUsWrapper {
