@@ -2600,3 +2600,40 @@
 // Enterprise image rotation CSS removed - no longer needed
 
 // Alternative selector removed - using only the first selector with proper class context
+
+/* Strong override: ensure chat input and expanded chat always show animated gradient border */
+.heroSection .chatInterface .inputContainer,
+.heroSection .chatInterface .expandedChat {
+  border: 2px solid transparent !important;
+  --border-angle: 0turn !important;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #cf142b, #4e160e 99%, transparent) !important;
+  background: #000000 padding-box, var(--gradient-border) border-box !important;
+  background-clip: padding-box, border-box !important;
+  -webkit-background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  animation: bg-spin 3s linear infinite !important;
+  z-index: 1001 !important;
+}
+
+/* Hide any internal opaque overlays that could obscure the border */
+.heroSection .chatInterface .inputContainer::after,
+.heroSection .chatInterface .expandedChat::after,
+.heroSection .chatInterface .inputContainer > .overlay,
+.heroSection .chatInterface .expandedChat > .overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Ensure expanded chat retains animated border even when other rules try to add borders */
+.heroSection .chatInterface .expandedChat {
+  border-color: transparent !important;
+}
+
+/* Also ensure mobile/tablet show the animated border */
+@media screen and (max-width: 1024px) {
+  .heroSection .chatInterface .inputContainer,
+  .heroSection .chatInterface .expandedChat {
+    animation: bg-spin 3s linear infinite !important;
+  }
+}
