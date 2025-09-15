@@ -173,20 +173,5 @@
         margin: 8px 0 0;
     }
 
-    .faqCard::after {
-        width: 3px;
-        height: 12px;
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .faqCard::before {
-        height: 3px;
-        width: 12px;
-        right: 13px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
 
 }
