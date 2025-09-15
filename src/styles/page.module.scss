@@ -791,76 +791,77 @@
             min-width: 420px;
             max-width: 420px;
             width: 100%;
-            color: #0b0b0b;
-            /* align exactly with hero feature icon gradient */
-            background: linear-gradient(135deg, #d44116 0%, #ff6b3d 100%);
-            border: 1px solid rgba(212,65,22,0.14);
+            color: #ffffff;
+            /* black gradient background */
+            background: linear-gradient(180deg, #0b0b0b 0%, #000000 100%);
+            border-radius: 12px;
+            padding: 18px 18px;
             display: flex;
             flex-direction: column;
-            padding: 18px 18px;
             align-items: flex-start;
-            border-radius: 12px;
-            /* warm inner glow + soft outer shadow to match icons */
-            box-shadow: 0 12px 30px rgba(212,65,22,0.12), 0 2px 8px rgba(11,11,11,0.12) inset;
-            transition: transform 0.24s ease, box-shadow 0.24s ease;
             position: relative;
-            overflow: hidden;
+            overflow: visible; /* allow border effect */
             text-decoration: none;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
 
-            /* small rounded accent using same gradient as hero icons */
-            &::after {
-              content: '';
-              position: absolute;
-              top: 12px;
-              right: 12px;
-              width: 36px;
-              height: 36px;
-              border-radius: 8px;
-              background: linear-gradient(135deg, #d44116 0%, #ff6b3d 100%);
-              box-shadow: 0 6px 16px rgba(212,65,22,0.18);
-              pointer-events: none;
-            }
+            /* inner subtle shadow for depth */
+            box-shadow: inset 0 2px 6px rgba(11,11,11,0.6), 0 8px 24px rgba(0,0,0,0.6);
 
-            /* soft highlight sweep on hover */
+            /* animated gradient border using masked pseudo element */
             &::before {
               content: '';
               position: absolute;
-              top: 0;
-              left: -120%;
-              width: 120%;
-              height: 100%;
-              background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
-              transform: translateX(0);
-              transition: transform 0.6s ease;
+              inset: 0;
+              padding: 2px; /* border thickness */
+              border-radius: 12px;
+              background: linear-gradient(90deg, #d44116, #ff6b3d, #ff9966, #d44116);
+              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude;
+              pointer-events: none;
+              opacity: 0;
+              transition: opacity 0.35s ease, transform 0.6s ease;
+              background-size: 200% 100%;
+              transform: translateX(-25%);
+              z-index: 0;
+            }
+
+            /* content above the border effect */
+            & > * {
+              position: relative;
+              z-index: 1;
             }
 
             &:hover {
               transform: translateY(-6px);
-              box-shadow: 0 26px 60px rgba(12,12,12,0.22), 0 6px 12px rgba(212,65,22,0.04) inset;
+              box-shadow: 0 26px 60px rgba(0,0,0,0.6);
 
               &::before {
-                transform: translateX(100%);
+                opacity: 1;
+                transform: translateX(25%);
+                background-position: 100% 0;
               }
             }
 
             @media screen and (max-width: 1200px) {
               max-width: 380px;
-              padding: 18px 22px;
+              padding: 16px 18px;
               min-width: 340px;
             }
 
             @media screen and (max-width: 768px) {
               max-width: 360px;
               min-width: 320px;
-              padding: 16px 18px;
+              padding: 14px 16px;
             }
 
             @media screen and (max-width: 550px) {
               max-width: 270px;
               min-width: 240px;
-              padding: 14px;
+              padding: 12px;
             }
 
+            /* link styles inside card */
             div a, & > .textSection .knowMoreLink, & .knowMoreLink {
               margin-top: 10px;
               display: inline-block;
@@ -868,7 +869,7 @@
               font-size: 18px;
               min-width: auto;
               position: relative;
-              color: #d44116;
+              color: #ffffff;
               text-decoration: none;
               font-weight: 600;
               transition: all 0.3s ease;
@@ -880,12 +881,12 @@
                 left: 0;
                 width: 0;
                 height: 2px;
-                background: #d44116;
+                background: linear-gradient(90deg,#d44116,#ff6b3d);
                 transition: width 0.3s ease;
               }
 
               &:hover {
-                color: #ff6b35;
+                color: #ffffff;
                 transform: translateX(4px);
 
                 &::after {
