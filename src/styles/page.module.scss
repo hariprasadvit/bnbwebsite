@@ -927,18 +927,19 @@
               padding: 12px;
             }
 
-            /* link styles inside card */
+            /* link styles inside card - override global */
             div a, & > .textSection .knowMoreLink, & .knowMoreLink {
-              margin-top: 10px;
+              margin-top: 8px;
               display: inline-block;
-              margin-bottom: 0;
-              font-size: 16px;
+              margin-bottom: 8px;
+              font-size: 14px;
+              line-height: 20px;
               min-width: auto;
               position: relative;
-              color: #ffffff;
+              color: #ffffff !important;
               text-decoration: none;
               font-weight: 600;
-              transition: all 0.3s ease;
+              transition: all 0.2s ease;
 
               &::after {
                 content: '';
@@ -948,8 +949,11 @@
                 width: 0;
                 height: 2px;
                 background: linear-gradient(90deg,#d44116,#ff6b3d);
-                transition: width 0.3s ease;
+                transition: width 0.25s ease;
               }
+
+              /* always visible; hover expands underline */
+              &::before { display: none; }
 
               &:hover {
                 color: #ffffff;
