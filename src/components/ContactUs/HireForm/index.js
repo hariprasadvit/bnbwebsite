@@ -238,7 +238,7 @@ export default function FooterForm() {
             <h4>Choose Purpose</h4>
             <Select
               isMulti
-              name="services"
+              name="services" instanceId="hireServiceSelect"
               options={InterestedDropdownOptions}
               value={InterestedDropdownOptions.filter((option) =>
                 details.data.service_list.includes(option.value)
