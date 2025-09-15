@@ -99,17 +99,7 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
   };
 
   return (
-    <div
-      className={`${styles.ourWorks} ${
-        addTopPadding ? styles.addTopPadding : ""
-      }`}
-      style={{
-        background: '#ffffff',
-        backgroundColor: '#ffffff',
-        position: 'relative',
-        overflow: 'hidden'
-      }}
-    >
+    <div className={`${styles.ourWorks} ${addTopPadding ? styles.addTopPadding : ""}`}>
       <div className={styles.topHeader}>
         <h2
           style={{
@@ -136,53 +126,11 @@ const OurWorks = ({ data = {} }, addTopPadding) => {
             : "/fallback-image.png"; // fallback image
           return (
             <div key={index} className={styles.slide}>
-              <Link
-                href={'/case-study/' + item?.case_study_detail?.slug}
-                className={styles.cardLayout}
-                style={{
-                  textDecoration: 'none',
-                  display: 'flex',
-                  gap: '2rem',
-                  alignItems: 'center',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 6px 26px rgba(16,16,16,0.08)';
-                }}
-              >
-                <div className={styles.cardGraphic} style={{
-                  background: `linear-gradient(135deg, rgba(212,65,22,0.12), rgba(255,107,61,0.06))`,
-                  borderRadius: '12px',
-                  minWidth: 260,
-                  minHeight: 160,
-                  flex: '0 0 340px'
-                }} aria-hidden="true"></div>
+              <Link href={'/case-study/' + item?.case_study_detail?.slug} className={styles.cardLayout}>
+                <div className={styles.cardGraphic} aria-hidden="true"></div>
                 <div className={styles.textSection}>
-                  <h3
-                    style={{
-                      color: '#0b0b0b',
-                      fontSize: '36px',
-                      fontWeight: '700',
-                      lineHeight: '1.2',
-                      marginBottom: '16px'
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    style={{
-                      color: '#2b2b2b',
-                      fontSize: '18px',
-                      lineHeight: '1.7',
-                      fontWeight: '400'
-                    }}
-                  >
-                    {item.description}
-                  </p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                   <span className="knowMoreLink" role="link">Read More</span>
                 </div>
               </Link>
