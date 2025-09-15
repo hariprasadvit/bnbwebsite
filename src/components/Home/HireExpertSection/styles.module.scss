@@ -56,7 +56,7 @@
   justify-content: center;
   overflow: hidden;
   border: 1px dashed rgba(255, 255, 255, 0.1);
-  
+
   .placeholder {
     display: flex;
     flex-direction: column;
@@ -67,10 +67,17 @@
     font-size: 14px;
     line-height: 1.6;
     padding: 20px;
-    
+
     span {
       display: block;
     }
+  }
+
+  .mvpImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 }
 
