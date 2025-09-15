@@ -13,7 +13,7 @@ export default function SectionList({ data = {} }) {
       {common_section_list.map((section, index) => {
         let _img = "";
         if (section.image_name === "animated-two") {
-          _img = "/enterprise.png";
+          _img = "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F35fc8769d0434111a772dcbab77af076?format=webp&width=800";
         } else if (section.image_name === "animated-three") {
           _img = "/mvp.png";
         } else if (section.image_name === "kGraph") {
