@@ -107,14 +107,15 @@ export default function SectionList({ data = {} }) {
             ) : section.image_name === "animated" ? (
               <div className={styles.splitSectionContainer}>
                 <div className={styles.splitSectionLeft}>
-                  <Image
-                    src={_img}
-                    alt={section.imageAlt || section.title}
-                    layout="intrinsic"
+                  <video
+                    src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F1b812eba234b45309f79d20b72ba81a1?alt=media&token=67193bbc-facb-4ae5-ab17-c72a9085b50d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     width={315}
                     height={360}
-                    sizes="(max-width: 768px) 100vw, 315px"
-                    className=""
+                    className={styles.sectionVideo}
                   />
                 </div>
                 <div className={styles.splitSectionRight}>
