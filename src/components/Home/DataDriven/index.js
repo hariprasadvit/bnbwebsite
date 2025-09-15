@@ -240,29 +240,100 @@ export default function DataDriven({
             </div>
             {showDataDrivenImg && (
               <div className={styles.imgWrap}>
-                <img
-                  className={isFlashing ? styles.flashAnimation : ''}
-                  src={activeCard?.title?.includes('Fintech') ? '/fintech.png' :
-                       activeCard?.title?.includes('Education') ? '/Education.png' :
-                       activeCard?.title?.includes('Healthcare') || activeCard?.title?.includes('Wellness') ? '/medical.png' :
-                       activeCard?.title?.includes('Media') || activeCard?.title?.includes('Content') ? '/media.png' :
-                       activeCard?.title?.includes('Retail') || activeCard?.title?.includes('E-commerce') ? '/retail.png' :
-                       activeCard?.title?.includes('Logistics') || activeCard?.title?.includes('Supply') ? '/logistics.png' :
-                       '/Home/dataDriven.svg'}
-                  alt={activeCard?.title || 'Industry Image'}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxWidth: '900px',
-                    display: 'block',
-                    margin: '0 auto',
-                    transition: 'all 0.3s ease',
-                    borderRadius: '12px'
-                  }}
-                  onError={(e) => {
-                    e.target.src = '/Home/dataDriven.svg';
-                  }}
-                />
+                {/* Render videos for select industries for richer visuals */}
+                {activeCard?.title?.includes('Fintech') ? (
+                  <video
+                    className={isFlashing ? styles.flashAnimation : ''}
+                    src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F7174d9bbe43448dd8cdefa897b8ad976?alt=media&token=49237d6d-ff18-40d5-9459-9743dce9ac3a&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '900px',
+                      display: 'block',
+                      margin: '0 auto',
+                      transition: 'all 0.3s ease',
+                      borderRadius: '12px'
+                    }}
+                  />
+                ) : activeCard?.title?.includes('Education') ? (
+                  <video
+                    className={isFlashing ? styles.flashAnimation : ''}
+                    src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Ff6bbb28e48fc4bb6883c800dc19ef87e?alt=media&token=5e77f6f2-786d-4f10-8eb1-17c832d8fb1e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '900px',
+                      display: 'block',
+                      margin: '0 auto',
+                      transition: 'all 0.3s ease',
+                      borderRadius: '12px'
+                    }}
+                  />
+                ) : activeCard?.title?.includes('Healthcare') || activeCard?.title?.includes('Wellness') ? (
+                  <video
+                    className={isFlashing ? styles.flashAnimation : ''}
+                    src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Ff8ab582318854e5eaba070306f2be69d?alt=media&token=30831a78-9ad0-4328-aa28-7b0b707df97c&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '900px',
+                      display: 'block',
+                      margin: '0 auto',
+                      transition: 'all 0.3s ease',
+                      borderRadius: '12px'
+                    }}
+                  />
+                ) : activeCard?.title?.includes('Retail') || activeCard?.title?.includes('E-commerce') ? (
+                  <video
+                    className={isFlashing ? styles.flashAnimation : ''}
+                    src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fb4776f61634d44569033ee091cea67be?alt=media&token=8fb323c3-e9f9-4b10-a3e6-33b9a4c668e2&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '900px',
+                      display: 'block',
+                      margin: '0 auto',
+                      transition: 'all 0.3s ease',
+                      borderRadius: '12px'
+                    }}
+                  />
+                ) : (
+                  <img
+                    className={isFlashing ? styles.flashAnimation : ''}
+                    src={activeCard?.title?.includes('Media') || activeCard?.title?.includes('Content') ? '/media.png' :
+                         activeCard?.title?.includes('Logistics') || activeCard?.title?.includes('Supply') ? '/logistics.png' :
+                         '/Home/dataDriven.svg'}
+                    alt={activeCard?.title || 'Industry Image'}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '900px',
+                      display: 'block',
+                      margin: '0 auto',
+                      transition: 'all 0.3s ease',
+                      borderRadius: '12px'
+                    }}
+                    onError={(e) => {
+                      e.target.src = '/Home/dataDriven.svg';
+                    }}
+                  />
+                )}
               </div>
             )}
           </div>
