@@ -1519,6 +1519,14 @@
 
 .OurClients {
   padding: 40px 80px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 26px;
+  }
   background: #2a2a2a;
   color: #ffffff;
 
