@@ -11,10 +11,12 @@ const servicesData = [
     technicalHighlights: ["Full-Stack Development", "Cloud Architecture", "API Integration"],
     businessImpact: "40% faster time-to-market",
     features: [
-      "Modern tech stacks (React, Node.js, Python)",
-      "Scalable cloud infrastructure",
-      "Real-time data processing",
-      "Advanced security protocols"
+      "MVP Development & Rapid Prototyping",
+      "Enterprise Application Development",
+      "Web Application Development",
+      "Mobile App Development",
+      "Third-Party Integrations & API Development",
+      "Legacy System Modernization"
     ]
   },
   {
@@ -24,10 +26,12 @@ const servicesData = [
     technicalHighlights: ["Machine Learning", "Natural Language Processing", "Autonomous Agents"],
     businessImpact: "60% reduction in manual tasks",
     features: [
-      "Custom AI model development",
-      "Intelligent automation workflows",
-      "Conversational AI interfaces",
-      "Predictive analytics and insights"
+      "Retrieval-Augmented Generation (RAG) Agents",
+      "Knowledge Graph-Enhanced Agents",
+      "Tool-Using Agents (Action Agents)",
+      "Multi-Agent Orchestration",
+      "Enterprise Workflow Agents",
+      "Custom Agent Stacks & Frameworks"
     ]
   },
   {
@@ -37,10 +41,12 @@ const servicesData = [
     technicalHighlights: ["Enterprise Security", "Workflow Automation", "System Integration"],
     businessImpact: "50% improvement in operational efficiency",
     features: [
-      "Enterprise resource planning (ERP)",
-      "Customer relationship management (CRM)",
-      "Business intelligence dashboards",
-      "Legacy system modernization"
+      "SaaS Platform Development",
+      "Custom ERP Systems",
+      "CRM Platform Development",
+      "Internal Tools & Admin Dashboards",
+      "Platform Modernization",
+      "API-first Architecture & DevOps"
     ]
   }
 ];
