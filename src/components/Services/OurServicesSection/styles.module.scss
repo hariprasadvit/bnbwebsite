@@ -145,12 +145,14 @@
 .serviceLeft {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   padding-right: 24px;
+  align-items: flex-start;
 
   @media screen and (max-width: 768px) {
     padding-right: 0;
-    gap: 24px;
+    gap: 20px;
+    align-items: center;
   }
 }
 
