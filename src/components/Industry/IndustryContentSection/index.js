@@ -251,7 +251,7 @@ const industryContentData = {
   }
 };
 
-export default function IndustryContentSection({ industrySlug = "default" }) {
+export default function IndustryContentSection({ industrySlug = "default", deliverData }) {
   const [activePillar, setActivePillar] = useState(null);
   const [visibleElements, setVisibleElements] = useState([]);
   const sectionRef = useRef(null);
@@ -297,6 +297,27 @@ export default function IndustryContentSection({ industrySlug = "default" }) {
       { metric: "24/7", label: "Support Available" }
     ]
   };
+
+  // If we have deliverData from CMS, use it to build richer content
+  const deliverCards = [];
+  if (deliverData && deliverData.our_process_list) {
+    deliverData.our_process_list.forEach((item, index) => {
+      if (item.sub_title_one && item.desc_one) {
+        deliverCards.push({
+          id: `deliver-${index}-1`,
+          title: item.sub_title_one,
+          description: item.desc_one,
+        });
+      }
+      if (item.sub_title_two && item.desc_two) {
+        deliverCards.push({
+          id: `deliver-${index}-2`,
+          title: item.sub_title_two,
+          description: item.desc_two,
+        });
+      }
+    });
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -362,50 +383,33 @@ export default function IndustryContentSection({ industrySlug = "default" }) {
           </div>
         </div>
 
-        {/* Expertise Pillars */}
-        <div className={styles.expertiseSection}>
-          <div 
-            className={`${styles.sectionHeader} ${visibleElements.includes('pillars-header') ? styles.visible : ''}`}
-            data-element="pillars-header"
+        {/* What We Deliver - Hero Style Grid */}
+        <div className={styles.deliverSection}>
+          <div
+            className={`${styles.sectionHeader} ${visibleElements.includes('deliver-header') ? styles.visible : ''}`}
+            data-element="deliver-header"
           >
-            <h3>Our {content.industry} Expertise</h3>
-            <p>Three pillars that make us the trusted choice for industry leaders</p>
+            <h3>What We Deliver</h3>
+            <p>Innovative solutions that drive real results in {content.industry}</p>
           </div>
 
-          <div className={styles.pillarsContainer}>
-            {content.expertisePillars.map((pillar, index) => (
+          <div className={styles.deliverGrid}>
+            {(deliverCards.length > 0 ? deliverCards : content.expertisePillars).map((item, index) => (
               <div
-                key={pillar.pillarId}
-                className={`${styles.expertisePillar} ${visibleElements.includes(`pillar-${index}`) ? styles.visible : ''} ${activePillar === index ? styles.active : ''}`}
-                data-element={`pillar-${index}`}
-                onMouseEnter={() => setActivePillar(index)}
-                onMouseLeave={() => setActivePillar(null)}
+                key={item.id || item.pillarId}
+                className={`${styles.deliverCard} ${visibleElements.includes(`deliver-${index}`) ? styles.visible : ''}`}
+                data-element={`deliver-${index}`}
               >
-                <div className={styles.pillarIcon}>
-                  {/* Custom icon placeholder - user will design these */}
-                  <div className={styles.iconPlaceholder} data-icon={pillar.iconName}>
-                    <span className={styles.iconLetter}>{pillar.title.charAt(0)}</span>
-                  </div>
-                  <div className={styles.iconGlow}></div>
-                </div>
-                
-                <div className={styles.pillarContent}>
-                  <h4 className={styles.pillarTitle}>{pillar.title}</h4>
-                  <p className={styles.pillarDescription}>{pillar.description}</p>
-                  
-                  <div className={styles.technicalHighlights}>
-                    {pillar.technicalHighlights.map((highlight, hIndex) => (
-                      <span key={hIndex} className={styles.techTag}>{highlight}</span>
-                    ))}
-                  </div>
-                  
-                  <div className={styles.businessImpact}>
-                    <strong>Impact: </strong>{pillar.businessImpact}
+                <div className={styles.cardIcon}>
+                  {/* Image placeholder for user's illustrations */}
+                  <div className={styles.imagePlaceholder}>
+                    <span>📊</span>
                   </div>
                 </div>
-                
-                <div className={styles.pillarNumber}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
+
+                <div className={styles.cardContent}>
+                  <h4 className={styles.cardTitle}>{item.title}</h4>
+                  <p className={styles.cardDescription}>{item.description}</p>
                 </div>
               </div>
             ))}
