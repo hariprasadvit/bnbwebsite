@@ -256,6 +256,13 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
       const scrollPosition = window.scrollY;
       setScrollY(scrollPosition);
       console.log('Scroll position:', scrollPosition); // Debug log
+
+      // Set CSS custom properties on the section
+      if (sectionRef.current) {
+        sectionRef.current.style.setProperty('--scroll-y', `${scrollPosition}px`);
+        sectionRef.current.style.setProperty('--scroll-offset', `${scrollPosition * 0.5}px`);
+        sectionRef.current.style.setProperty('--scroll-opacity', Math.max(0.3, 1 - (scrollPosition / 400)));
+      }
     };
 
     // Initial call to set position
