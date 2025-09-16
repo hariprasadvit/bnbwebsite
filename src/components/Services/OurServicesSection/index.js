@@ -97,38 +97,43 @@ export default function OurServicesSection() {
               className={`${styles.serviceCard} ${visibleElements.includes(`service-${index}`) ? styles.visible : ''}`}
               data-element={`service-${index}`}
             >
-              <div className={styles.serviceIcon}>
-                <div className={styles.iconPlaceholder}>
-                  <span>🚀</span>
+              {/* Left Column - Basic Info */}
+              <div className={styles.serviceLeft}>
+                <div className={styles.serviceIcon}>
+                  <div className={styles.iconPlaceholder}>
+                    <span>🚀</span>
+                  </div>
+                </div>
+
+                <div className={styles.serviceBasicInfo}>
+                  <div className={styles.serviceNumber}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                  </div>
+                  <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <p className={styles.serviceDescription}>{service.description}</p>
+
+                  <div className={styles.technicalHighlights}>
+                    {service.technicalHighlights.map((highlight, hIndex) => (
+                      <span key={hIndex} className={styles.techTag}>{highlight}</span>
+                    ))}
+                  </div>
+
+                  <div className={styles.businessImpact}>
+                    <strong>Impact: </strong>{service.businessImpact}
+                  </div>
                 </div>
               </div>
 
-              <div className={styles.serviceContent}>
-                <h3 className={styles.serviceTitle}>{service.title}</h3>
-                <p className={styles.serviceDescription}>{service.description}</p>
-
-                <div className={styles.technicalHighlights}>
-                  {service.technicalHighlights.map((highlight, hIndex) => (
-                    <span key={hIndex} className={styles.techTag}>{highlight}</span>
-                  ))}
-                </div>
-
-                <div className={styles.businessImpact}>
-                  <strong>Impact: </strong>{service.businessImpact}
-                </div>
-
+              {/* Right Column - Detailed Features */}
+              <div className={styles.serviceRight}>
                 <div className={styles.serviceFeatures}>
-                  <h4>Key Features:</h4>
+                  <h4>Key Services:</h4>
                   <ul>
                     {service.features.map((feature, fIndex) => (
                       <li key={fIndex}>{feature}</li>
                     ))}
                   </ul>
                 </div>
-              </div>
-
-              <div className={styles.serviceNumber}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
               </div>
             </div>
           ))}
