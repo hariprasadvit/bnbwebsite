@@ -10,7 +10,6 @@ import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 import NewHeroSection from "@/components/Home/NewHeroSection";
-import IndustryContentSection from "@/components/Industry/IndustryContentSection";
 import BlockRendererDetail from "@/components/Industry/BlockRendererDetail";
 
 // const Banner = dynamic(() => import("@/components/Projects/Banner"));
