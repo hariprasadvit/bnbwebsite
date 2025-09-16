@@ -84,7 +84,7 @@ const OurProcessSmall = ({ data }) => {
           <button 
             className={styles.sliderArrow}
             onClick={nextSlide}
-            disabled={currentIndex >= allCards.length - getVisibleCards()}
+            disabled={currentIndex >= Math.max(0, allCards.length - visibleCount)}
           >
             →
           </button>
