@@ -632,9 +632,10 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div
           className={styles.brandHeader}
           style={{
-            transform: `translateY(${scrollY * 0.3}px)`,
+            transform: `translateY(${scrollY * 1}px)`,
             opacity: Math.max(0.3, 1 - (scrollY / 400)),
-            willChange: 'transform, opacity'
+            willChange: 'transform, opacity',
+            position: 'relative'
           }}
         >
           <h1
