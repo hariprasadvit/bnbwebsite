@@ -617,8 +617,8 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div
           className={styles.brandHeader}
           style={{
-            transform: `translateY(${scrollY * 0.15}px)`,
-            opacity: Math.max(0.3, 1 - (scrollY / 800))
+            transform: `translateY(${scrollY * 0.3}px)`,
+            opacity: Math.max(0.3, 1 - (scrollY / 400))
           }}
         >
           <h1 className={styles.brandTitle}>
@@ -628,8 +628,8 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           <p
             className={styles.brandSubtitle}
             style={{
-              transform: `translateY(${scrollY * 0.08}px)`,
-              opacity: Math.max(0.2, 1 - (scrollY / 600))
+              transform: `translateY(${scrollY * 0.2}px)`,
+              opacity: Math.max(0.2, 1 - (scrollY / 300))
             }}
           >
             {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
