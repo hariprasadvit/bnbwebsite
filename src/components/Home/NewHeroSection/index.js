@@ -250,6 +250,17 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
     }
   }, [messages, isTyping, isExpanded]);
 
+  // Gentle scroll animation for text elements
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrollY(scrollPosition);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const addMessage = (text, isUser = false) => {
     setMessages(prev => [...prev, { text, isUser, timestamp: Date.now() }]);
   };
@@ -538,7 +549,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
       console.log('📡 API response status:', response.status);
       
       if (!response.ok) {
-        console.error('��� API response not ok:', response.status, response.statusText);
+        console.error('❌ API response not ok:', response.status, response.statusText);
         throw new Error(`Email API failed with status ${response.status}`);
       }
       
