@@ -604,15 +604,30 @@ ${Object.entries(scope.choices).map(([key, value]) => `
   const currentStep = CHAT_FLOW[chatState];
 
   return (
-    <section className={`${styles.heroSection} ${isExpanded ? styles.expanded : ''}`}>
+    <section
+      ref={sectionRef}
+      className={`${styles.heroSection} ${isExpanded ? styles.expanded : ''}`}
+    >
       <div className={styles.container}>
         {/* Brand Header */}
-        <div className={styles.brandHeader}>
+        <div
+          className={styles.brandHeader}
+          style={{
+            transform: `translateY(${scrollY * 0.15}px)`,
+            opacity: Math.max(0.3, 1 - (scrollY / 800))
+          }}
+        >
           <h1 className={styles.brandTitle}>
             <span className={styles.whiteText}>{data.brandPrefix || "We're "}</span>
             <span className={styles.gradientText}>{data.brandName || 'Boolean & Beyond'}</span>
           </h1>
-          <p className={styles.brandSubtitle}>
+          <p
+            className={styles.brandSubtitle}
+            style={{
+              transform: `translateY(${scrollY * 0.08}px)`,
+              opacity: Math.max(0.2, 1 - (scrollY / 600))
+            }}
+          >
             {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
           </p>
         </div>
