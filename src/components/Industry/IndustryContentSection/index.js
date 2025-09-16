@@ -300,7 +300,28 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
 
   // If we have deliverData from CMS, use it to build richer content
   const deliverCards = [];
-  if (deliverData && deliverData.our_process_list) {
+
+  // Special case for Real Estate - use specific content with provided images
+  if (industrySlug === "simplifying-property-management-with-technology") {
+    deliverCards.push(
+      {
+        id: "real-estate-listing",
+        title: "Real Estate Listing and Search Platforms",
+        description: "Advanced property search and listing platforms with AI-powered matching, virtual tours, and comprehensive property databases that connect buyers with their perfect home.",
+        technicalHighlights: ["AI Property Matching", "Virtual Tour Integration", "Advanced Search Filters"],
+        businessImpact: "75% faster property discovery",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fb3a4bde703384d2cb6e9c75684384312?format=webp&width=800"
+      },
+      {
+        id: "property-management",
+        title: "Property Management Systems",
+        description: "Comprehensive property management solutions with automated tenant screening, lease management, maintenance tracking, and financial reporting for efficient operations.",
+        technicalHighlights: ["Automated Workflows", "Tenant Portal", "Financial Reporting"],
+        businessImpact: "60% reduction in operational overhead",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fff8e5d163ef44428aaf4cc7efc3a58ac?format=webp&width=800"
+      }
+    );
+  } else if (deliverData && deliverData.our_process_list) {
     deliverData.our_process_list.forEach((item, index) => {
       if (item.sub_title_one && item.desc_one) {
         deliverCards.push({
