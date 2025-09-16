@@ -271,10 +271,12 @@
 
 .serviceFeatures {
   h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
   }
 
   ul {
@@ -284,17 +286,27 @@
 
     li {
       position: relative;
-      padding-left: 20px;
+      padding: 12px 20px;
       margin-bottom: 8px;
-      font-size: 14px;
-      color: #cccccc;
-      line-height: 1.4;
+      font-size: 15px;
+      color: #ffffff;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      border-left: 3px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-left-color: rgba(255, 255, 255, 0.4);
+        transform: translateX(4px);
+      }
 
       &::before {
-        content: '•';
+        content: '→';
         position: absolute;
-        left: 0;
-        color: #ffffff;
+        left: 8px;
+        color: rgba(255, 255, 255, 0.6);
         font-weight: bold;
       }
     }
