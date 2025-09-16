@@ -112,12 +112,12 @@ export default async function ServiceDetails({ params }) {
   const blackThemeIndustries = ['fantasy-gaming-for-sports-fans', 'e-sports', 'agri-tech', 'mobility'];
   const isBlackTheme = blackThemeIndustries.includes(params?.slug);
 
-  // Get home page sections data
-  const portfolioSection = blockData.homeBlocks?.find(block => block.__component === "landing-page.portfolio-section");
-  const clientsSection = blockData.homeBlocks?.find(block => block.__component === "landing-page.clients-section");
-  const insightSection = blockData.homeBlocks?.find(block => block.__component === "landing-page.insight-section");
-  const testimonialsSection = blockData.homeBlocks?.find(block => block.__component === "landing-page.testimonials-section");
-  const blogsSection = blockData.homeBlocks?.find(block => block.__component === "landing-page.insights-blogs-section");
+  // Get home page sections data with safety checks
+  const portfolioSection = blockData?.homeBlocks?.find(block => block?.__component === "landing-page.portfolio-section");
+  const clientsSection = blockData?.homeBlocks?.find(block => block?.__component === "landing-page.clients-section");
+  const insightSection = blockData?.homeBlocks?.find(block => block?.__component === "landing-page.insight-section");
+  const testimonialsSection = blockData?.homeBlocks?.find(block => block?.__component === "landing-page.testimonials-section");
+  const blogsSection = blockData?.homeBlocks?.find(block => block?.__component === "landing-page.insights-blogs-section");
 
   return (
     <div>
@@ -134,20 +134,30 @@ export default async function ServiceDetails({ params }) {
 
         {/* Featured Works Section */}
         <HireOurExperts />
-        {portfolioSection && <OurWorks data={portfolioSection} />}
+        {portfolioSection && (
+          <OurWorks data={portfolioSection} />
+        )}
         <NumberSection whiteBG />
 
         {/* Clients Section */}
-        {clientsSection && <OurClients data={clientsSection} greyBG />}
+        {clientsSection && (
+          <OurClients data={clientsSection} greyBG />
+        )}
 
         {/* Data Driven / Insight Section */}
-        {insightSection && <DataDriven data={insightSection} industryPage={true} />}
+        {insightSection && (
+          <DataDriven data={insightSection} industryPage={true} industrySlug={params?.slug} />
+        )}
 
         {/* Testimonials Section */}
-        {testimonialsSection && <Testimonials data={testimonialsSection} />}
+        {testimonialsSection && (
+          <Testimonials data={testimonialsSection} />
+        )}
 
         {/* Insights and Blog Section */}
-        {blogsSection && <InsightsAndBlog data={blogsSection} />}
+        {blogsSection && (
+          <InsightsAndBlog data={blogsSection} />
+        )}
 
         {/* Hire Expert Section */}
         <HireExpertSection />
