@@ -142,15 +142,42 @@
   }
 }
 
+// Left Column Styles
+.serviceLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .serviceIcon {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 8px;
+  justify-content: flex-start;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
-    align-self: center;
+    justify-content: center;
+  }
+}
+
+.serviceBasicInfo {
+  flex: 1;
+}
+
+// Right Column Styles
+.serviceRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
   }
 }
 
