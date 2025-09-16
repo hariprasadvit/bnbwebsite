@@ -395,7 +395,7 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
 ═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
-════════════════════════════════════════════════════���══════════
+════════════════════════════════════════════════════���═══════���══
 
 Generated on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
 
@@ -440,7 +440,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
 
    We're excited to help bring your vision to life!
 
-═══════════════════════════��═══════════════════════════════════
+═══════════════════════════════════════════════════════════════
                    Thank you for choosing Boolean & Beyond!
                         www.booleanbeyond.com
 ═══════════════════════════════════════════════════════════════
@@ -632,19 +632,27 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div
           className={styles.brandHeader}
           style={{
-            transform: `translateY(${scrollY * 0.3}px)`,
-            opacity: Math.max(0.3, 1 - (scrollY / 400))
+            transform: `translateY(${scrollY * 0.3}px) !important`,
+            opacity: `${Math.max(0.3, 1 - (scrollY / 400))} !important`,
+            willChange: 'transform, opacity'
           }}
         >
-          <h1 className={styles.brandTitle}>
+          <h1
+            className={styles.brandTitle}
+            style={{
+              transform: `translateY(${scrollY * 0.1}px) !important`,
+              willChange: 'transform'
+            }}
+          >
             <span className={styles.whiteText}>{data.brandPrefix || "We're "}</span>
             <span className={styles.gradientText}>{data.brandName || 'Boolean & Beyond'}</span>
           </h1>
           <p
             className={styles.brandSubtitle}
             style={{
-              transform: `translateY(${scrollY * 0.2}px)`,
-              opacity: Math.max(0.2, 1 - (scrollY / 300))
+              transform: `translateY(${scrollY * 0.2}px) !important`,
+              opacity: `${Math.max(0.2, 1 - (scrollY / 300))} !important`,
+              willChange: 'transform, opacity'
             }}
           >
             {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
