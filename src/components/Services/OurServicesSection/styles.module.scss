@@ -326,23 +326,7 @@
   }
 }
 
-.serviceNumber {
-  display: inline-block;
-  margin-bottom: 8px;
-
-  span {
-    font-size: 72px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.08);
-    transition: color 0.3s ease;
-    font-family: 'Arial', monospace;
-    line-height: 1;
-
-    @media screen and (max-width: 768px) {
-      font-size: 56px;
-    }
-  }
-}
+// Service number removed - no longer needed
 
 // Call to Action Section
 .ctaSection {
