@@ -395,7 +395,7 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
 ═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
-══��═════════════════════════════════════════════════���══════════
+════════════════════════════════════════════════════���══════════
 
 Generated on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
 
@@ -440,7 +440,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
 
    We're excited to help bring your vision to life!
 
-═══════════════════════════════════════════════════════════════
+═══════════════════════════��═══════════════════════════════════
                    Thank you for choosing Boolean & Beyond!
                         www.booleanbeyond.com
 ═══════════════════════════════════════════════════════════════
@@ -613,6 +613,21 @@ ${Object.entries(scope.choices).map(([key, value]) => `
       className={`${styles.heroSection} ${isExpanded ? styles.expanded : ''}`}
     >
       <div className={styles.container}>
+        {/* Debug scroll indicator */}
+        <div style={{
+          position: 'fixed',
+          top: '10px',
+          right: '10px',
+          background: 'red',
+          color: 'white',
+          padding: '5px 10px',
+          borderRadius: '5px',
+          zIndex: 9999,
+          fontSize: '12px'
+        }}>
+          Scroll: {scrollY}px
+        </div>
+
         {/* Brand Header */}
         <div
           className={styles.brandHeader}
