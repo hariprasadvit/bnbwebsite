@@ -3,7 +3,7 @@ import {
   serviceDetail1BannerData,
   serviceDetailBannerImageData,
 } from "@/components/data";
-const Banner = dynamic(() => import("@/components/Home/Banner"));
+const NewHeroSection = dynamic(() => import("@/components/Home/NewHeroSection"));
 const ServiceDetailBannerImage = dynamic(() =>
   import("@/components/ServiceDetail/ServiceDetailBannerImage")
 );
