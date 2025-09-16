@@ -198,7 +198,7 @@ const CHAT_FLOW = {
   }
 };
 
-export default function NewHeroSection() {
+export default function NewHeroSection({ data = {}, industryMode = false, industrySlug = null, isBlackTheme = false }) {
   const [chatState, setChatState] = useState("initial");
   const [isExpanded, setIsExpanded] = useState(false);
   const [userChoices, setUserChoices] = useState({});
@@ -375,7 +375,7 @@ export default function NewHeroSection() {
 
     // Create enhanced PDF content
     const pdfContent = `
-═══════════════════════════════════════════════════════════��═══
+═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
 ════════════════════════════════════════════════════���══════════
