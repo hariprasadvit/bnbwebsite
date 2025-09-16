@@ -395,7 +395,7 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
 ═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
-════════════════════════════════════════════════════���═══════���══
+════════════════════════════════════════════════════���══════════
 
 Generated on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
 
@@ -632,15 +632,15 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div
           className={styles.brandHeader}
           style={{
-            transform: `translateY(${scrollY * 0.3}px) !important`,
-            opacity: `${Math.max(0.3, 1 - (scrollY / 400))} !important`,
+            transform: `translateY(${scrollY * 0.3}px)`,
+            opacity: Math.max(0.3, 1 - (scrollY / 400)),
             willChange: 'transform, opacity'
           }}
         >
           <h1
             className={styles.brandTitle}
             style={{
-              transform: `translateY(${scrollY * 0.1}px) !important`,
+              transform: `translateY(${scrollY * 0.1}px)`,
               willChange: 'transform'
             }}
           >
@@ -650,8 +650,8 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           <p
             className={styles.brandSubtitle}
             style={{
-              transform: `translateY(${scrollY * 0.2}px) !important`,
-              opacity: `${Math.max(0.2, 1 - (scrollY / 300))} !important`,
+              transform: `translateY(${scrollY * 0.2}px)`,
+              opacity: Math.max(0.2, 1 - (scrollY / 300)),
               willChange: 'transform, opacity'
             }}
           >
