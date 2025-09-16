@@ -73,7 +73,10 @@ export default async function ServiceDetails({ params }) {
         <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: '', features: [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
 
         {/* Trust Pyramid Section - Our enhanced "Why Boolean and Beyond" */}
-        <IndustryContentSection industrySlug={params?.slug} />
+        <IndustryContentSection
+          industrySlug={params?.slug}
+          deliverData={blockData?.pageContent?.dynamic_section?.find(block => block.__component === "service-listing.our-process")}
+        />
 
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
