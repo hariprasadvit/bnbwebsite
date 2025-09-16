@@ -1154,6 +1154,24 @@
   }
 }
 
+// Scroll Animation Classes
+.scrollAnimated {
+  transform: translateY(var(--scroll-offset, 0px)) !important;
+  opacity: var(--scroll-opacity, 1) !important;
+  will-change: transform, opacity;
+}
+
+.titleAnimated {
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.1)) !important;
+  will-change: transform;
+}
+
+.subtitleAnimated {
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.2)) !important;
+  opacity: calc(1 - (var(--scroll-y, 0) / 300)) !important;
+  will-change: transform, opacity;
+}
+
 // Thank You Animations
 @keyframes slideIn {
   from {
