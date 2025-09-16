@@ -28,6 +28,9 @@ export default function BlockRendererDetail({ blocks, pageTitle, industrySlug })
     // Remove insight sections
     if (block.__component === "landing-page.insight-section") return false;
 
+    // Remove AI Solutions section from industry pages
+    if (block.__component === "service-listing.second-section") return false;
+
     // Remove old trust/why content sections
     if (block.__component === "landing-page.common-section-list") return false;
     if (block.__component === "landing-page.why-section") return false;
