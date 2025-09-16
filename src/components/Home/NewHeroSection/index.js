@@ -447,7 +447,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
 
    We're excited to help bring your vision to life!
 
-═══════════════════════════════════════════════════════════════
+═���═════════════════════════════════════════════════════════════
                    Thank you for choosing Boolean & Beyond!
                         www.booleanbeyond.com
 ═══════════════════════════════════════════════════════════════
@@ -638,33 +638,12 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         </div>
 
         {/* Brand Header */}
-        <div
-          className={styles.brandHeader}
-          style={{
-            transform: `translateY(${scrollY * 1}px)`,
-            opacity: Math.max(0.3, 1 - (scrollY / 400)),
-            willChange: 'transform, opacity',
-            position: 'relative'
-          }}
-        >
-          <h1
-            className={styles.brandTitle}
-            style={{
-              transform: `translateY(${scrollY * 0.1}px)`,
-              willChange: 'transform'
-            }}
-          >
+        <div className={`${styles.brandHeader} ${styles.scrollAnimated}`}>
+          <h1 className={`${styles.brandTitle} ${styles.titleAnimated}`}>
             <span className={styles.whiteText}>{data.brandPrefix || "We're "}</span>
             <span className={styles.gradientText}>{data.brandName || 'Boolean & Beyond'}</span>
           </h1>
-          <p
-            className={styles.brandSubtitle}
-            style={{
-              transform: `translateY(${scrollY * 0.2}px)`,
-              opacity: Math.max(0.2, 1 - (scrollY / 300)),
-              willChange: 'transform, opacity'
-            }}
-          >
+          <p className={`${styles.brandSubtitle} ${styles.subtitleAnimated}`}>
             {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
           </p>
         </div>
