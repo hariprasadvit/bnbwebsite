@@ -596,83 +596,101 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         {/* Brand Header */}
         <div className={styles.brandHeader}>
           <h1 className={styles.brandTitle}>
-            <span className={styles.whiteText}>We're </span><span className={styles.gradientText}>Boolean & Beyond</span>
+            <span className={styles.whiteText}>{data.brandPrefix || "We're "}</span>
+            <span className={styles.gradientText}>{data.brandName || 'Boolean & Beyond'}</span>
           </h1>
           <p className={styles.brandSubtitle}>
-            – your technology partner for building custom applications that drive real results. 
-            From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.
+            {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
           </p>
         </div>
 
         {/* Features Grid */}
         <div className={styles.featuresGrid}>
-          <div className={styles.featureCard}>
-            <div className={styles.brainIcon}>
-              {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ||
-              "/8df364e21dd94ffaa28f42c3ba39a273".match(/\.(png|jpg|jpeg|webp)$/i) ? (
-                <img
-                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                  alt="AI Brain"
-                  className={styles.featureVideo}
-                />
-              ) : (
-                <video
-                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className={styles.featureVideo}
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                />
-              )}
-            </div>
-            <h3>AI-Powered Development</h3>
-            <p>2 features per week with AI-assisted rapid development</p>
-          </div>
-          
-          <div className={styles.featureCard}>
-            <div className={styles.brainIcon}>
-              <video
-                src="https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F095960eb18bf4741a05eb6895d1b745e?alt=media&token=4a6e919c-8f98-4c67-af79-82d89b24139e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.featureVideo}
-                onError={(e) => {
-                  console.log('Enterprise Security video failed to load');
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
-            </div>
-            <h3>Enterprise Security</h3>
-            <p>SOC2, GDPR compliance with advanced security protocols</p>
-          </div>
-          
-          <div className={styles.featureCard}>
-            <div className={styles.brainIcon}>
-              {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ? (
-                <img
-                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                  alt="Architecture"
-                  className={styles.featureVideo}
-                />
-              ) : (
-                <video
-                  src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className={styles.featureVideo}
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                />
-              )}
-            </div>
-            <h3>Scalable Architecture</h3>
-            <p>Built to handle growth from startup to enterprise scale</p>
-          </div>
+          {(data.features && data.features.length > 0) ? (
+            data.features.map((f, i) => (
+              <div key={i} className={styles.featureCard}>
+                <div className={styles.brainIcon}>
+                  {f.type === 'image' || (f.src && f.src.match(/\.(png|jpg|jpeg|webp)$/i)) ? (
+                    <img src={f.src} alt={f.title} className={styles.featureVideo} />
+                  ) : (
+                    <video src={f.src} autoPlay muted loop playsInline className={styles.featureVideo} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                  )}
+                </div>
+                <h3>{f.title}</h3>
+                <p>{f.description}</p>
+              </div>
+            ))
+          ) : (
+            <>
+              <div className={styles.featureCard}>
+                <div className={styles.brainIcon}>
+                  {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ||
+                  "/8df364e21dd94ffaa28f42c3ba39a273".match(/\.(png|jpg|jpeg|webp)$/i) ? (
+                    <img
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      alt="AI Brain"
+                      className={styles.featureVideo}
+                    />
+                  ) : (
+                    <video
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F8df364e21dd94ffaa28f42c3ba39a273?alt=media&token=cc2bdf88-9b33-470e-afd9-83a42261156d&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className={styles.featureVideo}
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                  )}
+                </div>
+                <h3>AI-Powered Development</h3>
+                <p>2 features per week with AI-assisted rapid development</p>
+              </div>
+
+              <div className={styles.featureCard}>
+                <div className={styles.brainIcon}>
+                  <video
+                    src="https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F095960eb18bf4741a05eb6895d1b745e?alt=media&token=4a6e919c-8f98-4c67-af79-82d89b24139e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className={styles.featureVideo}
+                    onError={(e) => {
+                      console.log('Enterprise Security video failed to load');
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>SOC2, GDPR compliance with advanced security protocols</p>
+              </div>
+
+              <div className={styles.featureCard}>
+                <div className={styles.brainIcon}>
+                  {"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499".includes('format=') ? (
+                    <img
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      alt="Architecture"
+                      className={styles.featureVideo}
+                    />
+                  ) : (
+                    <video
+                      src={"https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdf578aed8d704b0aaa1c3977ac67e448?alt=media&token=2bc5339c-514e-4bc9-a74e-21a9221de78e&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className={styles.featureVideo}
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                  )}
+                </div>
+                <h3>Scalable Architecture</h3>
+                <p>Built to handle growth from startup to enterprise scale</p>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Chat Interface */}
