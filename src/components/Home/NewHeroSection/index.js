@@ -450,7 +450,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
 ═══════════════════════════════════════════════════════════════
                    Thank you for choosing Boolean & Beyond!
                         www.booleanbeyond.com
-══════════════════════���════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
     `;
     
     // Create and download file
@@ -632,9 +632,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
           zIndex: 9999,
           fontSize: '12px'
         }}>
-          Scroll: {scrollY}px<br/>
-          Transform: {scrollY * 1}px<br/>
-          Opacity: {Math.max(0.3, 1 - (scrollY / 400)).toFixed(2)}
+          Scroll: {scrollY}px
         </div>
 
         {/* Brand Header */}
