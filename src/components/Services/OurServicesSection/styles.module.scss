@@ -163,8 +163,8 @@
 
 // Illustration Placeholder
 .illustrationPlaceholder {
-  width: 100%;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.05);
   border: 2px dashed rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -172,6 +172,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 
   &:hover {
     background: rgba(255, 255, 255, 0.08);
@@ -179,7 +180,8 @@
   }
 
   @media screen and (max-width: 768px) {
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
 }
 
