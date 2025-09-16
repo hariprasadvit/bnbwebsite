@@ -70,11 +70,7 @@ export default async function ServiceDetails({ params }) {
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <IndustryHeroSection
-          data={blockData?.pageContent || {}}
-          industrySlug={params?.slug}
-          isBlackTheme={isBlackTheme}
-        />
+        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '', features: blockData?.pageContent?.features || [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
         <IndustryContentSection
           industrySlug={params?.slug}
         />
