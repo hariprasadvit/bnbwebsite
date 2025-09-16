@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import { fetchAPI } from "@/lib/fetch-api";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
-import IndustryHeroSection from "@/components/Industry/IndustryHeroSection";
+import NewHeroSection from "@/components/Home/NewHeroSection";
 import IndustryContentSection from "@/components/Industry/IndustryContentSection";
 import BlockRendererDetail from "@/components/Industry/BlockRendererDetail";
 
