@@ -36,6 +36,7 @@ export default function BlockRendererDetail({ blocks, pageTitle, industrySlug })
 
     // Remove "Some of our Impactful work" section from industry pages
     if (block.__component === "landing-page.portfolio-section") return false;
+    if (block.__component === "case-study.our-work-section") return false;
 
     // Remove old trust/why content sections
     if (block.__component === "landing-page.common-section-list") return false;
