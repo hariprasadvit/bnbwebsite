@@ -207,6 +207,47 @@ const industryContentData = {
       { metric: "99.8%", label: "Booking Success Rate" },
       { metric: "150+", label: "Travel Partners Integrated" }
     ]
+  },
+  "smart-technology-solutions-for-agriculture": {
+    title: "Why Boolean and Beyond Revolutionizes Agriculture Technology",
+    subtitle: "Smart Farming Solutions for Modern Agriculture",
+    industry: "AgriTech & Smart Farming",
+    trustFoundation: {
+      yearsExperience: "8+",
+      projectsDelivered: "120+",
+      industryFocus: "Agricultural Technology"
+    },
+    expertisePillars: [
+      {
+        pillarId: "precision-farming",
+        iconName: "precision-farming", // User will design this
+        title: "Precision Farming Intelligence",
+        description: "IoT sensors, satellite imagery, and AI analytics that optimize crop yields, reduce waste, and enable data-driven farming decisions.",
+        technicalHighlights: ["IoT Sensor Networks", "Satellite Data Integration", "Predictive Analytics"],
+        businessImpact: "40% increase in crop yields"
+      },
+      {
+        pillarId: "supply-chain",
+        iconName: "agri-supply-chain", // User will design this
+        title: "Farm-to-Market Traceability",
+        description: "Complete supply chain management from farm operations to market delivery with real-time tracking and quality assurance.",
+        technicalHighlights: ["Blockchain Traceability", "Cold Chain Monitoring", "Quality Management"],
+        businessImpact: "60% reduction in food waste"
+      },
+      {
+        pillarId: "smart-automation",
+        iconName: "smart-automation", // User will design this
+        title: "Automated Farm Operations",
+        description: "Smart irrigation systems, autonomous equipment control, and automated monitoring that reduce labor costs and improve efficiency.",
+        technicalHighlights: ["Smart Irrigation", "Equipment Automation", "Remote Monitoring"],
+        businessImpact: "50% reduction in operational costs"
+      }
+    ],
+    proofPoints: [
+      { metric: "500K+", label: "Acres Under Smart Management" },
+      { metric: "85%", label: "Water Usage Reduction" },
+      { metric: "200+", label: "Farms Digitized" }
+    ]
   }
 };
 
