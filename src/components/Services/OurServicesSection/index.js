@@ -99,11 +99,14 @@ export default function OurServicesSection() {
             >
               {/* Left Column - Basic Info */}
               <div className={styles.serviceLeft}>
-                <div className={styles.serviceContent}>
-                  <div className={styles.serviceNumber}>
-                    <span>{String(index + 1).padStart(2, '0')}</span>
+                <div className={styles.illustrationPlaceholder}>
+                  <div className={styles.placeholderContent}>
+                    <span>🎨</span>
+                    <p>Illustration Coming Soon</p>
                   </div>
+                </div>
 
+                <div className={styles.serviceContent}>
                   <h3 className={styles.serviceTitle}>{service.title}</h3>
                   <p className={styles.serviceDescription}>{service.description}</p>
 
@@ -115,13 +118,6 @@ export default function OurServicesSection() {
 
                   <div className={styles.businessImpact}>
                     <strong>Impact: </strong>{service.businessImpact}
-                  </div>
-                </div>
-
-                <div className={styles.illustrationPlaceholder}>
-                  <div className={styles.placeholderContent}>
-                    <span>🎨</span>
-                    <p>Illustration Coming Soon</p>
                   </div>
                 </div>
               </div>
