@@ -21,14 +21,7 @@ const IndustryWeServe = dynamic(() =>
 export default function ServiceDetail1() {
   return (
     <div style={{ width: "100%" }}>
-      <Banner
-        bannerData={serviceDetail1BannerData}
-        hideBorder
-        contactUs={"Talk to Us"}
-        descriptionMaxWidth={"945px"}
-        headingMarginBottom={30}
-        headingMaxWidth={"805px"}
-      />
+      <NewHeroSection data={{ brandPrefix: serviceDetail1BannerData.highlight, brandName: serviceDetail1BannerData.heading, subtitle: serviceDetail1BannerData.subheading }} />
       {serviceDetailBannerImageData.map((data, index) => (
         <ServiceDetailBannerImage
           key={index}
