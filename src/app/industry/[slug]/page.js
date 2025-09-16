@@ -70,9 +70,6 @@ export default async function ServiceDetails({ params }) {
     <div>
       <div style={{ width: "100%" }}>
         <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '', features: blockData?.pageContent?.features || [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
-        <IndustryContentSection
-          industrySlug={params?.slug}
-        />
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
           pageTitle={
