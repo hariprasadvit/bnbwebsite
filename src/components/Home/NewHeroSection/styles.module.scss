@@ -48,6 +48,7 @@
   max-width: 1000px;
   position: relative;
   z-index: 2;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
 
   .brandTitle {
     font-size: 56px;
