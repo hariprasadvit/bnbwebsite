@@ -395,7 +395,7 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
 ═══════════════════════════════════════════════════════════════
                         BOOLEAN & BEYOND
                      Project Scope Document
-════════════════════════════════════════════════════���══════════
+══��═════════════════════════════════════════════════���══════════
 
 Generated on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
 
@@ -640,8 +640,8 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         <div
           className={styles.featuresGrid}
           style={{
-            transform: `translateY(${scrollY * 0.05}px)`,
-            opacity: Math.max(0.4, 1 - (scrollY / 1000))
+            transform: `translateY(${scrollY * 0.15}px)`,
+            opacity: Math.max(0.4, 1 - (scrollY / 600))
           }}
         >
           {(data.features && data.features.length > 0) ? (
