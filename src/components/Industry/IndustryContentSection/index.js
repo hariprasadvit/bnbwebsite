@@ -412,53 +412,6 @@ export default function IndustryContentSection({ industrySlug = "default" }) {
           </div>
         </div>
 
-        {/* Proof Points */}
-        <div 
-          className={`${styles.proofSection} ${visibleElements.includes('proof') ? styles.visible : ''}`}
-          data-element="proof"
-        >
-          <h3>Proven Results That Speak for Themselves</h3>
-          <div className={styles.proofGrid}>
-            {content.proofPoints.map((proof, index) => (
-              <div key={index} className={styles.proofPoint}>
-                <div className={styles.proofMetric}>{proof.metric}</div>
-                <div className={styles.proofLabel}>{proof.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Enhanced CTA */}
-        <div 
-          className={`${styles.ctaSection} ${visibleElements.includes('cta') ? styles.visible : ''}`}
-          data-element="cta"
-        >
-          <div className={styles.ctaContent}>
-            <h3>Ready to Transform Your {content.industry} Business?</h3>
-            <p>Join industry leaders who trust Boolean & Beyond with their most critical technology initiatives.</p>
-            
-            <div className={styles.ctaActions}>
-              <a href="/contact-us" className={styles.primaryCta}>
-                <span>Start Your Project</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-              
-              <a href="#case-studies" className={styles.secondaryCta}>
-                <span>View Case Studies</span>
-              </a>
-            </div>
-          </div>
-          
-          <div className={styles.ctaVisual}>
-            <div className={styles.successIndicators}>
-              <div className={styles.indicator}>✓ Enterprise Security</div>
-              <div className={styles.indicator}>✓ Proven Track Record</div>
-              <div className={styles.indicator}>✓ 24/7 Support</div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
