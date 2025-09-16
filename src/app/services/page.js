@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import BlockRenderer from "@/components/Services/BlockRenderer";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
+import OurServicesSection from "@/components/Services/OurServicesSection";
 
 const NewHeroSection = dynamic(() => import("@/components/Home/NewHeroSection"));
 
