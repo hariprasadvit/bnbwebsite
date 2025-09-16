@@ -146,7 +146,7 @@ export default async function ServiceDetails({ params }) {
 
         {/* Data Driven / Insight Section */}
         {insightSection && (
-          <DataDriven data={insightSection} industryPage={true} industrySlug={params?.slug} />
+          <DataDriven data={insightSection} industryPage={false} industrySlug={params?.slug} />
         )}
 
         {/* Testimonials Section */}
