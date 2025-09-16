@@ -349,21 +349,24 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
         title: "Real Estate Project Management Systems",
         description: "End-to-end project management solutions for construction, development, and renovation projects with timeline tracking and resource management.",
         technicalHighlights: ["Project Tracking", "Resource Management", "Timeline Control"],
-        businessImpact: "30% faster project completion"
+        businessImpact: "30% faster project completion",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F87ebd15270504c4c9442cdd82a42f349?format=webp&width=800"
       },
       {
         id: "salesforce-solutions",
         title: "Salesforce Solutions for Real Estate",
         description: "Custom Salesforce implementations for real estate CRM, lead management, and client relationship optimization with automated workflows.",
         technicalHighlights: ["CRM Integration", "Lead Management", "Workflow Automation"],
-        businessImpact: "60% improvement in lead conversion"
+        businessImpact: "60% improvement in lead conversion",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F9cf74fa1ec694b0daeba68768018e0c5?format=webp&width=800"
       },
       {
         id: "mobile-applications",
         title: "Mobile Applications for Real Estate",
         description: "Native mobile apps for property browsing, agent tools, and client management with offline capabilities and real-time notifications.",
         technicalHighlights: ["Native Mobile", "Offline Capability", "Real-time Sync"],
-        businessImpact: "70% increase in mobile engagement"
+        businessImpact: "70% increase in mobile engagement",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F6fbf49783dd441149d8e51280606b083?format=webp&width=800"
       }
     );
   } else if (deliverData && deliverData.our_process_list) {
