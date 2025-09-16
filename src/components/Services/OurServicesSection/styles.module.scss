@@ -302,20 +302,19 @@
 }
 
 .serviceNumber {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 4px;
+  display: inline-block;
+  margin-bottom: 12px;
 
   span {
-    font-size: 24px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.2);
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.1);
     transition: color 0.3s ease;
     font-family: 'Arial', monospace;
+    line-height: 1;
 
     @media screen and (max-width: 768px) {
-      font-size: 20px;
+      font-size: 36px;
     }
   }
 }
