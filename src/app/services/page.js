@@ -48,16 +48,7 @@ export default async function ServiceListing() {
   const { pageContent: data = {} } = blockData;
   return (
     <div style={{ width: "100%" }}>
-      <Banner
-        data={data}
-        highlightFirst
-        hideBorder
-        descriptionMaxWidth={"828px"}
-        headingMarginBottom={30}
-        headingMaxWidth={"730px"}
-        showScroll={false}
-        contactUs
-      />
+      <NewHeroSection data={{ brandPrefix: data?.highlight || '', brandName: data?.heading || data?.title || '', subtitle: data?.subheading || data?.description || '' }} />
       <BlockRenderer blocks={data?.dynamic_zone} />
       <FAQ />
       <FooterForm />
