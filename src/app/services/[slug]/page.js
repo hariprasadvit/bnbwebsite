@@ -11,7 +11,7 @@ import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 import Script from "next/script";
 
-const Banner = dynamic(() => import("@/components/Projects/Banner"));
+const NewHeroSection = dynamic(() => import("@/components/Home/NewHeroSection"));
 
 async function loader({ slug }) {
   if (!slug) {
