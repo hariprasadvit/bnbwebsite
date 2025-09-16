@@ -146,7 +146,12 @@ export default async function ServiceDetails({ params }) {
 
         {/* Data Driven / Insight Section */}
         {insightSection && (
-          <DataDriven data={insightSection} industryPage={false} industrySlug={params?.slug} />
+          <DataDriven
+            data={insightSection}
+            industryPage={false}
+            titleMaxWidth={"305px"}
+            titleMarginBottom={"70px"}
+          />
         )}
 
         {/* Testimonials Section */}
