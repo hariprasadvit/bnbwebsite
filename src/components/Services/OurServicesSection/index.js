@@ -132,6 +132,27 @@ export default function OurServicesSection() {
                     ))}
                   </ul>
                 </div>
+
+                <div className={styles.serviceStats}>
+                  <div className={styles.statItem}>
+                    <span className={styles.statNumber}>50+</span>
+                    <span className={styles.statLabel}>Projects Delivered</span>
+                  </div>
+                  <div className={styles.statItem}>
+                    <span className={styles.statNumber}>98%</span>
+                    <span className={styles.statLabel}>Client Satisfaction</span>
+                  </div>
+                </div>
+
+                <div className={styles.serviceCTA}>
+                  <button className={styles.knowMoreButton}>
+                    Know More
+                    <span className={styles.arrow}>→</span>
+                  </button>
+                  <p className={styles.ctaSubtext}>
+                    Explore detailed case studies and project examples
+                  </p>
+                </div>
               </div>
             </div>
           ))}
