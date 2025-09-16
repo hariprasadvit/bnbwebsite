@@ -255,7 +255,11 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setScrollY(scrollPosition);
+      console.log('Scroll position:', scrollPosition); // Debug log
     };
+
+    // Initial call to set position
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -424,7 +428,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
    ��� vinod@cartoonmango.com  
    • hari@cartoonmango.com
 
-��� NEXT STEPS:
+🚀 NEXT STEPS:
    1. Our team will review your detailed requirements
    2. We'll prepare a comprehensive proposal with:
       - Technical architecture recommendations
@@ -520,7 +524,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
             
             <!-- Quick Actions -->
             <div style="margin-top: 30px; text-align: center;">
-              <a href="mailto:${scope.contact.email}?subject=Re: Your Boolean & Beyond Project Scope" style="display: inline-block; background: #d44116; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 10px;">��� Reply to Client</a>
+              <a href="mailto:${scope.contact.email}?subject=Re: Your Boolean & Beyond Project Scope" style="display: inline-block; background: #d44116; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 10px;">📧 Reply to Client</a>
               <a href="tel:${scope.contact.phone}" style="display: inline-block; background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 10px;">📞 Call Client</a>
             </div>
           </div>
