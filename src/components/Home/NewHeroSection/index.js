@@ -447,10 +447,10 @@ ${Object.entries(scope.choices).map(([key, value]) => `
 
    We're excited to help bring your vision to life!
 
-═���═════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
                    Thank you for choosing Boolean & Beyond!
                         www.booleanbeyond.com
-═══════════════════════════════════════════════════════════════
+══════════════════════���════════════════════════════════════════
     `;
     
     // Create and download file
@@ -649,13 +649,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
         </div>
 
         {/* Features Grid */}
-        <div
-          className={styles.featuresGrid}
-          style={{
-            transform: `translateY(${scrollY * 0.15}px)`,
-            opacity: Math.max(0.4, 1 - (scrollY / 600))
-          }}
-        >
+        <div className={`${styles.featuresGrid} ${styles.featuresAnimated}`}>
           {(data.features && data.features.length > 0) ? (
             data.features.map((f, i) => (
               <div key={i} className={styles.featureCard}>
