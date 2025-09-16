@@ -66,7 +66,7 @@ export default async function ServiceDetails({ params }) {
         />
       )}
       <div style={{ width: "100%" }}>
-        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '' }} industryMode={true} />
+        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: '' }} industryMode={true} />
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
           pageTitle={
