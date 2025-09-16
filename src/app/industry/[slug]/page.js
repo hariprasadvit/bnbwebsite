@@ -11,6 +11,7 @@ import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 import NewHeroSection from "@/components/Home/NewHeroSection";
 import BlockRendererDetail from "@/components/Industry/BlockRendererDetail";
+import IndustryContentSection from "@/components/Industry/IndustryContentSection";
 
 // const Banner = dynamic(() => import("@/components/Projects/Banner"));
 
@@ -70,6 +71,10 @@ export default async function ServiceDetails({ params }) {
     <div>
       <div style={{ width: "100%" }}>
         <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '', features: blockData?.pageContent?.features || [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
+
+        {/* Trust Pyramid Section - Our enhanced "Why Boolean and Beyond" */}
+        <IndustryContentSection industrySlug={params?.slug} />
+
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
           pageTitle={
