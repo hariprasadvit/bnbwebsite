@@ -424,7 +424,15 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
                 <div className={styles.pillarIcon}>
                   {/* Image placeholder for user's illustrations */}
                   <div className={styles.imagePlaceholder}>
-                    <span>📊</span>
+                    {item.iconUrl ? (
+                      <img
+                        src={item.iconUrl}
+                        alt={item.title}
+                        className={styles.pillarImage}
+                      />
+                    ) : (
+                      <span>📊</span>
+                    )}
                   </div>
                 </div>
 
