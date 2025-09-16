@@ -70,7 +70,7 @@ export default async function ServiceDetails({ params }) {
   return (
     <div>
       <div style={{ width: "100%" }}>
-        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '', features: blockData?.pageContent?.features || [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
+        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '', features: [] }} industryMode={true} industrySlug={params?.slug} isBlackTheme={isBlackTheme} />
 
         {/* Trust Pyramid Section - Our enhanced "Why Boolean and Beyond" */}
         <IndustryContentSection industrySlug={params?.slug} />

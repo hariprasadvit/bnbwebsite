@@ -23,10 +23,28 @@ export default function BlockRendererDetail({ blocks, pageTitle, industrySlug })
   // Skip the black section for all industry pages
   const shouldSkipBlackSection = true;
 
-  // Filter out all insight sections at the component level
-  const filteredBlocks = blocks.filter(block => 
-    block.__component !== "landing-page.insight-section"
-  );
+  // Filter out old trust/why sections and insight sections - we have new Trust Pyramid
+  const filteredBlocks = blocks.filter(block => {
+    // Remove insight sections
+    if (block.__component === "landing-page.insight-section") return false;
+
+    // Remove old trust/why content sections
+    if (block.__component === "landing-page.common-section-list") return false;
+    if (block.__component === "landing-page.why-section") return false;
+    if (block.__component === "service-listing.why-section") return false;
+
+    // Filter by title content to catch any remaining trust sections
+    const title = (block.title || "").toLowerCase();
+    if (title.includes("what makes") ||
+        title.includes("trustworthy") ||
+        title.includes("why boolean") ||
+        title.includes("expertise") ||
+        title.includes("right choice")) {
+      return false;
+    }
+
+    return true;
+  });
 
   return filteredBlocks.map((block, index) => {
     switch (block.__component) {
