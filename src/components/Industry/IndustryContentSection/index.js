@@ -319,6 +319,48 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
         technicalHighlights: ["Automated Workflows", "Tenant Portal", "Financial Reporting"],
         businessImpact: "60% reduction in operational overhead",
         iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fff8e5d163ef44428aaf4cc7efc3a58ac?format=webp&width=800"
+      },
+      {
+        id: "leasing-tracking",
+        title: "Leasing and Property Ownership Tracking Systems",
+        description: "Complete leasing lifecycle management with automated contract generation, tenant screening, and ownership tracking for streamlined operations.",
+        technicalHighlights: ["Contract Automation", "Tenant Screening", "Ownership Tracking"],
+        businessImpact: "50% faster lease processing"
+      },
+      {
+        id: "vr-ar-solutions",
+        title: "VR and AR Solutions for Real Estate",
+        description: "Immersive virtual property tours, augmented reality staging, and 3D visualization tools that enhance property marketing and sales.",
+        technicalHighlights: ["Virtual Tours", "AR Staging", "3D Visualization"],
+        businessImpact: "80% increase in property engagement"
+      },
+      {
+        id: "big-data-ml",
+        title: "Big Data Analytics and Machine Learning for Real Estate",
+        description: "Advanced analytics and predictive modeling for market trends, property valuation, and investment insights using machine learning algorithms.",
+        technicalHighlights: ["Predictive Analytics", "Market Insights", "ML Algorithms"],
+        businessImpact: "40% more accurate valuations"
+      },
+      {
+        id: "project-management",
+        title: "Real Estate Project Management Systems",
+        description: "End-to-end project management solutions for construction, development, and renovation projects with timeline tracking and resource management.",
+        technicalHighlights: ["Project Tracking", "Resource Management", "Timeline Control"],
+        businessImpact: "30% faster project completion"
+      },
+      {
+        id: "salesforce-solutions",
+        title: "Salesforce Solutions for Real Estate",
+        description: "Custom Salesforce implementations for real estate CRM, lead management, and client relationship optimization with automated workflows.",
+        technicalHighlights: ["CRM Integration", "Lead Management", "Workflow Automation"],
+        businessImpact: "60% improvement in lead conversion"
+      },
+      {
+        id: "mobile-applications",
+        title: "Mobile Applications for Real Estate",
+        description: "Native mobile apps for property browsing, agent tools, and client management with offline capabilities and real-time notifications.",
+        technicalHighlights: ["Native Mobile", "Offline Capability", "Real-time Sync"],
+        businessImpact: "70% increase in mobile engagement"
       }
     );
   } else if (deliverData && deliverData.our_process_list) {
