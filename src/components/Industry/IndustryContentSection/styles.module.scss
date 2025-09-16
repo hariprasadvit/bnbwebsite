@@ -4,17 +4,6 @@
   position: relative;
   overflow: hidden;
   padding: 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at center top, rgba(212, 65, 22, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
 }
 
 .container {
