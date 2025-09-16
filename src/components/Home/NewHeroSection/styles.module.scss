@@ -1172,6 +1172,12 @@
   will-change: transform, opacity;
 }
 
+.featuresAnimated {
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.15)) !important;
+  opacity: calc(1 - (var(--scroll-y, 0) / 600)) !important;
+  will-change: transform, opacity;
+}
+
 // Thank You Animations
 @keyframes slideIn {
   from {
