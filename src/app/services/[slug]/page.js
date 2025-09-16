@@ -66,12 +66,7 @@ export default async function ServiceDetails({ params }) {
         />
       )}
       <div style={{ width: "100%" }}>
-        <Banner
-          title={blockData?.pageContent?.title}
-          description={blockData?.pageContent?.description}
-          hightlighted_text={blockData?.pageContent?.highlighted_title}
-          blackBg
-        />
+        <NewHeroSection data={{ brandPrefix: blockData?.pageContent?.highlighted_title || '', brandName: blockData?.pageContent?.title || '', subtitle: blockData?.pageContent?.description || '' }} industryMode={true} />
         <BlockRendererDetail
           blocks={blockData?.pageContent?.dynamic_section}
           pageTitle={
