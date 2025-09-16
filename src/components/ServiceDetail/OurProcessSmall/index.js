@@ -34,24 +34,33 @@ const OurProcessSmall = ({ data }) => {
     }
   });
 
-  const getVisibleCards = () => {
-    if (window.innerWidth <= 480) return 1;
-    if (window.innerWidth <= 768) return 2;
-    if (window.innerWidth <= 1200) return 3;
-    return 4;
-  };
+  // Track visible cards count client-side to avoid SSR window access
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    const computeVisible = () => {
+      if (typeof window === 'undefined') return 4;
+      const w = window.innerWidth;
+      if (w <= 480) return 1;
+      if (w <= 768) return 2;
+      if (w <= 1200) return 3;
+      return 4;
+    };
+
+    const update = () => setVisibleCount(computeVisible());
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
 
   const nextSlide = () => {
-    const visibleCards = getVisibleCards();
-    if (currentIndex < allCards.length - visibleCards) {
-      setCurrentIndex(currentIndex + 1);
+    if (currentIndex < Math.max(0, allCards.length - visibleCount)) {
+      setCurrentIndex(prev => Math.min(allCards.length - visibleCount, prev + 1));
     }
   };
 
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex(prev => Math.max(0, prev - 1));
   };
 
   return (
