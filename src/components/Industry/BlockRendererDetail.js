@@ -34,6 +34,9 @@ export default function BlockRendererDetail({ blocks, pageTitle, industrySlug })
     // Remove What We Deliver section from industry pages (now merged into Trust Pyramid)
     if (block.__component === "service-listing.our-process") return false;
 
+    // Remove "Some of our Impactful work" section from industry pages
+    if (block.__component === "landing-page.portfolio-section") return false;
+
     // Remove old trust/why content sections
     if (block.__component === "landing-page.common-section-list") return false;
     if (block.__component === "landing-page.why-section") return false;
