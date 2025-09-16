@@ -166,6 +166,47 @@ const industryContentData = {
       { metric: "99.9%", label: "Platform Uptime" },
       { metric: "15s", label: "Average Page Load" }
     ]
+  },
+  "custom-travel-platforms-that-connect": {
+    title: "Why Boolean and Beyond Transforms Travel Experiences",
+    subtitle: "Connected Travel Technology for Modern Journeys",
+    industry: "Travel & Tourism",
+    trustFoundation: {
+      yearsExperience: "11+",
+      projectsDelivered: "180+",
+      industryFocus: "Travel Technology"
+    },
+    expertisePillars: [
+      {
+        pillarId: "booking-intelligence",
+        iconName: "booking-intelligence", // User will design this
+        title: "Intelligent Booking Engine",
+        description: "AI-powered booking systems with real-time inventory, dynamic pricing, and seamless payment integration for optimal user experiences.",
+        technicalHighlights: ["Real-time Inventory", "Dynamic Pricing", "Payment Gateway Integration"],
+        businessImpact: "45% increase in booking conversion"
+      },
+      {
+        pillarId: "personalization",
+        iconName: "travel-personalization", // User will design this
+        title: "Personalized Travel Recommendations",
+        description: "Machine learning algorithms that analyze user preferences, travel history, and behavior to deliver hyper-personalized travel suggestions.",
+        technicalHighlights: ["ML Recommendation Engine", "User Behavioral Analytics", "Preference Learning"],
+        businessImpact: "60% higher user engagement"
+      },
+      {
+        pillarId: "omnichannel",
+        iconName: "omnichannel-travel", // User will design this
+        title: "Omnichannel Travel Management",
+        description: "Unified platforms connecting web, mobile, and agency channels with real-time synchronization for seamless travel planning.",
+        technicalHighlights: ["Cross-platform Sync", "Agency Integration", "Mobile-first Design"],
+        businessImpact: "80% reduction in booking errors"
+      }
+    ],
+    proofPoints: [
+      { metric: "5M+", label: "Travelers Served Annually" },
+      { metric: "99.8%", label: "Booking Success Rate" },
+      { metric: "150+", label: "Travel Partners Integrated" }
+    ]
   }
 };
 
