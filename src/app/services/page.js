@@ -9,7 +9,7 @@ import BlockRenderer from "@/components/Services/BlockRenderer";
 import FAQ from "@/components/Common/FAQ";
 import FooterForm from "@/components/ContactUs/FooterForm";
 
-const Banner = dynamic(() => import("@/components/Home/Banner"));
+const NewHeroSection = dynamic(() => import("@/components/Home/NewHeroSection"));
 
 async function loader() {
   noStore();
