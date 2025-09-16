@@ -476,7 +476,7 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
                       <img
                         src={item.iconUrl}
                         alt={item.title}
-                        className={styles.pillarImage}
+                        className={`${styles.pillarImage} ${visibleElements.includes(`deliver-${index}`) ? styles.flashAnimation : ''}`}
                       />
                     ) : (
                       <span>📊</span>
