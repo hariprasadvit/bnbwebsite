@@ -215,6 +215,8 @@ export default function NewHeroSection({ data = {}, industryMode = false, indust
   const [showContactForm, setShowContactForm] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
   const messagesEndRef = useRef(null);
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef(null);
 
   const handleChatClick = () => {
     if (!isExpanded) {
@@ -536,7 +538,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
       console.log('📡 API response status:', response.status);
       
       if (!response.ok) {
-        console.error('❌ API response not ok:', response.status, response.statusText);
+        console.error('��� API response not ok:', response.status, response.statusText);
         throw new Error(`Email API failed with status ${response.status}`);
       }
       
