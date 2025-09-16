@@ -333,7 +333,8 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
         title: "VR and AR Solutions for Real Estate",
         description: "Immersive virtual property tours, augmented reality staging, and 3D visualization tools that enhance property marketing and sales.",
         technicalHighlights: ["Virtual Tours", "AR Staging", "3D Visualization"],
-        businessImpact: "80% increase in property engagement"
+        businessImpact: "80% increase in property engagement",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fbedc218239be4ece97aacd48990fc8c6?format=webp&width=800"
       },
       {
         id: "big-data-ml",
