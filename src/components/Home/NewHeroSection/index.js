@@ -610,14 +610,19 @@ ${Object.entries(scope.choices).map(([key, value]) => `
             data.features.map((f, i) => (
               <div key={i} className={styles.featureCard}>
                 <div className={styles.brainIcon}>
-                  {f.type === 'image' || (f.src && f.src.match(/\.(png|jpg|jpeg|webp)$/i)) ? (
-                    <img src={f.src} alt={f.title} className={styles.featureVideo} />
+                  {f.src ? (
+                    (f.type === 'image' || f.src.match(/\.(png|jpg|jpeg|webp)$/i)) ? (
+                      <img src={f.src} alt={f.title} className={styles.featureVideo} />
+                    ) : (
+                      <video src={f.src} autoPlay muted loop playsInline className={styles.featureVideo} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                    )
                   ) : (
-                    <video src={f.src} autoPlay muted loop playsInline className={styles.featureVideo} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                    // fallback to icon if no media src
+                    f.icon ? <div className={styles.featureIcon}>{f.icon}</div> : null
                   )}
                 </div>
                 <h3>{f.title}</h3>
-                <p>{f.description}</p>
+                <p>{f.description || f.desc}</p>
               </div>
             ))
           ) : (
