@@ -114,7 +114,7 @@
     margin: 0 auto;
     letter-spacing: -0.01em;
     animation: slideInUp 1s ease-out 0.2s both;
-    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+    /* Remove conflicting transitions for scroll animation */
 
     @media screen and (max-width: 1024px) {
       font-size: 22px;
