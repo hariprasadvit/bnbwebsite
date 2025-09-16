@@ -148,11 +148,14 @@
   gap: 24px;
   padding-right: 24px;
   align-items: flex-start;
+  justify-content: center;
+  height: 100%;
 
   @media screen and (max-width: 768px) {
     padding-right: 0;
     gap: 20px;
     align-items: center;
+    justify-content: flex-start;
   }
 }
 
