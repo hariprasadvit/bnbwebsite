@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import styles from "./styles.module.scss";
+import NewHeroSection from '@/components/Home/NewHeroSection';
 
 const industryFlows = {
   "future-ready-banking-tech-solutions": {
