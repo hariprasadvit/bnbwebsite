@@ -383,7 +383,7 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
           </div>
         </div>
 
-        {/* What We Deliver - Hero Style Grid */}
+        {/* What We Deliver - Horizontal Boxes */}
         <div className={styles.deliverSection}>
           <div
             className={`${styles.sectionHeader} ${visibleElements.includes('deliver-header') ? styles.visible : ''}`}
@@ -393,23 +393,47 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
             <p>Innovative solutions that drive real results in {content.industry}</p>
           </div>
 
-          <div className={styles.deliverGrid}>
+          <div className={styles.deliverContainer}>
             {(deliverCards.length > 0 ? deliverCards : content.expertisePillars).map((item, index) => (
               <div
                 key={item.id || item.pillarId}
-                className={`${styles.deliverCard} ${visibleElements.includes(`deliver-${index}`) ? styles.visible : ''}`}
+                className={`${styles.deliverPillar} ${visibleElements.includes(`deliver-${index}`) ? styles.visible : ''}`}
                 data-element={`deliver-${index}`}
               >
-                <div className={styles.cardIcon}>
+                <div className={styles.pillarIcon}>
                   {/* Image placeholder for user's illustrations */}
                   <div className={styles.imagePlaceholder}>
                     <span>📊</span>
                   </div>
                 </div>
 
-                <div className={styles.cardContent}>
-                  <h4 className={styles.cardTitle}>{item.title}</h4>
-                  <p className={styles.cardDescription}>{item.description}</p>
+                <div className={styles.pillarContent}>
+                  <h4 className={styles.pillarTitle}>{item.title}</h4>
+                  <p className={styles.pillarDescription}>{item.description}</p>
+
+                  {/* Add technical highlights tags if we have them from original pillars or mock some for CMS content */}
+                  <div className={styles.technicalHighlights}>
+                    {item.technicalHighlights ? item.technicalHighlights.map((highlight, hIndex) => (
+                      <span key={hIndex} className={styles.techTag}>{highlight}</span>
+                    )) : (
+                      // For CMS content without technical highlights, add some generic ones
+                      <>
+                        <span className={styles.techTag}>Enterprise-Grade</span>
+                        <span className={styles.techTag}>Scalable Solution</span>
+                        <span className={styles.techTag}>Custom Built</span>
+                      </>
+                    )}
+                  </div>
+
+                  {item.businessImpact && (
+                    <div className={styles.businessImpact}>
+                      <strong>Impact: </strong>{item.businessImpact}
+                    </div>
+                  )}
+                </div>
+
+                <div className={styles.pillarNumber}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
                 </div>
               </div>
             ))}
