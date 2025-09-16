@@ -385,6 +385,11 @@
   transform: scale(1.05);
 }
 
+/* flash animation when element becomes visible */
+.flashAnimation {
+  animation: flash 0.8s ease-in-out;
+}
+
 .pillarContent {
   flex: 1;
 
