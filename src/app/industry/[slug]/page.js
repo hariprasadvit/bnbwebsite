@@ -32,10 +32,6 @@ async function loader({ slug }) {
   noStore();
   const BASE_URL = getStrapiURL();
 
-  // Load both industry data and home page data
-  const industryPath = `/api/industry-details/${slug}`;
-  const homePath = `/api/landing-page`;
-
   const query = qs.stringify(
     {
       pLevel: "5",
@@ -43,21 +39,59 @@ async function loader({ slug }) {
     { encodeValuesOnly: true }
   );
 
+  // Load industry data first (critical)
+  const industryPath = `/api/industry-details/${slug}`;
   const industryUrl = new URL(industryPath + "?" + query, BASE_URL);
-  const homeUrl = new URL(homePath + "?" + query, BASE_URL);
 
-  const [industryData, homeData] = await Promise.all([
-    fetchAPI(industryUrl.href, { method: "GET" }),
-    fetchAPI(homeUrl.href, { method: "GET" })
-  ]);
+  try {
+    const industryData = await fetchAPI(industryUrl.href, { method: "GET" });
 
-  if (!industryData.data) notFound();
+    if (!industryData.data) notFound();
 
-  const industryBlocks = industryData?.data?.common || [];
-  const industryPageContent = industryData?.data;
-  const homeBlocks = homeData?.data?.common || [];
+    const industryBlocks = industryData?.data?.common || [];
+    const industryPageContent = industryData?.data;
 
-  return { industryBlocks, industryPageContent, homeBlocks };
+    // Try to load home page data for sections (non-critical, with fallback)
+    let homeBlocks = [];
+    try {
+      const homePath = `/api/landing-page`;
+      const homeUrl = new URL(homePath + "?" + query, BASE_URL);
+      const homeData = await fetchAPI(homeUrl.href, { method: "GET" });
+      homeBlocks = homeData?.data?.common || [];
+    } catch (homeError) {
+      console.warn('Failed to load home page data, using fallbacks:', homeError);
+      // Use static fallback data for home sections
+      homeBlocks = [
+        {
+          __component: "landing-page.portfolio-section",
+          title: "Some of our Featured Works",
+          subtitle: "Our latest projects and case studies"
+        },
+        {
+          __component: "landing-page.clients-section",
+          title: "Our Clients"
+        },
+        {
+          __component: "landing-page.insight-section",
+          title: "Serving Clients Across Industries"
+        },
+        {
+          __component: "landing-page.testimonials-section",
+          title: "What Our Clients Say"
+        },
+        {
+          __component: "landing-page.insights-blogs-section",
+          title: "Insights & Blog"
+        }
+      ];
+    }
+
+    return { industryBlocks, industryPageContent, homeBlocks };
+
+  } catch (error) {
+    console.error('Failed to load industry data:', error);
+    notFound();
+  }
 }
 
 export async function generateMetadata({ params }) {
