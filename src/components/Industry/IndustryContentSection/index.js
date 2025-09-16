@@ -325,7 +325,8 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
         title: "Leasing and Property Ownership Tracking Systems",
         description: "Complete leasing lifecycle management with automated contract generation, tenant screening, and ownership tracking for streamlined operations.",
         technicalHighlights: ["Contract Automation", "Tenant Screening", "Ownership Tracking"],
-        businessImpact: "50% faster lease processing"
+        businessImpact: "50% faster lease processing",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fdbd25a87e84e452fad3ac03143c7a4e6?format=webp&width=800"
       },
       {
         id: "vr-ar-solutions",
@@ -339,7 +340,8 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
         title: "Big Data Analytics and Machine Learning for Real Estate",
         description: "Advanced analytics and predictive modeling for market trends, property valuation, and investment insights using machine learning algorithms.",
         technicalHighlights: ["Predictive Analytics", "Market Insights", "ML Algorithms"],
-        businessImpact: "40% more accurate valuations"
+        businessImpact: "40% more accurate valuations",
+        iconUrl: "https://cdn.builder.io/api/v1/image/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2Fca66da1efe97414b83f87d246177627e?format=webp&width=800"
       },
       {
         id: "project-management",
