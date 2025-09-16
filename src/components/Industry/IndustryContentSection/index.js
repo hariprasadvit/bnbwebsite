@@ -438,16 +438,14 @@ export default function IndustryContentSection({ industrySlug = "default", deliv
             </div>
             
             <div className={styles.trustVisual}>
-              <div className={styles.trustSymbol}>
-                <div className={styles.trustRings}>
-                  <div className={styles.ring}></div>
-                  <div className={styles.ring}></div>
-                  <div className={styles.ring}></div>
-                </div>
-                <div className={styles.trustCore}>
-                  <span>🛡️</span>
-                </div>
-              </div>
+              <video
+                src="https://cdn.builder.io/o/assets%2F1ba648a6a1694e9aa91b762fb1bf4499%2F981dbe37b6044b70a6abf001a53e885a?alt=media&token=f16c4ad9-e01b-49f8-a78d-17f7cb4c7819&apiKey=1ba648a6a1694e9aa91b762fb1bf4499"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className={styles.trustVideo}
+              />
             </div>
           </div>
         </div>
