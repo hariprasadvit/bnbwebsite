@@ -299,7 +299,7 @@
 
     li {
       position: relative;
-      padding: 12px 20px;
+      padding: 12px 16px 12px 32px;
       margin-bottom: 8px;
       font-size: 15px;
       color: #ffffff;
@@ -310,17 +310,23 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-left-color: rgba(255, 255, 255, 0.4);
+        background: rgba(212, 65, 22, 0.1);
+        border-left-color: #d44116;
         transform: translateX(4px);
+        color: #ffffff;
+
+        &::before {
+          color: #d44116;
+        }
       }
 
       &::before {
         content: '→';
         position: absolute;
-        left: 8px;
+        left: 12px;
         color: rgba(255, 255, 255, 0.6);
         font-weight: bold;
+        transition: color 0.3s ease;
       }
     }
   }
