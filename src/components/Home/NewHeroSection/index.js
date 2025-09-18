@@ -642,7 +642,7 @@ ${Object.entries(scope.choices).map(([key, value]) => `
             <span className={styles.gradientText}>{data.brandName || 'Boolean & Beyond'}</span>
           </h1>
           <p className={`${styles.brandSubtitle} ${styles.subtitleAnimated}`}>
-            {data.subtitle || '– your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
+            {data.subtitle || 'Your technology partner for building custom applications that drive real results. From AI-powered solutions to enterprise SaaS platforms, we turn your vision into reality.'}
           </p>
         </div>
 
