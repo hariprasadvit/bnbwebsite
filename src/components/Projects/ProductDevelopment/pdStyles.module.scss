@@ -1,0 +1,191 @@
+.productDevelopmentCardWrapper{
+    background-color: #252525;
+    border: 1px solid #707070;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: minmax(auto, 596px) minmax(auto, 1fr);
+
+    @media screen and (max-width: 1200px) {
+grid-template-columns: auto minmax(auto, 50%);
+     
+       }
+    @media screen and (max-width: 980px) {
+ display: flex;
+ flex-direction: column;
+     
+       }
+
+    .pdCardTitle{
+        font-size: 36px;
+  line-height: 42px;
+  font-weight: 600;
+  padding: 76px 46px 76px 79px ;
+  
+
+  @media screen and (max-width: 1200px) {
+    font-size: 30px;
+    padding: 76px 36px 76px 39px ;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+   padding: 32px 26px;
+
+  }
+
+
+ 
+    }
+}
+
+.productDevelopCard{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+// max-width: 699px;
+
+
+
+
+ 
+   @media screen and (max-width: 980px) {
+
+    max-width: 100%;
+ 
+   }
+
+   .topContainer{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    .labelContainer{
+        display: flex;
+        gap: 30px;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+   gap: 14px;
+ 
+   }
+
+
+        .number{
+            font-size: 21px;
+  line-height: 32px;
+  font-weight: 300;
+  color:  #323232;
+  background-color: #FFFFFF;
+  border: 1px solid #707070;
+  padding: 0 6px;
+ 
+
+  @media screen and (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 3px;
+
+  }
+        }
+
+        .title{
+            font-size: 21px;
+  line-height: 32px;
+  font-weight: bold;
+
+ 
+
+  @media screen and (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 26px;
+
+  }
+        }
+    }
+
+    .iconWrapper{
+        .iconContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 22px;
+height: 22px;
+
+            img{
+width: 12px;
+height: 12px;
+            }
+        }
+    }
+   }
+
+   .description{
+    font-size: 18px;
+    line-height: 36px;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    overflow: hidden;
+
+    
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 26px;
+
+      }
+   }
+}
+
+.productDevCardContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+
+    @media screen and (max-width: 1200px) {
+        gap: 32px;
+     
+       }
+     
+       @media screen and (max-width: 768px) {
+        padding: 16px 26px 32px 26px;
+        gap: 16px;
+     
+       }
+
+       .cardDetails{
+        display: flex;
+        flex-direction: column;
+        gap: 43px;
+        background-color: #323232;
+        border: 1px solid #707070;
+        border-radius: 8px;
+        margin: 46px 71px 63px 0;
+        padding: 52px 60.78px 51px 42px;
+
+        @media screen and (max-width: 980px) {
+
+            margin: 0 50px 50px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin: unset;
+            padding: 32px 26px;
+         
+           }
+       }
+}

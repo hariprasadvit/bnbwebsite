@@ -1,0 +1,539 @@
+.contactBannerWithForm {
+    display: flex;
+    background-color: #ECE3DA;
+    padding: 50px 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 17%;
+
+    @media screen and (max-width: 978px) {
+        gap: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .bannerImageContainer {
+        position: relative;
+        max-width: 450px;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            max-width: 520px;
+        }
+    }
+
+    .bannerImage {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .bannerContent {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        text-align: center;
+
+        h2 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .contactBannerLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        max-width: 450px;
+
+        @media screen and (max-width: 768px) {
+            max-width: 520px;
+            gap: 16px;
+        }
+    }
+
+    .contactBannerWithFormTitle {
+        font-size: 36px;
+        line-height: 20px;
+        color: #000;
+        font-weight: 600;
+
+        @media screen and (max-width: 768px) {
+            font-size: 27px;
+            line-height: 37px;
+            // margin-bottom: 20px;
+        }
+    }
+
+    .contactBannerWithFormDescription {
+        font-size: 21px;
+        line-height: 36px;
+        font-weight: 300;
+        color: #000;
+
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    .contactUsWithFormButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 211px;
+        height: 56px;
+        background: #000000;
+        border-radius: 4px;
+        font-size: 21px;
+        line-height: 36px;
+        letter-spacing: -0.15px;
+        font-weight: 300;
+        color: #FFFFFF;
+        margin-top: 22px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(0.98);
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+
+    .contactForm {
+        max-width: 1000px;
+    }
+
+    .contactForm .joinUsTitle {
+        max-width: none;
+    }
+
+    .contactForm .joinUsTitle h4 {
+        letter-spacing: 0;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 10px;
+    }
+
+    .inputWidth {
+        display: flex;
+        // margin: 20px 0 0;
+        background: none;
+    }
+
+    .inputWidth> :first-child {
+        width: 50%;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .inputWidth> :last-child {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .contactUsForm {
+            // background-color: #fefcf9;
+            padding: 0;
+            // margin: 20px 0 0;
+        }
+
+        .inputWidth {
+            display: block;
+            margin: 0 0 0px;
+        }
+
+        .inputWidth> :first-child {
+            width: 100%;
+            margin-right: 0px;
+            margin-bottom: 10px;
+        }
+
+        .inputWidth> :last-child {
+            width: 100%;
+        }
+    }
+
+    .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 12px;
+    }
+
+    .textareaWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputWrapper label,
+    .textareaWrapper label {
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .inputWrapper input {
+        border: none;
+        border: 1px solid #C1A1A1;
+        height: 48px;
+        padding: 6px;
+        // border-radius: 4px;
+        color: #000;
+        font-size: 14px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+    .textareaWrapper textarea {
+        border: none;
+        border: 1px solid #C1A1A1;
+        min-height: 100px;
+        // border-radius: 4px;
+        padding: 6px;
+        color: #000;
+        font-size: 14px;
+        resize: vertical;
+        background: #fff;
+        border-radius: 8px;
+        margin-top: 0;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    .inputWrapper input::-webkit-outer-spin-button,
+    .inputWrapper input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .textareaWrapper textarea::-webkit-outer-spin-button,
+    .textareaWrapper textarea::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    .inputWrapper input[type="number"] {
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        appearance: textfield;
+    }
+
+    .inputWrapper input:focus-visible {
+        outline: none;
+    }
+
+    .textareaWrapper textarea:focus-visible {
+        outline: none;
+    }
+
+    .inputWrapper span,
+    .textareaWrapper span {
+        color: #f00;
+        opacity: 0;
+        font-size: 12px;
+        margin: 4px 0 0;
+    }
+
+    .inputWrapper span.active {
+        opacity: 1;
+    }
+
+    .inputWrapper input::placeholder {
+        color: #6d6b6b;
+    }
+
+    .textareaWrapper textarea::placeholder {
+        color: #6d6b6b;
+    }
+
+    .submit {
+        width: 100%;
+        height: 48px;
+        background-color: #d44116;
+        color: #ffffff;
+        border: 1px solid #d44116;
+        outline: none;
+        text-align: center;
+        margin-top: 12px;
+        letter-spacing: 0px;
+        font-size: 16px;
+        line-height: 16px;
+        cursor: pointer;
+        transition: .3s;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    .submit:hover {
+        background-color: #ffffff;
+        color: #d44116;
+    }
+
+    .contactUsWrapper {
+        display: flex;
+        margin: 40px 0 0;
+    }
+
+    .contactLeft {
+        width: 50%;
+    }
+
+    .callUs {
+        margin: 0 0 30px;
+    }
+
+    .callUs h5 {
+        color: #050505;
+        font-weight: bold;
+        letter-spacing: 0px;
+        font-size: 22px;
+        margin: 0 0 10px;
+    }
+
+    .callUs span {
+        letter-spacing: 0px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #825c9a;
+        cursor: pointer;
+    }
+
+    .careersbox {}
+
+    .careersbox h5 {
+        color: #050505;
+        font-weight: bold;
+        letter-spacing: 0px;
+        font-size: 22px;
+        margin: 0 0 10px;
+    }
+
+    .careersbox p {
+        letter-spacing: 0px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #484848;
+        max-width: 400px;
+    }
+
+    .careersbox p span {
+        letter-spacing: 0px;
+        font-size: 14px;
+        color: #825c9a;
+    }
+
+    .contactUsRight {
+        width: 50%;
+        display: flex;
+    }
+
+    .contactUsRight .careersbox {
+        flex: 1;
+    }
+
+    .contactUsRight .careersbox p {
+        max-width: 200px;
+    }
+
+    .joinUs {
+        background-color: #101010;
+        padding: 70px 80px;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .joinUsTitle {
+        /* margin: 0 0 64px; */
+        max-width: 680px;
+        position: relative;
+        // padding-top: 30px;
+    }
+
+    // .joinUsTitle::before {
+    //   position: absolute;
+    //   content: "";
+    //   top: 0;
+    //   left: 0;
+    //   width: 29px;
+    //   height: 4px;
+    //   background-color: #d44116;
+    // }
+
+    .joinUsTitle h4 {
+        letter-spacing: 0px;
+        color: #fff;
+        font-size: 34px;
+        line-height: 45px;
+        font-weight: bold;
+        margin: 0 0 24px;
+        max-width: 300px;
+    }
+
+    .joinUsTitle p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0px;
+        color: #fff;
+    }
+
+    .joinUsWrapper {
+        display: grid;
+        grid-gap: 42px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: 30px 0 0;
+    }
+
+    .positions {
+        padding: 70px 80px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .positions {
+            padding: 20px;
+        }
+
+        .callUs {
+            margin: 0 0 20px;
+        }
+
+        .contactUsWrapper {
+            flex-direction: column;
+        }
+
+        .careersbox {
+            margin: 0 0 20px;
+        }
+
+        .contactUsRight {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contactUsRight .careersbox {
+            flex: 1;
+        }
+
+        .contactUsRight .careersbox p {
+            max-width: 200px;
+        }
+
+        .interestedTabWrapper {
+            margin: 0;
+        }
+
+        .joinUs {
+            padding: 20px;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .joinUsTitle {
+            margin: 0;
+            padding-top: 25px;
+        }
+
+        .joinUsTitle h4 {
+            font-size: 22px;
+            line-height: 26px;
+            margin: 0 0 16px;
+        }
+
+        .joinUsTitle p {
+            font-size: 16px;
+            line-height: 20px;
+            height: auto;
+        }
+
+        .joinUsWrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin: 10px 0 0;
+        }
+
+        .joinUsCard {
+            padding: 30px;
+        }
+
+        .joinUsCard img {
+            max-height: 100px;
+            max-width: 110px;
+            margin: 0 auto 20px;
+        }
+
+        .joinUsCard h4 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .joinUsCard p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .submit {
+            width: auto;
+            height: auto;
+            padding: 10px;
+            white-space: nowrap;
+        }
+    }
+
+    .successMessageWrapper {
+        background-color: #28a745;
+        /* Bootstrap success green */
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 30px;
+        box-shadow: 0 4px 8px rgb(40 167 69 / 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        animation: fadeInScale 0.4s ease forwards;
+    }
+
+    @keyframes fadeInScale {
+        0% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .contactBannerRight {
+        max-width: 520px;
+        width: 100%;
+    }
+}

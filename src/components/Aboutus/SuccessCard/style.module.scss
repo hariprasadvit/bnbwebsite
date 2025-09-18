@@ -1,0 +1,218 @@
+/** @format */
+
+.success {
+  padding: 80px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.successTitle h3 {
+  font-size: 35px;
+  line-height: 64px;
+  letter-spacing: 0px;
+  color: #050505;
+  text-transform: capitalize;
+}
+
+.successTitle::before {
+  position: absolute;
+  content: "";
+  width: 29px;
+  height: 4px;
+  background-color: #d44116;
+}
+
+.successWrapper {}
+
+.successCard {}
+
+.successCardHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid #000000;
+}
+
+.successCardHeading h4 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.successCardHeading .icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #707070;
+  padding-bottom: 4px;
+}
+
+.successCardHeading .open {
+  position: relative;
+}
+
+.successCardHeading .open::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 12px;
+  height: 2px;
+  width: 10px;
+  background-color: #000000;
+}
+
+.successCardHeading .open span {
+  display: none;
+}
+
+.successCardHeading .icon span {
+  font-size: 25px;
+}
+
+.successCardContent {
+  display: flex;
+  align-items: flex-start;
+}
+
+.successCardBanner {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.successCardBanner h4 {
+  color: #707070;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
+  font-size: 70px;
+  font-family: "", sans-serif;
+
+  font-weight: bold;
+  max-width: 522px;
+  word-break: break-all;
+}
+
+.successCardContentWrapper {
+  flex: 1;
+  margin-top: 50px;
+}
+
+.successCardContentWrapper h4 {
+  font-size: 22px;
+  line-height: 4px;
+  font-weight: bold;
+
+  letter-spacing: 0px;
+  color: #050505;
+  text-transform: capitalize;
+  margin: 0 0 24px;
+}
+
+.successCardContentWrapper p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+
+  letter-spacing: 0px;
+  color: #050505;
+}
+
+@media only screen and (max-width: 768px) {
+  .successCardHeading .open::after {
+    top: 9px;
+    left: 4px;
+    height: 2px;
+    width: 10px;
+  }
+
+  .successCardBanner h4 {
+    font-size: 40px;
+  }
+
+  .successCardContentWrapper {
+    margin-top: 10px;
+  }
+
+  .successCardContentWrapper h4 {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 20px;
+  }
+
+  .successCardContentWrapper p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .success {
+    padding: 30px 20px 40px;
+  }
+
+  .success {
+    position: relative;
+  }
+
+  .successTitle h3 {
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  .successCardHeading {
+    padding: 15px 0;
+  }
+
+  .successCardHeading h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .successCardHeading .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .successCardContent {
+    margin: 10px 0 0;
+    flex-direction: column;
+    // align-items: center;
+  }
+
+  .successCardBanner {
+    /* margin: 0 0 30px; */
+  }
+
+  .successCardBanner .goalsImage {
+    max-width: 166px;
+  }
+
+  .successCardBanner .goalsIcon {
+    max-width: 142px;
+    top: 0px;
+    left: 0px;
+  }
+
+  .successCardContentWrapper {
+    margin-top: 10px;
+  }
+
+  .successCardContentWrapper h4 {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0 0 20px;
+    // text-align: center;
+  }
+
+  .successCardContentWrapper p {
+    font-size: 16px;
+    line-height: 25px;
+    // text-align: center;
+    margin-bottom: 20px;
+  }
+}

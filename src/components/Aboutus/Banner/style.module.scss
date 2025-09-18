@@ -1,0 +1,300 @@
+/**
+ * about Us new page styles
+ *
+ * @format
+ */
+
+.careersTitleBanner {
+  padding: 0px 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fefdf5;
+}
+
+.careersTitleBanner .careerBanner {
+  width: 100%;
+  height: 594px;
+  padding: 0 50px 50px;
+}
+
+.careersTitleBanner img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.careersTitleContent {
+  margin-right: 40px;
+  width: 100%;
+  margin: 140px 0px 70px;
+}
+
+.careersTopTitle {
+  margin-top: 50px;
+}
+
+.careersTitleContent h1 {
+  color: #000;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 48px;
+  max-width: 700px;
+}
+
+.careersTitleContent span {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #d44116;
+}
+
+.careersTitleContent p {
+  color: #000;
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  max-width: 850px;
+  margin-top: 50px;
+}
+
+.careersTitleBanner .btns {
+  display: flex;
+  align-items: center;
+}
+
+.careersTitleContent .btns> :first-child {
+  // width: 148px;
+  // height: 48px;
+  // background-color: #825c9a;
+  // border: 1px solid #825c9a;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // margin-right: 10px;
+  // font-size: 16px;
+  // line-height: 18px;
+  // font-weight: bold;
+  // letter-spacing: 0px;
+  // color: #ffffff;
+  // text-transform: capitalize;
+  // margin-right: 32px;
+  // cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 211px;
+  height: 56px;
+  background: #000000;
+  border-radius: 4px;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: -0.15px;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0px 32px 0px 0px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 111px;
+    height: 36px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+.careersTitleContent .btns> :last-child {
+  font-size: 20px;
+  line-height: 30px;
+  // font-weight: bold;
+  letter-spacing: 0px;
+  color: #050505;
+  padding: 2px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.careerBannerWrapper {
+  width: 50%;
+}
+
+.careerBannerWrapper .btns {
+  display: none;
+  align-items: center;
+}
+
+.careerBannerWrapper .btns> :first-child {
+  width: 148px;
+  height: 48px;
+  background-color: #825c9a;
+  border: 1px solid #825c9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.careerBannerWrapper .btns> :last-child {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #050505;
+  padding: 2px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .careersTitleBanner {
+    padding: 10px 25px;
+    margin: 110px 0px 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .careersTitleBanner .careerBanner {
+    width: 100%;
+    max-height: 394px;
+    height: 350px;
+    padding: 0 30px 0px;
+  }
+
+  .careersTopTitle {
+    line-height: 37px;
+    margin-top: 0px;
+  }
+
+  .careersTitleBanner img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .careersTitleContent {
+    max-width: none;
+    margin-right: 0px;
+    width: 100%;
+    margin: 0px 0px 0px;
+  }
+
+  .careersTitleContent h1 {
+    font-size: 27px;
+    line-height: 28px;
+  }
+
+  .careersTitleContent span {
+    font-size: 27px;
+    line-height: 37px;
+    margin-bottom: 20px;
+  }
+
+  .careersTitleContent p {
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  .careersTitleBanner .btns {
+    // display: none;
+    align-items: center;
+  }
+
+  .careerBannerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .careerBannerWrapper .btns {
+    display: flex;
+  }
+
+  .careerBannerWrapper .btns> :first-child {
+    width: 120px;
+    height: 42px;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 16px;
+  }
+
+  .careerBannerWrapper .btns> :last-child {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.designWrapper {
+  background-color: #f7f7f7;
+  padding: 38px 80px;
+}
+
+.designWrapper .speaker {
+  max-width: 257px;
+  max-height: 214px;
+  margin-right: auto;
+}
+
+.designWrapper p {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #000000;
+  padding-left: 2px;
+}
+
+.designWrapper p strong {
+  font-weight: bold;
+}
+
+.designWrapper .circle {
+  max-width: 257px;
+  max-height: 214px;
+  margin-left: auto;
+  position: relative;
+  top: -30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .designWrapper {
+    padding: 30px 20px;
+  }
+
+  .designWrapper .speaker {
+    max-width: 150px;
+    max-height: 100px;
+  }
+
+  .designWrapper p {
+    font-size: 22px;
+    line-height: 32px;
+    padding-left: 0px;
+  }
+
+  .designWrapper p strong {
+    font-weight: bold;
+  }
+
+  .designWrapper .circle {
+    max-width: 150px;
+    max-height: 100px;
+    top: -10px;
+  }
+}

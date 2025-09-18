@@ -1,0 +1,168 @@
+.WhyChooseSection {
+    padding: 60px 0;
+    background: #252525;
+
+    .WhyChooseContainer {
+        max-width: 1340px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+
+        .title {
+            text-align: center;
+            margin-bottom: 70px;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 42px;
+                line-height: 48px;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 30px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 25px;
+                    line-height: 35px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            p {
+                font-size: 21px;
+                line-height: 36px;
+                max-width: 860px;
+                margin: 0 auto;
+                color: #ffffff;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .CardContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+
+        @media screen and (max-width: 1100px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 30px;
+        }
+
+        .left {
+            ul {
+                @media screen and (max-width: 1400px) {
+                    margin-left: 36px;
+                }
+
+                li {
+                    font-size: 24px;
+                    line-height: 42px;
+                    color: #fff;
+                    margin-bottom: 30px;
+                    position: relative;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-bottom: 15px;
+                    }
+
+                    &:before {
+                        content: "\2713";
+                        font-family: monospace;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 21px;
+                        height: 21px;
+                        background: #FFFFFF;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 10px;
+                        left: -40px;
+                        font-size: 24px;
+                        color: #000;
+
+                        @media screen and (max-width: 768px) {
+                            width: 13px;
+                            height: 13px;
+                            font-size: 16px;
+                            top: 4px;
+                            left: -26px;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            @media screen and (max-width: 1100px) {
+                justify-content: center;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 224px;
+                max-height: 120px;
+                height: auto;
+                background: #FFFFFF;
+                border: 1px solid #E3E3E3;
+                border-radius: 8px;
+                padding: 20px 5px;
+
+                @media screen and (max-width: 768px) {
+                    padding: 15px;
+                }
+
+                strong {
+                    display: block;
+                    font-size: 27px;
+                    line-height: 36px;
+                    font-weight: 600;
+                    color: #000;
+                    margin-bottom: 10px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+
+                span {
+                    display: block;
+                    font-size: 21px;
+                    line-height: 27px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+}

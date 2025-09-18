@@ -1,0 +1,66 @@
+/** @format */
+
+.bannerCaseStudy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 180px 80px 87px;
+  position: relative;
+  background-color: #fff;
+
+  @media screen and (max-width: 1200px) {
+    padding: 180px 40px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 120px 26px 0;
+  }
+
+  .content {
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -1.87px;
+      color: #000;
+      margin-bottom: 28px;
+
+      span {
+        display: block;
+        color: #ff0000;
+
+        @media screen and (max-width: 768px) {
+          display: initial;
+        }
+      }
+    }
+
+    p {
+      font-size: 27px;
+      line-height: 32px;
+      color: #000;
+      margin-bottom: 58px;
+    }
+
+    .contactUsButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 211px;
+      height: 56px;
+      background: #000000;
+      border-radius: 4px;
+      font-size: 21px;
+      line-height: 36px;
+      letter-spacing: -0.15px;
+      font-weight: 300;
+      color: #ffffff;
+      margin-top: 22px;
+      cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

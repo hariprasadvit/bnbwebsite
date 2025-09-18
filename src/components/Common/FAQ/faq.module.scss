@@ -1,0 +1,170 @@
+.faq {
+    background-color: #1a1a1a;
+    padding: 60px;
+    transition: all 0.3s ease;
+}
+
+.faqHeading {
+    max-width: 542px;
+    margin: 0 auto 72px;
+}
+
+.faqHeading h5 {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #ff6b3d;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 10px;
+}
+
+.faqHeading h3 {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 30px;
+
+    font-weight: bold;
+}
+
+.faqWrapper {
+    background: #2a2a2a;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faqWrapper> :last-child {
+    border-bottom: 0;
+}
+
+.faqCard {
+    position: relative;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.faqCard.active ::after {
+    display: none;
+}
+
+.faqCard h4 {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    font-size: 20px;
+    line-height: 36px;
+
+    font-weight: bold;
+}
+
+.faqCard p {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin: 20px 0 0;
+}
+
+.faqCard ::after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 4px;
+    right: 22px;
+    top: 25px;
+    background-color: #ff6b3d;
+}
+
+.faqCard ::before {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 20px;
+    right: 15px;
+    top: 33px;
+    background-color: #ff6b3d;
+}
+
+@media screen and (max-width: 768px) {
+    .faq {
+        background-color: #1a1a1a;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .faqHeading {
+        max-width: 542px;
+        margin: 0 auto 40px;
+    }
+
+    .faqHeading h5 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .faqHeading h3 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .faqWrapper {
+        margin: 0 auto 40px;
+    }
+
+    .faqWrapper> :last-child {
+        border-bottom: 0;
+    }
+
+    .faqCard {
+        position: relative;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .faqCard.active ::after {
+        display: none;
+    }
+
+    .faqCard h4 {
+        font-size: 16px;
+        line-height: 20px;
+
+        @media screen and (max-width: 768px) {
+            max-width: 90%;
+        }
+    }
+
+    .faqCard p {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 10px 0;
+    }
+
+    .faqCard ::after {
+        height: 10px;
+        width: 2px;
+        right: 17px;
+        top: 20px;
+    }
+
+    .faqCard ::before {
+        height: 2px;
+        width: 10px;
+        right: 13px;
+        top: 24px;
+    }
+
+}

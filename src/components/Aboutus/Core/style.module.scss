@@ -1,0 +1,163 @@
+/** @format */
+
+.core {
+  padding: 70px 80px;
+}
+
+.coreTitle {
+  margin: 0 0 70px;
+}
+
+.coreTitle h3 {
+  letter-spacing: 0px;
+  color: #f30000;
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.coreTitle h2 {
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.coreWrapper {
+  padding: 0 100px;
+}
+
+.coreWrapper> :last-child {
+  border-bottom: none;
+}
+
+.coreCardTitle {
+  display: flex;
+  align-items: flex-start;
+}
+
+.coreCard {
+  display: flex;
+  flex: 1;
+  border-bottom: 1px dashed #bababa;
+  padding: 40px 0;
+}
+
+.coreCardTitle {
+  flex: 0.3;
+}
+
+.coreCardTitle h3 {
+  font-size: 38px;
+  line-height: 48px;
+  font-family: "academy-engraved";
+  letter-spacing: 0px;
+  color: #050505;
+  text-transform: capitalize;
+  opacity: 0.2;
+  position: relative;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+
+.coreCardTitle h3::after {
+  position: absolute;
+  content: "";
+  width: 29px;
+  height: 4px;
+  top: 15px;
+  right: 0;
+  background-color: #707070;
+}
+
+.coreCardTitle h2 {
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #050505;
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.coreCardContent {
+  flex: 0.7;
+}
+
+.coreCardContent p {
+  letter-spacing: 0px;
+  color: #050505;
+  font-size: 18px;
+  line-height: 30px;
+
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  .core {
+    padding: 40px 20px;
+  }
+
+  .coreTitle {
+    margin: 0 0 10px;
+    max-width: 300px;
+  }
+
+  .coreTitle h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .coreTitle h2 {
+    font-size: 20px;
+    line-height: 25px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .coreWrapper {
+    padding: 0px;
+  }
+
+  .coreWrapper> :last-child {
+    border-bottom: none;
+  }
+
+  .coreCardTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  .coreCard {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .coreCardTitle h3 {
+    font-size: 32px;
+    line-height: 48px;
+    padding-right: 30px;
+    margin-right: 30px;
+  }
+
+  .coreCardTitle h3::after {
+    width: 20px;
+    top: 20px;
+  }
+
+  .coreCardTitle h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .coreCardContent {
+    flex: 0.7;
+  }
+
+  .coreCardContent p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
