@@ -1,5 +1,4 @@
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import BlockRenderer from "@/components/CaseStudy/BlockRenderer";
@@ -13,6 +12,11 @@ import Footer from "@/components/Common/Footer";
 import FooterForm from "@/components/ContactUs/FooterForm";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
+
+export const metadata = {
+  title: "Blog - Boolean & Beyond",
+  description: "Stay updated with the latest insights, trends, and innovations in technology and software development from Boolean & Beyond.",
+};
 
 async function loader() {
   const BASE_URL = getStrapiURL();
@@ -43,9 +47,6 @@ export default async function Blog() {
 
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData?.pageContent || {}}

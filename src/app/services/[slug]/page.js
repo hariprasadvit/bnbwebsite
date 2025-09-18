@@ -1,5 +1,4 @@
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import { getStrapiURL } from "@/lib/utils";
 import { unstable_noStore as noStore } from "next/cache";

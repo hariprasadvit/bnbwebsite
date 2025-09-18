@@ -1,7 +1,6 @@
 /** @format */
 
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import { digitalProductBannerData } from "@/components/data";

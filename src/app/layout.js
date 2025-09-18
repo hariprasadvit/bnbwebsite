@@ -11,10 +11,15 @@ const titillium = Titillium_Web({
   variable: "--font-titillium",
 });
 
+export const metadata = {
+  title: "Boolean & Beyond - Technology Solutions",
+  description: "Leading technology solutions provider specializing in software development, digital transformation, and innovative tech services.",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={titillium.variable}>
-      <head>
+      <body>
         {/* Google Tag Manager Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RS4FR1L7EL"
@@ -28,8 +33,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-RS4FR1L7EL');
           `}
         </Script>
-      </head>
-      <body>
         <PageLoaderWrapper>
           <HeaderWrapper />
           {children}

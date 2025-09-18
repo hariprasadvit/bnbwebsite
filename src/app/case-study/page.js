@@ -1,5 +1,4 @@
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import BlockRenderer from "@/components/CaseStudy/BlockRenderer";
@@ -50,9 +49,6 @@ export default async function CaseStudy() {
 
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData?.pageContent || {}}

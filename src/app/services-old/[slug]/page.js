@@ -1,5 +1,4 @@
 import qs from "qs";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Header from "@/components/Common/Header";
 import { getStrapiURL } from "@/lib/utils";
@@ -10,6 +9,15 @@ import BlockRendererDetail from "@/components/Services-old/BlockRendererDetail";
 import { fetchAPI } from "@/lib/fetch-api";
 
 const Banner = dynamic(() => import("@/components/Home/Banner"));
+
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const { pageContent } = await loader({ slug });
+  return {
+    title: pageContent?.meta_title || "Service Details - Boolean & Beyond",
+    description: pageContent?.meta_description || "Explore our detailed service offerings and solutions.",
+  };
+}
 
 async function loader({ slug }) {
   if (!slug) {
@@ -43,9 +51,6 @@ export default async function ServiceDetails({ params }) {
   });
   return (
     <div>
-      <Head>
-        <title>B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Banner
           data={blockData?.pageContent}

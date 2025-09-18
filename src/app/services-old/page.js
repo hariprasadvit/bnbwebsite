@@ -7,9 +7,13 @@ import dynamic from "next/dynamic";
 import React from "react";
 import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
-import Head from "next/head";
 
 const Banner = dynamic(() => import("@/components/Projects/Banner"));
+
+export const metadata = {
+  title: "Services - Boolean & Beyond",
+  description: "Explore our comprehensive range of technology services and solutions designed to transform your business.",
+};
 
 async function loader() {
   noStore();
@@ -39,9 +43,6 @@ export default async function Projects() {
   const { pageContent: data = {} } = blockData;
   return (
     <div>
-      <Head>
-        <title>Projects || B&B</title>
-      </Head>
       <div style={{ width: "100%" }}>
         <Header whiteHeader active="services" />
         <Banner
